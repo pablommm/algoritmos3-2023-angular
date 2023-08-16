@@ -1,0 +1,9 @@
+.navbar-container {
+    background-color: var(--third-colour);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* PX Provisorio */
+    padding: 0 10px;
+    font-size: 2.5rem;
+}
