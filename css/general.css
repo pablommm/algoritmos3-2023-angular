@@ -7,11 +7,10 @@
 
 :root {
     /* Variables generales, tales como paleta de colores, fuente default, fondo, padding, etc */
-    --primary-colour: #75AADB;
-    --secondary-colour: #FFFFFF;
-    --third-colour: #59c05e;
-    --fourth-colour: #FFD100;
-    /* Colores de testing, no es la paleta utilizada */
+    --primary-colour: #F6F1F1;
+    --secondary-colour:  #AFD3E2;
+    --third-colour: #19A7CE;
+    --fourth-colour: #146C94;
 }
 
 body {
