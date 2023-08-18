@@ -1,0 +1,70 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 100%; 
+    gap: 1em;
+    justify-content: flex-start;
+    padding: 0; 
+}
+
+.detallesFigurita-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    padding-top: 1em;
+    background-color: var(--secondary-colour);
+    width: 100vw; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.figurita-nombre {
+    font-size: 2.8rem;
+    color: var(--text-colour);
+}
+
+.logos-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 2.8rem;
+    gap: 1em;
+}
+
+.foto-figurita img {
+    max-width: 100%; 
+    height: auto;
+    padding-left: 0.5em; 
+    padding-right: 0.5em; 
+}
+
+.detalles-escritos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 1em;
+    padding-left: 1em;
+}
+
+.detalles-item   {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.3em;
+}
+
+.detalles-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.1em;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
