@@ -4,4 +4,6 @@
     align-items: center;
     gap: 10px;
     background-color: var(--third-colour);
+    height: 2rem;
+    font-size: 1.3rem;
 }

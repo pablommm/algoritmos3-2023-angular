@@ -1,0 +1,30 @@
+.login-title{
+    font-size: 2.8rem;
+    color: var(--text-colour);
+}
+
+.sub-main-container {
+    flex-direction: column;
+    gap: 1em;
+    padding-bottom: 4em;
+}
+
+.login-item {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    font-size: 1em;
+}
+
+.login-icon {
+    font-size: 1.2em;
+    background-color: var(--secondary-colour);
+    width: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-info {
+    display: flex;
+}
