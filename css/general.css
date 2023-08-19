@@ -12,6 +12,7 @@
     --third-colour: #19A7CE;
     --fourth-colour: #146C94;
     --text-colour: #000;
+    --fire-colour: #FF0000;
 }
 
 body {
@@ -26,6 +27,16 @@ body {
     flex: 1;
     justify-content: center;
     align-items: center;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    padding-top: 1em;
+    background-color: var(--secondary-colour);
+    text-align: center;
 }
 
 .sub-main-container {
