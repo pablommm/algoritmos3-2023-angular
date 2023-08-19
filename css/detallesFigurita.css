@@ -1,11 +1,19 @@
-.main-container {
+.sub-main-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
-    width: 100%; 
-    gap: 1em;
-    justify-content: flex-start;
-    padding: 0; 
+    align-items: center; 
+    /* width: 100%;  */
+    gap: 1.2em;
+    /* flex: 1; */
+    /* justify-content: flex-start;
+    padding: 0;  */
+}
+
+.figurita-item {
+    border: var(--fourth-colour) solid .3em;
+    margin-top: 1.2em;
+    min-width: 2em;
+    max-width: 30em;
 }
 
 .detallesFigurita-header {
@@ -15,26 +23,28 @@
     align-items: center;
     padding-top: 1em;
     background-color: var(--secondary-colour);
-    width: 100vw; 
-    margin-left: auto; 
-    margin-right: auto; 
+    text-align: center;
+    /* flex: 1; */
+    /* width: 100vw;  */
+    /* margin-left: auto; 
+    margin-right: auto;  */
 }
 
 .figurita-nombre {
-    font-size: 2.8rem;
+    font-size: 2rem;
     color: var(--text-colour);
 }
 
 .logos-container {
     display: flex;
     flex-direction: row;
-    font-size: 2.8rem;
+    font-size: 2rem;
     gap: 1em;
 }
 
 .foto-figurita img {
     max-width: 100%; 
-    height: auto;
+    /* height: auto; */
     padding-left: 0.5em; 
     padding-right: 0.5em; 
 }
@@ -44,7 +54,7 @@
     flex-direction: column;
     align-items: flex-start; 
     gap: 1em;
-    padding-left: 1em;
+    padding: 1em;
 }
 
 .detalles-item   {
@@ -62,9 +72,8 @@
     font-weight: bold;
 }
 
-
-
-
-
-
-
+@media (min-width:768px) {
+    .sub-main-container{
+        flex-direction: row;
+    }  
+}
