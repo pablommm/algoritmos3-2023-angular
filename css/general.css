@@ -13,6 +13,7 @@
     --fourth-colour: #146C94;
     --text-colour: #000;
     --fire-colour: #FF0000;
+    --button-radius: .3rem;
 }
 
 body {
