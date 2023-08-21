@@ -1,0 +1,30 @@
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    /* font-size: 50em; */
+    padding: .5em;
+}
+
+.primary-button, .secondary-button {
+    font-size: 1.3em;
+    padding: .3em .5em;
+    border: .2em solid var(--third-colour);
+    border-radius: var(--button-radius);
+    color: var(--text-colour);
+    cursor: pointer;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+}
+
+.primary-button {
+    background-color: var(--third-colour);
+}
+
+.secondary-button {
+    background-color: var(--secondary-colour);
+}
+
+.primary-button:hover, .secondary-button:hover {
+    border-color: var(--fourth-colour);
+    font-size: 1.4em;  
+}
+
