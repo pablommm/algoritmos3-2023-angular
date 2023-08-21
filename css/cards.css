@@ -1,0 +1,27 @@
+.card-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-primeraParte, .card-segundaParte {
+    width: 100%;
+}
+
+
+
+@media (min-width:401px) {
+
+    .card-primeraParte, .card-segundaParte {
+        display: flex;
+        justify-content: center
+    }
+        
+    .card-segundaParte {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+}
