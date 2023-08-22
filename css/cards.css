@@ -1,3 +1,19 @@
+.card-item {
+    border: var(--fourth-colour) solid .3em;
+    margin-top: 1.2em;
+    min-width: 2em;
+}
+
+.card-header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    padding-top: 1em;
+    background-color: var(--secondary-colour);
+    text-align: center;
+}
+
 .card-content {
     display: flex;
     flex-direction: column;
@@ -6,10 +22,52 @@
     justify-content: center;
 }
 
+.card-nombre {
+    font-size: 2rem;
+    color: var(--text-colour);
+}
+
+.card-logos-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    gap: 1em;
+}
+
+.card-detalles-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 1em;
+    padding: 1em;
+}
+
+.card-detalles-item   {
+    display: flex;
+    gap: 0.3em;
+}
+
+.card-detalles-logo {
+    display: flex;
+    gap: 0.1em;
+    font-weight: bold;
+}
+
+.card-detalles-highlight {
+    font-size: 1.3em;
+}
+
+.card-detalles-center {
+    align-self: center;
+}
+
+.card-valoracion-container {
+    border-top: black .2rem solid;
+}
+
 .card-primeraParte, .card-segundaParte {
     width: 100%;
 }
-
 
 
 @media (min-width:401px) {

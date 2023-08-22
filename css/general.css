@@ -39,17 +39,6 @@ body {
     flex-wrap: wrap;
 }
 
-.header-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    align-items: center;
-    padding-top: 1em;
-    background-color: var(--secondary-colour);
-    text-align: center;
-}
-
-
 .searchbar-container{
     text-align: center;
 }

@@ -2,75 +2,24 @@
     gap: 1.2em;
 }
 
-.figurita-item {
-    border: var(--fourth-colour) solid .3em;
-    margin-top: 1.2em;
-    min-width: 2em;
-}
-
-.figurita-nombre {
-    font-size: 2rem;
-    color: var(--text-colour);
-}
-
-.logos-container {
-    display: flex;
-    flex-direction: row;
-    font-size: 2rem;
-    gap: 1em;
-}
-
-.foto-figurita{
+.card-imagen{
     max-width: 100%; 
     max-height: 20em;
     padding-left: 0.5em; 
     padding-right: 0.5em; 
 }
 
-.detalles-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 1em;
-    padding: 1em;
-}
-
-.detalles-item   {
-    display: flex;
-    gap: 0.3em;
-}
-
-.detalles-logo {
-    display: flex;
-    gap: 0.1em;
-    font-weight: bold;
-}
-
-.detalles-highlight {
-    font-size: 1.3em;
-}
-
-.detalles-center {
-    align-self: center;
-}
-
-.fire {
-    color: var(--fire-colour);
-}
-
-.valoracion-container {
-    border-top: black .2rem solid;
-}
-
 @media (min-width:401px) {
 
-    .header-container {
+    .card-header-container {
         flex-direction: row;
         justify-content: space-evenly;
     }
 
-    .foto-figurita {
+    .card-imagen {
         max-width: 50%;
+        overflow: hidden;
+        object-fit: cover;
     }
 
 }
