@@ -1,6 +1,7 @@
 .card-item {
     border: var(--fourth-colour) solid .3em;
-    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    margin-top: 1em;
     min-width: 2em;
 }
 

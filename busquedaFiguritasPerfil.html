@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="./css/button.css">
     <link rel="stylesheet" href="./css/cards.css">
     <link rel="stylesheet" href="./css/icons.css">
+    <link rel="stylesheet" href="./css/checkbox.css">
     <link rel="stylesheet" href="./css/detallesFigurita.css">
-    <link rel="stylesheet" href="./css/mainBusqueda.css">
+    <link rel="stylesheet" href="./css/busquedaFiguritasPerfil.css">
 
 </head>
 <body>
@@ -22,42 +23,43 @@
         <i class="fa-solid fa-bars"></i>
     </nav>
     
+    <div class="searchbar-container">
+        <div class="searchbar">
+            <input type="text"  placeholder="Buscar...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        
+        </div>
+    </div>
 
     <div class="main-container">
         <div class="header-container">
-            <div class="searchbar-container">
-                <div class="searchbar">
-                    <input type="text"  placeholder="Buscar...">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                
-                </div>
-            </div>
             <div class="sub-header-container">
-                <p>Filtros</p>
-                <hr class="divider-line"> 
-                <p>Valoracion</p>
+                <p class="sub-header-container-filtros">Filtros</p>
+                <!-- <hr class="divider-line">  -->
             </div>
-            
-            <div class="desde-hasta-container">
-                <div class="desde-hasta-subcontainer">
-                    <p>Desde</p>
-                    <input type="text" placeholder="placeholder" >
+            <div class="sub-header-container2">
+                <p class="valoracion">Valoracion</p>
+                <div class="desde-hasta-container">
+                    <div class="desde-hasta-subcontainer">
+                        <p>Desde</p>
+                        <input type="text" placeholder="placeholder" >
+                    </div>
+                    <div class="desde-hasta-subcontainer">
+                        <p>Hasta</p>
+                        <input type="text" placeholder="placeholder" >
+                    </div>
                 </div>
-                <div class="desde-hasta-subcontainer">
-                    <p>Hasta</p>
-                    <input type="text" placeholder="placeholder" >
+                <div class="checkbox-container">
+                    <div class="checkbox-item">
+                        <input type="checkbox" class="checkbox-input">
+                        <p>On fire</p>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" class="checkbox-input">
+                        <p>Es promesa</p>
+                    </div>
                 </div>
             </div>
-            <div class="botones-header-container">
-                <div class="botones-header-subcontainer">
-                    <input type="checkbox" class="checkbox-input">
-                    <p>On fire</p>  
-                </div>
-                <div class="botones-header-subcontainer">
-                    <input type="checkbox" class="checkbox-input">
-                    <p>Es promesa</p>  
-                </div>
-            </div> 
         </div>
         <div class="sub-main-container">
             <!-- Figurita 4 -->
