@@ -66,6 +66,10 @@
     font-size: 1.3em;
 }
 
+.card-detalles-bigger-highlight{
+    font-size: 1.8em;
+}
+
 .card-detalles-center {
     align-self: center;
 }
