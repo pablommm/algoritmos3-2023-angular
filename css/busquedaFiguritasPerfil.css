@@ -226,6 +226,12 @@
         display: flex;
         justify-content: center;
     }
+
+    .card-imagen{
+        max-width: 200%;
+        overflow: hidden;
+        object-fit: cover;    
+    }
 }
 
 @media (min-width:769px) {
@@ -316,9 +322,11 @@
         width: 100%;
     }
 
-    .imagen-container{
-        display: flex;
-        justify-content: center;
+    .card-imagen{
+        max-width: 200%;
+        overflow: hidden;
+        object-fit: cover;
+        
     }
     
 }
