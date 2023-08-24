@@ -1,0 +1,19 @@
+.botonesRadio{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+
+.sub-header-container2 {
+    flex-direction: row;
+    background-color: var(--fourth-colour);
+}
+
+.botonesRadio label {
+    font-size: 0.8em;
+}
+
+
+
+
