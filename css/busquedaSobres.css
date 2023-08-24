@@ -14,6 +14,47 @@
     font-size: 0.8em;
 }
 
+.card-primeraParte{
+    background-color: var(--third-colour);
+}
 
+.card-item{
+    border: black .2em solid;
+    border-radius: 1em;
+}
 
+.card-detalles-container{
+    border-top: black .2em solid;
+    border-bottom: black .2em solid;
+}
+
+.card-detalles-info{
+    font-size: 0.9em;
+}
+
+.card-detalles-highlight{
+    font-size: 1.8em;
+}
+
+@media (min-width:401px) {
+    .card-detalles-bigger-highlight{
+        font-size: 1.8em;
+    }
+
+    .card-detalles-highlight{
+        font-size: 1.2em;
+    }
+    
+}
+
+@media (min-width:769px) {
+    .card-detalles-bigger-highlight{
+        font-size: 1.8em;
+    }
+
+    .card-detalles-highlight{
+        font-size: 1.5em;
+    }
+    
+}
 

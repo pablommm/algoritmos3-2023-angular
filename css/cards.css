@@ -82,6 +82,10 @@
     width: 100%;
 }
 
+.card-detalles-container-center{
+    display: flex;
+    justify-content: center;
+}
 
 @media (min-width:401px) {
 
