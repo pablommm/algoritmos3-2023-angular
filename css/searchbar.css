@@ -2,6 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2.8rem;
+    background-color: var(--fourth-colour);
     height: 4rem; 
   }
   
@@ -24,7 +26,7 @@
 .searchbar button[type="submit"] {
     background-color: var(--third-colour);
     border: none;
-    border-radius: 2em;
+    border-radius: 0 2em 2em 0;
     color: var(--primary-colour);
     cursor: pointer;
     padding: 0.8em 1em;
@@ -32,5 +34,5 @@
   
   
 .searchbar button[type="submit"] i {
-    font-size: 1em;
+    font-size: 1.5em;
   }
