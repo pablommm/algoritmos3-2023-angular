@@ -4,9 +4,9 @@
     gap:1rem;
 }
 
-
-.sub-header-container2 {
-    flex-direction: row;
+.toolbox-content {
+    align-items: flex-start;
+    width: 90%;
     background-color: var(--fourth-colour);
 }
 

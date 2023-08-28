@@ -1,4 +1,4 @@
-.header-container {
+.toolbox-container {
     background-color: var(--fourth-colour);
     display: flex;
     flex-direction: column;
@@ -6,30 +6,101 @@
     width: 100%;
 }
 
-.sub-header-container {
+.toolbox-header-container, .toolbox-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5em;
     color: var(--primary-colour);
     font-size: 1.5em;
-    width: 100%;
 }
 
-.sub-header-container2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5em;
-    color: var(--primary-colour);
-    font-size: 1.5em;
-    width: 100%;
+.toolbox-header-container {
+    border-bottom: var(--primary-colour) .1em solid;
+    width: 90%; 
+}
+
+.toolbox-content {
     padding: .5em .1em;
 }
 
-.sub-header-container-item {
-    border-bottom: .1em var(--primary-colour) solid;
-    width: 85%;
+.toolbox-header-container-title {
+    /* border-bottom: .1em var(--primary-colour) solid;
+    width: 85%; */
     font-size: 1.5em;
     text-align: center;
+}
+
+.desde-hasta-container{
+    display: flex;
+    gap: 2em;
+    color: var(--primary-colour);
+    flex-wrap: wrap;
+}
+
+.desde-hasta-subcontainer {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+    color: var(--primary-colour);
+}
+
+.desde-hasta-subcontainer input[type="text"] {
+    width: 100%; 
+    min-height: 2em;
+}
+
+.valoracion {
+    font-size: 1.5em;
+    color: var(--primary-colour);
+}
+
+@media (min-width:401px) {
+    .toolbox-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 1em;
+    }
+
+    .valoracion {
+        font-size: .8em;
+    }
+
+    .desde-hasta-container {
+        width: 30%;
+        gap:.5em;
+        font-size: .8em;
+    }
+
+    .desde-hasta-subcontainer {
+        align-items: center;
+    }
+}
+
+@media (min-width:769px) {
+    .toolbox-container {
+        background-color: var(--fourth-colour);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 0;
+        max-width: 20%;
+        align-self: flex-start;
+        margin-left: 1em;
+    }
+    
+    .toolbox-content {
+        flex-direction: column;
+    }
+
+    .desde-hasta-container {
+        width: 80%;
+    }
+
+    .desde-hasta-subcontainer {
+        align-items: flex-start;
+    }
 }
