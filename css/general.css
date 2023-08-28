@@ -22,7 +22,7 @@ body, .main-container {
 }
 
 .main-container, .sub-main-container {
-    background-color: var(--primary-colour);
+    background-color: var(--secondary-colour);
     display: flex;
     flex: 1;
     justify-content: center;

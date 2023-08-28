@@ -1,8 +1,8 @@
 .main-container {
     display: flex;
+    align-items: flex-start;
     flex-direction: column; 
     margin-top: 0; 
-    background-color: var(--secondary-colour);
 }
 
 .sub-main-container{
@@ -11,7 +11,7 @@
 
 .card-primeraParte{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     padding-bottom: .5em;
     border-bottom: black .2em solid;
@@ -22,18 +22,14 @@
     width: 100%;
     justify-content: space-around;
     padding-top: 1em;
-}
-
-
-.card-nombre{
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .card-item{
     border: 0;
-    background-color: var(--primary-colour);
     width: 90%;
     border-radius: 1em;
+    font-size: 1rem;
 }
 
 .card-imagen{
@@ -42,9 +38,8 @@
 }
 
 .card-detalles-container{
-    display: flex;
     flex-direction: row;
-    column-gap: 5em;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -52,17 +47,23 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
+    padding-bottom: .8em;
+}
 
+.card-detalles-item{
+    font-size: 1.5em;
 }
 
 .card-detalles-item2{
     display: flex;
     gap: 0.3em;
+    font-size: 1.2em
 }
 
 .card-detalles-item3{
     display: flex;
     gap: 0.3em;
+    font-size: 0.9em;
 }
 
 .card-content{
@@ -70,23 +71,13 @@
 }
 
 @media (min-width:401px) {
-    .toolbox-content {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 1em;
-    }
-
     .card-item{
         width: 45%;
+        font-size: 0.7rem;
     }
 
     .card-content{
         width: 100%;
-    }
-
-    .card-nombre{
-        font-size: 1em;
     }
 
     .card-primeraParte-titulo{
@@ -101,45 +92,15 @@
         padding: 0.1em;
     }
 
-    .card-nombre{
-        font-size: 1em;
-    }
-
-    .card-detalles-item{
-        font-size: 0.8em;
-    }
-
-    .card-detalles-item2{
-        font-size: 0.7em
-    }
-
-    .card-detalles-item3{
-        font-size: 0.8em;
-    }
-
-    .card-detalles-highlight{
-        font-size: 0.8em;
-    }
-
-    .card-detalles-bigger-highlight{
-        font-size: 1em;
-    }
-
     .sub-main-container{
-        display: flex;
         flex-direction: row;
         width: 100%;
     }
 
-    .imagen-container{
-        display: flex;
-        justify-content: center;
-    }
-
     .card-imagen{
-        max-width: 200%;
+        min-width: 100%;
         overflow: hidden;
-        object-fit: cover;    
+        object-fit: cover;
     }
 }
 
@@ -147,47 +108,24 @@
     .main-container {
         display: flex;
         flex-direction: row; 
-        align-items: flex-start;
-        background-color: var(--secondary-colour);
+        /* align-items: flex-start; */
         padding-top: 1rem; 
         padding-bottom: 1rem;
     }
 
-    .toolbox-container {
-        background-color: var(--fourth-colour);
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-bottom: 0;
-        max-width: 20%;
-        align-self: flex-start;
-        margin-left: 1em;
-    }
-    
-    .toolbox-content {
-        flex-direction: column;
-    }
-
-    /* .checkbox-container {
-        width: auto;
-    } */
-
     .card-item{
         width: 25%;
         height: 100%;
+        font-size: 0.6rem;
     }
 
     .card-content{
         width: 100%;
     }
 
-    .card-nombre{
-        font-size: 1em;
-    }
-
     .card-primeraParte-titulo{
         display: flex;
-        flex-direction: row;
+        flex-direction: row; 
     }
 
     .card-detalles-container{
@@ -199,18 +137,6 @@
 
     .card-nombre{
         font-size: 0.8em;
-    }
-
-    .card-detalles-item{
-        font-size: 0.8em;
-    }
-
-    .card-detalles-item2{
-        font-size: 0.8vw
-    }
-
-    .card-detalles-item3{
-        font-size: 0.6em;
     }
 
     .card-detalles-highlight{
@@ -228,7 +154,7 @@
     }
 
     .card-imagen{
-        max-width: 200%;
+        max-width: 100%;
         overflow: hidden;
         object-fit: cover;
         

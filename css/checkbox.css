@@ -1,9 +1,9 @@
 .checkbox-container {
     display: flex;
     flex-direction: column;
-    width: 100%; 
     gap: 0.5em;
     padding-top: 1em;
+    width: 100%; 
 }
 
 .checkbox-item {
@@ -23,7 +23,6 @@
         font-size: .5em;
         justify-content: space-evenly;
         flex-grow: 1;
-        /* margin-right: .5em; */
     }
 }
 
@@ -31,5 +30,6 @@
     .checkbox-container {
         align-self: flex-start;
         flex-direction: column;
+        width: 100%;
     }
 }

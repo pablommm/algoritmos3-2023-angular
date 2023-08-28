@@ -1,8 +1,10 @@
 .card-item {
+    background-color: var(--primary-colour);
     border: var(--fourth-colour) solid .3em;
     margin-bottom: 1.2em;
     margin-top: 1em;
     min-width: 2em;
+    text-align: center;
 }
 
 .card-header-container {
@@ -60,11 +62,12 @@
     display: flex;
     gap: 0.1em;
     font-weight: bold;
+    text-align: center;
 }
 
-.card-detalles-highlight {
+/* .card-detalles-highlight {
     font-size: 1.3em;
-}
+} */
 
 .card-detalles-bigger-highlight{
     font-size: 1.8em;
