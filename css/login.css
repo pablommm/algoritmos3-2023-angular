@@ -1,6 +1,6 @@
 .login-title {
     font-size: 2.8rem;
-    color: var(--fourth-colour);
+    color: var(--text-colour);
     font-family: 'Exo', sans-serif;
 }
 
@@ -44,9 +44,5 @@
         background-color: var(--secondary-colour);
         border: solid .3em var(--fourth-colour);
         border-radius: var(--border-radius);
-    }
-
-    .login-title {
-        color: var(--text-colour);
     }
 }

@@ -1,9 +1,13 @@
 .login-input {
     width: 15em;
     height: 2.5em;
-    border-right: .3em var(--secondary-colour) solid;
-    border-bottom: .3em var(--secondary-colour) solid;
-    border-top: .3em var(--secondary-colour) solid ;
+    border-right: .3em var(--fourth-colour) solid;
+    border-bottom: .3em var(--fourth-colour) solid;
+    border-top: .3em var(--fourth-colour) solid ;
     border-left: none;
     padding-left: .5em;
+}
+
+input:focus {
+    outline: none;
 }

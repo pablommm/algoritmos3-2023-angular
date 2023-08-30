@@ -6,7 +6,7 @@
 }
 
 .sub-main-container{
-    background-color: var(--secondary-colour);
+    /* background-color: var(--secondary-colour); */
 }
 
 .card-primeraParte{
@@ -50,20 +50,21 @@
     padding-bottom: .8em;
 }
 
+.card-detalles-item, .card-detalles-item2, .card-detalles-item3 {
+    display: flex;
+    gap: 0.3em;
+}
+
 .card-detalles-item{
     font-size: 1.5em;
 }
 
 .card-detalles-item2{
-    display: flex;
-    gap: 0.3em;
     font-size: 1.2em
 }
 
 .card-detalles-item3{
-    display: flex;
-    gap: 0.3em;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .card-content{
