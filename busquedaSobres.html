@@ -18,34 +18,34 @@
     <link rel="stylesheet" href="./css/detallesFigurita.css">
     <link rel="stylesheet" href="./css/busquedaFiguritas.css">
     <link rel="stylesheet" href="./css/busquedaSobres.css">
-
 </head>
 <body>
-    <nav class="navbar-container">
-        <p>WorldCApp</p>
-        <i class="fa-solid fa-bars burger"></i>
+    <header>
+        <nav class="navbar-container">
+            <span>WorldCApp</span>
+            <i class="fa-solid fa-bars burger"></i>
 
-        <ul class="navbar-list">
-            <li>Figuritas</li>
-            <li>Sobres</li>
-            <li>Perfil</li>
-            <li><i class="fa-solid fa-right-from-bracket"></i></li>
-        </ul>
-    </nav>
-    
-    <div class="searchbar-container">
+            <ul class="navbar-list">
+                <li>Figuritas</li>
+                <li>Sobres</li>
+                <li>Perfil</li>
+                <li><i class="fa-solid fa-right-from-bracket"></i></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="searchbar-container">
         <div class="searchbar">
-            <input type="text"  placeholder="Buscar...">
+            <input type="text" placeholder="Buscar...">
             <button type="submit"><i class="fa fa-search"></i></button>
-        
         </div>
-    </div>
+    </section>
 
-    <div class="main-container">
-        <div class="toolbox-container">
-            <div class="toolbox-header-container">
-                <p class="toolbox-header-container-title">Ordenar Por</p>
-            </div>
+    <main class="main-container">
+        <section class="toolbox-container">
+            <header class="toolbox-header-container">
+                <span class="toolbox-header-container-title">Ordenar Por</span>
+            </header>
             <div class="toolbox-content">
                 <div class="botonesRadio">
                     <div class="botonRadio-item">
@@ -65,290 +65,285 @@
                         <label for="sobresChoice4">Solo los más cercanos</label>
                     </div>
                 </div>
-            </div>            
-        </div>
-        <div class="sub-main-container">
+            </div>
+        </section>
+        <section class="sub-main-container">
             <!-- Super 1 -->
-            <div class="card-item">             
-                <div class="card-content">
-                    <div class="card-primeraParte">
+            <article class="card-item">
+                <section class="card-content">
+                    <header class="card-primeraParte">
                         <div class="card-primeraParte-titulo">
-                            <p class="card-detalles-highlight">Supermercado Chumbo</p>
+                            <span class="card-detalles-highlight">Supermercado Chumbo</span>
                             <i class="fa-solid fa-shop card-detalles-highlight"></i>
-                        </div>   
-                    </div>
+                        </div>
+                    </header>
                     <div class="card-segundaParte">
-                        <div class="card-detalles-container"> 
-                            
+                        <div class="card-detalles-container">
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Direccion</p>
-                                <p class="card-detalles-info">Avenida Siempre Viva 5555, Springfield</p>
+                                <span class="card-detalles-logo">Direccion</span>
+                                <span class="card-detalles-info">Avenida Siempre Viva 5555, Springfield</span>
                             </div>
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Ubicación geográfica</p>
-                                <p class="card-detalles-info">(34,55443; 44,42342)</p>
+                                <span class="card-detalles-logo">Ubicación geográfica</span>
+                                <span class="card-detalles-info">(34,55443; 44,42342)</span>
                             </div>
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Distancia</p>
-                                <p class="card-detalles-info">3 kilómetros</p>
-                            </div>     
+                                <span class="card-detalles-logo">Distancia</span>
+                                <span class="card-detalles-info">3 kilómetros</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="card-segundaParte">
+                    <div class="card-detalles-container">
+                        <div class="card-detalles-item2">
+                            <span class="card-detalles-logo">Stock de Sobres</span>
+                            <span class="card-detalles-info">45 unidades</span>
+                        </div>
+                        <div class="card-detalles-item2">
+                            <span class="card-detalles-info">Pedidos Pendientes</span>
                         </div>
                     </div>
                 </div>
                 <div class="card-segundaParte">
-                    <div class="card-detalles-container">           
+                    <div class="card-detalles-container-center">
                         <div class="card-detalles-item2">
-                            <p class="card-detalles-logo">Stock de Sobres</p>
-                            <p class="card-detalles-info">45 unidades</p>
-                        </div>
-                        <div class="card-detalles-item2">
-                            <p class="card-detalles-info">Pedidos Pendientes</p>
-                        </div>  
-                    </div>
-                </div>
-                <div class="card-segundaParte">
-                    <div class="card-detalles-container-center">           
-                        <div class="card-detalles-item2">
-                            <p class="card-detalles-item2">Precio por sobre $240</p>
+                            <span class="card-detalles-item2">Precio por sobre $240</span>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
             <!-- Super 2 -->
-            <div class="card-item">             
-                <div class="card-content">
-                    <div class="card-primeraParte">
+            <article class="card-item">
+                <section class="card-content">
+                    <header class="card-primeraParte">
                         <div class="card-primeraParte-titulo">
-                            <p class="card-detalles-highlight">Librería Jorge</p>
+                            <span class="card-detalles-highlight">Librería Jorge</span>
                             <i class="fa-solid fa-shop card-detalles-highlight"></i>
-                        </div>   
-                    </div>
+                        </div>
+                    </header>
                     <div class="card-segundaParte">
-                        <div class="card-detalles-container"> 
-                            
+                        <div class="card-detalles-container">
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Direccion</p>
-                                <p class="card-detalles-info">Avenida Siempre Viva 5555, Springfield</p>
+                                <span class="card-detalles-logo">Direccion</span>
+                                <span class="card-detalles-info">Avenida Siempre Viva 5555, Springfield</span>
                             </div>
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Ubicación geográfica</p>
-                                <p class="card-detalles-info">(34,55443; 44,42342)</p>
+                                <span class="card-detalles-logo">Ubicación geográfica</span>
+                                <span class="card-detalles-info">(34,55443; 44,42342)</span>
                             </div>
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Distancia</p>
-                                <p class="card-detalles-info">3 kilómetros</p>
-                            </div>     
+                                <span class="card-detalles-logo">Distancia</span>
+                                <span class="card-detalles-info">3 kilómetros</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="card-segundaParte">
+                    <div class="card-detalles-container">
+                        <div class="card-detalles-item2">
+                            <span class="card-detalles-logo">Stock de Sobres</span>
+                            <span class="card-detalles-info">45 unidades</span>
+                        </div>
+                        <div class="card-detalles-item2">
+                            <span class="card-detalles-info">Pedidos Pendientes</span>
                         </div>
                     </div>
                 </div>
                 <div class="card-segundaParte">
-                    <div class="card-detalles-container">           
+                    <div class="card-detalles-container-center">
                         <div class="card-detalles-item2">
-                            <p class="card-detalles-logo">Stock de Sobres</p>
-                            <p class="card-detalles-info">45 unidades</p>
-                        </div>
-                        <div class="card-detalles-item2">
-                            <p class="card-detalles-info">Pedidos Pendientes</p>
-                        </div>  
-                    </div>
-                </div>
-                <div class="card-segundaParte">
-                    <div class="card-detalles-container-center">           
-                        <div class="card-detalles-item2">
-                            <p class="card-detalles-item2">Precio por sobre $240</p>
+                            <span class="card-detalles-item2">Precio por sobre $240</span>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
             <!-- Super 3 -->
-            <div class="card-item">             
-                <div class="card-content">
-                    <div class="card-primeraParte">
+            <article class="card-item">
+                <section class="card-content">
+                    <header class="card-primeraParte">
                         <div class="card-primeraParte-titulo">
-                            <p class="card-detalles-highlight">Librería Jorge</p>
+                            <span class="card-detalles-highlight">Librería Jorge</span>
                             <i class="fa-solid fa-shop card-detalles-highlight"></i>
-                        </div>   
-                    </div>
+                        </div>
+                    </header>
                     <div class="card-segundaParte">
-                        <div class="card-detalles-container"> 
-                            
+                        <div class="card-detalles-container">
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Direccion</p>
-                                <p class="card-detalles-info">Avenida Siempre Viva 5555, Springfield</p>
+                                <span class="card-detalles-logo">Direccion</span>
+                                <span class="card-detalles-info">Avenida Siempre Viva 5555, Springfield</span>
                             </div>
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Ubicación geográfica</p>
-                                <p class="card-detalles-info">(34,55443; 44,42342)</p>
+                                <span class="card-detalles-logo">Ubicación geográfica</span>
+                                <span class="card-detalles-info">(34,55443; 44,42342)</span>
                             </div>
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Distancia</p>
-                                <p class="card-detalles-info">3 kilómetros</p>
-                            </div>     
+                                <span class="card-detalles-logo">Distancia</span>
+                                <span class="card-detalles-info">3 kilómetros</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="card-segundaParte">
+                    <div class="card-detalles-container">
+                        <div class="card-detalles-item2">
+                            <span class="card-detalles-logo">Stock de Sobres</span>
+                            <span class="card-detalles-info">45 unidades</span>
+                        </div>
+                        <div class="card-detalles-item2">
+                            <span class="card-detalles-info">Pedidos Pendientes</span>
                         </div>
                     </div>
                 </div>
                 <div class="card-segundaParte">
-                    <div class="card-detalles-container">           
+                    <div class="card-detalles-container-center">
                         <div class="card-detalles-item2">
-                            <p class="card-detalles-logo">Stock de Sobres</p>
-                            <p class="card-detalles-info">45 unidades</p>
-                        </div>
-                        <div class="card-detalles-item2">
-                            <p class="card-detalles-info">Pedidos Pendientes</p>
-                        </div>  
-                    </div>
-                </div>
-                <div class="card-segundaParte">
-                    <div class="card-detalles-container-center">           
-                        <div class="card-detalles-item2">
-                            <p class="card-detalles-item2">Precio por sobre $240</p>
+                            <span class="card-detalles-item2">Precio por sobre $240</span>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
             <!-- Super 4 -->
-            <div class="card-item">             
-                <div class="card-content">
-                    <div class="card-primeraParte">
+            <article class="card-item">
+                <section class="card-content">
+                    <header class="card-primeraParte">
                         <div class="card-primeraParte-titulo">
-                            <p class="card-detalles-highlight">Kiosko Lo Pibe!</p>
+                            <span class="card-detalles-highlight">Kiosko Lo Pibe!</span>
                             <i class="fa-solid fa-shop card-detalles-highlight"></i>
-                        </div>   
-                    </div>
+                        </div>
+                    </header>
                     <div class="card-segundaParte">
-                        <div class="card-detalles-container"> 
-                            
+                        <div class="card-detalles-container">
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Direccion</p>
-                                <p class="card-detalles-info">Avenida Siempre Viva 5555, Springfield</p>
+                                <span class="card-detalles-logo">Direccion</span>
+                                <span class="card-detalles-info">Avenida Siempre Viva 5555, Springfield</span>
                             </div>
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Ubicación geográfica</p>
-                                <p class="card-detalles-info">(34,55443; 44,42342)</p>
+                                <span class="card-detalles-logo">Ubicación geográfica</span>
+                                <span class="card-detalles-info">(34,55443; 44,42342)</span>
                             </div>
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Distancia</p>
-                                <p class="card-detalles-info">3 kilómetros</p>
-                            </div>     
+                                <span class="card-detalles-logo">Distancia</span>
+                                <span class="card-detalles-info">3 kilómetros</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="card-segundaParte">
+                    <div class="card-detalles-container">
+                        <div class="card-detalles-item2">
+                            <span class="card-detalles-logo">Stock de Sobres</span>
+                            <span class="card-detalles-info">45 unidades</span>
+                        </div>
+                        <div class="card-detalles-item2">
+                            <span class="card-detalles-info">Pedidos Pendientes</span>
                         </div>
                     </div>
                 </div>
                 <div class="card-segundaParte">
-                    <div class="card-detalles-container">           
+                    <div class="card-detalles-container-center">
                         <div class="card-detalles-item2">
-                            <p class="card-detalles-logo">Stock de Sobres</p>
-                            <p class="card-detalles-info">45 unidades</p>
-                        </div>
-                        <div class="card-detalles-item2">
-                            <p class="card-detalles-info">Pedidos Pendientes</p>
-                        </div>  
-                    </div>
-                </div>
-                <div class="card-segundaParte">
-                    <div class="card-detalles-container-center">           
-                        <div class="card-detalles-item2">
-                            <p class="card-detalles-item2">Precio por sobre $240</p>
+                            <span class="card-detalles-item2">Precio por sobre $240</span>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
             <!-- Super 5 -->
-            <div class="card-item">             
-                <div class="card-content">
-                    <div class="card-primeraParte">
+            <article class="card-item">
+                <section class="card-content">
+                    <header class="card-primeraParte">
                         <div class="card-primeraParte-titulo">
-                            <p class="card-detalles-highlight">Supermercado Chumbo</p>
+                            <span class="card-detalles-highlight">Supermercado Chumbo</span>
                             <i class="fa-solid fa-shop card-detalles-highlight"></i>
-                        </div>   
-                    </div>
+                        </div>
+                    </header>
                     <div class="card-segundaParte">
-                        <div class="card-detalles-container"> 
-                            
+                        <div class="card-detalles-container">
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Direccion</p>
-                                <p class="card-detalles-info">Avenida Siempre Viva 5555, Springfield</p>
+                                <span class="card-detalles-logo">Direccion</span>
+                                <span class="card-detalles-info">Avenida Siempre Viva 5555, Springfield</span>
                             </div>
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Ubicación geográfica</p>
-                                <p class="card-detalles-info">(34,55443; 44,42342)</p>
+                                <span class="card-detalles-logo">Ubicación geográfica</span>
+                                <span class="card-detalles-info">(34,55443; 44,42342)</span>
                             </div>
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Distancia</p>
-                                <p class="card-detalles-info">3 kilómetros</p>
-                            </div>     
+                                <span class="card-detalles-logo">Distancia</span>
+                                <span class="card-detalles-info">3 kilómetros</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="card-segundaParte">
+                    <div class="card-detalles-container">
+                        <div class="card-detalles-item2">
+                            <span class="card-detalles-logo">Stock de Sobres</span>
+                            <span class="card-detalles-info">45 unidades</span>
+                        </div>
+                        <div class="card-detalles-item2">
+                            <span class="card-detalles-info">Pedidos Pendientes</span>
                         </div>
                     </div>
                 </div>
                 <div class="card-segundaParte">
-                    <div class="card-detalles-container">           
+                    <div class="card-detalles-container-center">
                         <div class="card-detalles-item2">
-                            <p class="card-detalles-logo">Stock de Sobres</p>
-                            <p class="card-detalles-info">45 unidades</p>
-                        </div>
-                        <div class="card-detalles-item2">
-                            <p class="card-detalles-info">Pedidos Pendientes</p>
-                        </div>  
-                    </div>
-                </div>
-                <div class="card-segundaParte">
-                    <div class="card-detalles-container-center">           
-                        <div class="card-detalles-item2">
-                            <p class="card-detalles-item2">Precio por sobre $240</p>
+                            <span class="card-detalles-item2">Precio por sobre $240</span>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
             <!-- Super 6 -->
-            <div class="card-item">             
-                <div class="card-content">
-                    <div class="card-primeraParte">
+            <article class="card-item">
+                <section class="card-content">
+                    <header class="card-primeraParte">
                         <div class="card-primeraParte-titulo">
-                            <p class="card-detalles-highlight">Kiosko Lo Pibe!</p>
+                            <span class="card-detalles-highlight">Kiosko Lo Pibe!</span>
                             <i class="fa-solid fa-shop card-detalles-highlight"></i>
-                        </div>   
-                    </div>
+                        </div>
+                    </header>
                     <div class="card-segundaParte">
-                        <div class="card-detalles-container"> 
-                            
+                        <div class="card-detalles-container">
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Direccion</p>
-                                <p class="card-detalles-info">Avenida Siempre Viva 5555, Springfield</p>
+                                <span class="card-detalles-logo">Direccion</span>
+                                <span class="card-detalles-info">Avenida Siempre Viva 5555, Springfield</span>
                             </div>
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Ubicación geográfica</p>
-                                <p class="card-detalles-info">(34,55443; 44,42342)</p>
+                                <span class="card-detalles-logo">Ubicación geográfica</span>
+                                <span class="card-detalles-info">(34,55443; 44,42342)</span>
                             </div>
                             <div class="card-detalles-item2">
-                                <p class="card-detalles-logo">Distancia</p>
-                                <p class="card-detalles-info">3 kilómetros</p>
-                            </div>     
+                                <span class="card-detalles-logo">Distancia</span>
+                                <span class="card-detalles-info">3 kilómetros</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="card-segundaParte">
+                    <div class="card-detalles-container">
+                        <div class="card-detalles-item2">
+                            <span class="card-detalles-logo">Stock de Sobres</span>
+                            <span class="card-detalles-info">45 unidades</span>
+                        </div>
+                        <div class="card-detalles-item2">
+                            <span class="card-detalles-info">Pedidos Pendientes</span>
                         </div>
                     </div>
                 </div>
                 <div class="card-segundaParte">
-                    <div class="card-detalles-container">           
+                    <div class="card-detalles-container-center">
                         <div class="card-detalles-item2">
-                            <p class="card-detalles-logo">Stock de Sobres</p>
-                            <p class="card-detalles-info">45 unidades</p>
-                        </div>
-                        <div class="card-detalles-item2">
-                            <p class="card-detalles-info">Pedidos Pendientes</p>
-                        </div>  
-                    </div>
-                </div>
-                <div class="card-segundaParte">
-                    <div class="card-detalles-container-center">           
-                        <div class="card-detalles-item2">
-                            <p class="card-detalles-item2">Precio por sobre $240</p>
+                            <span class="card-detalles-item2">Precio por sobre $240</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>  
-    </div>       
+            </article>
+        </section>
+    </main>
+
     <footer class="footer-container">
         <i class="fa-brands fa-square-facebook"></i>
-        <p>WorldCApp / 2023</p>
+        <span>WorldCApp / 2023</span>
     </footer>
 </body>
 </html>
