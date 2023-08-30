@@ -1,12 +1,13 @@
 .login-title {
     font-size: 2.8rem;
     color: var(--fourth-colour);
-    font-family: "Cinzel Decorative", cursive;
+    font-family: 'Exo', sans-serif;
 }
 
 
 .main-container{
     background-color: var(--primary-colour);
+    margin-top: 0;
 }
 
 .sub-main-container {

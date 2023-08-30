@@ -63,7 +63,7 @@
 .card-detalles-item3{
     display: flex;
     gap: 0.3em;
-    font-size: 0.9em;
+    font-size: 1.2em;
 }
 
 .card-content{
@@ -158,6 +158,16 @@
         overflow: hidden;
         object-fit: cover;
         
+    }
+
+    .card-detalles-item{
+        font-size: 1.3em;
+    }
+    
+    
+
+    .card-detalles-info{
+        font-size: 1em;
     }
     
 }
