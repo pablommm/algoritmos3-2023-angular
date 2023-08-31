@@ -1,128 +1,290 @@
+
 .sub-main-container {
-    flex-direction: row;
-}
-
-.card-item {
-    display: grid;
-    grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
-    grid-template-columns: 1fr;
-    /* max-height: 70rem; */
-    /* max-width: 10rem; */
-    background-color: aquamarine;
-    transition: font-size 0.5s ease-in-out;
-}
-
-.card-header-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: slategrey;
-    font-size: 2em;
-    /* max-height: 5rem; */
-}
-
-.card-imagen{
-    max-width: 100%; 
-    max-height: 15em;
-    padding-left: 0.5em; 
-    padding-right: 0.5em; 
-}
-
-.card-detalles-container {
-    display: flex;
-    flex-direction: column;
-    /* flex-grow: 1; */
-    gap: 1em;
+    width: 80%;
+    height: 100%;
+    
     padding: 1em;
-}
-
-.card-detalles-item   {
+    margin-top: 20px;
+  }
+  
+  .profile {
+    width: 100%;
+    background-color: var(--primary-colour);
+    margin-top: 3em;
     display: flex;
-    gap: 0.3em;
-}
-
-.card-detalles-logo {
-    display: flex;
-    gap: 0.2em;
-    font-weight: bold;
+    flex-direction: column;
     align-items: center;
-}
-
-.card-detalles-center {
-    align-self: center;
-    gap: 1em;
-}
-
-.card-logos-container {
+  }
+  
+  .imagen_perfil{
+    width: 9em;
+    height: 9em;
+    margin: 1em;
+    object-fit: cover; /* Ajusta la imagen para llenar el contenedor */
+    border: 0.2em solid var(--third-colour);
+    border-radius: 50%;
+    
+  }
+  
+  .informacion {
+    display: grid;
+    grid-template-columns: repeat(1, 10em);
+    margin-top: 10px;
+    text-align: center;
+    font-size:large;
+  }
+  
+  .formulario {
+    display: grid;
+    gap: 10px 20px;
+  }
+  
+  .Subtitulo {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  
+  .formulario input,
+  .select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0.5em 0.5em 0.1em rgba(0, 0, 0, 0.2); /* Valores de sombra */
+    padding: 20px; 
+    border-radius: 5px; 
+  }
+  
+  .formulario input:focus,
+  .formulario select:focus {
+    box-shadow: 0.5em 0.5em 0.15em rgba(0, 0, 0, 0.7); /* x y enfoque expansion */
+    border: 0.1em solid #e71fd3; 
+    outline: none; 
+  }
+  
+  
+  .tabs-container {
     display: flex;
-    justify-content: space-evenly;
-    gap: 0.5em;
-}
-
-.card-primeraParte {
-    background-color: slateblue;
-    font-size: 1.3em;
-}
-
-.card-segundaParte {
-    background-color: lightgreen;
-}
-
-@media (min-width:401px) {
-
-    .card-header-container {
-        flex-direction: row;
-        font-size: 1.6em;
+    padding: 1em;
+    flex-direction:column ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: var(--color-secundario);
+  }
+  
+  .informacion span {
+    
+    margin-bottom: 10px;
+  }
+   .info-datos-personales{
+    font-weight: bold;
+   }
+  
+  
+  /* version mobile*/
+  @media (max-width: 400px) {
+    .formulario {
+      grid-template-columns: 1fr;
     }
-
-    .card-detalles-container {
-        display: grid;
-        /* grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr)); */
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        font-size: .8em;
+  
+    .Informacion-General {
+      grid-template-columns: 1fr;
     }
-
-    .card-primeraParte {
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: repeat(2, 1fr);
-        font-size: 1.3em;
+  
+    .columna-izquierda,
+    .columna-derecha {
+      grid-column: auto;
+      width: 100%;
     }
-
-    .card-imagen {
-        overflow: hidden;
-        object-fit: cover;
-        min-width: 100%;
-        min-height: 90%;
-        align-self: center;
-        justify-self: center;
+  
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      margin-top: 20px;
     }
-
-    .card-detalles-item {
-        flex-direction: column;
+  
+    .card-item{
+      width: 105%;
     }
-
-    .card-detalles-grow {
-        flex-direction: row;
-        justify-self: center;
-        align-self: center;
-        grid-column: 1/3;
+  
+    .tab{
+      display: none;
     }
-
-}
-
-@media (min-width:769px) {
-    .card-detalles-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        font-size: 0.9em;
+  
+    .tab-elegido{
+      font-size: 2em;
     }
-
-    .card-detalles-item {
-        flex-direction: row;
+  
+  
+  
+  }
+  /* version tablet*/
+  @media (min-width: 401px)  {
+    .profile{
+      margin-top: 3em;
     }
-}
+    .columna-izquierda {
+      grid-column: 1;
+    }
+  
+    .columna-derecha {
+      grid-column: 2;
+    }
+  
+    .Informacion-Perfil {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+  
+    .Informacion-General,
+    .Direccion,
+    .Ubicacion--Geografica {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  
+    .Informacion-General {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  
+    .columna-izquierda {
+      grid-column: 1;
+    }
+  
+    .columna-derecha {
+      grid-column: 2;
+    }
+    
+    .card-item{
+      width: 90%;
+    }
+    .Distancia {
+      width: 209%;
+    }
+    .tabs-container {
+      display: flex;
+      flex-direction:row ;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      background-color: var(--color-secundario);
+    }
+    
+    .tab {
+      font-size: 1em;
+      padding: 1em;      
+      border-bottom: 0.2em solid gray;
+    }
+  
+    .tab-elegido{
+      font-size: 1em;
+      padding: 1em;      
+      border-bottom: 0.5em solid gray;
+    }
+   
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+  }
+  
+  
+  /* version desktop*/
+  @media (min-width: 769px) {
+    .main-container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100vh;
+    }
+  
+    .sub-main-container { 
+      background-color: var(--color-secundario);   
+      margin-top: 0;
+    }
+  
+    .Criterio-De-Cambio .select,
+    .Distancia {
+      grid-column: 1 / span 2;
+      width: 48%;
+      margin-bottom: 10px;
+    }
+  
+    .profile {
+      width: 20%;
+      height: inherit;
+      background-color: var(--primary-colour);
+      margin-top: 2em;
+      margin-bottom: -1em;
+    }
+  
+  
+  
+    .columna-izquierda {
+      grid-column: 1;
+    }
+  
+    .columna-derecha {
+      grid-column: 2;
+    }
+  
+    .columna-izquierda,
+    .columna-derecha {
+      grid-column: auto;
+      width: 100%;
+    }
+  
+    .Informacion-General,
+    .Direccion,
+    .Ubicacion--Geografica {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  
+    .Distancia {
+      width: 100%;
+    }
+  
+    .tabs-container {
+      font-size: 2em;
+      display: flex;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      background-color: var(--color-secundario);
+    }
+  
+    .tab {
+      font-size: 1.5rem;
+      padding: 1em;      
+      border-bottom: 0.2em solid gray;
+    }
+    .tab-elegido {
+      font-size: 1.5rem;
+      padding: 1em;      
+      border-bottom: 0.5em solid gray;
+    }
+  
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+  
+    .card-item {
+      width: 100% !important;
+      height: max-content;
+      font-size: 1.1rem;
+    }
+  
+  
+  }

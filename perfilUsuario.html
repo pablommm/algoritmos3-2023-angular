@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>detallesFigurita</title>
+    <title>Perfil-usuario-formulario</title>
     <script src="https://kit.fontawesome.com/e0d6dd6321.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="./css/test.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/input.css">
     <link rel="stylesheet" href="./css/button.css">
-    <!-- <link rel="stylesheet" href="./css/cards.css"> -->
+    <link rel="stylesheet" href="./css/cards.css">
     <link rel="stylesheet" href="./css/icons.css">
-    <!-- <link rel="stylesheet" href="./css/detallesFigurita.css"> -->
+    <link rel="stylesheet" href="./css/checkbox.css">
+    <link rel="stylesheet" href="./css/searchbar.css">
+    <link rel="stylesheet" href="./css/toolbox.css">
+    <link rel="stylesheet" href="./css/detallesFigurita.css">
+    <link rel="stylesheet" href="./css/busquedaFiguritas.css">
     <link rel="stylesheet" href="./css/perfilUsuario.css">
+
 </head>
+
 <body>
     <nav class="navbar-container">
-        <p>WorldCApp</p>
+        <span>WorldCApp</span>
         <i class="fa-solid fa-bars burger"></i>
 
         <ul class="navbar-list">
@@ -30,102 +36,107 @@
     </nav>
 
     <div class="main-container">
-        <div class="sub-main-container">
-            <!-- Figurita 4 -->
-            <div class="card-item">
-                <div class="card-header-container">
-                    <p class="card-nombre">Lionel Messi</p>
-                    <p>(de Carlos Raffo)</p>
-                    <div class="card-logos-container">
-                        <i class="fa-solid fa-fire fire"></i>
-                        <i class="fa-solid fa-id-badge"></i>
-                        <p>5</p>
-                    </div>
-                
+        <div class="profile">
+
+            <img src="img/scaloni.jpg" class="imagen_perfil">
+            <div class="informacion">
+                <div>
+                    <span class="info-datos-personales">Nombre de usuario </span> <i class="fa-solid fa-pencil"></i>
                 </div>
-                
-                <div class="card-content">
-                    <div class="card-primeraParte">
-                        <img src="img/messi.jpg" class="card-imagen">
-                    
-                        <div class="card-detalles-container">
-                            <div class="card-detalles-item">
-                                <div class="card-detalles-logo">
-                                    <i class="fa-solid fa-weight-scale"></i>
-                                    <p>Peso</p>
-                                </div>
-                                <p class="card-detalles-info">72 kilos</p>
-                            </div>
-                            <div class="card-detalles-item">
-                                <div class="card-detalles-logo">
-                                    <i class="fa-solid fa-ruler"></i>
-                                    <p>Altura</p>
-                                </div>
-                                <p class="card-detalles-info">1.7 mts</p>
-                            </div>
-                            <div class="card-detalles-item card-detalles-grow">
-                                <p class="card-detalles-logo">Nacimiento</p>
-                                <p class="card-detalles-info">24/06/1987 (36 años)</p>
-                            </div>
-                            <div class="card-detalles-item">
-                                <p class="card-detalles-logo">Casaca</p>
-                                <p class="card-detalles-info">10</p>
-                            </div>
-                            <div class="card-detalles-item">
-                                <p class="card-detalles-logo">Seleccion</p>
-                                <p class="card-detalles-info">Argentina (<i class="fa-solid fa-trophy"></i> 3)</p>
-                            </div>
-                            <div class="card-detalles-item">
-                                <p class="card-detalles-logo">Año debut</p>
-                                <p class="card-detalles-info">2005</p>
-                            </div>
-                            <div class="card-detalles-item">
-                                <p class="card-detalles-info">CONMEBOL (<i class="fa-solid fa-trophy"></i> 3)</p>
-                            </div>
-                            <div class="card-detalles-item">
-                                <p class="card-detalles-logo">Posición</p>
-                                <p class="card-detalles-info">Delantero</p>
-                            </div>
-                            <div class="card-detalles-item">
-                                <p class="card-detalles-logo">Es líder</p>
-                            </div>
-                            <div class="card-detalles-item  card-detalles-highlight card-detalles-center card-detalles-grow">
-                                <p class="card-detalles-logo">Cotización USD 80.000.000</p>
-                            </div>
-                        </div>
+
+                <div>
+                    <span class="info-datos-personales">Edad: </span>
+                    <span>84</span>
+                </div>
+
+                <div>
+                    <span class="info-datos-personales">Ubicación:</span>
+                    <span>Argentina</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="sub-main-container">
+            <div class="tabs-container">
+                <span class="tab-elegido" >Informacion del Perfil</span>
+                <span class="tab">Figuritas Repetidas</span>
+                <span class="tab">Figuritas Faltantes</span>
+            </div>
+            <div class="formulario">
+                <span class="Subtitulo">Informacion General</span>
+
+                <div class="Informacion-General">
+                    <div class="columna-izquierda">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" placeholder="Nombre">
+                        <label for="Apellido">Apellido</label>
+                        <input type="text" placeholder="Apellido">
                     </div>
-                    <div class="card-segundaParte">
-                        <div class="card-detalles-container card-valoracion-container">
-                            <div class="card-detalles-item card-detalles-highlight">
-                                <p class="card-detalles-logo">Nivel de impresión</p>
-                                <p class="card-detalles-info">Bajo</p>
-                            </div>
-                            <div class="card-detalles-item card-detalles-highlight">
-                                <p class="card-detalles-logo">Valoración Base</p>
-                                <p class="card-detalles-info">102</p>
-                            </div>
-                            <div class="card-detalles-item card-detalles-highlight">
-                                <p class="card-detalles-logo">Valoración Total</p>
-                                <p class="card-detalles-info">124</p>
-                            </div>
-                        </div>
+                    <div class="columna-derecha">
+                        <label for="Correo Electronico">Correo Electronico</label>
+                        <input type="email" placeholder="Correo Electronico">
+                        <label for="Fecha de nacimiento">Fecha de nacimiento</label>
+                        <input type="date" placeholder="Fecha de nacimiento">
                     </div>
-                    <div class="button-container">
-                        <button class="secondary-button">
-                            Volver
-                        </button>
-                        <button class="primary-button">
-                            Solicitar
-                        </button>
+                </div>
+                <span class="Subtitulo">Direccion</span>
+                <div class=" Direccion">
+                    <div class="columna-izquierda">
+                        <label for="Provincia">Provincia</label>
+                        <form action="Provincia">
+                            <select class="select">
+                                <option value="seleccione">Seleccione una opción</option>
+                            </select>
+                        </form>
+                        <label for="Calle">Calle</label>
+                        <input type="text" placeholder="Calle">
                     </div>
+                    <div class="columna-derecha">
+                        <label for="Localidad">Localidad</label>
+                        <form action="Localidad">
+                            <select class="select">
+                                <option value="seleccione">Seleccione una opción</option>
+                            </select>
+                        </form>
+                        <label for="Altura">Altura</label>
+                        <input type="number" placeholder="Altura">
+                    </div>
+                </div>
+                <span class="Subtitulo">Ubicacion Geografica</span>
+                <div class="Ubicacion--Geografica">
+                    <div class="columna-izquierda">
+                        <label for="PosiciónX">Posición X</label>
+                        <input type="number" placeholder="Posición X">
+                    </div>
+                    <div class="columna-derecha">
+                        <label for="PosiciónY">Posición Y</label>
+                        <input type="number" placeholder="Posición y">
+                    </div>
+                    <div class="Distancia">
+                        <label for="DistanciaMaxima">Distancia Maxima de Cercania</label>
+                        <input type="number" placeholder="Distancia Maxima de Cercania">
+                    </div>
+                </div>
+                <span class="Subtitulo">Criterio Para el Cambio</span>
+                <div class="Criterio-De-Cambio">
+                    <label for="Criterio">Criterio</label>
+                    <form action="Criterios">
+                        <select class="select">
+                            <option value="nonee">none</option>
+                        </select>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 
     <footer class="footer-container">
         <i class="fa-brands fa-square-facebook"></i>
-        <p>WorldCApp / 2023</p>
+        <span>WorldCApp / 2023</span>
     </footer>
 </body>
+
 </html>

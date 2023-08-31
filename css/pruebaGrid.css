@@ -1,0 +1,128 @@
+.sub-main-container {
+    flex-direction: row;
+}
+
+.card-item {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+    grid-template-columns: 1fr;
+    /* max-height: 70rem; */
+    /* max-width: 10rem; */
+    background-color: aquamarine;
+    transition: font-size 0.5s ease-in-out;
+}
+
+.card-header-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: slategrey;
+    font-size: 2em;
+    /* max-height: 5rem; */
+}
+
+.card-imagen{
+    max-width: 100%; 
+    max-height: 15em;
+    padding-left: 0.5em; 
+    padding-right: 0.5em; 
+}
+
+.card-detalles-container {
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1; */
+    gap: 1em;
+    padding: 1em;
+}
+
+.card-detalles-item   {
+    display: flex;
+    gap: 0.3em;
+}
+
+.card-detalles-logo {
+    display: flex;
+    gap: 0.2em;
+    font-weight: bold;
+    align-items: center;
+}
+
+.card-detalles-center {
+    align-self: center;
+    gap: 1em;
+}
+
+.card-logos-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.5em;
+}
+
+.card-primeraParte {
+    background-color: slateblue;
+    font-size: 1.3em;
+}
+
+.card-segundaParte {
+    background-color: lightgreen;
+}
+
+@media (min-width:401px) {
+
+    .card-header-container {
+        flex-direction: row;
+        font-size: 1.6em;
+    }
+
+    .card-detalles-container {
+        display: grid;
+        /* grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr)); */
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        font-size: .8em;
+    }
+
+    .card-primeraParte {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 1.3em;
+    }
+
+    .card-imagen {
+        overflow: hidden;
+        object-fit: cover;
+        min-width: 100%;
+        min-height: 90%;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .card-detalles-item {
+        flex-direction: column;
+    }
+
+    .card-detalles-grow {
+        flex-direction: row;
+        justify-self: center;
+        align-self: center;
+        grid-column: 1/3;
+    }
+
+}
+
+@media (min-width:769px) {
+    .card-detalles-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        font-size: 0.9em;
+    }
+
+    .card-detalles-item {
+        flex-direction: row;
+    }
+}
