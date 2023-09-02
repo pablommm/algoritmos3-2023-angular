@@ -1,204 +1,199 @@
-
-
 .sub-main-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    /* height: 100%; */
-    /* padding: 1em; */
-    /* margin-top: 1em; */
-  }
-  
-  .profile {
-    width: 100%;
-    /* height: 100vh; */
-    background-color: var(--primary-colour);
-    margin-top: 3em;
-    padding-bottom: 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .imagen_perfil{
-    width: 9em;
-    height: 9em;
-    margin: 1em;
-    object-fit: cover; /* Ajusta la imagen para llenar el contenedor */
-    border: 0.2em solid var(--third-colour);
-    border-radius: 50%;
-    
-  }
-  
-  .informacion {
-    display: grid;
-    grid-template-columns: repeat(1, 10em);
-    /* margin-top: 10px; */
-    text-align: center;
-    /* font-size:large; */
-  }
-  
-  .formulario {
-    display: grid;
-    /* gap: 10px 20px; */
-    grid-template-columns: 1fr;
-  }
-  
-  .subtitulo {
-    font-size: 1.6rem;
-    text-align: center;
-  }
-  
-  .formulario input,
-  .select {
-    width: 100%;
-    /* padding: 10px; */
-    /* border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  /* height: 100%; */
+  /* padding: 1em; */
+  /* margin-top: 1em; */
+}
+
+.profile {
+  width: 100%;
+  /* height: 100vh; */ 
+  overflow-y: auto;
+  background-color: var(--primary-colour);
+  margin-top: 3em;
+  padding-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagen_perfil {
+  width: 9em;
+  height: 9em;
+  margin: 1em;
+  object-fit: cover; /* Ajusta la imagen para llenar el contenedor */
+  border: 0.2em solid var(--third-colour);
+  border-radius: 50%;
+}
+
+.informacion {
+  display: grid;
+  grid-template-columns: repeat(1, 10em);
+  /* margin-top: 10px; */
+  text-align: center;
+  /* font-size:large; */
+}
+
+.formulario {
+  display: grid;
+  /* gap: 10px 20px; */
+  grid-template-columns: 1fr;
+}
+
+.subtitulo {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.formulario input,
+.select {
+  width: 100%;
+  /* padding: 10px; */
+  /* border: 1px solid #ccc;
     border-radius: 3px; */
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    box-shadow: 0.5em 0.5em 0.1em rgba(0, 0, 0, 0.2); /* Valores de sombra */
-    /* padding: 20px;  */
-    /* border-radius: 5px;  */
-  }
-  
-  .formulario input:focus,
-  .formulario select:focus {
-    box-shadow: 0.5em 0.5em 0.15em rgba(0, 0, 0, 0.7); /* x y enfoque expansion */
-    border: 0.1em solid #e71fd3; 
-    outline: none; 
-  }
-  
-  
-  .tabs-container {
-    display: flex;
-    margin: 1em;
-    /* flex-direction:column ; */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* justify-content: flex-end;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0.5em 0.5em 0.1em rgba(0, 0, 0, 0.2); /* Valores de sombra */
+  /* padding: 20px;  */
+  /* border-radius: 5px;  */
+}
+
+.formulario input:focus,
+.formulario select:focus {
+  box-shadow: 0.5em 0.5em 0.15em rgba(0, 0, 0, 0.7); /* x y enfoque expansion */
+  border: 0.1em solid #e71fd3;
+  outline: none;
+}
+
+.tabs-container {
+  display: flex;
+  margin: 1em;
+  /* flex-direction:column ; */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* justify-content: flex-end;
     align-items: flex-start; */
-    background-color: var(--color-secundario);
-    text-align: center;
-  }
-  
-  .informacion span {
-    
-    /* margin-bottom: 10px; */
-  }
-   .info-datos-personales{
-    font-weight: bold;
-   }
-  
-  .Informacion-General {
-    grid-template-columns: 1fr;
-  }
-   
-  .columna-izquierda,
-  .columna-derecha {
-     grid-column: auto;
-     width: 100%;
-   }
+  background-color: var(--color-secundario);
+  text-align: center;
+}
 
-  .card-grid {
-     display: grid;
-     grid-template-columns: 1fr;
-     place-items: center;
-     /* gap: 20px;
+.informacion span {
+  /* margin-bottom: 10px; */
+}
+.info-datos-personales {
+  font-weight: bold;
+}
+
+.Informacion-General {
+  grid-template-columns: 1fr;
+}
+
+.columna-izquierda,
+.columna-derecha {
+  grid-column: auto;
+  width: 100%;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  /* gap: 20px;
      margin-top: 20px; */
-   }
+}
 
- /*  .card-item{
+/*  .card-item{
      width: 100%;
    } */
-  /* version mobile*/
-  
-  .tab{
-    display: none;
+/* version mobile*/
+
+.tab {
+  display: none;
+}
+
+.tab-elegido {
+  font-size: 2em;
+}
+
+/* version tablet*/
+@media (min-width: 401px) {
+  .profile {
+    margin-top: 3em;
+  }
+  .columna-izquierda {
+    grid-column: 1;
   }
 
-  .tab-elegido{
-    font-size: 2em;
+  .columna-derecha {
+    grid-column: 2;
   }
 
+  .Informacion-Perfil {
+    font-size: 1.3rem;
+    text-align: center;
+  }
 
-  /* version tablet*/
-  @media (min-width: 401px)  {
-    .profile{
-      margin-top: 3em;
-    }
-    .columna-izquierda {
-      grid-column: 1;
-    }
-  
-    .columna-derecha {
-      grid-column: 2;
-    }
-  
-    .Informacion-Perfil {
-      font-size: 1.3rem;
-      text-align: center;
-    }
-  
-    .Informacion-General,
-    .Direccion,
-    .Ubicacion--Geografica {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      /* gap: 20px; */
-    }
-  
-    .Informacion-General {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      /* gap: 20px; */
-    }
-  
-    .columna-izquierda {
-      grid-column: 1;
-    }
-  
-    .columna-derecha {
-      grid-column: 2;
-    }
-    
-    .card-item{
-      width: 90%;
-    }
-    .Distancia {
-      width: 209%;
-    }
-    .tabs-container {
-      display: flex;
-      flex-direction:row ;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      background-color: var(--color-secundario);
-    }
-    
-    .tab {
-      display: inline;
-      font-size: 1em;
-      padding: 1em;      
-      border-bottom: 0.2em solid gray;
-    }
-  
-    .tab-elegido{
-      font-size: 1em;
-      padding: 1em;      
-      border-bottom: 0.5em solid gray;
-    }
-   
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      /* gap: 20px;
+  .Informacion-General,
+  .Direccion,
+  .Ubicacion--Geografica {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 20px; */
+  }
+
+  .Informacion-General {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 20px; */
+  }
+
+  .columna-izquierda {
+    grid-column: 1;
+  }
+
+  .columna-derecha {
+    grid-column: 2;
+  }
+
+  .card-item {
+    width: 90%;
+  }
+  .Distancia {
+    width: 209%;
+  }
+  .tabs-container {
+    display: flex;
+    flex-direction: row;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-color: var(--color-secundario);
+  }
+
+  .tab {
+    display: inline;
+    font-size: 1em;
+    padding: 1em;
+    border-bottom: 0.2em solid gray;
+  }
+
+  .tab-elegido {
+    font-size: 1em;
+    padding: 1em;
+    border-bottom: 0.5em solid gray;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 20px;
       margin-top: 20px; */
-    }
   }
-  
-  
-  /* version desktop*/
-  @media (min-width: 769px) {
-    /* .main-container {
+}
+
+/* version desktop*/
+@media (min-width: 769px) {
+  /* .main-container {
       display: flex;
       flex-direction: row;
       width: 100%;
@@ -208,82 +203,79 @@
       background-color: var(--color-secundario);   
       margin-top: 0;
     } */
-  
-    .Criterio-De-Cambio .select,
-    .Distancia {
-      grid-column: 1 / span 2;
-      width: 48%;
-      /* margin-bottom: 10px; */
-    }
-  
-    .profile {
-      width: 20%;
-      height: 100vh;
-      background-color: var(--primary-colour);
-      margin-top: 2em;
-      margin-bottom: -1em;
-    }
-  
-  
-  
-    .columna-izquierda {
-      grid-column: 1;
-    }
-  
-    .columna-derecha {
-      grid-column: 2;
-    }
-  
-    .columna-izquierda,
-    .columna-derecha {
-      grid-column: auto;
-      width: 100%;
-    }
-  
-    .Informacion-General,
-    .Direccion,
-    .Ubicacion--Geografica {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      /* gap: 20px; */
-    }
-  
-    .Distancia {
-      width: 100%;
-    }
-  
-    .tabs-container {
-      /* font-size: 2em; */
-      display: flex;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      background-color: var(--color-secundario);
-    }
-  
-    .tab, .tab-elegido {
-      font-size: 1.5rem;
-      padding: 1em;      
-    }
-    
-    .tab {
-      border-bottom: 0.2em solid gray;
-    }
 
-    .tab-elegido {
-      border-bottom: 0.5em solid gray;
-    }
-  
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      /* gap: 20px;
-      margin-top: 20px; */
-    }
-  
-    .card-item {
-      /* width: 100% !important; */
-      height: max-content;
-      /* font-size: 1em; */
-    }
-  
-  
+  .Criterio-De-Cambio .select,
+  .Distancia {
+    grid-column: 1 / span 2;
+    width: 48%;
+    /* margin-bottom: 10px; */
   }
+
+  .profile {
+    width: 20%;
+    height: 100vh;
+    background-color: var(--primary-colour);
+    margin-top: 2em;
+    margin-bottom: -1em;
+  }
+
+  .columna-izquierda {
+    grid-column: 1;
+  }
+
+  .columna-derecha {
+    grid-column: 2;
+  }
+
+  .columna-izquierda,
+  .columna-derecha {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .Informacion-General,
+  .Direccion,
+  .Ubicacion--Geografica {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 20px; */
+  }
+
+  .Distancia {
+    width: 100%;
+  }
+
+  .tabs-container {
+    /* font-size: 2em; */
+    display: flex;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-color: var(--color-secundario);
+  }
+
+  .tab,
+  .tab-elegido {
+    font-size: 1.5rem;
+    padding: 1em;
+  }
+
+  .tab {
+    border-bottom: 0.2em solid gray;
+  }
+
+  .tab-elegido {
+    border-bottom: 0.5em solid gray;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 20px;
+      margin-top: 20px; */
+  }
+
+  .card-item {
+    /* width: 100% !important; */
+    height: max-content;
+    /* font-size: 1em; */
+  }
+}
