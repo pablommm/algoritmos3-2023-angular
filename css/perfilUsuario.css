@@ -1,6 +1,6 @@
 .sub-main-container {
   padding: 1em;
-}
+  }
 
 .profile {
   width: 100%;
@@ -15,7 +15,7 @@
   width: 9em;
   height: 9em;
   margin: 1em;
-  object-fit: cover; /* Ajusta la imagen para llenar el contenedor */
+  object-fit: cover; 
   border: 0.2em solid var(--third-colour);
   border-radius: 50%;
   
@@ -24,7 +24,6 @@
 .informacion {
   display: grid;
   grid-template-columns: repeat(1, 10em);
-  margin-top: 0.5rem;
   text-align: center;
   font-size:large;
 }
@@ -80,6 +79,29 @@
   font-weight: bold;
  }
 
+ .tab, .tab-elegido {
+  font-size: 1em;
+  padding: 1em;      
+  border-bottom: 0.2em solid gray;
+}
+
+.tab-elegido{    
+  border-bottom: 0.5em solid gray;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1em;
+  margin-top: 1em;
+  width: 90%;
+}
+
+.Informacion-General,.Direccion,.Ubicacion--Geografica,.Informacion-General {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1em;
+}
 
 /* version mobile*/
 @media (max-width: 400px) {
@@ -91,17 +113,9 @@
     grid-template-columns: 1fr;
   }
 
-  .columna-izquierda,
-  .columna-derecha {
+  .columna-izquierda, .columna-derecha {
     grid-column: auto;
     width: 100%;
-  }
-
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-    margin-top: 20px;
   }
 
   .card-item{
@@ -113,12 +127,10 @@
   }
 
   .tab-elegido{
-    font-size: 2em;
+    font-size: 1em;
   }
-
-
-
 }
+
 /* version tablet*/
 @media (min-width: 401px)  {
   .profile{
@@ -129,52 +141,23 @@
     font-size: 1.3rem;
     text-align: center;
   }
-
-  .Informacion-General,
-  .Direccion,
-  .Ubicacion--Geografica {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  .Informacion-General,.Direccion,.Ubicacion--Geografica,.Informacion-General {
+     grid-template-columns: repeat(2, 1fr);
   }
 
-  .Informacion-General {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
 
-  
   .card-item{
     width: 90%;
   }
   .Distancia {
-    width: 209%;
+    width: 205%;
   }
   .tabs-container {
-    display: flex;
     flex-direction:row ;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: var(--color-secundario);
   }
   
-  .tab {
-    font-size: 1em;
-    padding: 1em;      
-    border-bottom: 0.2em solid gray;
-  }
-
-  .tab-elegido{
-    font-size: 1em;
-    padding: 1em;      
-    border-bottom: 0.5em solid gray;
-  }
- 
   .card-grid {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 20px;
   }
 }
 
@@ -182,29 +165,21 @@
 /* version desktop*/
 @media (min-width: 769px) {
   .main-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
     height: 100vh;
   }
 
-  .sub-main-container { 
-    background-color: var(--color-secundario);   
-    margin-top: 0;
-    width: 80%;
-  }
 
   .Criterio-De-Cambio .select,
   .Distancia {
     grid-column: 1 / span 2;
     width: 48%;
-    margin-bottom: 10px;
+    margin-bottom: .6em;
   }
 
   .profile {
     width: 20%;
     height: inherit;
-    margin-top: 2em;
+    margin-top: 1.5em;
     margin-bottom: -1em;
   }
 
@@ -214,44 +189,27 @@
     width: 100%;
   }
 
-  .Informacion-General,
-  .Direccion,
-  .Ubicacion--Geografica {
-    display: grid;
+  .Informacion-General,.Direccion,.Ubicacion--Geografica,.Informacion-General {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
   }
 
   .Distancia {
     width: 100%;
   }
+  .informacion{
+    font-size: 1em;
+
+  }
 
   .tabs-container {
-    font-size: 2em;
-    display: flex;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: var(--color-secundario);
-  }
-
-  .tab {
-    font-size: 1.5rem;
-    padding: 1em;      
-    border-bottom: 0.2em solid gray;
-  }
-  .tab-elegido {
-    font-size: 1.5rem;
-    padding: 1em;      
-    border-bottom: 0.5em solid gray;
+    font-size: 1.2em;
   }
 
   .card-grid {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 20px;
   }
-
-
-
+  .card-item{
+    height: max-content;
+  }
 
 }
