@@ -5,6 +5,7 @@
     margin-top: 1em;
     min-width: 2em;
     text-align: center;
+    box-shadow: .4rem .8rem 1.6rem rgb(0 0 0 / 80%);
 }
 
 .card-header-container {
