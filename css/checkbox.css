@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: column;
     gap: 0.5em;
-    padding-top: 1em;
+    padding-top: 0.5em;
     width: 100%; 
+    font-size: 1em;
 }
 
 .checkbox-item {
@@ -20,7 +21,7 @@
     .checkbox-container {
         flex-direction: row;
         width: 30%;
-        font-size: .5em;
+        font-size: .8em;
         justify-content: space-evenly;
         flex-grow: 1;
     }
@@ -31,5 +32,6 @@
         align-self: flex-start;
         flex-direction: column;
         width: 100%;
+        font-size: 1em;
     }
 }

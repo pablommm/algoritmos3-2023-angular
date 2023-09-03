@@ -15,6 +15,7 @@
     --text-colour: #000;
     --fire-colour: #FF0000;
     --button-radius: .3rem;
+    --border-radius: 0.5rem;
 }
 
 body, .main-container {

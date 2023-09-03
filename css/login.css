@@ -26,15 +26,23 @@
 
 .login-icon {
     font-size: 1.2em;
-    background-color: var(--fourth-colour);
+    
     width: 1.5em;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: var(--border-radius) 0 0 var(--border-radius)
 }
 
 .login-info {
     display: flex;
+    border-radius: var(--border-radius);
+    background-color: var(--fourth-colour);
+    
+}
+
+.login-input{
+    border-radius:  0   var(--border-radius) var(--border-radius) 0;
 }
 
 @media (min-width:401px){

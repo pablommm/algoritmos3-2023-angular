@@ -1,9 +1,11 @@
+/*tamaño celular */
 .toolbox-container {
     background-color: var(--fourth-colour);
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    border-radius:  0  0  var(--border-radius) var(--border-radius);
 }
 
 .toolbox-header-container, .toolbox-content {
@@ -33,9 +35,10 @@
 
 .desde-hasta-container{
     display: flex;
-    gap: 2em;
+    gap: 0.5em;
     color: var(--primary-colour);
     flex-wrap: wrap;
+    padding: 0.5em
 }
 
 .desde-hasta-subcontainer {
@@ -57,6 +60,7 @@
     color: var(--primary-colour);
 }
 
+/*tamaño tablet */
 @media (min-width:401px) {
     .toolbox-content {
         flex-direction: row;
@@ -70,7 +74,7 @@
     }
 
     .desde-hasta-container {
-        width: 30%;
+        width: 50%;
         gap:.5em;
         font-size: .8em;
     }
@@ -79,7 +83,7 @@
         align-items: center;
     }
 }
-
+/*tamaño desktop */
 @media (min-width:769px) {
     .toolbox-container {
         background-color: var(--fourth-colour);
@@ -90,6 +94,7 @@
         max-width: 20%;
         align-self: flex-start;
         margin-left: 1em;
+        border-radius: var(--border-radius);
     }
     
     .toolbox-content {
