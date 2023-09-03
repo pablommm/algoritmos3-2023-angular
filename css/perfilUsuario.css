@@ -1,8 +1,4 @@
-
 .sub-main-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
   padding: 1em;
 }
 
@@ -61,6 +57,14 @@
   outline: none; 
 }
 
+.columna-izquierda {
+  grid-column: 1;
+}
+
+.columna-derecha {
+  grid-column: 2;
+}
+
 
 .tabs-container {
   display: flex;
@@ -72,10 +76,6 @@
   background-color: var(--color-secundario);
 }
 
-.informacion span {
-  
- /* margin-bottom: 1000rem;*/
-}
  .info-datos-personales{
   font-weight: bold;
  }
@@ -124,13 +124,6 @@
   .profile{
     margin-top: 3em;
   }
-  .columna-izquierda {
-    grid-column: 1;
-  }
-
-  .columna-derecha {
-    grid-column: 2;
-  }
 
   .Informacion-Perfil {
     font-size: 1.3rem;
@@ -151,13 +144,6 @@
     gap: 20px;
   }
 
-  .columna-izquierda {
-    grid-column: 1;
-  }
-
-  .columna-derecha {
-    grid-column: 2;
-  }
   
   .card-item{
     width: 90%;
@@ -218,19 +204,8 @@
   .profile {
     width: 20%;
     height: inherit;
-    background-color: var(--primary-colour);
     margin-top: 2em;
     margin-bottom: -1em;
-  }
-
-
-
-  .columna-izquierda {
-    grid-column: 1;
-  }
-
-  .columna-derecha {
-    grid-column: 2;
   }
 
   .columna-izquierda,
@@ -276,11 +251,7 @@
     margin-top: 20px;
   }
 
-  .card-item {
-    width: 100% !important;
-    height: max-content;
-    font-size: 1.1rem;
-  }
+
 
 
 }
