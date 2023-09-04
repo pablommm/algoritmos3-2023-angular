@@ -9,11 +9,12 @@
     /* Variables generales, tales como paleta de colores, fuente default, fondo, padding, etc */
     --primary-colour: #F6F1F1;
     --secondary-colour:  #b6c5cc;
-    --third-colour: #19A7CE;
+    --third-colour: #66aabd;
     --fourth-colour: #146C94;
     --fifth-colour: #65b6cc;
     --text-colour: #000;
     --fire-colour: #FF0000;
+    --grey-colour: #6e6e6e;
     --button-radius: .3rem;
     --border-radius: 0.5rem;
 }
@@ -37,7 +38,7 @@ body {
 }
 
 .main-container {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
 }
 
 .sub-main-container {

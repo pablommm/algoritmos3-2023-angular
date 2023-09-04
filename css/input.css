@@ -11,3 +11,21 @@
 input:focus {
     outline: none;
 }
+
+.formulario input,
+.select {
+  width: 100%;
+  border: .1rem solid var(--primary-colour);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0.5em 0.5em 0.1em rgba(0, 0, 0, 0.2); /* Valores de sombra */
+  padding: 1rem; 
+  border-radius: .5rem; 
+}
+
+.formulario input:focus,
+.formulario select:focus {
+  box-shadow: 0.5em 0.5em 0.15em rgba(0, 0, 0, 0.7); /* x y enfoque expansion */
+  border: 0.1em solid #e71fd3; 
+  outline: none; 
+}

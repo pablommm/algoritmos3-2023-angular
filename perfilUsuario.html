@@ -23,20 +23,22 @@
 </head>
 
 <body>
-    <nav class="navbar-container">
-        <span>WorldCApp</span>
-        <i class="fa-solid fa-bars burger"></i>
+    <header>
+        <nav class="navbar-container">
+            <span>WorldCApp</span>
+            <i class="fa-solid fa-bars burger"></i>
+    
+            <ul class="navbar-list">
+                <li>Figuritas</li>
+                <li>Sobres</li>
+                <li>Perfil</li>
+                <li><i class="fa-solid fa-right-from-bracket"></i></li>
+            </ul>
+        </nav>
+    </header>
 
-        <ul class="navbar-list">
-            <li>Figuritas</li>
-            <li>Sobres</li>
-            <li>Perfil</li>
-            <li><i class="fa-solid fa-right-from-bracket"></i></li>
-        </ul>
-    </nav>
-
-    <div class="main-container">
-        <div class="profile">
+    <main class="main-container">
+        <div class="toolbox-container">
 
             <img src="img/alexis.jpg" class="imagen_perfil">
             <div class="informacion">
@@ -59,16 +61,16 @@
 
         </div>
 
-        <div class="sub-main-container">
+        <section class="sub-main-container">
             <div class="tabs-container">
-                <span class="tab-elegido" >Informacion del Perfil</span>
+                <span class="tab-elegido" >Información del Perfil</span>
                 <span class="tab">Figuritas Repetidas</span>
                 <span class="tab">Figuritas Faltantes</span>
             </div>
             <div class="formulario">
-                <span class="subtitulo">Informacion General</span>
+                <span class="subtitulo">Información General</span>
 
-                <div class="Informacion-General">
+                <div class="informacion-general">
                     <div class="columna-izquierda">
                         <label for="nombre">Nombre</label>
                         <input type="text" placeholder="Nombre">
@@ -76,14 +78,14 @@
                         <input type="text" placeholder="Apellido">
                     </div>
                     <div class="columna-derecha">
-                        <label for="Correo Electronico">Correo Electronico</label>
-                        <input type="email" placeholder="Correo Electronico">
+                        <label for="Correo Electronico">Correo Electrónico</label>
+                        <input type="email" placeholder="Correo Electrónico">
                         <label for="Fecha de nacimiento">Fecha de nacimiento</label>
                         <input type="date" placeholder="Fecha de nacimiento">
                     </div>
                 </div>
-                <span class="subtitulo">Direccion</span>
-                <div class=" Direccion">
+                <span class="subtitulo">Dirección</span>
+                <div class="direccion">
                     <div class="columna-izquierda">
                         <label for="Provincia">Provincia</label>
                         <form action="Provincia">
@@ -105,8 +107,8 @@
                         <input type="number" placeholder="Altura">
                     </div>
                 </div>
-                <span class="subtitulo">Ubicacion Geografica</span>
-                <div class="Ubicacion--Geografica">
+                <span class="subtitulo">Ubicación Geográfica</span>
+                <div class="ubicacion-geografica">
                     <div class="columna-izquierda">
                         <label for="PosiciónX">Posición X</label>
                         <input type="number" placeholder="Posición X">
@@ -115,13 +117,13 @@
                         <label for="PosiciónY">Posición Y</label>
                         <input type="number" placeholder="Posición y">
                     </div>
-                    <div class="Distancia">
-                        <label for="DistanciaMaxima">Distancia Maxima de Cercania</label>
-                        <input type="number" placeholder="Distancia Maxima de Cercania">
+                    <div class="distancia">
+                        <label for="distanciaMaxima">Distancia máxima de Cercanía</label>
+                        <input type="number" placeholder="Distancia máxima de Cercanía">
                     </div>
                 </div>
-                <span class="subtitulo">Criterio Para el Cambio</span>
-                <div class="Criterio-De-Cambio">
+                <span class="subtitulo">Criterio para el Cambio</span>
+                <div class="criterio-cambio">
                     <label for="Criterio">Criterio</label>
                     <form action="Criterios">
                         <select class="select">
@@ -130,8 +132,8 @@
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <footer class="footer-container">
         <i class="fa-brands fa-square-facebook"></i>

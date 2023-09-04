@@ -2,13 +2,11 @@
   padding: 1em;
   }
 
-.profile {
-  width: 100%;
+.toolbox-container {
   background-color: var(--primary-colour);
-  margin-top: 3em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-top: 2.5em;
+  border-radius: 0;
+  padding-bottom: 1em;
 }
 
 .imagen_perfil{
@@ -25,7 +23,7 @@
   display: grid;
   grid-template-columns: repeat(1, 10em);
   text-align: center;
-  font-size:large;
+  /* font-size: large; */
 }
 
 .formulario {
@@ -36,24 +34,6 @@
 .subtitulo {
   font-size: 1.6rem;
   text-align: center;
-}
-
-.formulario input,
-.select {
-  width: 100%;
-  border: .1rem solid #ccc;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  box-shadow: 0.5em 0.5em 0.1em rgba(0, 0, 0, 0.2); /* Valores de sombra */
-  padding: 1rem; 
-  border-radius: .5rem; 
-}
-
-.formulario input:focus,
-.formulario select:focus {
-  box-shadow: 0.5em 0.5em 0.15em rgba(0, 0, 0, 0.7); /* x y enfoque expansion */
-  border: 0.1em solid #e71fd3; 
-  outline: none; 
 }
 
 .columna-izquierda {
@@ -82,11 +62,11 @@
  .tab, .tab-elegido {
   font-size: 1em;
   padding: 1em;      
-  border-bottom: 0.2em solid gray;
+  border-bottom: 0.2em solid var(--grey-colour);
 }
 
 .tab-elegido{    
-  border-bottom: 0.5em solid gray;
+  border-bottom: 0.5em solid var(--grey-colour);
 }
 
 .card-grid {
@@ -97,60 +77,44 @@
   width: 90%;
 }
 
-.Informacion-General,.Direccion,.Ubicacion--Geografica,.Informacion-General {
+.informacion-general,.direccion,.ubicacion-geografica,.informacion-general {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1em;
 }
 
-/* version mobile*/
-@media (max-width: 400px) {
-  .formulario {
-    grid-template-columns: 1fr;
-  }
+.formulario {
+  grid-template-columns: 1fr;
+}
 
-  .Informacion-General {
-    grid-template-columns: 1fr;
-  }
+.informacion-general {
+  grid-template-columns: 1fr;
+}
 
-  .columna-izquierda, .columna-derecha {
-    grid-column: auto;
-    width: 100%;
-  }
+.columna-izquierda, .columna-derecha {
+  grid-column: auto;
+  width: 100%;
+}
 
-  .card-item{
-    width: 105%;
-  }
+.card-item{
+  width: 100%;
+}
 
-  .tab{
-    display: none;
-  }
-
-  .tab-elegido{
-    font-size: 1em;
-  }
+.tab{
+  display: none;
 }
 
 /* version tablet*/
 @media (min-width: 401px)  {
-  .profile{
-    margin-top: 3em;
-  }
-
-  .Informacion-Perfil {
-    font-size: 1.3rem;
-    text-align: center;
-  }
-  .Informacion-General,.Direccion,.Ubicacion--Geografica,.Informacion-General {
+  .informacion-general,.direccion,.ubicacion-geografica,.informacion-general {
      grid-template-columns: repeat(2, 1fr);
   }
-
 
   .card-item{
     width: 90%;
   }
-  .Distancia {
-    width: 205%;
+  .distancia {
+    grid-column: span 2;
   }
   .tabs-container {
     flex-direction:row ;
@@ -169,18 +133,19 @@
   }
 
 
-  .Criterio-De-Cambio .select,
-  .Distancia {
+  .criterio-cambio .select,
+  .distancia {
     grid-column: 1 / span 2;
     width: 48%;
     margin-bottom: .6em;
   }
 
-  .profile {
+  .toolbox-container {
     width: 20%;
     height: inherit;
     margin-top: 1.5em;
     margin-bottom: -1em;
+    margin-left: 0;
   }
 
   .columna-izquierda,
@@ -189,11 +154,11 @@
     width: 100%;
   }
 
-  .Informacion-General,.Direccion,.Ubicacion--Geografica,.Informacion-General {
+  .informacion-general,.direccion,.ubicacion-geografica,.informacion-general {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .Distancia {
+  .distancia {
     width: 100%;
   }
   .informacion{
