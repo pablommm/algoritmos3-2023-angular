@@ -1,6 +1,14 @@
 .sub-main-container {
     gap: 1.2em;
 }
+.card-header-container {
+    border-radius:  var(--border-radius-interno) var(--border-radius-interno) 0 0;
+}
+
+.card-imagen {
+    border-radius: var(--border-radius);
+}
+
 
 @media (min-width:401px) {
 
@@ -13,6 +21,7 @@
         max-width: 50%;
         overflow: hidden;
         object-fit: cover;
+        border-radius: var(--border-radius);
     }
 
 }

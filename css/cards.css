@@ -6,6 +6,7 @@
     min-width: 2em;
     text-align: center;
     box-shadow: .4rem .8rem 1.6rem rgb(0 0 0 / 80%);
+    border-radius: var(--border-radius);
 }
 
 .card-header-container {
@@ -52,6 +53,7 @@
     max-height: 20em;
     padding-left: 0.5em; 
     padding-right: 0.5em; 
+    border-radius: var(--border-radius);
 }
 
 .card-detalles-container {

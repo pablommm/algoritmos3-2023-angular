@@ -17,6 +17,7 @@
     --grey-colour: #6e6e6e;
     --button-radius: .3rem;
     --border-radius: 0.5rem;
+    --border-radius-interno: 0.35rem;
 }
 
 body, .main-container {

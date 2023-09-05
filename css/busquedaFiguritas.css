@@ -28,12 +28,12 @@
     width: 90%;
     border-radius: 1em;
     font-size: 1rem;
-    transition: font-size 0.5s ease;
+    transition: font-size 1.5s ease;
 }
 
-.card-item:focus{
+.card-item:hover{
     /* width: 28%; */
-    font-size:smaller;
+    font-size:medium;
     box-shadow: 0.5em 0.5em 0.1em rgba(0, 0, 0, 0.5); /* Valores de sombra */
 }
 
@@ -85,6 +85,7 @@
 
     .card-item:hover{
         border-color: 1em solid var(--fourth-colour) ;
+        font-size:smaller;
     }
     .card-content{
         width: 100%;
