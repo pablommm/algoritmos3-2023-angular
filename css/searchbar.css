@@ -26,7 +26,7 @@
 .searchbar button[type="submit"] {
     background-color: var(--third-colour);
     border: none;
-    border-radius: 0 2em 2em 0;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
     color: var(--primary-colour);
     cursor: pointer;
     padding: 0.8em 1em;
