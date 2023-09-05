@@ -6,9 +6,6 @@
     margin-top: 0; 
 }
 
-.sub-main-container{
-    /* background-color: var(--secondary-colour); */
-}
 
 .card-primeraParte{
     display: flex;
@@ -31,6 +28,13 @@
     width: 90%;
     border-radius: 1em;
     font-size: 1rem;
+    transition: font-size 0.5s ease;
+}
+
+.card-item:focus{
+    /* width: 28%; */
+    font-size:smaller;
+    box-shadow: 0.5em 0.5em 0.1em rgba(0, 0, 0, 0.5); /* Valores de sombra */
 }
 
 .card-imagen{

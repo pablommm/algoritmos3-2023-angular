@@ -38,6 +38,7 @@
     gap: 0.5em;
     color: var(--primary-colour);
     flex-wrap: wrap;
+    width: 100%;
     padding: 0.5em
 }
 
@@ -75,7 +76,7 @@
 
     .desde-hasta-container {
         width: 50%;
-        gap:.5em;
+        gap: 1em;
         font-size: .8em;
     }
 
@@ -102,7 +103,7 @@
     }
 
     .desde-hasta-container {
-        width: 80%;
+        width: 90%;
     }
 
     .desde-hasta-subcontainer {

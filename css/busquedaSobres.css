@@ -16,6 +16,7 @@
 
 .card-primeraParte{
     background-color: var(--third-colour);
+    border-radius: .5em .5em 0 0;
 }
 
 .card-segundaParte{
