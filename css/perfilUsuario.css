@@ -76,7 +76,6 @@
 
 .formulario {
   grid-template-columns: 1fr;
-  grid-column: auto;
   width: 100%;
 }
 
@@ -112,7 +111,6 @@
     display:block;
   }
 }
-
 
 /* version desktop*/
 @media (min-width: 769px) {
