@@ -9,9 +9,6 @@
 
 .checkbox-item {
     display: flex;
-    /* justify-content: flex-start; 
-    align-items: flex-start;  */
-    /* width: 100%;  */
     margin-left: 1em;
     gap: 0.5em; 
     color: var(--primary-colour);

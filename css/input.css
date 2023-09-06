@@ -1,10 +1,7 @@
 .login-input {
     width: 15em;
     height: 2.5em;
-    border-right: .3em var(--fourth-colour) solid;
-    border-bottom: .3em var(--fourth-colour) solid;
-    border-top: .3em var(--fourth-colour) solid ;
-    border-left: none;
+    border: .3em var(--fourth-colour) solid .3em var(--fourth-colour) solid .3em var(--fourth-colour) solid 0; 
     padding-left: .5em;
 }
 
@@ -16,10 +13,9 @@ input:focus {
 .select {
   width: 100%;
   border: .1rem solid var(--primary-colour);
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
   box-shadow: 0.5em 0.5em 0.1em rgba(0, 0, 0, 0.2); /* Valores de sombra */
-  padding: 1rem; 
+  padding: 1rem;
   border-radius: .5rem; 
 }
 

@@ -1,7 +1,6 @@
 .button-container {
     display: flex;
     justify-content: space-evenly;
-    /* font-size: 50em; */
     padding: .5em;
 }
 

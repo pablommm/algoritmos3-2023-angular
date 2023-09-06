@@ -1,144 +1,114 @@
 .card-item {
-    background-color: var(--primary-colour);
-    border: var(--fourth-colour) solid .3em;
-    margin-bottom: 1.2em;
-    margin-top: 1em;
-    min-width: 2em;
-    text-align: center;
-    box-shadow: .4rem .8rem 1.6rem rgb(0 0 0 / 80%);
-    border-radius: var(--border-radius);
+	background-color: var(--primary-colour);
+	border: var(--fourth-colour) solid 0.3em;
+	margin-bottom: 1.2em;
+	margin-top: 1em;
+	min-width: 2em;
+	text-align: center;
+	box-shadow: 0.4rem 0.8rem 1.6rem rgb(0 0 0 / 80%);
+	border-radius: var(--border-radius);
+    width: 90%;
 }
 
 .card-header-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    align-items: center;
-    padding-top: 1em;
-    background-color: var(--fifth-colour);
-    text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	align-items: center;
+	padding-top: 1em;
+	background-color: var(--fifth-colour);
+	text-align: center;
 }
 
 .card-content {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1em;
-    
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	margin-top: 1em;
+	align-items: center;
+	justify-content: center;
 }
 
 .card-nombre {
-    font-size: 2rem;
-    color: var(--text-colour);
+	font-size: 2rem;
+	color: var(--text-colour);
 }
 
 .card-name-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: .5em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5em;
 }
 
 .card-logos-container {
-    display: flex;
-    flex-direction: row;
-    font-size: 2rem;
-    gap: 1em;
+	display: flex;
+	flex-direction: row;
+	font-size: 2rem;
+	gap: 1em;
 }
 
-
-.card-imagen{
-    max-width: 100%; 
-    max-height: 20em;
-    /*
-    padding-left: 0.5em; 
-    padding-right: 0.5em; 
-    */
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
-    border-radius: var(--border-radius);
+.card-imagen {
+	max-width: 100%;
+	max-height: 25em;
+	padding: 0.5em;
+	border-radius: var(--border-radius);
 }
-.card-segundaParte{
-    padding:1em;
+
+.card-segundaParte {
+	padding: 1em;
 }
 
 .card-detalles-container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    gap: 1em;
-    padding: 1em;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	gap: 1em;
+	padding: 1em;
 }
 
-.card-detalles-item   {
-    display: flex;
-    gap: 0.3em;
+.card-detalles-item {
+	display: flex;
+	gap: 0.3em;
 }
 
 .card-detalles-logo {
-    display: flex;
-    gap: 0.1em;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* .card-detalles-highlight {
-    font-size: 1.3em;
-} */
-
-.card-detalles-bigger-highlight{
-    font-size: 1.8em;
+	display: flex;
+	gap: 0.1em;
+	font-weight: bold;
+	text-align: center;
 }
 
 .card-detalles-center {
-    align-self: center;
+	align-self: center;
 }
 
 .card-valoracion-container {
-    border-top: black .2rem solid;
+	border-top: black 0.2rem solid;
 }
 
-.card-primeraParte, .card-segundaParte {
-    width: 100%;
+.card-primeraParte,
+.card-segundaParte {
+	width: 100%;
 }
 
-.card-detalles-container-center{
-    display: flex;
-    justify-content: center;
+.card-detalles-container-center {
+	display: flex;
+	justify-content: center;
 }
 
-@media (min-width:401px) {
-
-    .card-primeraParte, .card-segundaParte {
-        display: flex;
-        justify-content: center
-    }
-        
-    .card-segundaParte {
-        flex-direction: column;
-        width: 100%;
-    }
-    
+.fire {
+	color: var(--fire-colour);
 }
 
-@media (min-width:769px) {
+@media (min-width: 401px) {
+	.card-primeraParte,
+	.card-segundaParte {
+		display: flex;
+		justify-content: center;
+	}
 
-    .card-item {
-        width: 60%
-    }
-
-    .card-primeraParte, .card-segundaParte {
-        display: flex;
-        justify-content: center
-    }
-        
-    .card-segundaParte {
-        flex-direction: column;
-        width: 100%;
-    }
-    
+	.card-segundaParte {
+		flex-direction: column;
+	}
 }
-

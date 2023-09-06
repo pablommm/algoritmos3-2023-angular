@@ -49,7 +49,7 @@
     .sub-main-container {
         flex:0;
         padding: 5em;
-        background-color: var(--secondary-colour);
+        /* background-color: var(--secondary-colour); */
         border: solid .3em var(--fourth-colour);
         border-radius: var(--border-radius);
     }

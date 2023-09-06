@@ -1,73 +1,56 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* font-family: ; */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* font-family: ; */
 }
 
 :root {
-    /* Variables generales, tales como paleta de colores, fuente default, fondo, padding, etc */
-    --primary-colour: #F6F1F1;
-    --secondary-colour:  #b6c5cc;
-    --third-colour: #66aabd;
-    --fourth-colour: #146C94;
-    --fifth-colour: #65b6cc;
-    --text-colour: #000;
-    --fire-colour: #FF0000;
-    --grey-colour: #6e6e6e;
-    --button-radius: .3rem;
-    --border-radius: 0.5rem;
-    --border-radius-interno: 0.2rem;
+	/* Variables generales, tales como paleta de colores, fuente default, fondo, padding, etc */
+	--primary-colour: #f6f1f1;
+	--secondary-colour: #b6c5cc;
+	--third-colour: #66aabd;
+	--fourth-colour: #146c94;
+	--fifth-colour: #65b6cc;
+	--text-colour: #000;
+	--fire-colour: #ff0000;
+	--grey-colour: #6e6e6e;
+	--button-radius: 0.3rem;
+	--border-radius: 0.5rem;
+	--border-radius-interno: 0.2rem;
 }
 
-body, .main-container {
-    display:flex;
-    background-color: var(--primary-colour);
-}
-
-.main-container, .sub-main-container {
-    background-color: var(--secondary-colour);
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
+html {
+	font-size: 13px;
 }
 
 body {
-    flex-direction: column;
-    min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	/* background-color: var(--primary-colour); */
+}
+
+.main-container,
+.sub-main-container {
+	background-color: var(--secondary-colour);
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 .main-container {
-    margin-top: 2.5rem;
+	margin-top: 2.5rem;
 }
 
 .sub-main-container {
-    flex-direction: column;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
-.page-title{
-    font-size: 0.8em;
-    color: var(--text-colour);
-    font-family: 'Exo', sans-serif;
-  }
-
-
-.searchbar-container{
-    text-align: center;
+@media (min-width: 401px) {
+	html {
+		font-size: 15px;
+	}
 }
-
-
-@media (max-width:400px) {
-    html {
-        font-size: 13px;
-    }
-}
-
-@media (min-width:401px) and (max-width:768px) {
-    html {
-        font-size: 15px;
-    }
-}
-

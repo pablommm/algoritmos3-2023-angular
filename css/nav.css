@@ -9,11 +9,17 @@
     width: 100vw;
 }
 
-
 .navbar-list {
     list-style: none;
     display: none;
 }
+
+.navbar-title{
+    font-size: 0.8em;
+    color: var(--text-colour);
+    font-family: 'Exo', sans-serif;
+}
+
 
 @media (min-width:768px) {
     .burger {
