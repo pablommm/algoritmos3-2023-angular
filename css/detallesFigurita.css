@@ -1,6 +1,6 @@
-.sub-main-container {
+/* .sub-main-container {
     gap: 1.2em;
-}
+} */
 .card-header-container {
     border-radius:  var(--border-radius-interno) var(--border-radius-interno) 0 0;
 }
@@ -11,6 +11,10 @@
 
 
 @media (min-width:401px) {
+
+    .sub-main-container {
+        margin-left: 0;
+    }
 
     .card-header-container {
         flex-direction: row;

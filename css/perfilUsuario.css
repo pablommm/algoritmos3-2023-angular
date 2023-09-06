@@ -1,151 +1,156 @@
 
-
-.sub-main-container {
-  padding: 1em;
-  }
-
-.toolbox-container {
-  background-color: var(--primary-colour);
-  margin-top: 2.5em;
-  border-radius: 0;
-  padding-bottom: 1em;
+.main-container {
+	align-items: flex-start;
 }
 
-.imagen_perfil{
-  width: 9em;
-  height: 9em;
-  margin: 1em;
-  object-fit: cover; 
-  border: 0.2em solid var(--third-colour);
-  border-radius: 50%;
-  
+.sub-main-container {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	padding: 1em;
+	justify-content: center;
+}
+
+.toolbox-container {
+	background-color: var(--primary-colour);
+	margin-top: 2.5em;
+	border-radius: 0;
+	padding-bottom: 1em;
+}
+
+.imagen_perfil {
+	width: 9em;
+	height: 9em;
+	margin: 1em;
+	object-fit: cover;
+	border: 0.2em solid var(--third-colour);
+	border-radius: 50%;
 }
 
 .informacion {
-  display: grid;
-  grid-template-columns: repeat(1, 10em);
-  text-align: center;
-  /* font-size: large; */
+	display: grid;
+	grid-template-columns: repeat(1, 10em);
+	text-align: center;
+	/* font-size: large; */
 }
 
 .formulario {
-  display: grid;
-  gap: .3rem .6rem;
+	display: grid;
+	gap: 0.3rem 0.6rem;
 }
 
 .subtitulo {
-  font-size: 1.6rem;
-  text-align: center;
+	font-size: 1.6rem;
+	text-align: center;
 }
 
 .tabs-container {
-  display: flex;
-  padding: .6em;
-  flex-direction:column ;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  justify-content: flex-end;
-  align-items: flex-start;
-  background-color: var(--color-secundario);
+	display: flex;
+	padding: 0.6em;
+	flex-direction: row;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: var(--color-secundario);
 }
 
- .info-datos-personales{
-  font-weight: bold;
- }
-
- .tab, .tab-elegido {
-  font-size: 1em;
-  padding: 1em;      
-  border-bottom: 0.2em solid var(--grey-colour);
+.info-datos-personales {
+	font-weight: bold;
 }
 
-.tab-elegido{    
-  border-bottom: 0.5em solid var(--grey-colour);
+.tab,
+.tab-elegido {
+	font-size: 1em;
+	padding: 1em;
+	border-bottom: 0.2em solid var(--grey-colour);
+}
+
+.tab-elegido {
+	border-bottom: 0.5em solid var(--grey-colour);
 }
 
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 1em;
-  margin-top: 1em;
-  width: 90%;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 1em;
+	margin-top: 1em;
+	width: 90%;
 }
 
 .subtitulo-contenedor {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 1em;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 1em;
 }
 
 .formulario {
-  grid-template-columns: 1fr;
-  width: 100%;
+	grid-template-columns: 1fr;
+	width: 100%;
 }
 
-.card-item{
-  width: 100%;
+.card-item {
+	width: 100%;
 }
 
-.tab{
-  display: none;
+.tab {
+	display: none;
 }
 
 /* version tablet*/
-@media (min-width: 401px)  {
-  .subtitulo-contenedor {
-     grid-template-columns: repeat(2, 1fr);
-  }
+@media (min-width: 401px) {
+	.subtitulo-contenedor {
+		grid-template-columns: repeat(2, 1fr);
+	}
 
-  .card-item{
-    width: 90%;
-  }
-  .distancia {
-    grid-column: span 2;
-  }
-  .tabs-container {
-    flex-direction:row ;
-  }
+	.card-item {
+		width: 90%;
+	}
+	.distancia {
+		grid-column: span 2;
+	}
+	.tabs-container {
+		flex-direction: row;
+	}
 
-  
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .tab{
-    display:block;
-  }
+	.card-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.tab {
+		display: block;
+	}
+
+	.arrow-icon {
+		display: none;
+	}
+	
 }
 
 /* version desktop*/
 @media (min-width: 769px) {
+	.toolbox-container {
+		width: 20%;
+		margin-top: 1.5em;
+		margin-bottom: -1em;
+		margin-left: 0;
+		align-self: stretch;
+	}
 
+	.distancia {
+		width: 100%;
+	}
 
-  .toolbox-container {
-    width: 20%;
-    margin-top: 1.5em;
-    margin-bottom: -1em;
-    margin-left: 0;
-    align-self: stretch;
-  }
+	.informacion {
+		font-size: 1em;
+	}
 
- .subtitulo-contenedor{
-    grid-template-columns: repeat(2, 1fr);
-  }
+	.tabs-container {
+		font-size: 1.2em;
+	}
 
-  .distancia {
-    width: 100%;
-  }
-  .informacion{
-    font-size: 1em;
-  }
+	.card-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
 
-  .tabs-container {
-    font-size: 1.2em;
-  }
-
-  .card-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .card-item{
-    height: max-content;
-  }
-
+	.card-item {
+		height: max-content;
+	}
 }

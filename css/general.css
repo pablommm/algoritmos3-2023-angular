@@ -36,8 +36,8 @@ body {
 	background-color: var(--secondary-colour);
 	display: flex;
 	flex: 1;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 	flex-direction: column;
 }
 
@@ -47,10 +47,16 @@ body {
 
 .sub-main-container {
 	flex-wrap: wrap;
+	gap: 1.2em;
 }
 
 @media (min-width: 401px) {
 	html {
 		font-size: 15px;
+	}
+
+	.sub-main-container {
+		justify-content: flex-start;
+		margin-left: 2em;
 	}
 }
