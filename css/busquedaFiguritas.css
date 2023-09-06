@@ -47,18 +47,18 @@
 	padding-bottom: 0.8em;
 }
 
-.card-detalles-title,
-.card-detalles-subtitle,
+.card-detalles-titulo-item,
+.card-detalles-subtitulo-item,
 .card-detalles-info {
 	display: flex;
 	gap: 0.3em;
 }
 
-.card-detalles-title {
+.card-detalles-titulo-item {
 	font-size: 1.5em;
 }
 
-.card-detalles-subtitle {
+.card-detalles-subtitulo-item {
 	font-size: 1.2em;
 }
 
@@ -121,7 +121,7 @@
 		font-size: 0.7em;
 	}
 
-	.card-detalles-title {
+	.card-detalles-titulo-item {
 		font-size: 1.3em;
 	}
 
