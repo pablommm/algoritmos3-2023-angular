@@ -30,7 +30,7 @@
 	display: grid;
 	grid-template-columns: repeat(1, 10em);
 	text-align: center;
-	/* font-size: large; */
+	 font-size: 1em; 
 }
 
 .formulario {
@@ -138,10 +138,6 @@
 		width: 100%;
 	}
 
-	.informacion {
-		font-size: 1em;
-	}
-
 	.tabs-container {
 		font-size: 1.2em;
 	}
@@ -150,7 +146,4 @@
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-	.card-item {
-		height: max-content;
-	}
 }
