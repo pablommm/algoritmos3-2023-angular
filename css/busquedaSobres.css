@@ -13,12 +13,12 @@
 	font-size: 0.8em;
 }
 
-.card-upper {
+.card-upper-container {
 	background-color: var(--third-colour);
 	border-radius: 0.5em 0.5em 0 0;
 }
 
-.card-bottom {
+.card-bottom-container {
 	padding-top: 1em;
 	border-top: black 0.2em solid;
 }
@@ -29,9 +29,6 @@
 	font-size: 0.6em;
 }
 
-/* .card-detalles-info {
-	font-size: 0.9em;
-} */
 
 .card-detalles-container {
 	gap: 1.5em;

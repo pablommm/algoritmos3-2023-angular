@@ -3,7 +3,7 @@
 	margin-top: 0;
 }
 
-.card-upper {
+.card-upper-container {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -11,7 +11,7 @@
 	border-bottom: black 0.2em solid;
 }
 
-.card-upper-titulo {
+.card-upper-subcontainer {
 	display: flex;
 	width: 100%;
 	justify-content: space-around;
@@ -40,29 +40,29 @@
 	flex-wrap: wrap;
 }
 
-.card-bottom {
+.card-bottom-container {
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
 	padding-bottom: 0.8em;
 }
 
-.card-detalles-titulo-item,
-.card-detalles-subtitulo-item,
-.card-detalles-info {
+.card-detalles-largeFont,
+.card-detalles-mediumFont,
+.card-detalles-smallFont {
 	display: flex;
 	gap: 0.3em;
 }
 
-.card-detalles-titulo-item {
+.card-detalles-largeFont {
 	font-size: 1.5em;
 }
 
-.card-detalles-subtitulo-item {
+.card-detalles-mediumFont {
 	font-size: 1.2em;
 }
 
-.card-detalles-info {
+.card-detalles-smallFont {
 	font-size: 1em;
 }
 
@@ -109,24 +109,4 @@
 		font-size: .65rem;
 	}
 
-	/* .card-content {
-		width: 100%;
-	}
-
-	.card-nombre {
-		font-size: 0.8em;
-	}
-
-	.card-detalles-highlight {
-		font-size: 0.7em;
-	}
-
-	.card-detalles-titulo-item {
-		font-size: 1.3em;
-	}
-
-	.card-detalles-info {
-		font-size: 1em;
-	}
-	*/
 }
