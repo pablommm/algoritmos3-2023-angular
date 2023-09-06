@@ -13,12 +13,12 @@
 	font-size: 0.8em;
 }
 
-.card-primeraParte {
+.card-upper {
 	background-color: var(--third-colour);
 	border-radius: 0.5em 0.5em 0 0;
 }
 
-.card-segundaParte {
+.card-bottom {
 	padding-top: 1em;
 	border-top: black 0.2em solid;
 }
@@ -29,9 +29,9 @@
 	font-size: 0.6em;
 }
 
-.card-detalles-info {
+/* .card-detalles-info {
 	font-size: 0.9em;
-}
+} */
 
 .card-detalles-container {
 	gap: 1.5em;
@@ -48,7 +48,8 @@
 }
 
 @media (min-width: 401px) {
+    
 	.card-item {
-		font-size: 0.7em;
+		font-size: 0.7rem;
 	}
 }
