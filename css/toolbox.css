@@ -87,7 +87,7 @@
 /*tamaño desktop */
 @media (min-width:769px) {
     .toolbox-container {
-        background-color: var(--fourth-colour);
+        
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
