@@ -114,16 +114,14 @@
 
 /* version desktop*/
 @media (min-width: 769px) {
-  .main-container {
-    height: 100vh;
-  }
+
 
   .toolbox-container {
     width: 20%;
-    height: inherit;
     margin-top: 1.5em;
     margin-bottom: -1em;
     margin-left: 0;
+    align-self: stretch;
   }
 
  .subtitulo-contenedor{
