@@ -36,15 +36,6 @@
   text-align: center;
 }
 
-.columna-izquierda {
-  grid-column: 1;
-}
-
-.columna-derecha {
-  grid-column: 2;
-}
-
-
 .tabs-container {
   display: flex;
   padding: .6em;
@@ -89,11 +80,6 @@
   width: 100%;
 }
 
-.columna-izquierda, .columna-derecha {
-  grid-column: auto;
-  width: 100%;
-}
-
 .card-item{
   width: 100%;
 }
@@ -117,6 +103,7 @@
   .tabs-container {
     flex-direction:row ;
   }
+
   
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -133,26 +120,12 @@
     height: 100vh;
   }
 
-
-  .criterio-cambio .select,
-  .distancia {
-    grid-column: 1 / span 2;
-    width: 48%;
-    margin-bottom: .6em;
-  }
-
   .toolbox-container {
     width: 20%;
     height: inherit;
     margin-top: 1.5em;
     margin-bottom: -1em;
     margin-left: 0;
-  }
-
-  .columna-izquierda,
-  .columna-derecha {
-    grid-column: auto;
-    width: 100%;
   }
 
  .subtitulo-contenedor{
