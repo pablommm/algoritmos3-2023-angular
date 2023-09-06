@@ -47,6 +47,13 @@ body {
     flex-wrap: wrap;
 }
 
+.page-title{
+    font-size: 0.8em;
+    color: var(--text-colour);
+    font-family: 'Exo', sans-serif;
+  }
+
+
 .searchbar-container{
     text-align: center;
 }
