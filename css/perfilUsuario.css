@@ -46,7 +46,7 @@
 .tabs-container {
 	display: flex;
 	padding: 0.6em;
-	flex-direction: row;
+	flex-direction: column;
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 	justify-content: flex-end;
 	align-items: center;
@@ -94,7 +94,7 @@
 	display: none;
 }
 .point-icon{
-	font-size: 1.5em;
+	font-size: 1.1em;
 	padding: 0.5em;
 	padding-bottom: 0;
 }
