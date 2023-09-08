@@ -9,6 +9,10 @@
     border-radius: var(--border-radius);
 }
 
+[class^="card-item"]:hover {
+    transform: none; 
+    box-shadow: 0.4rem 0.8rem 1.6rem rgb(0 0 0 / 80%);
+}
 
 @media (min-width:401px) {
 
