@@ -99,6 +99,27 @@
 	padding-bottom: 0;
 }
 
+.plus-icon{
+	color:white;
+	background-color: var(--fifth-colour);
+	position: fixed;
+	font-size: 4em;
+    bottom: 1em; 
+    right: 0.2em;
+	border-radius: 5em;
+	
+}
+.card-content{
+	position: relative;
+}
+.trash-can{
+	color:white;
+	position: absolute;
+	
+	top:0.5em; 
+    right: 0.2em; 
+}
+
 /* version tablet*/
 @media (min-width: 401px) {
 	.subtitulo-contenedor {
