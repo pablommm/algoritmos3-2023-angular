@@ -11,7 +11,7 @@
     display: flex;
     margin-left: 1em;
     gap: 0.5em; 
-    color: var(--primary-colour);
+    color: var(--primary-color);
 }
 
 @media (min-width:401px) {

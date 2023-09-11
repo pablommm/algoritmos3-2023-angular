@@ -1,5 +1,5 @@
 .navbar-container {
-    background-color: var(--third-colour);
+    background-color: var(--third-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,7 +16,7 @@
 
 .navbar-title{
     font-size: 0.8em;
-    color: var(--text-colour);
+    color: var(--text-color);
     font-family: 'Exo', sans-serif;
 }
 

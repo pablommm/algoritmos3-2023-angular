@@ -1,284 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>perfilUsuarioFiguritasRep</title>
+		<script
+			src="https://kit.fontawesome.com/e0d6dd6321.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Exo:ital,wght@1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Exo:ital,wght@1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/general.css" />
+		<link rel="stylesheet" href="./css/nav.css" />
+		<link rel="stylesheet" href="./css/footer.css" />
+		<link rel="stylesheet" href="./css/input.css" />
+		<link rel="stylesheet" href="./css/button.css" />
+		<link rel="stylesheet" href="./css/cards.css" />
+		<link rel="stylesheet" href="./css/icons.css" />
+		<link rel="stylesheet" href="./css/checkbox.css" />
+		<link rel="stylesheet" href="./css/searchbar.css" />
+		<link rel="stylesheet" href="./css/toolbox.css" />
+		<!-- <link rel="stylesheet" href="./css/detallesFigurita.css"> -->
+		<link rel="stylesheet" href="./css/busquedaFiguritas.css" />
+		<link rel="stylesheet" href="./css/perfilUsuario.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>perfilUsuarioFiguritasRep</title>
-    <script src="https://kit.fontawesome.com/e0d6dd6321.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Exo:ital,wght@1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/input.css">
-    <link rel="stylesheet" href="./css/button.css">
-    <link rel="stylesheet" href="./css/cards.css">
-    <link rel="stylesheet" href="./css/icons.css">
-    <link rel="stylesheet" href="./css/checkbox.css">
-    <link rel="stylesheet" href="./css/searchbar.css">
-    <link rel="stylesheet" href="./css/toolbox.css">
-    <!-- <link rel="stylesheet" href="./css/detallesFigurita.css"> -->
-    <link rel="stylesheet" href="./css/busquedaFiguritas.css">
-    <link rel="stylesheet" href="./css/perfilUsuario.css">
-</head>
+	<body>
+		<header>
+			<nav class="navbar-container">
+				<span class="navbar-title">WorldCApp</span>
+				<i class="fa-solid fa-bars burger"></i>
 
-<body>
-    <header>
-        <nav class="navbar-container">
-            <span class="navbar-title">WorldCApp</span>
-            <i class="fa-solid fa-bars burger"></i>
-    
-            <ul class="navbar-list">
-                <li>Figuritas</li>
-                <li>Sobres</li>
-                <li>Perfil</li>
-                <li><i class="fa-solid fa-right-from-bracket"></i></li>
-            </ul>
-        </nav>
-    </header>
+				<ul class="navbar-list">
+					<li>Figuritas</li>
+					<li>Sobres</li>
+					<li>Perfil</li>
+					<li><i class="fa-solid fa-right-from-bracket"></i></li>
+				</ul>
+			</nav>
+		</header>
 
-    <div class="main-container">
-        <div class="toolbox-container">
-            <img src="img/alexis.jpg" class="imagen_perfil">
-            <div class="informacion">
-                <div>
-                    <span class="info-datos-personales">Nombre de usuario </span> <i class="fa-solid fa-pencil"></i>
-                </div>
+		<div class="main-container">
+			<div class="toolbox-container">
+				<img src="img/alexis.jpg" class="imagen_perfil" />
+				<div class="informacion">
+					<div>
+						<span class="info-datos-personales">Nombre de usuario </span>
+						<i class="fa-solid fa-pencil"></i>
+					</div>
 
-                <div>
-                    <span class="info-datos-personales">Edad: </span>
-                    <span>84</span>
-                </div>
+					<div>
+						<span class="info-datos-personales">Edad: </span>
+						<span>84</span>
+					</div>
 
-                <div>
-                    <span class="info-datos-personales">Ubicación:</span>
-                    <span>Argentina</span>
-                </div>
-            </div>
-        </div>
+					<div>
+						<span class="info-datos-personales">Ubicación:</span>
+						<span>Argentina</span>
+					</div>
+				</div>
+			</div>
 
-        <div class="sub-main-container">
-            <div class="tabs-container">
-                <span class="tab">Información del Perfil</span>
-                <span class="tab-elegido">Figuritas Repetidas</span>
-                <span class="tab">Figuritas Faltantes</span>
-                <div>
-                    <i class="fa-regular fa-circle point-icon"></i>
-                    <i class="fa-solid fa-circle point-icon"></i>
-                    <i class="fa-regular fa-circle point-icon"></i>
-                </div>
-            </div>
+			<div class="sub-main-container">
+				<div class="tabs-container">
+					<span class="tab">Información del Perfil</span>
+					<span class="tab-elegido">Figuritas Repetidas</span>
+					<span class="tab">Figuritas Faltantes</span>
+					<div>
+						<i class="fa-regular fa-circle point-icon"></i>
+						<i class="fa-solid fa-circle point-icon"></i>
+						<i class="fa-regular fa-circle point-icon"></i>
+					</div>
+				</div>
 
-            <div class="card-grid">
-                <!-- card 1 -->
-                <article class="card-item">             
-                    <section class="card-content">
-                        <img src="img/enzofe.jpg" alt="Enzo Fernandez" class="card-imagen">
-                        <div class="card-upper-container">
-                            <div class="card-upper-subcontainer">
-                                <span class="card-detalles-largeFont">Enzo Fernandez</span>
-                                <div class="card-detalles-largeFont">
-                                    <i class="fa-solid fa-id-badge"></i>
-                                    <span>5</span>
-                                </div>
-                                <div class="card-detalles-largeFont">
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>124</span>
-                                </div>
-                            </div>
-                            
-                            <div class="card-upper-subcontainer">
-                                <div class="card-detalles-mediumFont">
-                                    <div class="card-detalles-logo">
-                                        <i class="fa-solid fa-weight-scale"></i>
-                                        <span>Peso</span>
-                                    </div>
-                                    <span>72 kilos</span>
-                                </div>
-                                <div class="card-detalles-mediumFont">
-                                    <div class="card-detalles-logo">
-                                        <i class="fa-solid fa-ruler"></i>
-                                        <span>Altura</span>
-                                    </div>
-                                    <span>1.7 metros</span>
-                                </div>
-                            </div>     
-                        </div>
-                        <div class="card-bottom-container">
-                            <div class="card-detalles-container"> 
-                                
-                                <div class="card-detalles-smallFont">
-                                    <span class="card-detalles-logo">Casaca</span>
-                                    <span>10</span>
-                                </div>
-                                <div class="card-detalles-smallFont">
-                                    <span class="card-detalles-logo">Nacimiento</span>
-                                    <span>24/06/1987 (36 años)</span>
-                                </div>
-                                <div class="card-detalles-smallFont">
-                                    <span class="card-detalles-logo">Selección</span>
-                                    <span>Argentina (<i class="fa-solid fa-trophy"></i> 3)</span>
-                                </div>
-                                <div class="card-detalles-smallFont">
-                                    <span class="card-detalles-logo">Posición</span>
-                                    <span>Delantero</span>
-                                </div>
-                                
-                            </div>
-                            <div class="card-detalles-mediumFont card-detalles-center">
-                                <span class="card-detalles-logo">Cotización USD 80.000.000</span>
-                            </div>
-                            <div class="card-detalles-largeFont card-detalles-center">
-                                <span class="card-detalles-logo">Cedida por Daniel Gonzalez</span>
-                            </div>
-                        </div>
-                    </section>
-                </article>
-                <!-- card 2 -->
-                <article class="card-item">             
-                    <section class="card-content">
-                        <img src="img/enzofe.jpg" alt="Enzo Fernandez" class="card-imagen">
-                        <div class="card-upper-container">
-                            <div class="card-upper-subcontainer">
-                                <span class="card-detalles-largeFont">Enzo Fernandez</span>
-                                <div class="card-detalles-largeFont">
-                                    <i class="fa-solid fa-id-badge"></i>
-                                    <span>5</span>
-                                </div>
-                                <div class="card-detalles-largeFont">
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>124</span>
-                                </div>
-                            </div>
-                            
-                            <div class="card-upper-subcontainer">
-                                <div class="card-detalles-mediumFont">
-                                    <div class="card-detalles-logo">
-                                        <i class="fa-solid fa-weight-scale"></i>
-                                        <span>Peso</span>
-                                    </div>
-                                    <span>72 kilos</span>
-                                </div>
-                                <div class="card-detalles-mediumFont">
-                                    <div class="card-detalles-logo">
-                                        <i class="fa-solid fa-ruler"></i>
-                                        <span>Altura</span>
-                                    </div>
-                                    <span>1.7 metros</span>
-                                </div>
-                            </div>     
-                        </div>
-                        <div class="card-bottom-container">
-                            <div class="card-detalles-container"> 
-                                
-                                <div class="card-detalles-smallFont">
-                                    <span class="card-detalles-logo">Casaca</span>
-                                    <span>10</span>
-                                </div>
-                                <div class="card-detalles-smallFont">
-                                    <span class="card-detalles-logo">Nacimiento</span>
-                                    <span>24/06/1987 (36 años)</span>
-                                </div>
-                                <div class="card-detalles-smallFont">
-                                    <span class="card-detalles-logo">Selección</span>
-                                    <span>Argentina (<i class="fa-solid fa-trophy"></i> 3)</span>
-                                </div>
-                                <div class="card-detalles-smallFont">
-                                    <span class="card-detalles-logo">Posición</span>
-                                    <span>Delantero</span>
-                                </div>
-                                
-                            </div>
-                            <div class="card-detalles-mediumFont card-detalles-center">
-                                <span class="card-detalles-logo">Cotización USD 80.000.000</span>
-                            </div>
-                            <div class="card-detalles-largeFont card-detalles-center">
-                                <span class="card-detalles-logo">Cedida por Daniel Gonzalez</span>
-                            </div>
-                        </div>
-                    </section>
-                </article>
+				<div class="card-grid">
+					<!-- card 1 -->
+					<article class="card-item">
+						<section class="card-content">
+							<img
+								src="img/enzofe.jpg"
+								alt="Enzo Fernandez"
+								class="card-imagen"
+							/>
+							<span class="material-symbols-outlined trash-can"
+								>delete_forever</span
+							>
+							<div class="card-upper-container">
+								<div class="card-upper-subcontainer">
+									<span class="card-detalles-largeFont">Enzo Fernandez</span>
+									<div class="card-detalles-largeFont">
+										<i class="fa-solid fa-id-badge"></i>
+										<span>5</span>
+									</div>
+									<div class="card-detalles-largeFont">
+										<i class="fa-solid fa-star"></i>
+										<span>124</span>
+									</div>
+								</div>
 
-                <!-- card 3 -->
-                <article class="card-item">             
-                    <section class="card-content">
-                        <img src="img/enzofe.jpg" alt="Enzo Fernandez" class="card-imagen">
-                        <div class="card-upper-container">
-                            <div class="card-upper-subcontainer">
-                                <span class="card-detalles-largeFont">Enzo Fernandez</span>
-                                <div class="card-detalles-largeFont">
-                                    <i class="fa-solid fa-id-badge"></i>
-                                    <span>5</span>
-                                </div>
-                                <div class="card-detalles-largeFont">
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>124</span>
-                                </div>
-                            </div>
-                            
-                            <div class="card-upper-subcontainer">
-                                <div class="card-detalles-mediumFont">
-                                    <div class="card-detalles-logo">
-                                        <i class="fa-solid fa-weight-scale"></i>
-                                        <span>Peso</span>
-                                    </div>
-                                    <span>72 kilos</span>
-                                </div>
-                                <div class="card-detalles-mediumFont">
-                                    <div class="card-detalles-logo">
-                                        <i class="fa-solid fa-ruler"></i>
-                                        <span>Altura</span>
-                                    </div>
-                                    <span>1.7 metros</span>
-                                </div>
-                            </div>     
-                        </div>
-                        <div class="card-bottom-container">
-                            <div class="card-detalles-container"> 
-                                
-                                <div class="card-detalles-smallFont">
-                                    <span class="card-detalles-logo">Casaca</span>
-                                    <span>10</span>
-                                </div>
-                                <div class="card-detalles-smallFont">
-                                    <span class="card-detalles-logo">Nacimiento</span>
-                                    <span>24/06/1987 (36 años)</span>
-                                </div>
-                                <div class="card-detalles-smallFont">
-                                    <span class="card-detalles-logo">Selección</span>
-                                    <span>Argentina (<i class="fa-solid fa-trophy"></i> 3)</span>
-                                </div>
-                                <div class="card-detalles-smallFont">
-                                    <span class="card-detalles-logo">Posición</span>
-                                    <span>Delantero</span>
-                                </div>
-                                
-                            </div>
-                            <div class="card-detalles-mediumFont card-detalles-center">
-                                <span class="card-detalles-logo">Cotización USD 80.000.000</span>
-                            </div>
-                            <div class="card-detalles-largeFont card-detalles-center">
-                                <span class="card-detalles-logo">Cedida por Daniel Gonzalez</span>
-                            </div>
-                        </div>
-                    </section>
-                </article>
+								<div class="card-upper-subcontainer">
+									<div class="card-detalles-mediumFont">
+										<div class="card-detalles-logo">
+											<i class="fa-solid fa-weight-scale"></i>
+											<span>Peso</span>
+										</div>
+										<span>72 kilos</span>
+									</div>
+									<div class="card-detalles-mediumFont">
+										<div class="card-detalles-logo">
+											<i class="fa-solid fa-ruler"></i>
+											<span>Altura</span>
+										</div>
+										<span>1.7 metros</span>
+									</div>
+								</div>
+							</div>
+							<div class="card-bottom-container">
+								<div class="card-detalles-container">
+									<div class="card-detalles-smallFont">
+										<span class="card-detalles-logo">Casaca</span>
+										<span>10</span>
+									</div>
+									<div class="card-detalles-smallFont">
+										<span class="card-detalles-logo">Nacimiento</span>
+										<span>24/06/1987 (36 años)</span>
+									</div>
+									<div class="card-detalles-smallFont">
+										<span class="card-detalles-logo">Selección</span>
+										<span
+											>Argentina (<i class="fa-solid fa-trophy"></i> 3)</span
+										>
+									</div>
+									<div class="card-detalles-smallFont">
+										<span class="card-detalles-logo">Posición</span>
+										<span>Delantero</span>
+									</div>
+								</div>
+								<div class="card-detalles-mediumFont card-detalles-center">
+									<span class="card-detalles-logo"
+										>Cotización USD 80.000.000</span
+									>
+								</div>
+								<div class="card-detalles-largeFont card-detalles-center">
+									<span class="card-detalles-logo"
+										>Cedida por Daniel Gonzalez</span
+									>
+								</div>
+							</div>
+						</section>
+					</article>
+					<!-- card 2 -->
+					<article class="card-item">
+						<section class="card-content">
+							<img
+								src="img/enzofe.jpg"
+								alt="Enzo Fernandez"
+								class="card-imagen"
+							/>
+							<span class="material-symbols-outlined trash-can"
+								>delete_forever</span
+							>
+							<div class="card-upper-container">
+								<div class="card-upper-subcontainer">
+									<span class="card-detalles-largeFont">Enzo Fernandez</span>
+									<div class="card-detalles-largeFont">
+										<i class="fa-solid fa-id-badge"></i>
+										<span>5</span>
+									</div>
+									<div class="card-detalles-largeFont">
+										<i class="fa-solid fa-star"></i>
+										<span>124</span>
+									</div>
+								</div>
 
+								<div class="card-upper-subcontainer">
+									<div class="card-detalles-mediumFont">
+										<div class="card-detalles-logo">
+											<i class="fa-solid fa-weight-scale"></i>
+											<span>Peso</span>
+										</div>
+										<span>72 kilos</span>
+									</div>
+									<div class="card-detalles-mediumFont">
+										<div class="card-detalles-logo">
+											<i class="fa-solid fa-ruler"></i>
+											<span>Altura</span>
+										</div>
+										<span>1.7 metros</span>
+									</div>
+								</div>
+							</div>
+							<div class="card-bottom-container">
+								<div class="card-detalles-container">
+									<div class="card-detalles-smallFont">
+										<span class="card-detalles-logo">Casaca</span>
+										<span>10</span>
+									</div>
+									<div class="card-detalles-smallFont">
+										<span class="card-detalles-logo">Nacimiento</span>
+										<span>24/06/1987 (36 años)</span>
+									</div>
+									<div class="card-detalles-smallFont">
+										<span class="card-detalles-logo">Selección</span>
+										<span
+											>Argentina (<i class="fa-solid fa-trophy"></i> 3)</span
+										>
+									</div>
+									<div class="card-detalles-smallFont">
+										<span class="card-detalles-logo">Posición</span>
+										<span>Delantero</span>
+									</div>
+								</div>
+								<div class="card-detalles-mediumFont card-detalles-center">
+									<span class="card-detalles-logo"
+										>Cotización USD 80.000.000</span
+									>
+								</div>
+								<div class="card-detalles-largeFont card-detalles-center">
+									<span class="card-detalles-logo"
+										>Cedida por Daniel Gonzalez</span
+									>
+								</div>
+							</div>
+						</section>
+					</article>
 
-            </div>
+					<!-- card 3 -->
+					<article class="card-item">
+						<section class="card-content">
+							<img
+								src="img/enzofe.jpg"
+								alt="Enzo Fernandez"
+								class="card-imagen"
+							/>
+							<span class="material-symbols-outlined trash-can"
+								>delete_forever</span
+							>
+							<div class="card-upper-container">
+								<div class="card-upper-subcontainer">
+									<span class="card-detalles-largeFont">Enzo Fernandez</span>
+									<div class="card-detalles-largeFont">
+										<i class="fa-solid fa-id-badge"></i>
+										<span>5</span>
+									</div>
+									<div class="card-detalles-largeFont">
+										<i class="fa-solid fa-star"></i>
+										<span>124</span>
+									</div>
+								</div>
 
-
-
-
-        </div>
-
-    </div>
-    <footer class="footer-container">
-        <i class="fa-brands fa-square-facebook"></i>
-        <span>WorldCApp / 2023</span>
-    </footer>
-</body>
-
+								<div class="card-upper-subcontainer">
+									<div class="card-detalles-mediumFont">
+										<div class="card-detalles-logo">
+											<i class="fa-solid fa-weight-scale"></i>
+											<span>Peso</span>
+										</div>
+										<span>72 kilos</span>
+									</div>
+									<div class="card-detalles-mediumFont">
+										<div class="card-detalles-logo">
+											<i class="fa-solid fa-ruler"></i>
+											<span>Altura</span>
+										</div>
+										<span>1.7 metros</span>
+									</div>
+								</div>
+							</div>
+							<div class="card-bottom-container">
+								<div class="card-detalles-container">
+									<div class="card-detalles-smallFont">
+										<span class="card-detalles-logo">Casaca</span>
+										<span>10</span>
+									</div>
+									<div class="card-detalles-smallFont">
+										<span class="card-detalles-logo">Nacimiento</span>
+										<span>24/06/1987 (36 años)</span>
+									</div>
+									<div class="card-detalles-smallFont">
+										<span class="card-detalles-logo">Selección</span>
+										<span
+											>Argentina (<i class="fa-solid fa-trophy"></i> 3)</span
+										>
+									</div>
+									<div class="card-detalles-smallFont">
+										<span class="card-detalles-logo">Posición</span>
+										<span>Delantero</span>
+									</div>
+								</div>
+								<div class="card-detalles-mediumFont card-detalles-center">
+									<span class="card-detalles-logo"
+										>Cotización USD 80.000.000</span
+									>
+								</div>
+								<div class="card-detalles-largeFont card-detalles-center">
+									<span class="card-detalles-logo"
+										>Cedida por Daniel Gonzalez</span
+									>
+								</div>
+							</div>
+						</section>
+					</article>
+				</div>
+				<span class="material-symbols-outlined plus-icon">add</span>
+			</div>
+		</div>
+		<footer class="footer-container">
+			<i class="fa-brands fa-square-facebook"></i>
+			<span>WorldCApp / 2023</span>
+		</footer>
+	</body>
 </html>

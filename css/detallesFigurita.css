@@ -1,6 +1,3 @@
-/* .sub-main-container {
-    gap: 1.2em;
-} */
 .card-header-container {
     border-radius:  var(--border-radius-interno) var(--border-radius-interno) 0 0;
 }
@@ -13,6 +10,41 @@
     transform: none; 
     box-shadow: 0.4rem 0.8rem 1.6rem rgb(0 0 0 / 80%);
 }
+
+.card-valoracion-container {
+	border-top: black 0.2rem solid;
+}
+
+.card-logos-container {
+	display: flex;
+	flex-direction: row;
+	font-size: 2rem;
+	gap: 1em;
+}
+
+.card-name-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5em;
+}
+
+.card-nombre {
+	font-size: 2rem;
+	color: var(--text-color);
+}
+
+.card-header-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	align-items: center;
+	padding-top: 1em;
+	background-color: var(--fifth-color);
+	text-align: center;
+}
+
 
 @media (min-width:401px) {
 

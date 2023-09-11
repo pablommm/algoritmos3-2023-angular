@@ -25,7 +25,6 @@
 }
 
 .card-imagen {
-	margin: 0;
 	padding: 0;
 }
 
@@ -40,25 +39,6 @@
 	flex-direction: column;
 	gap: 1em;
 	padding-bottom: 0.8em;
-}
-
-.card-detalles-largeFont,
-.card-detalles-mediumFont,
-.card-detalles-smallFont {
-	display: flex;
-	gap: 0.3em;
-}
-
-.card-detalles-largeFont {
-	font-size: 1.5em;
-}
-
-.card-detalles-mediumFont {
-	font-size: 1.2em;
-}
-
-.card-detalles-smallFont {
-	font-size: 1em;
 }
 
 .card-content {

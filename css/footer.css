@@ -2,10 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    background-color: var(--third-colour);
+    gap: .5em;
+    background-color: var(--third-color);
     height: 2rem;
     font-size: 1.3rem;
-    color: var(--text-colour);
+    color: var(--text-color);
     font-family: 'Exo', sans-serif;
 }

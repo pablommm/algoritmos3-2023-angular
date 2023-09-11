@@ -1,6 +1,6 @@
 /*tamaño celular */
 .toolbox-container {
-    background-color: var(--fourth-colour);
+    background-color: var(--fourth-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,12 +13,12 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5em;
-    color: var(--primary-colour);
+    color: var(--primary-color);
     font-size: 1.5em;
 }
 
 .toolbox-header-container {
-    border-bottom: var(--primary-colour) .1em solid;
+    border-bottom: var(--primary-color) .1em solid;
     width: 90%; 
 }
 
@@ -27,7 +27,7 @@
 }
 
 .toolbox-header-container-title {
-    /* border-bottom: .1em var(--primary-colour) solid;
+    /* border-bottom: .1em var(--primary-color) solid;
     width: 85%; */
     font-size: 1.5em;
     text-align: center;
@@ -36,7 +36,7 @@
 .desde-hasta-container{
     display: flex;
     gap: 0.5em;
-    color: var(--primary-colour);
+    color: var(--primary-color);
     flex-wrap: wrap;
     width: 100%;
     padding: 0.5em
@@ -48,7 +48,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5em;
-    color: var(--primary-colour);
+    color: var(--primary-color);
 }
 
 .desde-hasta-subcontainer input[type="text"] {
@@ -58,7 +58,7 @@
 
 .valoracion {
     font-size: 1.5em;
-    color: var(--primary-colour);
+    color: var(--primary-color);
 }
 
 /*tamaño tablet */

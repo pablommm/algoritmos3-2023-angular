@@ -3,14 +3,12 @@
 }
 
 .sub-main-container {
-	flex-direction: column;
-	flex-wrap: nowrap;
 	padding: 1em;
 	justify-content: center;
 }
 
 .toolbox-container {
-	background-color: var(--primary-colour);
+	background-color: var(--primary-color);
 	margin-top: 2.5em;
 	border-radius: 0;
 	padding-bottom: 1em;
@@ -21,7 +19,7 @@
 	height: 9em;
 	margin: 1em;
 	object-fit: cover;
-	border: 0.2em solid var(--third-colour);
+	border: 0.2em solid var(--third-color);
 	border-radius: 50%;
 }
 
@@ -61,7 +59,7 @@
 .tab-elegido {
 	font-size: 1.5em;
 	padding: 1em;
-	border-bottom: 0em solid var(--grey-colour);
+	border-bottom: 0em solid var(--grey-color);
 	padding-top: 0.5em;
 }
 
@@ -101,7 +99,7 @@
 
 .plus-icon{
 	color:white;
-	background-color: var(--fifth-colour);
+	background-color: var(--fifth-color);
 	position: fixed;
 	font-size: 4em;
     bottom: 1em; 
@@ -109,45 +107,56 @@
 	border-radius: 5em;
 	
 }
+
 .card-content{
 	position: relative;
 }
+
 .trash-can{
 	color:white;
 	position: absolute;
-	
 	top:0.5em; 
     right: 0.2em; 
 }
 
 /* version tablet*/
 @media (min-width: 401px) {
+	.sub-main-container{
+		margin-left: 1em;
+	}
+	
 	.subtitulo-contenedor {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
 	.card-item {
-		width: 90%;
+		width: 100%;
 	}
+
 	.distancia {
 		grid-column: span 2;
 	}
+
 	.tabs-container {
 		flex-direction: row;
 	}
+
 	.tab,
 	.tab-elegido {
 	font-size: 1em;
 	padding: 1em;
-	border-bottom: 0.2em solid var(--grey-colour);
+	border-bottom: 0.2em solid var(--grey-color);
 	padding-top: 0;
 	}
+
 	.tab-elegido {
-		border-bottom: 0.5em solid var(--grey-colour);
+		border-bottom: 0.5em solid var(--grey-color);
 	}
+
 	.card-grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
+	
 	.tab {
 		display: block;
 	}
@@ -160,6 +169,7 @@
 
 /* version desktop*/
 @media (min-width: 769px) {
+
 	.toolbox-container {
 		width: 20%;
 		margin-top: 1.5em;

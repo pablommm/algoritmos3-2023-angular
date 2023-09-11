@@ -3,14 +3,14 @@
 	justify-content: center;
 	align-items: center;
 	margin-top: 2.8rem;
-	background-color: var(--fourth-colour);
+	background-color: var(--fourth-color);
 	height: 4rem;
 }
 
 .searchbar {
 	display: flex;
 	align-items: center;
-	background-color: var(--primary-colour);
+	background-color: var(--primary-color);
 	border-radius: 2em;
 	width: 80%;
 }
@@ -23,10 +23,10 @@
 }
 
 .searchbar button[type="submit"] {
-	background-color: var(--third-colour);
+	background-color: var(--third-color);
 	border: none;
 	border-radius: 0 var(--border-radius) var(--border-radius) 0;
-	color: var(--primary-colour);
+	color: var(--primary-color);
 	cursor: pointer;
 	padding: 0.8em 1em;
 }

@@ -7,14 +7,14 @@
 
 :root {
 	/* Variables generales, tales como paleta de colores, fuente default, fondo, padding, etc */
-	--primary-colour: #f6f1f1;
-	--secondary-colour: #b6c5cc;
-	--third-colour: #66aabd;
-	--fourth-colour: #146c94;
-	--fifth-colour: #65b6cc;
-	--text-colour: #000;
-	--fire-colour: #ff0000;
-	--grey-colour: #6e6e6e;
+	--primary-color: #f6f1f1;
+	--secondary-color: #b6c5cc;
+	--third-color: #66aabd;
+	--fourth-color: #146c94;
+	--fifth-color: #65b6cc;
+	--text-color: #000;
+	--fire-color: #ff0000;
+	--grey-color: #6e6e6e;
 	--button-radius: 0.3rem;
 	--border-radius: 0.5rem;
 	--border-radius-interno: 0.2rem;
@@ -28,12 +28,11 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	/* background-color: var(--primary-colour); */
 }
 
 .main-container,
 .sub-main-container {
-	background-color: var(--secondary-colour);
+	background-color: var(--secondary-color);
 	display: flex;
 	flex: 1;
 	align-items: center;
