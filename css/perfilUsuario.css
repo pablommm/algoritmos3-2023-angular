@@ -108,9 +108,15 @@
 	
 }
 
-.card-content{
-	position: relative;
+.plus-icon:hover {
+	transform: scale(1.1); 
+    transition: transform 0.6s ease; 
+	box-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.5);
 }
+
+/* .card-content{
+	position: relative;
+} */
 
 .trash-can{
 	color:white;
