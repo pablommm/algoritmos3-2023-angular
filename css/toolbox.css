@@ -67,7 +67,8 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
-        gap: 1em;
+        gap: 0.2em;
+        margin:0.2em;
     }
 
     .valoracion {
