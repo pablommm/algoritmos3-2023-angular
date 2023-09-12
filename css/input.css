@@ -14,14 +14,14 @@ input:focus {
   width: 100%;
   border: .1rem solid var(--primary-color);
   margin: 0.5rem 0;
-  box-shadow: 0.5em 0.5em 0.1em rgba(0, 0, 0, 0.2); /* Valores de sombra */
+  box-shadow: 0.5em 0.5em 0.1em rgba(0, 0, 0, 0.2); 
   padding: 1rem;
   border-radius: .5rem; 
 }
 
 .formulario input:focus,
 .formulario select:focus {
-  box-shadow: 0.5em 0.5em 0.15em rgba(0, 0, 0, 0.7); /* x y enfoque expansion */
+  box-shadow: 0.5em 0.5em 0.15em rgba(0, 0, 0, 0.7); 
   border: 0.2em solid var(--fourth-color); 
   outline: none; 
 }
