@@ -4,6 +4,9 @@
 	gap: 1rem;
 }
 
+.card-content{
+	font-size: 0.8em;
+}
 .card-upper-container {
 	background-color: var(--third-color);
 	border-radius: 0.5em 0.5em 0 0;
@@ -17,7 +20,7 @@
 .card-item {
 	border: var(--text-color) 0.2em solid;
 	border-radius: var(--border-radius);
-	font-size: 0.6em;
+	
 }
 
 .card-detalles-container {
@@ -36,8 +39,8 @@
 }
 
 @media (min-width: 401px) {
-    
-	.card-item {
-		font-size: 0.7rem;
+	.card-content{
+		font-size: 1.2em;
 	}
+	
 }
