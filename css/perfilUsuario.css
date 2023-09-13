@@ -123,6 +123,7 @@
 @media (min-width: 401px) {
   .sub-main-container {
     margin-left: 1em;
+    flex-direction: column;
   }
 
   .subtitulo-contenedor {
