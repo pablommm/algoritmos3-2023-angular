@@ -15,15 +15,12 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./css/general.css" />
-		<link rel="stylesheet" href="./css/nav.css" />
 		<link rel="stylesheet" href="./css/footer.css" />
+		<link rel="stylesheet" href="./css/nav.css" />
 		<link rel="stylesheet" href="./css/input.css" />
 		<link rel="stylesheet" href="./css/button.css" />
 		<link rel="stylesheet" href="./css/cards.css" />
-		<link rel="stylesheet" href="./css/checkbox.css" />
-		<link rel="stylesheet" href="./css/searchbar.css" />
 		<link rel="stylesheet" href="./css/toolbox.css" />
-		<link rel="stylesheet" href="./css/busquedaFiguritas.css" />
 		<link rel="stylesheet" href="./css/perfilUsuario.css" />
 	</head>
 
@@ -34,10 +31,10 @@
 				<i class="fa-solid fa-bars burger"></i>
 
 				<ul class="navbar-list">
-					<li>Figuritas</li>
-					<li>Sobres</li>
-					<li>Perfil</li>
-					<li><i class="fa-solid fa-right-from-bracket"></i></li>
+					<li><a href="">Figuritas</a></li>
+					<li><a href="">Sobres</a></li>
+					<li class="navbar-select-tab"><a href="">Perfil</a></li>
+					<li><a href=""><i class="fa-solid fa-right-from-bracket"></i></a></li>
 				</ul>
 			</nav>
 		</header>
@@ -64,16 +61,16 @@
 			</div>
 
 			<section class="sub-main-container">
-				<div class="tabs-container">
-					<span class="tab-elegido">Información del Perfil</span>
-					<span class="tab">Figuritas Repetidas</span>
-					<span class="tab">Figuritas Faltantes</span>
-					<div>
+				<ul class="tabs-container navbar-list">
+					<li class="tab-elegido">Información del Perfil</li>
+					<li class="tab">Figuritas Repetidas</li>
+					<li class="tab">Figuritas Faltantes</li>
+					<li>
 						<i class="fa-solid fa-circle point-icon"></i>
 						<i class="fa-regular fa-circle point-icon"></i>
 						<i class="fa-regular fa-circle point-icon"></i>
-					</div>
-				</div>
+					</li>
+				</ul>
 				<div class="formulario">
 					<span class="subtitulo">Información General</span>
 

@@ -16,15 +16,23 @@
 }
 
 li:hover{
-    transform: scale(1.1); 
-    transition: transform 0.6s ease; 
-	text-decoration: underline;
+    transform: scale(1.15); 
+    transition: transform 1s ease; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit
 }
 
 .navbar-title{
     font-size: 0.8em;
     color: var(--text-color);
     font-family: 'Exo', sans-serif;
+}
+
+.navbar-select-tab {
+    font-weight: bold;
 }
 
 

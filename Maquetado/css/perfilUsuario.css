@@ -119,6 +119,10 @@
   right: 0.2em;
 }
 
+.card-content{
+	position: relative;
+}
+
 /* version tablet*/
 @media (min-width: 401px) {
   .sub-main-container {
@@ -172,6 +176,10 @@
 
 /* version desktop*/
 @media (min-width: 769px) {
+  .main-container {
+    flex-direction: row;
+  }
+
   .toolbox-container {
     width: 20%;
     margin-top: 1.5em;
@@ -185,8 +193,9 @@
   }
 
   .tabs-container {
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-top: 1em;
+    gap: 0;
   }
 
   .card-grid {
