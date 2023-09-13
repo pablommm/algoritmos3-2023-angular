@@ -52,4 +52,9 @@
         border-radius: var(--border-radius);
         margin-left: 0;
     }
+
+    .login-info {
+        
+        border: none;
+    }
 }
