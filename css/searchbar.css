@@ -11,7 +11,7 @@
 	display: flex;
 	align-items: center;
 	background-color: var(--primary-color);
-	border-radius: 2em;
+	border-radius: var(--border-radius);
 	width: 80%;
 }
 
@@ -32,5 +32,5 @@
 }
 
 .searchbar button[type="submit"] i {
-	font-size: 1.5em;
+	font-size: 2em;
 }

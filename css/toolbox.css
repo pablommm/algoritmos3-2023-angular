@@ -50,7 +50,7 @@
     color: var(--primary-color);
 }
 
-.desde-hasta-subcontainer input[type="text"] {
+.desde-hasta-subcontainer input {
     width: 100%; 
     min-height: 2em;
 }
