@@ -1,0 +1,29 @@
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: .5em;
+}
+
+.primary-button, .secondary-button {
+    font-size: 1.3em;
+    padding: .3em .5em;
+    border: .2em solid --secondary-color;
+    border-radius: --secondary-color;
+    color: --secondary-color;
+    cursor: pointer;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+}
+
+.primary-button {
+    background-color: --third-color;
+}
+
+.secondary-button {
+    background-color: --secondary-color;
+}
+
+.primary-button:hover, .secondary-button:hover {
+    border-color: --fourth-color;
+    font-size: 1.4em;  
+}
+

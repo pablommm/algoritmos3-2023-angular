@@ -1,0 +1,11 @@
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    background-color: --third-color;
+    height: 2rem;
+    font-size: 1.3rem;
+    color: --text-color;
+    font-family: 'Exo', sans-serif;
+}
