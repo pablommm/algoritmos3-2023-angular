@@ -1,7 +1,7 @@
 .login-input {
     width: 15em;
     height: 2.5em;
-    border: .3em --fourth-color solid .3em --fourth-color solid .3em --fourth-color solid 0; 
+    border: .3em var(--fourth-color) solid .3em var(--fourth-color) solid .3em var(--fourth-color) solid 0; 
     padding-left: .5em;
 }
 
@@ -12,7 +12,7 @@ input:focus {
 .formulario input,
 .select {
   width: 100%;
-  border: .1rem solid --primary-color;
+  border: .1rem solid var(--primary-color);
   margin: 0.5rem 0;
   box-shadow: 0.5em 0.5em 0.1em rgba(0, 0, 0, 0.2); 
   padding: 1rem;
@@ -22,6 +22,6 @@ input:focus {
 .formulario input:focus,
 .formulario select:focus {
   box-shadow: 0.5em 0.5em 0.15em rgba(0, 0, 0, 0.7); 
-  border: 0.2em solid --fourth-color; 
+  border: 0.2em solid var(--fourth-color); 
   outline: none; 
 }

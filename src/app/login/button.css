@@ -7,23 +7,23 @@
 .primary-button, .secondary-button {
     font-size: 1.3em;
     padding: .3em .5em;
-    border: .2em solid --secondary-color;
-    border-radius: --secondary-color;
-    color: --secondary-color;
+    border: .2em solid var(--third-color);
+    border-radius: var(--button-radius);
+    color: var(--text-color);
     cursor: pointer;
     transition: background-color 0.3s ease, font-size 0.3s ease;
 }
 
 .primary-button {
-    background-color: --third-color;
+    background-color: var(--third-color);
 }
 
 .secondary-button {
-    background-color: --secondary-color;
+    background-color: var(--secondary-color);
 }
 
 .primary-button:hover, .secondary-button:hover {
-    border-color: --fourth-color;
+    border-color: var(--fourth-color);
     font-size: 1.4em;  
 }
 

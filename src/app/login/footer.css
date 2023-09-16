@@ -3,9 +3,9 @@
     justify-content: center;
     align-items: center;
     gap: .5em;
-    background-color: --third-color;
+    background-color: var(--third-color);
     height: 2rem;
     font-size: 1.3rem;
-    color: --text-color;
+    color: var(--text-color);
     font-family: 'Exo', sans-serif;
 }

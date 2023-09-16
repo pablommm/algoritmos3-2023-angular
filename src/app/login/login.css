@@ -1,19 +1,19 @@
 .login-title {
     font-size: 2.8rem;
-    color: --text-color;
+    color: var(--text-color);
     font-family: 'Exo', sans-serif;
 }
 
 
 .main-container{
-    background-color: --primary-color;
+    background-color: var(--fourth-color);
     margin-top: 0;
 }
 
 .sub-main-container {
     gap: 1em;
     padding-bottom: 4em;
-    background-color: --primary-color;
+    background-color: var(--primary-color);
 }
 
 .login-item {
@@ -29,27 +29,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: --border-radius 0 0 --border-radius
+    border-radius: var(--border-radius) 0 0 var(--border-radius)
 }
 
 .login-info {
     display: flex;
-    border-radius: --border-radius;
-    background-color: --fourth-color;
-    border: solid 0.1em --fourth-color
+    border-radius: var(--border-radius);
+    background-color: var(--fourth-color);
+    border: solid 0.1em var(--fourth-color)
 }
 
 .login-input{
-    border-radius:  0   --border-radius --border-radius 0;
+    border-radius:  0   var(--border-radius) var(--border-radius) 0;
 }
 
 @media (min-width:401px){
     .sub-main-container {
         flex: 0;
         padding: 5em;
-        background-color: --secondary-color;
-        border: solid .3em --fourth-color;
-        border-radius: --border-radius;
+        background-color: var(--secondary-color);
+        border: solid .3em var(--fourth-color);
+        border-radius: var(--border-radius);
         margin-left: 0;
     }
 
