@@ -9,10 +9,13 @@ import { Component } from '@angular/core'
   selector: 'app-login',
   templateUrl: './login.component.html',
   //styleUrls : ['./login.component.scss',]
-  styleUrls: ['../Maquetado/css/button.css',
+  styleUrls: [
   '../Maquetado/css/footer.css',
-  '../Maquetado/css/login.css',
-  '../Maquetado/css/input.css']
+  '../Maquetado/css/input.css',
+  '../Maquetado/css/button.css',
+  '../Maquetado/css/login.css'
+
+]
 })
 export class LoginComponent {
 

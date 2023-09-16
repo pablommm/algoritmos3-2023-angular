@@ -1,1 +1,141 @@
-<p>perfil-usuario works!</p>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Perfil-usuario-formulario</title>
+		<script
+			src="https://kit.fontawesome.com/e0d6dd6321.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Exo:ital,wght@1,900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body>
+		<header>
+			<nav class="navbar-container">
+				<span class="navbar-title">WorldCApp</span>
+				<i class="fa-solid fa-bars burger"></i>
+
+				<ul class="navbar-list">
+					<li><a href="">Figuritas</a></li>
+					<li><a href="">Sobres</a></li>
+					<li class="navbar-select-tab"><a href="">Perfil</a></li>
+					<li><a href=""><i class="fa-solid fa-right-from-bracket"></i></a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="main-container">
+			<div class="toolbox-container">
+				<img src="img/alexis.jpg" class="imagen_perfil" />
+				<div class="informacion">
+					<div>
+						<span class="info-datos-personales">Nombre de usuario </span>
+						<i class="fa-solid fa-pencil"></i>
+					</div>
+
+					<div>
+						<span class="info-datos-personales">Edad: </span>
+						<span>84</span>
+					</div>
+
+					<div>
+						<span class="info-datos-personales">Ubicación:</span>
+						<span>Argentina</span>
+					</div>
+				</div>
+			</div>
+
+			<section class="sub-main-container">
+				<ul class="tabs-container navbar-list">
+					<li class="tab-elegido">Información del Perfil</li>
+					<li class="tab">Figuritas Repetidas</li>
+					<li class="tab">Figuritas Faltantes</li>
+					<li>
+						<i class="fa-solid fa-circle point-icon"></i>
+						<i class="fa-regular fa-circle point-icon"></i>
+						<i class="fa-regular fa-circle point-icon"></i>
+					</li>
+				</ul>
+				<div class="formulario">
+					<span class="subtitulo">Información General</span>
+
+					<div class="subtitulo-contenedor">
+						<div>
+							<label for="nombre">Nombre</label>
+							<input type="text" placeholder="Nombre" />
+							<label for="Apellido">Apellido</label>
+							<input type="text" placeholder="Apellido" />
+						</div>
+						<div>
+							<label for="Correo Electronico">Correo Electrónico</label>
+							<input type="email" placeholder="Correo Electrónico" />
+							<label for="Fecha de nacimiento">Fecha de nacimiento</label>
+							<input type="date" placeholder="Fecha de nacimiento" />
+						</div>
+					</div>
+					<span class="subtitulo">Dirección</span>
+					<div class="subtitulo-contenedor">
+						<div>
+							<label for="Provincia">Provincia</label>
+							<form action="Provincia">
+								<select class="select">
+									<option value="seleccione">Seleccione una opción</option>
+								</select>
+							</form>
+							<label for="Calle">Calle</label>
+							<input type="text" placeholder="Calle" />
+						</div>
+						<div>
+							<label for="Localidad">Localidad</label>
+							<form action="Localidad">
+								<select class="select">
+									<option value="seleccione">Seleccione una opción</option>
+								</select>
+							</form>
+							<label for="Altura">Altura</label>
+							<input type="number" placeholder="Altura" />
+						</div>
+					</div>
+					<span class="subtitulo">Ubicación Geográfica</span>
+					<div class="subtitulo-contenedor">
+						<div>
+							<label for="PosiciónX">Posición X</label>
+							<input type="number" placeholder="Posición X" />
+						</div>
+						<div>
+							<label for="PosiciónY">Posición Y</label>
+							<input type="number" placeholder="Posición y" />
+						</div>
+						<div class="distancia">
+							<label for="distanciaMaxima">Distancia máxima de Cercanía</label>
+							<input type="number" placeholder="Distancia máxima de Cercanía" />
+						</div>
+					</div>
+					<span class="subtitulo">Criterio para el Cambio</span>
+					<div class="subtitulo-contenedor">
+						<div>
+							<label for="Criterio">Criterio</label>
+							<form action="Criterios">
+								<select class="select">
+									<option value="nonee">none</option>
+								</select>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+        
+		<footer class="footer-container">
+			<i class="fa-brands fa-square-facebook"></i>
+			<span>WorldCApp / 2023</span>
+		</footer>
+	</body>
+</html>
