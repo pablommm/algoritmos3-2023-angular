@@ -8,7 +8,8 @@ import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.componen
 import { PerfilUsuarioFiguritasFalComponent } from './perfil-usuario-figuritas-fal/perfil-usuario-figuritas-fal.component'
 import { PerfilUsuarioFiguritasRepComponent } from './perfil-usuario-figuritas-rep/perfil-usuario-figuritas-rep.component';
 import { FooterComponent } from './footer/footer.component';
-import { NavComponent } from './nav/nav.component'
+import { NavComponent } from './nav/nav.component';
+import { CardComponent } from './card/card.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavComponent } from './nav/nav.component'
     PerfilUsuarioFiguritasFalComponent,
     PerfilUsuarioFiguritasRepComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
