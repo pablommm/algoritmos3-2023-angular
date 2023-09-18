@@ -1,1 +1,71 @@
-<p>perfil-usuario-figuritas-fal works!</p>
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>perfilUsuarioFiguritasFal</title>
+		<script
+			src="https://kit.fontawesome.com/e0d6dd6321.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Exo:ital,wght@1,900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body>
+
+
+		<div class="main-container">
+			<div class="toolbox-container">
+				<img src="img/alexis.jpg" class="imagen_perfil" />
+				<div class="informacion">
+					<div>
+						<span class="info-datos-personales">Nombre de usuario </span>
+						<i class="fa-solid fa-pencil"></i>
+					</div>
+
+					<div>
+						<span class="info-datos-personales">Edad: </span>
+						<span>84</span>
+					</div>
+
+					<div>
+						<span class="info-datos-personales">Ubicación:</span>
+						<span>Argentina</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="sub-main-container">
+				<div class="tabs-container navbar-list">
+					<ul class="tabs-container navbar-list">
+						<li class="tab">Información del Perfil</li>
+						<li class="tab-elegido">Figuritas Repetidas</li>
+						<li class="tab">Figuritas Faltantes</li>
+						<li>
+							<i class="fa-solid fa-circle point-icon"></i>
+							<i class="fa-regular fa-circle point-icon"></i>
+							<i class="fa-regular fa-circle point-icon"></i>
+						</li>
+					</ul>
+				</div>
+				<div class="card-grid">
+                    <app-card></app-card>
+                    <app-card></app-card>
+                    <app-card></app-card>
+				</div>
+				<span class="material-symbols-outlined plus-icon">add</span>
+			</div>
+		</div>
+		
+	</body>
+</html>
