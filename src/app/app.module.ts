@@ -11,9 +11,16 @@ import { FooterComponent } from './footer/footer.component'
 import { NavComponent } from './nav/nav.component'
 import { CardComponent } from './card/card.component'
 import { FormsModule } from '@angular/forms'
+import { DetallesFiguritaComponent } from './detallesFigurita/detallesFigurita.component';
+import { ButtonComponent } from './button/button.component';
+import { BusquedaSobresComponent } from './busquedaSobres/busquedaSobres.component';
+import { BusquedaFiguritasPerfilComponent } from './busquedaFiguritasPerfil/busquedaFiguritasPerfil.component';
+import { BusquedaFiguritasComponent } from './busquedaFiguritas/busquedaFiguritas.component';
+import { SearchBarComponent } from './searchBar/searchBar.component';
+import { CardSobresComponent } from './cardSobres/cardSobres.component';
 
 @NgModule({
-  declarations: [
+  declarations: [							
     AppComponent,
     LoginComponent,
     PerfilUsuarioComponent,
@@ -21,8 +28,15 @@ import { FormsModule } from '@angular/forms'
     PerfilUsuarioFiguritasRepComponent,
     FooterComponent,
     NavComponent,
-    CardComponent
-  ],
+    CardComponent,
+      DetallesFiguritaComponent,
+      ButtonComponent,
+      BusquedaSobresComponent,
+      BusquedaFiguritasPerfilComponent,
+      BusquedaFiguritasComponent,
+      SearchBarComponent,
+      CardSobresComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

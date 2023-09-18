@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Sobres</title>
+    <script src="https://kit.fontawesome.com/e0d6dd6321.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Exo:ital,wght@1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <app-searchBar></app-searchBar>
+
+    <main class="main-container">
+        <section class="toolbox-container">
+            <header class="toolbox-header-container">
+                <span class="toolbox-header-container-title">Ordenar Por</span>
+            </header>
+            <div class="toolbox-content">
+                <div class="botonesRadio">
+                    <div class="botonRadio-item">
+                        <input type="radio" id="sobresChoice1" name="sobres" value="Menor distancia" />
+                        <label for="sobresChoice1">Menor distancia</label>
+                    </div>
+                    <div class="botonRadio-item">
+                        <input type="radio" id="sobresChoice2" name="sobres" value="Más Barato" />
+                        <label for="sobresChoice2">Más Barato</label>
+                    </div>
+                    <div class="botonRadio-item">
+                        <input type="radio" id="sobresChoice3" name="sobres" value="Más Sobres" />
+                        <label for="sobresChoice3">Más Sobres</label>
+                    </div>
+                    <div class="botonRadio-item">
+                        <input type="radio" id="sobresChoice4" name="sobres" value="Solo los más cercanos" />
+                        <label for="sobresChoice4">Solo los más cercanos</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sub-main-container">
+            <app-cardSobres></app-cardSobres>
+            <app-cardSobres></app-cardSobres>
+            <app-cardSobres></app-cardSobres>
+            <app-cardSobres></app-cardSobres>
+            <app-cardSobres></app-cardSobres>
+            <app-cardSobres></app-cardSobres>
+            <app-cardSobres></app-cardSobres>
+            <app-cardSobres></app-cardSobres>
+            <app-cardSobres></app-cardSobres>
+        </section>
+    </main>
+</body>
+</html>

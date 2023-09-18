@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     padding: .5em;
+    gap: 1em
 }
 
 .primary-button, .secondary-button {
