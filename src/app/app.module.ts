@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component'
 import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component'
 import { PerfilUsuarioFiguritasFalComponent } from './perfil-usuario-figuritas-fal/perfil-usuario-figuritas-fal.component'
 import { PerfilUsuarioFiguritasRepComponent } from './perfil-usuario-figuritas-rep/perfil-usuario-figuritas-rep.component'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PerfilUsuarioFiguritasRepComponent } from './perfil-usuario-figuritas-r
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
