@@ -5,3 +5,15 @@
 @import url(../Maquetado/css/checkbox.css);
 @import url(../Maquetado/css/toolbox.css);
 @import url(../Maquetado/css/busquedaFiguritas.css);
+
+.card-item {
+	background-color: var(--primary-color);
+	border: var(--fourth-color) solid 0.3em;
+	margin-bottom: 1.2em;
+	margin-top: 1em;
+	min-width: 2em;
+	text-align: center;
+	box-shadow: 0.4rem 0.8rem 1.6rem rgb(0 0 0 / 80%);
+	border-radius: var(--border-radius);
+    width: 90%;
+}
