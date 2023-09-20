@@ -7,4 +7,4 @@ enum Confederacion {
     UEFA
 }
 
-export { Confederacion }; 
+export { Confederacion } 

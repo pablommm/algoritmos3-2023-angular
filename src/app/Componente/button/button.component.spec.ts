@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 import { By } from '@angular/platform-browser'
 import { DebugElement } from '@angular/core'
 
-import { BusquedaFiguritasPerfilComponent } from './busquedaFiguritasPerfil.component'
+import { ButtonComponent } from './button.component'
 
-describe('BusquedaFiguritasPerfilComponent', () => {
-  let component: BusquedaFiguritasPerfilComponent
-  let fixture: ComponentFixture<BusquedaFiguritasPerfilComponent>
+describe('ButtonComponent', () => {
+  let component: ButtonComponent
+  let fixture: ComponentFixture<ButtonComponent>
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BusquedaFiguritasPerfilComponent ]
+      declarations: [ ButtonComponent ]
     })
     .compileComponents()
   }))
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BusquedaFiguritasPerfilComponent)
+    fixture = TestBed.createComponent(ButtonComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
   })
