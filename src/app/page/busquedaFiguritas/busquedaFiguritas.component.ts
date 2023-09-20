@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core'
   templateUrl: './busquedaFiguritas.component.html',
   styleUrls: ['./busquedaFiguritas.component.css']
 })
+
 export class BusquedaFiguritasComponent implements OnInit {
 
   constructor() { }
@@ -12,4 +13,12 @@ export class BusquedaFiguritasComponent implements OnInit {
   ngOnInit() {
   }
 
+}
+
+
+class Card {
+  constructor(
+  public nombre: string,
+  public peso: number,
+  public cotizacion: number){}
 }

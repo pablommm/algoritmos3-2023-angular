@@ -8,7 +8,6 @@ import { PerfilUsuarioComponent } from './page/perfil-usuario/perfil-usuario.com
 import { PerfilUsuarioFiguritasFalComponent } from './page/perfil-usuario-figuritas-fal/perfil-usuario-figuritas-fal.component'
 import { PerfilUsuarioFiguritasRepComponent } from './page/perfil-usuario-figuritas-rep/perfil-usuario-figuritas-rep.component'
 import { FormsModule } from '@angular/forms'
-import { ButtonComponent } from './Componente/button/button.component'
 import { BusquedaSobresComponent } from './page/busquedaSobres/busquedaSobres.component'
 import { BusquedaFiguritasPerfilComponent } from './page/busquedaFiguritasPerfil/busquedaFiguritasPerfil.component'
 import { BusquedaFiguritasComponent } from './page/busquedaFiguritas/busquedaFiguritas.component'
@@ -30,7 +29,6 @@ import { DetallesFiguritaComponent } from './page/detallesFigurita/detallesFigur
     NavComponent,
     CardComponent,
     DetallesFiguritaComponent,
-      ButtonComponent,
       BusquedaSobresComponent,
       BusquedaFiguritasPerfilComponent,
       BusquedaFiguritasComponent,
