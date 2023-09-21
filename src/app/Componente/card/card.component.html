@@ -2,18 +2,17 @@
     <section class="card-content">
         <img src="../../assets/enzofe.jpg" alt="Enzo Fernandez" class="card-imagen">
         <div class="card-upper-container">
-            <div class="card-upper-subcontainer">
-                <span class="card-detalles-largeFont">Enzo Fernandez</span>
-                <div class="card-detalles-largeFont">
-                    <i class="fa-solid fa-id-badge"></i>
-                    <span>5</span>
-                </div>
-                <div class="card-detalles-largeFont">
-                    <i class="fa-solid fa-star"></i>
-                    <span >{{ listaCards[1].valoracionBase }}</span>
-                </div>
+          <div class="card-upper-subcontainer">
+            <span class="card-detalles-largeFont">Enzo Fernandez</span>
+            <div class="card-detalles-largeFont">
+              <i class="fa-solid fa-id-badge"></i>
+              <span>5</span>
             </div>
-
+            <div class="card-detalles-largeFont">
+              <i class="fa-solid fa-star"></i>
+              <span>{{ calcularValoracionBase(card) }}</span>
+            </div>
+          </div>
             <div class="card-upper-subcontainer">
                 <div class="card-detalles-mediumFont">
                     <div class="card-detalles-logo">

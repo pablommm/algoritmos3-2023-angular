@@ -30,14 +30,8 @@
                 </div>
             </div>
         </aside>
-        <section class="sub-main-container">
-            <app-card class="card-item"></app-card>
-            <app-card class="card-item"></app-card>
-            <app-card class="card-item"></app-card>
-            <app-card class="card-item"></app-card>
-            <app-card class="card-item"></app-card>
-            <app-card class="card-item"></app-card>
-            <app-card class="card-item"></app-card>
-        </section>
+        <section class="sub-main-container" > 
+        <app-card [card]="card" class="card-item" *ngFor="let card of listaCards"></app-card>
+          </section>
     </main>
 </body>

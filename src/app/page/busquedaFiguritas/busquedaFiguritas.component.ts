@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { CardService } from '../../services/card.service';
 
 @Component({
   selector: 'app-busquedaFiguritas',
@@ -7,18 +8,13 @@ import { Component, OnInit } from '@angular/core'
 })
 
 export class BusquedaFiguritasComponent implements OnInit {
+  listaCards: any[] = [];
 
-  constructor() { }
+  constructor(private cardService: CardService) {}
 
   ngOnInit() {
+    // Obtener los datos de las tarjetas desde el servicio
+    this.listaCards = this.cardService.getCardsWithValoracionBase();
   }
-
 }
 
-
-class Card {
-  constructor(
-  public nombre: string,
-  public peso: number,
-  public cotizacion: number){}
-}
