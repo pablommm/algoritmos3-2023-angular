@@ -1,12 +1,12 @@
-.botonesRadio {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
+.card-item {
+	border: var(--text-color) 0.2em solid;
+	border-radius: var(--border-radius);
+	
 }
-
 .card-content{
 	font-size: 0.8em;
 }
+
 .card-upper-container {
 	background-color: var(--third-color);
 	border-radius: 0.5em 0.5em 0 0;
@@ -17,25 +17,30 @@
 	border-top: var(--text-color) 0.2em solid;
 }
 
-.card-item {
-	border: var(--text-color) 0.2em solid;
-	border-radius: var(--border-radius);
-	
-}
-
 .card-detalles-container {
 	gap: 1.5em;
 	padding-top: 1em;
 }
 
+
+.botonesRadio {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
 .toolbox-container {
 	align-items: flex-start;
 	padding-left: 1em;
-}
-
-.card-detalles-container-center {
-	display: flex;
-	justify-content: center;
 }
 
 @media (min-width: 401px) {
