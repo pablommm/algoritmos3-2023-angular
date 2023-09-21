@@ -1,30 +1,38 @@
-import { Component } from '@angular/core'
-import {CardService} from '../../services/card.service'
+import { Component, OnInit } from '@angular/core';
+import { CardService } from '../../services/card.service';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
+export class CardComponent implements OnInit {
+  listaCards: any[] = [];
 
-export class CardComponent {
-  listaCards!: any[]
-  
   constructor(private cardService: CardService) {}
 
   ngOnInit() {
-    this.listaCards = this.cardService.getCards()
+    this.listaCards = this.cardService.getCards().map(card => {
+      const valoracionBase = this.calcularValoracionBase(
+        card.valorPiso,
+        card.valorOnFire,
+        card.valorParidad,
+        card.valorImpresion
+      );
+      return { ...card, valoracionBase };
+    });
+
+    console.log(this.listaCards);
   }
+
   
-  card = new Card()
-}
-
-/* const VALORACION_PISO = 100  */
-class Card {
-
-  valoracionBase(valorPiso:number, valorOnFire:number, valorParidad:number, valorImpresion:number) {
-    return valorPiso + valorOnFire + valorParidad - valorImpresion
+  calcularValoracionBase(
+    valorPiso: number,
+    valorOnFire: number,
+    valorParidad: number,
+    valorImpresion: number
+  ): number {
+    return valorPiso + valorOnFire + valorParidad - valorImpresion;
   }
-
 }
 
