@@ -4,10 +4,12 @@
 			<img src="../../assets/bilardo.jpg" class="imagen_perfil" />
 			<div class="informacion">
 				<div>
-					<span class="info-datos-personales">Nombre de usuario </span>
-					<i class="fa-solid fa-pencil"></i>
+					<span class="info-datos-personales" >Nombre de usuario </span>
+					<a (click)="cambioDeUsuario.hizoClick()"><i class="fa-solid fa-pencil"></i></a>
 				</div>
-
+				<div *ngIf="cambioDeUsuario.editando">
+					<input type="text" [(ngModel)]="cambioDeUsuario.nombreUsuario" (keyup.enter)="cambioDeUsuario.guardar()">
+				  </div>
 				<div>
 					<span class="info-datos-personales">Edad: </span>
 					<span>84</span>
@@ -22,9 +24,9 @@
 
 		<section class="sub-main-container">
 			<ul class="tabs-container navbar-list">
-				<li class="tab-elegido">Información del Perfil</li>
-				<li class="tab">Figuritas Repetidas</li>
-				<li class="tab">Figuritas Faltantes</li>
+				<li class="tab-elegido" (click)="perfil.informacion()">Información del Perfil</li>
+				<li class="tab"(click)="perfil.repetidas()" >Figuritas Repetidas</li>
+				<li class="tab"(click)="perfil.faltantes()">Figuritas Faltantes</li>
 				<li>
 					<i class="fa-solid fa-circle point-icon"></i>
 					<i class="fa-regular fa-circle point-icon"></i>
