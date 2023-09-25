@@ -6,5 +6,13 @@ import { Component } from '@angular/core'
   styleUrls: ['./perfil-usuario-figuritas-rep.component.scss']
 })
 export class PerfilUsuarioFiguritasRepComponent {
+agregar = new Aniadir()
+}
+
+export class Aniadir{
+
+  aniadir(){
+    alert("agregandooo...")
+  }
 
 }
