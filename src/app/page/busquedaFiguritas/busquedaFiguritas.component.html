@@ -1,0 +1,37 @@
+<body>
+    <app-searchBar></app-searchBar>
+
+    <main class="main-container">
+        <aside class="toolbox-container">
+            <div class="toolbox-header-container">
+                <span class="toolbox-header-container-title">Filtros</span>
+            </div>
+            <div class="toolbox-content">
+                <span class="valoracion">Valoración</span>
+                <div class="desde-hasta-container">
+                    <div class="desde-hasta-subcontainer">
+                        <label for="desde">Desde</label>
+                        <input type="number" min="0" id="desde" placeholder="Desde...">
+                    </div>
+                    <div class="desde-hasta-subcontainer">
+                        <label for="hasta">Hasta</label>
+                        <input type="number" min="0" id="hasta" placeholder="Hasta...">
+                    </div>
+                </div>
+                <div class="checkbox-container">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="onFireCheckbox" class="checkbox-input">
+                        <label for="onFireCheckbox">On fire</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="esPromesaCheckbox" class="checkbox-input">
+                        <label for="esPromesaCheckbox">Es promesa</label>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <section class="sub-main-container" > 
+        <app-card [card]="card" class="card-item" *ngFor="let card of listaCards"></app-card>
+          </section>
+    </main>
+</body>

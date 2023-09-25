@@ -28,7 +28,7 @@
 	border-radius: 0 var(--border-radius) var(--border-radius) 0;
 	color: var(--primary-color);
 	cursor: pointer;
-	padding: 0.8em 1em;
+	padding: 1em 1em;
 }
 
 .searchbar button[type="submit"] i {

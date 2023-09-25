@@ -50,6 +50,7 @@
 	.card-item {
 		width: 45%;
 		font-size: 0.7rem;
+		/* background-color: red; */
 	}
 
 	.card-detalles-container {
@@ -77,6 +78,7 @@
 		width: 30%;
 		height: 100%;
 		font-size: .65rem;
+		/* background-color: green; */
 	}
 
 }
