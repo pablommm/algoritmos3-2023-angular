@@ -11,5 +11,13 @@ export class SearchBarComponent implements OnInit {
 
   ngOnInit() {
   }
+  buscador= new Buscador
 
+}
+
+export class Buscador {
+
+  filtrar(){
+    alert("filtrando")
+  }
 }
