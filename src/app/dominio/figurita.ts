@@ -39,11 +39,10 @@ export class Figurita {
     public NivelImpresion: string = '',
     public ValoracionBase?: number, ) { }
 
-  static fromJson(figuritaJSON: FiguritaJSON): Figurita {
-    /* return Object.assign(new Figurita(), figuritaJSON, { 
-      valoracionBase: valoracionBase(figuritaJSON.ValoracionBase, valoracionBase)
-    }) */
+    static fromJson(figuritaJSON: FiguritaJSON): Figurita {
+      return Object.assign(new Figurita(), figuritaJSON);
   }
+  
 
     calcularValoracionBase(figurita: Figurita) {
     var valoracionBase = VALORACION_PISO
