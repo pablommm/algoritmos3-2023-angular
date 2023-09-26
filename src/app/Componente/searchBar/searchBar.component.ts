@@ -16,8 +16,10 @@ export class SearchBarComponent implements OnInit {
 }
 
 export class Buscador {
+  criterioDeBusqueda=''
 
   filtrar(){
     alert("filtrando")
+    alert(this.criterioDeBusqueda)
   }
 }

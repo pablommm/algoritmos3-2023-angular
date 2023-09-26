@@ -11,21 +11,21 @@
           <div class="desde-hasta-container">
             <div class="desde-hasta-subcontainer">
               <label for="desde">Desde</label>
-              <input type="number" min="0" id="desde" placeholder="Desde...">
+              <input type="number" min="0" id="desde" placeholder="Desde..."[(ngModel)]='filtros.desde'>
             </div>
             <div class="desde-hasta-subcontainer">
               <label for="hasta">Hasta</label>
-              <input type="number" min="0" id="hasta" placeholder="Hasta...">
+              <input type="number" min="0" id="hasta" placeholder="Hasta..." [(ngModel)]='filtros.hasta' (keyup.enter)="filtros.busqueda()">
             </div>
           </div>
           <div class="checkbox-container">
             <div class="checkbox-item">
               <input type="checkbox" id="onFireCheckbox" class="checkbox-input">
-              <label for="onFireCheckbox">On fire</label>
+              <label for="onFireCheckbox"[(ngModel)]='filtros.esOnFire'>On fire</label>
             </div>
             <div class="checkbox-item">
               <input type="checkbox" id="esPromesaCheckbox" class="checkbox-input">
-              <label for="esPromesaCheckbox">Es promesa</label>
+              <label for="esPromesaCheckbox"[(ngModel)]='filtros.esPromesa'>Es promesa</label>
             </div>
           </div>
         </div>
