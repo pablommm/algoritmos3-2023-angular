@@ -113,10 +113,16 @@
 }
 
 .trash-can {
+ 
   color: white;
   position: absolute;
   top: 0.5em;
   right: 0.2em;
+}
+
+.trash-can:hover{
+
+  
 }
 
 .card-content{

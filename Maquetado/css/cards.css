@@ -11,6 +11,7 @@
 }
 
 [class^="card-item"]:hover {
+	
     transform: scale(1.1); 
     transition: transform 0.6s ease; 
 	box-shadow: 0.5em 0.5em 0.1em rgba(0, 0, 0, 0.5);
@@ -89,6 +90,10 @@
 
 .card-detalles-highlight {
 	font-size: 1.8em;
+}
+
+.trash-can{
+	/* display: none; */
 }
 
 @media (min-width: 401px) {
