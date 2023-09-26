@@ -92,9 +92,9 @@
 	font-size: 1.8em;
 }
 
-.trash-can{
-	/* display: none; */
-}
+/* .trash-can{
+	 display: none; 
+} */
 
 @media (min-width: 401px) {
 	.card-upper-container,
