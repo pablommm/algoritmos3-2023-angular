@@ -10,10 +10,9 @@ export class FiguritaService {
 
   todasLasFiguritas(): Figurita[] {
     try {
-      // Calcula la valoración base para cada figurita
       const figuritasConValoracionBase = figuritas.map((figuritaJSON) => {
         const figurita = Figurita.fromJson(figuritaJSON);
-        figurita.valoracionBase = calcularValoracionBase(figurita); // Agrega la valoración base
+        figurita.valoracionBase = calcularValoracionBase(figurita); 
         return figurita;
       });
       return figuritasConValoracionBase;

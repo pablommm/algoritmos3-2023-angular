@@ -92,5 +92,24 @@ export const figuritas: Figurita[] = [
       "esPar": true,
       "nivelImpresion": "medio",
       "imagen": "../../assets/ocampos.jpg",
+    },
+    {
+      "nombre": "Andrés",
+      "apellido": "D'Alessandro",
+      "fechaNacimiento": "15-04-1981",
+      "numeroCamiseta": 7,
+      "seleccion": "Argentina",
+      "anioDebutSeleccion": 2003,
+      "altura": 1.73,
+      "peso": 75,
+      "posicion": "Centrocampista",
+      "pais": "ARG",
+      "cotizacionJugador": "No se encuentra en actividad",
+      "esLider": true,
+      "estaOnFire": true,
+      "esPar": false,
+      "nivelImpresion": "bajo",
+      "imagen": "../../assets/dalessandro.jpg",
     }
+    
 ];
