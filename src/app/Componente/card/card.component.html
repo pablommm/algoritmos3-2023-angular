@@ -1,6 +1,6 @@
 <!-- <article class="card-item"> -->
     <section class="card-content">
-        <img src="../../assets/enzofe.jpg" alt="Enzo Fernandez" class="card-imagen">
+        <img src="{{card.imagen}}" alt="Enzo Fernandez" class="card-imagen">
         <span class="material-symbols-outlined trash-can">delete_forever</span>
         <div class="card-upper-container">
           <div class="card-upper-subcontainer">
@@ -27,7 +27,7 @@
                         <i class="fa-solid fa-ruler"></i>
                         <span>Altura</span>
                     </div>
-                    <span>1.7 metros</span>
+                    <span>{{card.altura}}</span>
                 </div>
             </div>
         </div>
@@ -36,24 +36,24 @@
 
                 <div class="card-detalles-smallFont">
                     <span class="card-detalles-logo">Casaca</span>
-                    <span>10</span>
+                    <span>{{card.numeroCamiseta}}</span>
                 </div>
                 <div class="card-detalles-smallFont">
                     <span class="card-detalles-logo">Nacimiento</span>
-                    <span>24/06/1987 (36 años)</span>
+                    <span>{{card.fechaNacimiento}}</span>
                 </div>
                 <div class="card-detalles-smallFont">
                     <span class="card-detalles-logo">Selección</span>
-                    <span>Argentina (<i class="fa-solid fa-trophy"></i> 3)</span>
+                    <span>{{card.seleccion}} (<i class="fa-solid fa-trophy"></i> 3)</span>
                 </div>
                 <div class="card-detalles-smallFont">
                     <span class="card-detalles-logo">Posición</span>
-                    <span>Delantero</span>
+                    <span>{{card.posicion}}</span>
                 </div>
 
             </div>
             <div class="card-detalles-mediumFont card-detalles-center">
-                <span class="card-detalles-logo">Cotización USD 80.000.000</span>
+                <span class="card-detalles-logo">{{card.cotizacionJugador}}</span>
             </div>
             <div class="card-detalles-largeFont card-detalles-center">
                 <span class="card-detalles-logo">Cedida por Daniel Gonzalez</span>

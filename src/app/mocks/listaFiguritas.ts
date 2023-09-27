@@ -18,7 +18,8 @@ export const figuritas: Figurita[] = [
       "esLider": true,
       "estaOnFire": true,
       "esPar": true,
-      "nivelImpresion": "alto"
+      "nivelImpresion": "alto",
+      "imagen": "../../assets/messi.jpg",
     },
     {
       "nombre": "Emiliano",
@@ -35,7 +36,8 @@ export const figuritas: Figurita[] = [
       "esLider": false,
       "estaOnFire": true,
       "esPar": true,
-      "nivelImpresion": "medio"
+      "nivelImpresion": "medio",
+      "imagen": "../../assets/dibu.jpg",
     },
     {
       "nombre": "Nicolas",
@@ -52,7 +54,8 @@ export const figuritas: Figurita[] = [
       "esLider": false,
       "estaOnFire": false,
       "esPar": true,
-      "nivelImpresion": "medio"
+      "nivelImpresion": "medio",
+      "imagen": "../../assets/tagliafico.jpg",
     },
     {
       "nombre": "Giovani",
@@ -69,7 +72,8 @@ export const figuritas: Figurita[] = [
       "esLider": false,
       "estaOnFire": true,
       "esPar": false,
-      "nivelImpresion": "alto"
+      "nivelImpresion": "alto",
+      "imagen": "../../assets/locelso.jpg",
     },
     {
       "nombre": "Lucas",
@@ -86,6 +90,7 @@ export const figuritas: Figurita[] = [
       "esLider": false,
       "estaOnFire": false,
       "esPar": true,
-      "nivelImpresion": "medio"
+      "nivelImpresion": "medio",
+      "imagen": "../../assets/ocampos.jpg",
     }
 ];

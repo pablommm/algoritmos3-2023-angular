@@ -22,6 +22,7 @@ export class Figurita {
     public estaOnFire?: boolean,
     public esPar?: boolean,
     public nivelImpresion: string = '',
+    public imagen: string = '',
   ) {}
 
   static fromJson(figurita: Figurita): Figurita {
