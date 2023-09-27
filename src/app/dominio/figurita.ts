@@ -1,9 +1,7 @@
-// figurita.ts
-
-const VALORACION_PISO = 100;
-const VALOR_ON_FIRE = 1.2;
-const VALOR_ES_PAR = 1.1;
-const VALOR_NIVEL_IMPRESION = 0.85;
+const VALORACION_PISO = 100
+const VALOR_ON_FIRE = 1.2
+const VALOR_ES_PAR = 1.1
+const VALOR_NIVEL_IMPRESION = 0.85
 
 export class Figurita {
   constructor(
@@ -24,34 +22,38 @@ export class Figurita {
     public nivelImpresion: string = '',
     public imagen: string = '',
     public valoracionBase?: number,
+    public valoracionJugador: number = 0,
+    public valoracionTotal?: number,
   ) {}
 
   static fromJson(figurita: Figurita): Figurita {
-    return Object.assign(new Figurita(), figurita);
+    return Object.assign(new Figurita(), figurita)
   }
 }
 
-export function calcularValoracionBase(figurita: Figurita): number {
+function calcularValoracionBase(figurita: Figurita): number {
   return Math.round(
     VALORACION_PISO *
     valorOnFire(figurita) *
     valorEsPar(figurita) *
     valorNivelImpresion(figurita)
-  );
+  )
 }
 
 function valorOnFire(figurita: Figurita): number {
-  return figurita.estaOnFire ? VALOR_ON_FIRE : 1;
+  return figurita.estaOnFire ? VALOR_ON_FIRE : 1
 }
 
 function valorEsPar(figurita: Figurita): number {
-  return figurita.esPar ? VALOR_ES_PAR : 1;
+  return figurita.esPar ? VALOR_ES_PAR : 1
 }
 
 function valorNivelImpresion(figurita: Figurita): number {
   return figurita.nivelImpresion === 'medio' || figurita.nivelImpresion === 'alto'
     ? VALOR_NIVEL_IMPRESION
-    : 1;
+    : 1
 }
 
-/* export { calcularValoracionBase, valorOnFire, valorEsPar, valorNivelImpresion }; */
+export function valoracionTotal(figurita: Figurita): number {
+  return calcularValoracionBase(figurita) + figurita.valoracionJugador
+}

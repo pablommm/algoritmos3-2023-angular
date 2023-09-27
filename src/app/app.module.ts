@@ -18,8 +18,9 @@ import { NavComponent } from './Componente/nav/nav.component'
 import { CardComponent } from './Componente/card/card.component'
 import { DetallesFiguritaComponent } from './page/detallesFigurita/detallesFigurita.component'
 import { FiguritaService } from './services/figurita.service'
-import { FiltroComponent } from './Componente/filtro/filtro.component';
+import { FiltroComponent } from './Componente/filtro/filtro.component'
 import { FiltroOrdenarPorComponent } from './Componente/filtro-ordenar-por/filtro-ordenar-por.component'
+import { NombreApellidoPipe } from './pipes/nombreApellido.pipe'
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FiltroOrdenarPorComponent } from './Componente/filtro-ordenar-por/filtr
     DetallesFiguritaComponent,
     FiltroComponent,
     FiltroOrdenarPorComponent,
+    NombreApellidoPipe,
   ],
   imports: [
     BrowserModule,

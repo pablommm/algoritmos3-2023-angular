@@ -1,8 +1,25 @@
-// listaFiguritas.ts
-
-import { Figurita } from "../dominio/figurita";
+import { Figurita } from "../dominio/figurita"
 
 export const figuritas: Figurita[] = [
+    {
+      "nombre": "Enzo",
+      "apellido": "Fernández",
+      "fechaNacimiento": "17-01-2001",
+      "numeroCamiseta": 8,
+      "seleccion": "Argentina",
+      "anioDebutSeleccion": 2022,
+      "altura": 1.78,
+      "peso": 76,
+      "posicion": "Centrocampista",
+      "pais": "ARG",
+      "cotizacionJugador": "131.4 millones de dólares",
+      "esLider": true,
+      "estaOnFire": true,
+      "esPar": false,
+      "nivelImpresion": "alto",
+      "valoracionJugador": 250,
+      "imagen": "../../assets/enzofe.jpg",
+    },
     {
       "nombre": "Lionel",
       "apellido": "Messi",
@@ -19,6 +36,7 @@ export const figuritas: Figurita[] = [
       "estaOnFire": true,
       "esPar": true,
       "nivelImpresion": "alto",
+      "valoracionJugador": 100,
       "imagen": "../../assets/messi.jpg",
     },
     {
@@ -37,6 +55,7 @@ export const figuritas: Figurita[] = [
       "estaOnFire": true,
       "esPar": true,
       "nivelImpresion": "medio",
+      "valoracionJugador": 100,
       "imagen": "../../assets/dibu.jpg",
     },
     {
@@ -55,6 +74,7 @@ export const figuritas: Figurita[] = [
       "estaOnFire": false,
       "esPar": true,
       "nivelImpresion": "medio",
+      "valoracionJugador": 80,
       "imagen": "../../assets/tagliafico.jpg",
     },
     {
@@ -73,25 +93,8 @@ export const figuritas: Figurita[] = [
       "estaOnFire": true,
       "esPar": false,
       "nivelImpresion": "alto",
+      "valoracionJugador": 60,
       "imagen": "../../assets/locelso.jpg",
-    },
-    {
-      "nombre": "Lucas",
-      "apellido": "Ocampos",
-      "fechaNacimiento": "11-07-1994",
-      "numeroCamiseta": 11,
-      "seleccion": "Argentina",
-      "anioDebutSeleccion": 2020,
-      "altura": 1.87,
-      "peso": 82,
-      "posicion": "Delantero",
-      "pais": "ARG",
-      "cotizacionJugador": "25 millones de euros",
-      "esLider": false,
-      "estaOnFire": false,
-      "esPar": true,
-      "nivelImpresion": "medio",
-      "imagen": "../../assets/ocampos.jpg",
     },
     {
       "nombre": "Andrés",
@@ -109,7 +112,27 @@ export const figuritas: Figurita[] = [
       "estaOnFire": true,
       "esPar": false,
       "nivelImpresion": "bajo",
+      "valoracionJugador": 160,
       "imagen": "../../assets/dalessandro.jpg",
-    }
+    },
+    {
+      "nombre": "Lucas",
+      "apellido": "Ocampos",
+      "fechaNacimiento": "11-07-1994",
+      "numeroCamiseta": 11,
+      "seleccion": "Argentina",
+      "anioDebutSeleccion": 2020,
+      "altura": 1.87,
+      "peso": 82,
+      "posicion": "Delantero",
+      "pais": "ARG",
+      "cotizacionJugador": "25 millones de euros",
+      "esLider": false,
+      "estaOnFire": false,
+      "esPar": true,
+      "nivelImpresion": "medio",
+      "valoracionJugador": 110,
+      "imagen": "../../assets/ocampos.jpg",
+    },
     
-];
+]
