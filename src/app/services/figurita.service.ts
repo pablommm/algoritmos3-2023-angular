@@ -1,6 +1,5 @@
-import { Figurita } from '../dominio/figurita';
+import { Figurita, calcularValoracionBase } from '../dominio/figurita';
 import { Injectable } from '@angular/core';
-import { REST_SERVER_URL } from './configuration';
 import { figuritas } from '../mocks/listaFiguritas';
 
 @Injectable({
@@ -11,7 +10,13 @@ export class FiguritaService {
 
   todasLasFiguritas(): Figurita[] {
     try {
-      return figuritas.map((figuritaJSON) => Figurita.fromJson(figuritaJSON));
+      // Calcula la valoración base para cada figurita
+      const figuritasConValoracionBase = figuritas.map((figuritaJSON) => {
+        const figurita = Figurita.fromJson(figuritaJSON);
+        figurita.valoracionBase = calcularValoracionBase(figurita); // Agrega la valoración base
+        return figurita;
+      });
+      return figuritasConValoracionBase;
     } catch (error) {
       console.error('Error al cargar las figuritas', error);
       return []; 

@@ -23,6 +23,7 @@ export class Figurita {
     public esPar?: boolean,
     public nivelImpresion: string = '',
     public imagen: string = '',
+    public valoracionBase?: number,
   ) {}
 
   static fromJson(figurita: Figurita): Figurita {
@@ -30,8 +31,8 @@ export class Figurita {
   }
 }
 
-function calcularValoracionBase(figurita: Figurita): number {
-  return (
+export function calcularValoracionBase(figurita: Figurita): number {
+  return Math.round(
     VALORACION_PISO *
     valorOnFire(figurita) *
     valorEsPar(figurita) *
@@ -53,4 +54,4 @@ function valorNivelImpresion(figurita: Figurita): number {
     : 1;
 }
 
-export { calcularValoracionBase, valorOnFire, valorEsPar, valorNivelImpresion };
+/* export { calcularValoracionBase, valorOnFire, valorEsPar, valorNivelImpresion }; */
