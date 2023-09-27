@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { FiguritaService } from 'src/app/services/figurita.service';
+import { Component, Input } from '@angular/core'
+import { FiguritaService } from 'src/app/services/figurita.service'
 
 @Component({
   selector: 'app-card',
@@ -8,7 +8,7 @@ import { FiguritaService } from 'src/app/services/figurita.service';
 })
 export class CardComponent {
 
-  @Input() card: any;
+  @Input() card: any
 
   
 

@@ -40,26 +40,26 @@ export class Figurita {
     public ValoracionBase?: number, ) { }
 
     static fromJson(figuritaJSON: FiguritaJSON): Figurita {
-      return Object.assign(new Figurita(), figuritaJSON);
+      return Object.assign(new Figurita(), figuritaJSON)
   }
   
 
     calcularValoracionBase(figurita: Figurita) {
-    var valoracionBase = VALORACION_PISO
+    let valoracionBase = VALORACION_PISO
 
       if (figurita.estaOnFire) {
-        valoracionBase *= 1.2;
+        valoracionBase *= 1.2
       }
     
       if (figurita.esPar) {
-        valoracionBase *= 1.1;
+        valoracionBase *= 1.1
       }
     
       if (figurita.NivelImpresion === "medio" || figurita.NivelImpresion === "alto") {
-        valoracionBase *= 0.85;
+        valoracionBase *= 0.85
       }
     
-      return valoracionBase;
+      return valoracionBase
     }
   }
 

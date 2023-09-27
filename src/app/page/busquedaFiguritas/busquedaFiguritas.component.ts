@@ -1,6 +1,6 @@
-import { Figurita } from './../../dominio/figurita';
-import { Component, OnInit } from '@angular/core';
-import { FiguritaService } from '../../services/figurita.service';
+import { Figurita } from './../../dominio/figurita'
+import { Component, OnInit } from '@angular/core'
+import { FiguritaService } from '../../services/figurita.service'
 import { Router } from '@angular/router'
 import { mostrarError } from '../../util/errorHandler'
 
@@ -20,7 +20,7 @@ export const errorHandler = (component: BusquedaFiguritasComponent) => ({
 
 export class BusquedaFiguritasComponent implements OnInit {
 
-  listaFiguritas: Array<Figurita> = [];
+  listaFiguritas: Array<Figurita> = []
   errors = []
   
   constructor(public figuritaService : FiguritaService) {}
