@@ -25,16 +25,16 @@ export class BusquedaFiguritasComponent implements OnInit {
   
   constructor(public figuritaService : FiguritaService) {}
 
-  async ngOnInit() {
-    await this.obtenerTodasLasFiguritas()
+   ngOnInit() {
+     this.obtenerTodasLasFiguritas()
   }
   
 
   
 
-  async obtenerTodasLasFiguritas() {
+   obtenerTodasLasFiguritas() {
     try {
-      this.listaFiguritas = await this.figuritaService.todasLasFiguritas()
+      this.listaFiguritas = this.figuritaService.todasLasFiguritas()
     } catch (error) {
       mostrarError(this, error)
   }

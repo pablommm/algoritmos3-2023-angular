@@ -1,71 +1,55 @@
-const VALORACION_PISO = 100
+// figurita.ts
 
-export type FiguritaJSON = {
-    Nombre: string,
-    Apellido: string,
-    FechaNacimiento: string,
-    NumeroCamiseta: number,
-    Seleccion: string,
-    DebutSeleccion: number,
-    Altura: number,
-    Peso: number,
-    Posicion: string,
-    Pais: string,
-    CotizacionJugador: string,
-    esLider: boolean,
-    estaOnFire: boolean,
-    esPar: boolean,
-    NivelImpresion: string,
-    ValoracionBase?: number, 
-  }
+const VALORACION_PISO = 100;
+const VALOR_ON_FIRE = 1.2;
+const VALOR_ES_PAR = 1.1;
+const VALOR_NIVEL_IMPRESION = 0.85;
 
-  
 export class Figurita {
-
-  constructor(public Nombre: string = '',
-    public Apellido: string = '',
-    public FechaNacimiento: string = '',
-    public NumeroCamiseta?: number,
-    public Seleccion: string = '',
-    public DebutSeleccion?: number,
-    public Altura?: number,
-    public Peso?: number,
-    public Posicion: string = '',
-    public Pais: string = '',
-    public CotizacionJugador: string = '',
+  constructor(
+    public nombre: string = '',
+    public apellido: string = '',
+    public fechaNacimiento: string = '',
+    public numeroCamiseta?: number,
+    public seleccion: string = '',
+    public anioDebutSeleccion?: number,
+    public altura?: number,
+    public peso?: number,
+    public posicion: string = '',
+    public pais: string = '',
+    public cotizacionJugador: string = '',
     public esLider?: boolean,
     public estaOnFire?: boolean,
     public esPar?: boolean,
-    public NivelImpresion: string = '',
-    public ValoracionBase?: number, ) { }
+    public nivelImpresion: string = '',
+  ) {}
 
-    static fromJson(figuritaJSON: FiguritaJSON): Figurita {
-      return Object.assign(new Figurita(), figuritaJSON)
+  static fromJson(figurita: Figurita): Figurita {
+    return Object.assign(new Figurita(), figurita);
   }
-  
+}
 
-    calcularValoracionBase(figurita: Figurita) {
-    let valoracionBase = VALORACION_PISO
+function calcularValoracionBase(figurita: Figurita): number {
+  return (
+    VALORACION_PISO *
+    valorOnFire(figurita) *
+    valorEsPar(figurita) *
+    valorNivelImpresion(figurita)
+  );
+}
 
-      if (figurita.estaOnFire) {
-        valoracionBase *= 1.2
-      }
-    
-      if (figurita.esPar) {
-        valoracionBase *= 1.1
-      }
-    
-      if (figurita.NivelImpresion === "medio" || figurita.NivelImpresion === "alto") {
-        valoracionBase *= 0.85
-      }
-    
-      return valoracionBase
-    }
-  }
+function valorOnFire(figurita: Figurita): number {
+  return figurita.estaOnFire ? VALOR_ON_FIRE : 1;
+}
 
-  
-  
-  
-  
-  
-  
+function valorEsPar(figurita: Figurita): number {
+  return figurita.esPar ? VALOR_ES_PAR : 1;
+}
+
+function valorNivelImpresion(figurita: Figurita): number {
+  return figurita.nivelImpresion === 'medio' || figurita.nivelImpresion === 'alto'
+    ? VALOR_NIVEL_IMPRESION
+    : 1;
+}
+
+export { calcularValoracionBase, valorOnFire, valorEsPar, valorNivelImpresion };

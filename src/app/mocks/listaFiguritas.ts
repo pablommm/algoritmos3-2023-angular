@@ -1,0 +1,91 @@
+// listaFiguritas.ts
+
+import { Figurita } from "../dominio/figurita";
+
+export const figuritas: Figurita[] = [
+    {
+      "nombre": "Lionel",
+      "apellido": "Messi",
+      "fechaNacimiento": "24-06-1987",
+      "numeroCamiseta": 10,
+      "seleccion": "Argentina",
+      "anioDebutSeleccion": 2005,
+      "altura": 1.70,
+      "peso": 72,
+      "posicion": "Delantero",
+      "pais": "ARG",
+      "cotizacionJugador": "200 millones de euros",
+      "esLider": true,
+      "estaOnFire": true,
+      "esPar": true,
+      "nivelImpresion": "alto"
+    },
+    {
+      "nombre": "Emiliano",
+      "apellido": "Martínez",
+      "fechaNacimiento": "02-09-1992",
+      "numeroCamiseta": 23,
+      "seleccion": "Argentina",
+      "anioDebutSeleccion": 2019,
+      "altura": 1.95,
+      "peso": 94,
+      "posicion": "Arquero",
+      "pais": "ARG",
+      "cotizacionJugador": "40 millones de euros",
+      "esLider": false,
+      "estaOnFire": true,
+      "esPar": true,
+      "nivelImpresion": "medio"
+    },
+    {
+      "nombre": "Nicolas",
+      "apellido": "Tagliafico",
+      "fechaNacimiento": "31-08-1992",
+      "numeroCamiseta": 3,
+      "seleccion": "Argentina",
+      "anioDebutSeleccion": 2017,
+      "altura": 1.74,
+      "peso": 73,
+      "posicion": "Defensor",
+      "pais": "ARG",
+      "cotizacionJugador": "20 millones de euros",
+      "esLider": false,
+      "estaOnFire": false,
+      "esPar": true,
+      "nivelImpresion": "medio"
+    },
+    {
+      "nombre": "Giovani",
+      "apellido": "Lo Celso",
+      "fechaNacimiento": "09-04-1996",
+      "numeroCamiseta": 20,
+      "seleccion": "Argentina",
+      "anioDebutSeleccion": 2017,
+      "altura": 1.77,
+      "peso": 68,
+      "posicion": "Centrocampista",
+      "pais": "ARG",
+      "cotizacionJugador": "35 millones de euros",
+      "esLider": false,
+      "estaOnFire": true,
+      "esPar": false,
+      "nivelImpresion": "alto"
+    },
+    {
+      "nombre": "Lucas",
+      "apellido": "Ocampos",
+      "fechaNacimiento": "11-07-1994",
+      "numeroCamiseta": 11,
+      "seleccion": "Argentina",
+      "anioDebutSeleccion": 2020,
+      "altura": 1.87,
+      "peso": 82,
+      "posicion": "Delantero",
+      "pais": "ARG",
+      "cotizacionJugador": "25 millones de euros",
+      "esLider": false,
+      "estaOnFire": false,
+      "esPar": true,
+      "nivelImpresion": "medio"
+    }
+];
