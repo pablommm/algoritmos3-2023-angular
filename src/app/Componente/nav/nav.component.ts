@@ -1,4 +1,6 @@
 import { Component } from '@angular/core'
+import { Router,ActivatedRoute } from '@angular/router'
+
 
 @Component({
   selector: 'app-nav',
@@ -7,24 +9,28 @@ import { Component } from '@angular/core'
 })
 export class NavComponent {
 
-  nav = new Nav()
+  constructor(private router: Router, private route :ActivatedRoute) {}
+
+  ngOnInit() {
+   
+  }
+
+  perfil(){
+    this.router.navigateByUrl('/PerfilUsuario')
+   }
+   inicio(){
+    this.router.navigateByUrl('/BusquedaFiguritas')
+  }
+   figuritas(){
+    this.router.navigateByUrl('/BusquedaFiguritas')
+     }
+  
+   sobres(){
+    this.router.navigateByUrl('/BusquedaSobre')
+   }
+   exit(){
+    this.router.navigateByUrl('/Login')
+   }
+
 }
 
-export class Nav{
-
-inicio(){
-  alert("vamos al inicio")
-}
- figuritas(){
- alert("Desplazamiento a Figuritas")
- }
- perfil(){
-  alert("Desplazamiento a Perfil")
- }
- sobres(){
-  alert("Desplazamiento a sobres")
- }
- exit(){
-  alert("Saliendo... go to login")
- }
-}

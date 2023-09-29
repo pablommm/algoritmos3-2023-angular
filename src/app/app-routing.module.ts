@@ -19,7 +19,8 @@ const routes: Routes = [
   {path:'BusquedaSobre', component:BusquedaSobresComponent},
   {path:'BusquedaFiguritasPerfil', component:BusquedaFiguritasPerfilComponent},
   {path:'BusquedaFiguritas', component:BusquedaFiguritasComponent},
-  {path:'Login', component:LoginComponent}
+  {path:'Login', component:LoginComponent},
+  {path:'**', component:BusquedaFiguritasComponent}
 
 ]
 
