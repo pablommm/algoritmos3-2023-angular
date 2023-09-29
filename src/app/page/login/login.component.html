@@ -7,7 +7,7 @@
                 <label>Usuario</label>
                 <div class="login-info">
                     <i class="fa-solid fa-user login-icon"></i>
-                    <input type="text" placeholder="Usuario" class="login-input" [(ngModel)]="login.usuario">
+                    <input type="text" placeholder="Usuario" class="login-input" [(ngModel)]="usuario">
                     
                 </div>
             </div>
@@ -16,12 +16,12 @@
                 <label>Contraseña</label>
                 <div class="login-info">
                     <i class="fa-solid fa-key login-icon"></i>
-                    <input type="password" placeholder="Contraseña" class="login-input" [(ngModel)]="login.password">
+                    <input type="password" placeholder="Contraseña" class="login-input" [(ngModel)]="password">
                     
                 </div>
             </div>
             <div>
-                <button class="primary-button" (click)="login.ingresar()" >Ingresar</button>
+                <button class="primary-button" (click)="ingresar()" >Ingresar</button>
 
             </div>
         </div>

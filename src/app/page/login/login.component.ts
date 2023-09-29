@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { Router,ActivatedRoute } from '@angular/router'
 //import { login } from './maquetado/css/login.css'
 
 @Component({
@@ -15,19 +16,15 @@ import { Component } from '@angular/core'
 })
 
 export class LoginComponent {
-
+  constructor(private router: Router, private route :ActivatedRoute) {}
   title = 'Login'
- 
-  login = new Login()
-}
 
-export class Login {
   usuario = ""
   password = ""
 
   ingresar(){
     if(this.validarUsuario() === true){
-      alert("todo salio pillo")
+      this.router.navigateByUrl('/BusquedaFiguritas')
     } else{
       alert("esta todo mal")
     }
@@ -60,7 +57,4 @@ export class Login {
       return false
     }
   }
-
-  
-  
 }
