@@ -4,7 +4,7 @@
 			<img src="../../assets/bilardo.jpg" class="imagen_perfil" />
 			<div class="informacion">
 				<div>
-					<span class="info-datos-personales" >Nombre de usuario </span>
+					<span class="info-datos-personales" > {{cambioDeUsuario.nombreUsuario}} </span>
 					<a (click)="cambioDeUsuario.hizoClick()"><i class="fa-solid fa-pencil"></i></a>
 				</div>
 				<div *ngIf="cambioDeUsuario.editando">
