@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core'
+import { Router,ActivatedRoute } from '@angular/router'
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-detallesFigurita',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./detallesFigurita.component.css']
 })
 export class DetallesFiguritaComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(private router: Router, private route :ActivatedRoute, private location: Location) {}
 
   ngOnInit() {
+  }
+
+  volver(){
+    this.location.back();
   }
 
 }
