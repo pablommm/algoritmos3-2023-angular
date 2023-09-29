@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { Router,ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-perfil-usuario',
@@ -13,7 +14,21 @@ import { Component } from '@angular/core'
 })
 export class PerfilUsuarioComponent {
  cambioDeUsuario = new CambioUsername()
-perfil= new Perfil()
+  constructor(private router: Router, private route :ActivatedRoute) {}
+  ngOnInit() {}
+
+  faltantes(){
+    this.router.navigateByUrl('/FiguritaFaltante')
+
+  }
+  repetidas(){
+    this.router.navigateByUrl('/FiguritaRepetida')
+
+  }
+  informacion(){
+    this.router.navigateByUrl('/PerfilUsuario')
+  }
+
 }
 
 
@@ -42,19 +57,4 @@ export class CambioUsername {
     this.editando = false
   }
   
-}
-export class Perfil {
-
-  faltantes(){
-    alert("go to faltantes")
-
-  }
-  repetidas(){
-    alert("go to repetidas")
-
-  }
-  informacion(){
-    alert("go to form")
-  }
-
 }
