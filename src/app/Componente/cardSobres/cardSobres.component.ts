@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, Input } from '@angular/core'
+import { Router,ActivatedRoute } from '@angular/router'
+import { Supermercado } from 'src/app/dominio/supermercado'
 
 @Component({
   selector: 'app-cardSobres',
   templateUrl: './cardSobres.component.html',
   styleUrls: ['./cardSobres.component.css']
 })
-export class CardSobresComponent implements OnInit {
+export class CardSobresComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor(private router: Router, private route :ActivatedRoute) {}
+  
+  @Input() cardSobres!: Supermercado
 
 }

@@ -3,18 +3,9 @@
     <app-searchBar></app-searchBar>
 
     <main class="main-container">
-<app-filtro-ordenar-por class="toolbox-container"></app-filtro-ordenar-por>
+        <app-filtro-ordenar-por class="toolbox-container"></app-filtro-ordenar-por>
         <section class="sub-main-container">
-            <app-cardSobres class="card-item"></app-cardSobres>
-            <app-cardSobres class="card-item"></app-cardSobres>
-            <app-cardSobres class="card-item"></app-cardSobres>
-            <app-cardSobres class="card-item"></app-cardSobres>
-            <app-cardSobres class="card-item"></app-cardSobres>
-            <app-cardSobres class="card-item"></app-cardSobres>
-            
-      
-    
-          
+            <app-cardSobres *ngFor="let cardSobres of listaSupermercados" [cardSobres]="cardSobres" class="card-item"></app-cardSobres>
         </section>
     </main>
 </body>

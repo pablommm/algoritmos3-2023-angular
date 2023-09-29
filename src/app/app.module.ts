@@ -21,6 +21,7 @@ import { FiguritaService } from './services/figurita.service'
 import { FiltroComponent } from './Componente/filtro/filtro.component'
 import { FiltroOrdenarPorComponent } from './Componente/filtro-ordenar-por/filtro-ordenar-por.component'
 import { NombreApellidoPipe } from './pipes/nombreApellido.pipe'
+import { PrecioSobrePipe } from './pipes/precioSobre.pipe'
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { NombreApellidoPipe } from './pipes/nombreApellido.pipe'
     FiltroComponent,
     FiltroOrdenarPorComponent,
     NombreApellidoPipe,
+    PrecioSobrePipe,
   ],
   imports: [
     BrowserModule,
