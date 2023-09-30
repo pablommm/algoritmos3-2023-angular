@@ -55,7 +55,7 @@
             <div class="card-detalles-mediumFont card-detalles-center">
                 <span class="card-detalles-logo">{{card.cotizacionJugador}}</span>
             </div>
-            <div class="card-detalles-largeFont card-detalles-center">
+            <div class="card-detalles-largeFont card-detalles-center" *ngIf="!ruta()">
                 <span class="card-detalles-logo">Cedida por Daniel Gonzalez</span>
             </div>
         </div>
