@@ -6,9 +6,12 @@ export class Supermercado {
     public distancia: string = '',
     public stock: number = 0,
     public precio: string = '',
+    public tipo: string = '',
   ) {}
 
   static fromJson(supermercado: Supermercado): Supermercado {
-    return Object.assign(new Supermercado(), supermercado);
+    return Object.assign(new Supermercado(), supermercado)
   }
+
+  
 }
