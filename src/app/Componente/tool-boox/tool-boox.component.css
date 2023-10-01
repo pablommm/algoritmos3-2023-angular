@@ -7,7 +7,6 @@
 @import url(../../../../Maquetado/css/perfilUsuario.css);
 
 
-
 .toolbox-container {
     text-align: center;
     background-color: var(--primary-color);
@@ -24,7 +23,7 @@
         width: 20%;
         margin-top: 1.5em;
         margin-bottom: -1em;
-        margin-left: 0;
+        margin-left: 4rem;
         align-self: stretch;
       }
 }
