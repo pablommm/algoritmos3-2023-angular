@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core'
 @Component({
   selector: 'app-busquedaFiguritasPerfil',
   templateUrl: './busquedaFiguritasPerfil.component.html',
-  styleUrls: ['./busquedaFiguritasPerfil.component.css']
+  styleUrls: ['./busquedaFiguritasPerfil.component.scss']
 })
 export class BusquedaFiguritasPerfilComponent implements OnInit {
 

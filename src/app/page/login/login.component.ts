@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { Router,ActivatedRoute } from '@angular/router'
+import { UsuarioLoginService } from 'src/app/services/usuarioLogin.service'
 //import { login } from './maquetado/css/login.css'
 
 @Component({
@@ -15,45 +16,40 @@ import { Router,ActivatedRoute } from '@angular/router'
 ]
 })
 
+
 export class LoginComponent {
   constructor(private router: Router, private route :ActivatedRoute) {}
   title = 'Login'
+
+  usuarioLoginService: UsuarioLoginService = new UsuarioLoginService
 
   usuario = ""
   password = ""
 
   ingresar(){
-    if(this.validarUsuario() === true){
+    if(this.validarUsuario() && this.usuarioLoginService.verificarUsuario({usuario: this.usuario.toLowerCase(), contrasenia: this.password})){
       this.router.navigateByUrl('/BusquedaFiguritas')
-    } else{
-      alert("esta todo mal")
     }
-
   }
 
   validarUsuario(){
-    if (this.validarEmail() && this.validarPassword()) {
-      
-      return true
-    }else {
-    return false
-  }
+    return (this.validarEmail() && this.validarPassword())
   }
 
   validarEmail(){
     if(this.usuario.includes("@")){
       return true
-    }else {
+    } else {
+      alert("El usuario debe contener @")
       return false
     }
   }
 
   validarPassword(){
     if(this.password != ""){
-      
       return true
     }else{
-      console.log("la contrasena no debe ser vacia")
+      alert("La contraseña no puede ser vacía")
       return false
     }
   }

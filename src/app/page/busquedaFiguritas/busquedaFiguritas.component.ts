@@ -15,7 +15,7 @@ export const errorHandler = (component: BusquedaFiguritasComponent) => ({
 @Component({
   selector: 'app-busquedaFiguritas',
   templateUrl: './busquedaFiguritas.component.html',
-  styleUrls: ['./busquedaFiguritas.component.css'],
+  styleUrls: ['./busquedaFiguritas.component.scss'],
   providers: []
 })
 

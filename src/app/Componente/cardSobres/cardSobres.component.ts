@@ -6,7 +6,7 @@ import { Supermercado } from 'src/app/dominio/supermercado'
 @Component({
   selector: 'app-cardSobres',
   templateUrl: './cardSobres.component.html',
-  styleUrls: ['./cardSobres.component.css']
+  styleUrls: ['./cardSobres.component.scss']
 })
 
 export class CardSobresComponent {

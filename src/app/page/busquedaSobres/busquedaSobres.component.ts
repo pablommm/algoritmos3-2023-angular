@@ -1,4 +1,4 @@
-import { SupermercadoService } from './../../services/supermercado.service';
+import { SupermercadoService } from './../../services/supermercado.service'
 import { Supermercado } from './../../dominio/supermercado'
 import { Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
@@ -14,7 +14,7 @@ export const errorHandler = (component: BusquedaSobresComponent) => ({
 @Component({
   selector: 'app-busquedaSobres',
   templateUrl: './busquedaSobres.component.html',
-  styleUrls: ['./busquedaSobres.component.css'],
+  styleUrls: ['./busquedaSobres.component.scss'],
   providers: []
 })
 

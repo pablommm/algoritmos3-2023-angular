@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core'
 import { Router,ActivatedRoute } from '@angular/router'
-import {Location} from '@angular/common';
+import {Location} from '@angular/common'
 
 @Component({
   selector: 'app-detallesFigurita',
   templateUrl: './detallesFigurita.component.html',
-  styleUrls: ['./detallesFigurita.component.css']
+  styleUrls: ['./detallesFigurita.component.scss']
 })
 export class DetallesFiguritaComponent implements OnInit {
   
@@ -15,7 +15,7 @@ export class DetallesFiguritaComponent implements OnInit {
   }
 
   volver(){
-    this.location.back();
+    this.location.back()
   }
 
 }
