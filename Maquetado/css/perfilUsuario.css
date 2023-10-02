@@ -188,9 +188,9 @@
 
   .toolbox-container {
     width: 20%;
-    margin-top: 1.5em;
-    margin-bottom: -1em;
-    margin-left: 0;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 0em;
     align-self: stretch;
   }
 

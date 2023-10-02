@@ -3,11 +3,11 @@
 @import url(../../../../Maquetado/css/input.css);
 @import url(../../../../Maquetado/css/cards.css);
 @import url(../../../../Maquetado/css/toolbox.css);
-@import url(../../../../Maquetado/css/busquedaFiguritas.css);
+@import url(../../../../Maquetado/css/busquedaFiguritas.css); 
 @import url(../../../../Maquetado/css/perfilUsuario.css);
 
 
-.toolbox-container {
+ .toolbox-container {
     text-align: center;
     background-color: var(--primary-color);
     margin-top: 2.5em;
@@ -18,12 +18,10 @@
 @media (min-width:401px) {
 
 }
+
 @media (min-width:769px) {
     .toolbox-container {
-        width: 20%;
-        margin-top: 1.5em;
-        margin-bottom: -1em;
-        margin-left: 4rem;
-        align-self: stretch;
+       margin-top: -1em;
       }
-}
+     
+} 
