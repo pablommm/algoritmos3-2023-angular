@@ -75,7 +75,7 @@ export const figuritas: Figurita[] = [
       "esPar": true,
       "nivelImpresion": "medio",
       "valoracionJugador": 80,
-      "imagen": "../../assets/tagliafico.jpg",
+      "imagen": "../../assets/nicolas-tagliafico.jpg",
     },
     {
       "nombre": "Giovani",
@@ -113,7 +113,7 @@ export const figuritas: Figurita[] = [
       "esPar": false,
       "nivelImpresion": "bajo",
       "valoracionJugador": 160,
-      "imagen": "../../assets/dalessandro.jpg",
+      "imagen": "../../assets/dalessandro2.jpg",
     },
     {
       "nombre": "Lucas",
