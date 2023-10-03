@@ -7,7 +7,8 @@ import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
 
 export const errorHandler = (component: BusquedaFiguritasComponent) => ({
   error: async (error: Error) => {
-    component.listaFiguritas = await component.figuritaService.todasLasFiguritas()
+    component.listaFiguritas =
+      await component.figuritaService.todasLasFiguritas()
     mostrarError(component, error)
   }
 })
@@ -18,51 +19,42 @@ export const errorHandler = (component: BusquedaFiguritasComponent) => ({
   styleUrls: ['./busquedaFiguritas.component.scss'],
   providers: []
 })
-
 export class BusquedaFiguritasComponent implements OnInit {
-
   listaFiguritas: Array<Figurita> = []
   errors = []
-  
-  constructor(public figuritaService : FiguritaService) {}
 
-   ngOnInit() {
-     this.obtenerTodasLasFiguritas()
+  constructor(public figuritaService: FiguritaService) {}
+
+  ngOnInit() {
+    this.obtenerTodasLasFiguritas()
   }
-  
 
-  
-
-   obtenerTodasLasFiguritas() {
+  obtenerTodasLasFiguritas() {
     try {
       this.listaFiguritas = this.figuritaService.todasLasFiguritas()
     } catch (error) {
       mostrarError(this, error)
+    }
   }
-    
-
-}
-  filtros= new Filtros()
+  filtros = new Filtros()
 }
 
+export class Filtros {
+  desde = ''
+  hasta = ''
+  esPromesa = false
+  esOnFire = false
 
-export class Filtros{
-  desde=''
-  hasta=''
-  esPromesa=false
-  esOnFire=false
-
-  validacionHasta(){
-    if(this.desde !='' && this.hasta!=''){
-       if (this.desde > this.hasta){
+  validacionHasta() {
+    if (this.desde != '' && this.hasta != '') {
+      if (this.desde > this.hasta) {
         alert('El valor del campo desde no puede ser menor que el de hasta')
+      }
+    }
   }
-  }
-}
 
-  busqueda(){
+  busqueda() {
     this.validacionHasta()
-    alert(this.desde +"...." +this.hasta)
+    alert(this.desde + '....' + this.hasta)
   }
 }
-

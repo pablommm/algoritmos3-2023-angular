@@ -11,9 +11,8 @@ describe('BusquedaFiguritasComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BusquedaFiguritasComponent ]
-    })
-    .compileComponents()
+      declarations: [BusquedaFiguritasComponent]
+    }).compileComponents()
   }))
 
   beforeEach(() => {
