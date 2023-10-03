@@ -1,7 +1,7 @@
-/* import { suPuntoDeVenta } from './../../mocks/listaSuPuntoDeVentas' */
+/* import { puntoDeVenta } from './../../mocks/listaPuntoDeVentas' */
 import { Component, Input } from '@angular/core'
 import { Router,ActivatedRoute } from '@angular/router'
-import { SuPuntoDeVenta } from 'src/app/dominio/suPuntoDeVenta'
+import { PuntoDeVenta } from 'src/app/dominio/puntoDeVenta'
 
 @Component({
   selector: 'app-cardSobres',
@@ -13,10 +13,10 @@ export class CardSobresComponent {
 
   constructor(private router: Router, private route :ActivatedRoute) {}
   
-  @Input() cardSobres!: SuPuntoDeVenta
+  @Input() cardSobres!: PuntoDeVenta
 
-  iconoPuntoDeVenta(suPuntoDeVenta: SuPuntoDeVenta) {
-    const tipo = suPuntoDeVenta.tipo.toUpperCase()
+  iconoPuntoDeVenta(puntoDeVenta: PuntoDeVenta) {
+    const tipo = puntoDeVenta.tipo.toUpperCase()
 
     if(tipo =="KIOSCO") {
       return "fa-solid fa-shop card-detalles-highlight"

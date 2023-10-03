@@ -1,4 +1,4 @@
-export class SuPuntoDeVenta {
+export class PuntoDeVenta {
   constructor(
     public nombre: string = '',
     public direccion: string = '',
@@ -9,8 +9,8 @@ export class SuPuntoDeVenta {
     public tipo: string = '',
   ) {}
 
-  static fromJson(suPuntoDeVenta: SuPuntoDeVenta): SuPuntoDeVenta {
-    return Object.assign(new SuPuntoDeVenta(), suPuntoDeVenta)
+  static fromJson(puntoDeVenta: PuntoDeVenta): PuntoDeVenta {
+    return Object.assign(new PuntoDeVenta(), puntoDeVenta)
   }
 
   

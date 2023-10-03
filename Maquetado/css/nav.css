@@ -31,11 +31,6 @@ a {
     font-family: 'Exo', sans-serif;
 }
 
-.navbar-select-tab {
-    font-weight: bold;
-}
-
-
 @media (min-width:769px) {
     .burger {
         display: none;

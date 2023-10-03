@@ -1,6 +1,6 @@
-import { SuPuntoDeVenta } from "../dominio/suPuntoDeVenta"
+import { PuntoDeVenta } from "../dominio/puntoDeVenta"
 
-export const suPuntoDeVenta: SuPuntoDeVenta[] = [
+export const puntoDeVenta: PuntoDeVenta[] = [
   {
     "nombre": "Carrefour",
     "direccion": "Av. San Martin 4930",

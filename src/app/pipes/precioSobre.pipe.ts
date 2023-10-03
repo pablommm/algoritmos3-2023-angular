@@ -1,13 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { SuPuntoDeVenta } from '../dominio/suPuntoDeVenta'
+import { PuntoDeVenta } from '../dominio/puntoDeVenta'
 
 @Pipe({
   name: 'precioSobre'
 })
 export class PrecioSobrePipe implements PipeTransform {
 
-  transform(suPuntoDeVenta: SuPuntoDeVenta): string {
-    return ("Precio por sobre").concat(" ").concat("$").concat(suPuntoDeVenta.precio)
+  transform(puntoDeVenta: PuntoDeVenta): string {
+    return ("Precio por sobre").concat(" ").concat("$").concat(puntoDeVenta.precio)
   }
 
 

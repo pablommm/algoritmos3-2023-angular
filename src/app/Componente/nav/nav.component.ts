@@ -23,7 +23,7 @@ export class NavComponent {
   }
    figuritas(){
     this.router.navigateByUrl('/BusquedaFiguritas')
-     }
+   }
   
    sobres(){
     this.router.navigateByUrl('/BusquedaSobre')
@@ -32,5 +32,8 @@ export class NavComponent {
     this.router.navigateByUrl('/Login')
    }
 
+   activeRoute(ruta: string){
+    return ruta === this.route.snapshot.url.join('/')
+   }
 }
 
