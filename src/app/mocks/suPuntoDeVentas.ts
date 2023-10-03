@@ -1,6 +1,6 @@
-import { Supermercado } from "../dominio/supermercado"
+import { SuPuntoDeVenta } from "../dominio/suPuntoDeVenta"
 
-export const supermercado: Supermercado[] = [
+export const suPuntoDeVenta: SuPuntoDeVenta[] = [
   {
     "nombre": "Carrefour",
     "direccion": "Av. San Martin 4930",
@@ -8,7 +8,7 @@ export const supermercado: Supermercado[] = [
     "distancia": "3 kilómetros",
     "stock": 3,
     "precio": "120",
-    "tipo": "Supermercado"
+    "tipo": "SuPuntoDeVenta"
   },
   {
       "nombre": "Libreria las 3 Estrellas",
@@ -26,7 +26,7 @@ export const supermercado: Supermercado[] = [
       "distancia": "2.5 kilómetros",
       "stock": 5,
       "precio": "115",
-      "tipo": "Supermercado"
+      "tipo": "SuPuntoDeVenta"
     },
     {
       "nombre": "Kiosco 9/12/18",
@@ -44,7 +44,7 @@ export const supermercado: Supermercado[] = [
       "distancia": "3.2 kilómetros",
       "stock": 4,
       "precio": "125",
-      "tipo": "Supermercado"
+      "tipo": "SuPuntoDeVenta"
     },
     {
       "nombre": "Carrefour Express",
@@ -53,7 +53,7 @@ export const supermercado: Supermercado[] = [
       "distancia": "2.7 kilómetros",
       "stock": 1,
       "precio": "140",
-      "tipo": "Supermercado"
+      "tipo": "SuPuntoDeVenta"
     },
     {
       "nombre": "Jumbo",
@@ -62,6 +62,6 @@ export const supermercado: Supermercado[] = [
       "distancia": "3.3 kilómetros",
       "stock": 3,
       "precio": "120",
-      "tipo": "Supermercado"
+      "tipo": "SuPuntoDeVenta"
     }
 ]

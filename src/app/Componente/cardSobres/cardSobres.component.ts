@@ -1,7 +1,7 @@
-/* import { supermercado } from './../../mocks/listaSupermercados' */
+/* import { suPuntoDeVenta } from './../../mocks/listaSuPuntoDeVentas' */
 import { Component, Input } from '@angular/core'
 import { Router,ActivatedRoute } from '@angular/router'
-import { Supermercado } from 'src/app/dominio/supermercado'
+import { SuPuntoDeVenta } from 'src/app/dominio/suPuntoDeVenta'
 
 @Component({
   selector: 'app-cardSobres',
@@ -13,15 +13,15 @@ export class CardSobresComponent {
 
   constructor(private router: Router, private route :ActivatedRoute) {}
   
-  @Input() cardSobres!: Supermercado
+  @Input() cardSobres!: SuPuntoDeVenta
 
-  iconoPuntoDeVenta(supermercado: Supermercado) {
-    const tipo = supermercado.tipo.toUpperCase()
+  iconoPuntoDeVenta(suPuntoDeVenta: SuPuntoDeVenta) {
+    const tipo = suPuntoDeVenta.tipo.toUpperCase()
 
     if(tipo =="KIOSCO") {
       return "fa-solid fa-shop card-detalles-highlight"
     }
-    if(tipo =="SUPERMERCADO") {
+    if(tipo =="SUPuntoDeVenta") {
       return "fa-solid fa-basket-shopping card-detalles-highlight"
     }
     return "fa-solid fa-pen-ruler card-detalles-highlight"

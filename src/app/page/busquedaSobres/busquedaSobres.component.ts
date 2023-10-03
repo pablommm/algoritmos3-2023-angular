@@ -1,12 +1,12 @@
-import { SupermercadoService } from './../../services/supermercado.service'
-import { Supermercado } from './../../dominio/supermercado'
+import { SuPuntoDeVentaService } from '../../services/suPuntoDeVenta.service'
+import { SuPuntoDeVenta } from './../../dominio/suPuntoDeVenta'
 import { Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
 import { mostrarError } from '../../util/errorHandler'
 
 export const errorHandler = (component: BusquedaSobresComponent) => ({
   error: async (error: Error) => {
-    component.listaSupermercados = await component.supermercadoService.todosLosSupermercados()
+    component.listaSuPuntoDeVentas = await component.suPuntoDeVentaService.todosLosSuPuntoDeVentas()
     mostrarError(component, error)
   }
 })
@@ -20,21 +20,21 @@ export const errorHandler = (component: BusquedaSobresComponent) => ({
 
 export class BusquedaSobresComponent implements OnInit {
 
-  listaSupermercados: Array<Supermercado> = []
+  listaSuPuntoDeVentas: Array<SuPuntoDeVenta> = []
   errors = []
   
-  constructor(public supermercadoService : SupermercadoService) {}
+  constructor(public suPuntoDeVentaService : SuPuntoDeVentaService) {}
 
    ngOnInit() {
-     this.obtenerTodosLosSupermercados()
+     this.obtenerTodosLosSuPuntoDeVentas()
   }
   
 
   
 
-  obtenerTodosLosSupermercados() {
+  obtenerTodosLosSuPuntoDeVentas() {
     try {
-      this.listaSupermercados = this.supermercadoService.todosLosSupermercados()
+      this.listaSuPuntoDeVentas = this.suPuntoDeVentaService.todosLosSuPuntoDeVentas()
     } catch (error) {
       mostrarError(this, error)
   }
