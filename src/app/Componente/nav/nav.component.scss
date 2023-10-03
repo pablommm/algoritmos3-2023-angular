@@ -3,3 +3,33 @@
 .activeRoute {
     font-weight: bold;
 }
+
+.navbar-aside-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-aside-subcontainer{
+    position: fixed;
+    z-index: 5;
+    height: 100vh;
+    width: 55vw;
+    flex-direction: column;
+    background-color: var(--sixth-color);
+}
+
+.navbar-list-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1em;
+    list-style: none;
+    padding-top: .5em;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

@@ -1,20 +1,36 @@
 <header>
-    <nav class="navbar-container">
-      <span class="navbar-title" (click)="inicio()">WorldCApp</span>
-      <i class="fa-solid fa-bars burger"></i>
-  
-      <ul class="navbar-list">
-        <li [ngClass]="{ 'activeRoute': activeRoute('BusquedaFiguritas')}">
-          <a (click)="figuritas()">Figuritas</a>
-        </li>
-        <li [ngClass]="{ 'activeRoute': activeRoute('BusquedaSobre')}">
-          <a (click)="sobres()">Sobres</a>
-        </li>
-        <li [ngClass]="{ 'activeRoute': activeRoute('PerfilUsuario')}">
-          <a (click)="perfil()">Perfil</a>
-        </li>
-        <li><a (click)="exit()"><i class="fa-solid fa-right-from-bracket"></i></a></li>
-      </ul>
-    </nav>
-  </header>
-  
+  <nav class="navbar-container">
+    <span class="navbar-title" (click)="inicio()">WorldCApp</span>
+    <a class="icon-container" (click)="toggleAside()"><i class="fa-solid fa-bars burger"></i></a>
+
+    <ul class="navbar-list">
+      <li [ngClass]="{ 'activeRoute': activeRoute('BusquedaFiguritas') }">
+        <a (click)="figuritas()">Figuritas</a>
+      </li>
+      <li [ngClass]="{ 'activeRoute': activeRoute('BusquedaSobre') }">
+        <a (click)="sobres()">Sobres</a>
+      </li>
+      <li [ngClass]="{ 'activeRoute': activeRoute('PerfilUsuario') }">
+        <a (click)="perfil()">Perfil</a>
+      </li>
+      <li><a (click)="exit()"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+    </ul>
+  </nav>
+</header>
+
+<aside class="navbar-aside-container" *ngIf="isAsideVisible">
+  <nav class="navbar-container navbar-aside-subcontainer">
+    <ul class="navbar-list-aside">
+      <a class="icon-container" (click)="toggleAside()"><i class="fa-regular fa-circle-xmark"></i></a>
+      <li [ngClass]="{ 'activeRoute': activeRoute('BusquedaFiguritas') }">
+        <a (click)="figuritas()">Figuritas</a>
+      </li>
+      <li [ngClass]="{ 'activeRoute': activeRoute('BusquedaSobre') }">
+        <a (click)="sobres()">Sobres</a>
+      </li>
+      <li [ngClass]="{ 'activeRoute': activeRoute('PerfilUsuario') }">
+        <a (click)="perfil()">Perfil</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
