@@ -1,5 +1,9 @@
 import { Component } from '@angular/core'
 import { Router,ActivatedRoute } from '@angular/router'
+import { Figurita } from './../../dominio/figurita'
+import { FiguritaService } from '../../services/figurita.service'
+import { mostrarError } from '../../util/errorHandler'
+
 @Component({
   selector: 'app-perfil-usuario-figuritas-fal',
   templateUrl: './perfil-usuario-figuritas-fal.component.html',
@@ -8,11 +12,6 @@ import { Router,ActivatedRoute } from '@angular/router'
 
 
 export class PerfilUsuarioFiguritasFalComponent {
-
-  datosDePerfil = new DatosDePerfil()
-  constructor(private router: Router, private route :ActivatedRoute) {}
-  ngOnInit() {}
-
   faltantes(){
     this.router.navigateByUrl('/FiguritaFaltante')
 
@@ -24,6 +23,24 @@ export class PerfilUsuarioFiguritasFalComponent {
   informacion(){
     this.router.navigateByUrl('/PerfilUsuario')
   }
+
+  listaFiguritas: Array<Figurita> = []
+
+  datosDePerfil = new DatosDePerfil()
+  constructor(private router: Router, private route :ActivatedRoute, public figuritaService : FiguritaService) {}
+  ngOnInit() {
+    this.obtenerTodasLasFiguritas()
+  }
+  obtenerTodasLasFiguritas() {
+    try {
+      this.listaFiguritas = this.figuritaService.todasLasFiguritas()
+    } catch (error) {
+      mostrarError(this, error)
+  }
+
+ 
+}
+
 }
 export class DatosDePerfil {
   nombreUsuario = 'pepe'

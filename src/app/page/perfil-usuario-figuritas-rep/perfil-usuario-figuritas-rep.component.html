@@ -17,9 +17,7 @@
 				</ul>
 			</div>
 			<div class="card-grid">
-				<app-card class="card-item"></app-card>
-				<app-card class="card-item"></app-card>
-				<app-card class="card-item"></app-card>
+				<app-card *ngFor="let card of listaFiguritas" [card]="card" class="card-item"></app-card>
 
 			</div>
 			<span class="material-symbols-outlined plus-icon" (click)="agregar.aniadir()">add</span>

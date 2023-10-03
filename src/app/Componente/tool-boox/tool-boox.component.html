@@ -2,9 +2,13 @@
   <img src="../../assets/alexis.jpg" class="imagen_perfil" />
   <div class="informacion">
     <div>
-      <span class="info-datos-personales"> {{datosDePerfil.nombre}} </span>
-      <i class="fa-solid fa-pencil"></i>
+      <span class="info-datos-personales"> {{cambioDeUsuario.nombreUsuario}} </span>
+      <a (click)="cambioDeUsuario.hizoClick()"><i class="fa-solid fa-pencil"></i></a>
     </div>
+    <div *ngIf="cambioDeUsuario.editando">
+      <input type="text" [(ngModel)]="cambioDeUsuario.nombreUsuario" (keyup.enter)="cambioDeUsuario.guardar()">
+      </div>
+    <div>
 
     <div>
       <span class="info-datos-personales"> edad : {{datosDePerfil.edad}} </span>

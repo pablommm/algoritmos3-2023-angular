@@ -1,15 +1,23 @@
 import { Component } from '@angular/core'
 import { Router,ActivatedRoute } from '@angular/router'
+import { Figurita } from './../../dominio/figurita'
+import { FiguritaService } from '../../services/figurita.service'
+import { mostrarError } from '../../util/errorHandler'
+
 @Component({
   selector: 'app-perfil-usuario-figuritas-rep',
   templateUrl: './perfil-usuario-figuritas-rep.component.html',
   styleUrls: ['./perfil-usuario-figuritas-rep.component.scss']
 })
 export class PerfilUsuarioFiguritasRepComponent {
+listaFiguritas: Array<Figurita> = []
 agregar = new Aniadir()
 
-constructor(private router: Router, private route :ActivatedRoute) {}
-  ngOnInit() {}
+constructor(private router: Router, private route :ActivatedRoute,public figuritaService : FiguritaService) {}
+  ngOnInit() {
+    this.obtenerTodasLasFiguritas()
+  }
+ 
 
   faltantes(){
     this.router.navigateByUrl('/FiguritaFaltante')
@@ -22,6 +30,16 @@ constructor(private router: Router, private route :ActivatedRoute) {}
   informacion(){
     this.router.navigateByUrl('/PerfilUsuario')
   }
+
+  obtenerTodasLasFiguritas() {
+    try {
+      this.listaFiguritas = this.figuritaService.todasLasFiguritas()
+    } catch (error) {
+      mostrarError(this, error)
+  }
+
+}
+
 }
 
 export class Aniadir{

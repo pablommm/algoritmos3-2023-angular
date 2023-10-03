@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'
 import { Figurita } from 'src/app/dominio/figurita'
-import { Router,ActivatedRoute,NavigationEnd } from '@angular/router'
+import { Router,ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-card',
@@ -9,28 +9,27 @@ import { Router,ActivatedRoute,NavigationEnd } from '@angular/router'
 })
 
 export class CardComponent {
-  currentUrl!: string
-
+  currentUrl = this.router.url
   constructor(private router: Router, private route :ActivatedRoute) {}
   
   @Input() card!: Figurita
 
   OnInit(){
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-         this.currentUrl = event.url
-      }
-    })
+   
   }
 
 
   selecionarCard(){
     this.router.navigateByUrl('/DetalleFigurita') //en el futuro hay que modificarlo para que te lleve a la figurita que coresponde
- 
+    
 
 }
+
+rutaDelete(){
+  return this.currentUrl ==='/BusquedaFiguritas'
+}
 ruta(){
-  return this.currentUrl === '/FiguritaRepetida'
+  return this.currentUrl === '/BusquedaFiguritas'
 }
 
   

@@ -1,7 +1,7 @@
 <!-- <article class="card-item"> -->
     <section class="card-content" (click)="selecionarCard()">
         <img src="{{card.imagen}}" alt="Enzo Fernandez" class="card-imagen">
-        <span class="material-symbols-outlined trash-can">delete_forever</span>
+        <span class="material-symbols-outlined trash-can" *ngIf="!rutaDelete()">delete_forever</span>
         <div class="card-upper-container">
           <div class="card-upper-subcontainer">
             <span class="card-detalles-largeFont">{{card | nombreApellido}}</span>
@@ -55,7 +55,7 @@
             <div class="card-detalles-mediumFont card-detalles-center">
                 <span class="card-detalles-logo">{{card.cotizacionJugador}}</span>
             </div>
-            <div class="card-detalles-largeFont card-detalles-center" *ngIf="!ruta()">
+            <div class="card-detalles-largeFont card-detalles-center" *ngIf="ruta()">
                 <span class="card-detalles-logo">Cedida por Daniel Gonzalez</span>
             </div>
         </div>
