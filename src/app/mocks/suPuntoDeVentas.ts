@@ -8,7 +8,7 @@ export const suPuntoDeVenta: SuPuntoDeVenta[] = [
     "distancia": "3 kilómetros",
     "stock": 3,
     "precio": "120",
-    "tipo": "SuPuntoDeVenta"
+    "tipo": "Supermercado"
   },
   {
       "nombre": "Libreria las 3 Estrellas",
@@ -26,7 +26,7 @@ export const suPuntoDeVenta: SuPuntoDeVenta[] = [
       "distancia": "2.5 kilómetros",
       "stock": 5,
       "precio": "115",
-      "tipo": "SuPuntoDeVenta"
+      "tipo": "Supermercado"
     },
     {
       "nombre": "Kiosco 9/12/18",
@@ -44,7 +44,7 @@ export const suPuntoDeVenta: SuPuntoDeVenta[] = [
       "distancia": "3.2 kilómetros",
       "stock": 4,
       "precio": "125",
-      "tipo": "SuPuntoDeVenta"
+      "tipo": "Supermercado"
     },
     {
       "nombre": "Carrefour Express",
@@ -53,7 +53,7 @@ export const suPuntoDeVenta: SuPuntoDeVenta[] = [
       "distancia": "2.7 kilómetros",
       "stock": 1,
       "precio": "140",
-      "tipo": "SuPuntoDeVenta"
+      "tipo": "Supermercado"
     },
     {
       "nombre": "Jumbo",
@@ -62,6 +62,6 @@ export const suPuntoDeVenta: SuPuntoDeVenta[] = [
       "distancia": "3.3 kilómetros",
       "stock": 3,
       "precio": "120",
-      "tipo": "SuPuntoDeVenta"
+      "tipo": "Supermercado"
     }
 ]
