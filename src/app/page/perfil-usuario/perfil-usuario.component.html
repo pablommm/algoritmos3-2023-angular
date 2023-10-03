@@ -1,27 +1,7 @@
 <body>
 	<app-nav></app-nav>
 	<main class="main-container">
-		<div class="toolbox-container">
-			<img src="../../assets/bilardo.jpg" class="imagen_perfil" />
-			<div class="informacion">
-				<div>
-					<span class="info-datos-personales" > {{cambioDeUsuario.nombreUsuario}} </span>
-					<a (click)="cambioDeUsuario.hizoClick()"><i class="fa-solid fa-pencil"></i></a>
-				</div>
-				<div *ngIf="cambioDeUsuario.editando">
-					<input type="text" [(ngModel)]="cambioDeUsuario.nombreUsuario" (keyup.enter)="cambioDeUsuario.guardar()">
-				  </div>
-				<div>
-					<span class="info-datos-personales">Edad: </span>
-					<span>84</span>
-				</div>
-
-				<div>
-					<span class="info-datos-personales">Ubicación:</span>
-					<span>Argentina</span>
-				</div>
-			</div>
-		</div>
+		<app-tool-boox class="toolbox-container"></app-tool-boox>
 
 		<section class="sub-main-container">
 			<ul class="tabs-container navbar-list">

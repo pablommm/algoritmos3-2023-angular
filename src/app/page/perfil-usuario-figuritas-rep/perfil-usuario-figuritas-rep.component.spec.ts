@@ -14,8 +14,16 @@ describe('PerfilUsuarioFiguritasRepComponent', () => {
     component = fixture.componentInstance
     fixture.detectChanges()
   })
-
+  
   it('should create', () => {
     expect(component).toBeTruthy()
   })
 })
+
+export class DatosDePerfil {
+  nombreUsuario = 'pepe'
+  nombre = 'Pepe'
+  apellido = 'Perez'
+  edad = '20'
+  pais = 'Boliviano'
+}
