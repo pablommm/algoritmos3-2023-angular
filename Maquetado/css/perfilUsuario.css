@@ -9,7 +9,8 @@
 
 .toolbox-container {
   background-color: var(--primary-color);
-  margin-top: 2.5em;
+  margin: 0;
+  padding-top: 2.5em;
   border-radius: 0;
   padding-bottom: 1em;
 }
@@ -112,22 +113,6 @@
   box-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.5);
 }
 
-.trash-can {
- 
-  color: white;
-  position: absolute;
-  top: 0.5em;
-  right: 0.2em;
-}
-
-/* .trash-can:hover{
-
-  
-} */
-
-.card-content{
-	position: relative;
-}
 
 /* version tablet*/
 @media (min-width: 401px) {
@@ -188,9 +173,6 @@
 
   .toolbox-container {
     width: 20%;
-    margin-top: 0em;
-    margin-bottom: 0em;
-    margin-left: 0em;
     align-self: stretch;
   }
 
