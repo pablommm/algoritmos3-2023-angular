@@ -3,6 +3,7 @@ import { CardComponent } from './../Componente/card/card.component'
 import { Figurita } from '../dominio/figurita'
 import { valoracionTotal } from '../dominio/figurita'
 import { ActivatedRouteStub } from '../activatedRouteStub'
+import { RouterTestingModule } from "@angular/router/testing"
 
 describe('CardComponent', () => {
   let fixture: ComponentFixture<CardComponent>
@@ -12,6 +13,7 @@ describe('CardComponent', () => {
   beforeEach(async () => {
     TestBed.configureTestingModule({
       declarations: [CardComponent],
+      imports: [RouterTestingModule],
       providers: [
         { provide: activatedRouteStub, useValue: activatedRouteStub }, // Proporciona ActivatedRouteStub como valor para ActivatedRoute.
       ],

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-
+import { RouterTestingModule } from "@angular/router/testing"
 import { PerfilUsuarioFiguritasRepComponent } from './perfil-usuario-figuritas-rep.component'
 
 describe('PerfilUsuarioFiguritasRepComponent', () => {
@@ -8,7 +8,10 @@ describe('PerfilUsuarioFiguritasRepComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PerfilUsuarioFiguritasRepComponent]
+      declarations: [PerfilUsuarioFiguritasRepComponent],
+      imports: [
+        RouterTestingModule 
+    ],
     })
     fixture = TestBed.createComponent(PerfilUsuarioFiguritasRepComponent)
     component = fixture.componentInstance
