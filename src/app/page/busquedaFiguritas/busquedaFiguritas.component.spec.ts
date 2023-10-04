@@ -7,6 +7,8 @@ import { SearchBarComponent } from 'src/app/Componente/searchBar/searchBar.compo
 import { RouterTestingModule } from "@angular/router/testing"
 import { FiltroComponent } from 'src/app/Componente/filtro/filtro.component'
 import { CardComponent } from 'src/app/Componente/card/card.component'
+import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
+import { FormsModule } from '@angular/forms';
 
 import { BusquedaFiguritasComponent } from './busquedaFiguritas.component'
 
@@ -16,8 +18,8 @@ describe('BusquedaFiguritasComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [BusquedaFiguritasComponent, NavComponent, SearchBarComponent, FiltroComponent, CardComponent],
-      imports: [RouterTestingModule],
+      declarations: [BusquedaFiguritasComponent, NavComponent, SearchBarComponent, FiltroComponent, CardComponent, NombreApellidoPipe],
+      imports: [RouterTestingModule, FormsModule],
     }).compileComponents()
   }))
 

@@ -4,6 +4,8 @@ import { PerfilUsuarioFiguritasRepComponent } from './perfil-usuario-figuritas-r
 import { NavComponent } from 'src/app/Componente/nav/nav.component'
 import { ToolBooxComponent } from 'src/app/Componente/tool-boox/tool-boox.component'
 import { CardComponent } from 'src/app/Componente/card/card.component'
+import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
+import { PrecioSobrePipe } from 'src/app/pipes/precioSobre.pipe'
 
 describe('PerfilUsuarioFiguritasRepComponent', () => {
   let component: PerfilUsuarioFiguritasRepComponent
@@ -11,7 +13,7 @@ describe('PerfilUsuarioFiguritasRepComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PerfilUsuarioFiguritasRepComponent, NavComponent, ToolBooxComponent, CardComponent],
+      declarations: [PerfilUsuarioFiguritasRepComponent, NavComponent, ToolBooxComponent, CardComponent, NombreApellidoPipe, PrecioSobrePipe],
       imports: [
         RouterTestingModule 
     ],

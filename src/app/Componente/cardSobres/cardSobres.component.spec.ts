@@ -4,6 +4,8 @@ import { By } from '@angular/platform-browser'
 import { DebugElement } from '@angular/core'
 import { RouterTestingModule } from "@angular/router/testing"
 import { RouterModule } from '@angular/router'
+import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
+import { PrecioSobrePipe } from 'src/app/pipes/precioSobre.pipe'
 
 
 import { CardSobresComponent } from './cardSobres.component'
@@ -14,7 +16,7 @@ describe('CardSobresComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CardSobresComponent ],
+      declarations: [ CardSobresComponent, NombreApellidoPipe, PrecioSobrePipe],
       imports: [
         RouterTestingModule, RouterModule.forRoot([]) 
     ],
