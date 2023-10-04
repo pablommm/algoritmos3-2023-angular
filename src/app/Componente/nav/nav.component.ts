@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core'
 import { Router, ActivatedRoute } from '@angular/router'
 
@@ -16,22 +17,6 @@ export class NavComponent {
 
   ngOnInit() {}
 
-  perfil() {
-    this.router.navigateByUrl('/PerfilUsuario')
-  }
-  inicio() {
-    this.router.navigateByUrl('/BusquedaFiguritas')
-  }
-  figuritas() {
-    this.router.navigateByUrl('/BusquedaFiguritas')
-  }
-
-  sobres() {
-    this.router.navigateByUrl('/BusquedaSobre')
-  }
-  exit() {
-    this.router.navigateByUrl('/Login')
-  }
 
   toggleAside() {
     this.isAsideVisible = !this.isAsideVisible

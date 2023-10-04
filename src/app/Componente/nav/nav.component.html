@@ -1,19 +1,19 @@
 <header>
   <nav class="navbar-container">
-    <span class="navbar-title" (click)="inicio()">WorldCApp</span>
+    <span class="navbar-title" routerLink="BusquedaFiguritas" routerLinkActive="activeRoute">WorldCApp</span>
     <a class="icon-container" (click)="toggleAside()"><i class="fa-solid fa-bars burger"></i></a>
 
     <ul class="navbar-list">
       <li [ngClass]="{ 'activeRoute': activeRoute('BusquedaFiguritas') }">
-        <a (click)="figuritas()">Figuritas</a>
+        <a routerLink="/BusquedaFiguritas" routerLinkActive="activeRoute">Figuritas</a>
       </li>
       <li [ngClass]="{ 'activeRoute': activeRoute('BusquedaSobre') }">
-        <a (click)="sobres()">Sobres</a>
+        <a routerLink="/BusquedaSobre" routerLinkActive="activeRoute">Sobres</a>
       </li>
       <li [ngClass]="{ 'activeRoute': activeRoute('PerfilUsuario') }">
-        <a (click)="perfil()">Perfil</a>
+        <a routerLink="/PerfilUsuario" routerLinkActive="activeRoute">Perfil</a>
       </li>
-      <li><a (click)="exit()"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+      <li><a routerLink="/Login" routerLinkActive="activeRoute"><i class="fa-solid fa-right-from-bracket"></i></a></li>
     </ul>
   </nav>
 </header>
@@ -23,14 +23,16 @@
     <ul class="navbar-list-aside">
       <a class="icon-container" (click)="toggleAside()"><i class="fa-regular fa-circle-xmark"></i></a>
       <li [ngClass]="{ 'activeRoute': activeRoute('BusquedaFiguritas') }">
-        <a (click)="figuritas()">Figuritas</a>
+        <a routerLink="/BusquedaFiguritas" routerLinkActive="activeRoute">Figuritas</a>
       </li>
       <li [ngClass]="{ 'activeRoute': activeRoute('BusquedaSobre') }">
-        <a (click)="sobres()">Sobres</a>
+        <a  routerLink="/BusquedaSobre" routerLinkActive="activeRoute">Sobres</a>
       </li>
       <li [ngClass]="{ 'activeRoute': activeRoute('PerfilUsuario') }">
-        <a (click)="perfil()">Perfil</a>
+        <a routerLink="/PerfilUsuario" routerLinkActive="activeRoute" >Perfil</a>
       </li>
     </ul>
   </nav>
 </aside>
+
+
