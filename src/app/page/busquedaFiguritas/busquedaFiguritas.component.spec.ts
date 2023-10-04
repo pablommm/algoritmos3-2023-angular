@@ -1,7 +1,8 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing'
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing'
 import { By } from '@angular/platform-browser'
 import { DebugElement } from '@angular/core'
+import { NavComponent } from 'src/app/Componente/nav/nav.component'
 
 import { BusquedaFiguritasComponent } from './busquedaFiguritas.component'
 
@@ -9,9 +10,9 @@ describe('BusquedaFiguritasComponent', () => {
   let component: BusquedaFiguritasComponent
   let fixture: ComponentFixture<BusquedaFiguritasComponent>
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [BusquedaFiguritasComponent]
+      declarations: [BusquedaFiguritasComponent, NavComponent]
     }).compileComponents()
   }))
 

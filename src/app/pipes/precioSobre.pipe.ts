@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core'
 import { PuntoDeVenta } from '../dominio/puntoDeVenta'
 
 @Pipe({

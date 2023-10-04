@@ -1,19 +1,16 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing'
-import { By } from '@angular/platform-browser'
-import { DebugElement } from '@angular/core'
-
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing'
 import { BusquedaFiguritasPerfilComponent } from './busquedaFiguritasPerfil.component'
+import { NavComponent } from 'src/app/Componente/nav/nav.component'
 
 describe('BusquedaFiguritasPerfilComponent', () => {
   let component: BusquedaFiguritasPerfilComponent
   let fixture: ComponentFixture<BusquedaFiguritasPerfilComponent>
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ BusquedaFiguritasPerfilComponent ]
-    })
-    .compileComponents()
+      declarations: [BusquedaFiguritasPerfilComponent, NavComponent] 
+    }).compileComponents()
   }))
 
   beforeEach(() => {

@@ -1,28 +1,28 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
+import { By } from '@angular/platform-browser'
+import { DebugElement } from '@angular/core'
 
-import { ToolBooxComponent } from './tool-boox.component';
+import { ToolBooxComponent } from './tool-boox.component'
 
 describe('ToolBooxComponent', () => {
-  let component: ToolBooxComponent;
-  let fixture: ComponentFixture<ToolBooxComponent>;
+  let component: ToolBooxComponent
+  let fixture: ComponentFixture<ToolBooxComponent>
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ToolBooxComponent ]
     })
-    .compileComponents();
-  }));
+    .compileComponents()
+  }))
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ToolBooxComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(ToolBooxComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})
