@@ -3,9 +3,9 @@
 import { TestBed, async } from '@angular/core/testing';
 import { PrecioSobrePipe } from './precioSobre.pipe';
 
-describe('Pipe: PrecioSobree', () => {
+describe('Pipe: PrecioSobre', () => {
   it('create an instance', () => {
-    let pipe = new PrecioSobre();
+    let pipe = new PrecioSobrePipe();
     expect(pipe).toBeTruthy();
   });
 });

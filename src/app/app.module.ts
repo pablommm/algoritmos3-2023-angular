@@ -23,7 +23,7 @@ import { FiltroOrdenarPorComponent } from './Componente/filtro-ordenar-por/filtr
 import { NombreApellidoPipe } from './pipes/nombreApellido.pipe'
 import { PrecioSobrePipe } from './pipes/precioSobre.pipe'
 import { ToolBooxComponent } from './Componente/tool-boox/tool-boox.component'
-
+  
 @NgModule({
   declarations: [
     AppComponent,
