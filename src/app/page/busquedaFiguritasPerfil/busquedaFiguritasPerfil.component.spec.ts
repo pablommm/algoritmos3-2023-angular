@@ -8,7 +8,7 @@ import { FiltroComponent } from 'src/app/Componente/filtro/filtro.component'
 import { CardComponent } from 'src/app/Componente/card/card.component'
 import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
 import { PrecioSobrePipe } from 'src/app/pipes/precioSobre.pipe'
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'
 
 describe('BusquedaFiguritasPerfilComponent', () => {
   let component: BusquedaFiguritasPerfilComponent

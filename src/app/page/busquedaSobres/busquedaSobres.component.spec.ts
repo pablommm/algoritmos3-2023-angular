@@ -8,7 +8,7 @@ import { FiltroOrdenarPorComponent } from 'src/app/Componente/filtro-ordenar-por
 import { CardSobresComponent } from 'src/app/Componente/cardSobres/cardSobres.component'
 import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
 import { PrecioSobrePipe } from 'src/app/pipes/precioSobre.pipe'
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'
 
 describe('BusquedaSobresComponent', () => {
   let component: BusquedaSobresComponent

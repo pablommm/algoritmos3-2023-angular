@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { RouterTestingModule } from "@angular/router/testing"
 import { PerfilUsuarioFiguritasRepComponent } from './perfil-usuario-figuritas-rep.component'
 import { NavComponent } from 'src/app/Componente/nav/nav.component'
-import { ToolBooxComponent } from 'src/app/Componente/tool-boox/tool-boox.component'
 import { CardComponent } from 'src/app/Componente/card/card.component'
 import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
 import { PrecioSobrePipe } from 'src/app/pipes/precioSobre.pipe'
@@ -13,7 +12,7 @@ describe('PerfilUsuarioFiguritasRepComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PerfilUsuarioFiguritasRepComponent, NavComponent, ToolBooxComponent, CardComponent, NombreApellidoPipe, PrecioSobrePipe],
+      declarations: [PerfilUsuarioFiguritasRepComponent, NavComponent, CardComponent, NombreApellidoPipe, PrecioSobrePipe],
       imports: [
         RouterTestingModule 
     ],
