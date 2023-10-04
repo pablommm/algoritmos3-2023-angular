@@ -13,7 +13,7 @@ import { LoginComponent } from './page/login/login.component'
 
 const routes: Routes = [
   {path:'Perfil', component:PerfilUsuarioComponent,children:[
-    {path:'FiguritaRepetida', component:PerfilUsuarioFiguritasRepComponent},
+    {path:'Perfil/FiguritaRepetida', component:PerfilUsuarioFiguritasRepComponent},
     {path:'FiguritaFaltante', component:PerfilUsuarioFiguritasFalComponent},
   ]},
   {path:'DetalleFigurita', component:DetallesFiguritaComponent},
