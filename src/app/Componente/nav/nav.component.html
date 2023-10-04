@@ -4,14 +4,14 @@
     <a class="icon-container" (click)="toggleAside()"><i class="fa-solid fa-bars burger"></i></a>
 
     <ul class="navbar-list">
-      <li [ngClass]="{ 'activeRoute': activeRoute('BusquedaFiguritas') }">
+      <li>
         <a routerLink="/BusquedaFiguritas" routerLinkActive="activeRoute">Figuritas</a>
       </li>
-      <li [ngClass]="{ 'activeRoute': activeRoute('BusquedaSobre') }">
+      <li>
         <a routerLink="/BusquedaSobre" routerLinkActive="activeRoute">Sobres</a>
       </li>
-      <li [ngClass]="{ 'activeRoute': activeRoute('PerfilUsuario') }">
-        <a routerLink="/PerfilUsuario" routerLinkActive="activeRoute">Perfil</a>
+      <li>
+        <a routerLink="/Perfil" routerLinkActive="activeRoute">Perfil</a>
       </li>
       <li><a routerLink="/Login" routerLinkActive="activeRoute"><i class="fa-solid fa-right-from-bracket"></i></a></li>
     </ul>

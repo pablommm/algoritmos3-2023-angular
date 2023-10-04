@@ -23,6 +23,8 @@ import { FiltroOrdenarPorComponent } from './Componente/filtro-ordenar-por/filtr
 import { NombreApellidoPipe } from './pipes/nombreApellido.pipe'
 import { PrecioSobrePipe } from './pipes/precioSobre.pipe'
 import { ToolBooxComponent } from './Componente/tool-boox/tool-boox.component'
+import { TabComponent } from './Componente/tab/tab.component'
+import { FormComponent } from './Componente/form/form.component'
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { ToolBooxComponent } from './Componente/tool-boox/tool-boox.component'
     NombreApellidoPipe,
     PrecioSobrePipe,
     ToolBooxComponent,
+    TabComponent,
+    FormComponent
   
   ],
   imports: [

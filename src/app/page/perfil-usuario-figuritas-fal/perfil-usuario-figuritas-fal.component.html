@@ -4,18 +4,7 @@
 		<app-tool-boox class = "toolbox-container"></app-tool-boox>
 
 		<section class="sub-main-container">
-			<div class="tabs-container navbar-list">
-				<ul class="tabs-container navbar-list">
-					<li class= "tab" (click)="informacion()"><a>Información del Perfil</a></li>
-				<li class="tab" (click)="repetidas()"><a>Figuritas Repetidas</a></li>
-				<li class= "tab-elegido"(click)="faltantes()"><a>Figuritas Faltantes</a></li>
-				<li>
-						<i class="fa-solid fa-circle point-icon"></i>
-						<i class="fa-regular fa-circle point-icon"></i>
-						<i class="fa-regular fa-circle point-icon"></i>
-					</li>
-				</ul>
-			</div>
+		<app-tab></app-tab>
 			<div class="card-grid">
 				<app-card *ngFor="let card of listaFiguritas" [card]="card" class="card-item"></app-card>
 			</div>
