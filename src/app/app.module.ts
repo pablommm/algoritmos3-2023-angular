@@ -22,7 +22,6 @@ import { FiltroComponent } from './Componente/filtro/filtro.component'
 import { FiltroOrdenarPorComponent } from './Componente/filtro-ordenar-por/filtro-ordenar-por.component'
 import { NombreApellidoPipe } from './pipes/nombreApellido.pipe'
 import { PrecioSobrePipe } from './pipes/precioSobre.pipe'
-import { ToolBooxComponent } from './Componente/tool-boox/tool-boox.component'
 import { TabComponent } from './Componente/tab/tab.component'
 import { FormComponent } from './Componente/form/form.component'
 import { FiguritasPerfilComponent } from './Componente/FiguritasPerfil/FiguritasPerfil.component'
@@ -47,7 +46,6 @@ import { FiguritasPerfilComponent } from './Componente/FiguritasPerfil/Figuritas
     FiltroOrdenarPorComponent,
     NombreApellidoPipe,
     PrecioSobrePipe,
-    ToolBooxComponent,
     TabComponent,
     FormComponent,
     FiguritasPerfilComponent

@@ -1,17 +1,17 @@
 <!-- <article class="card-item"> -->
     <section class="card-content" (click)="selecionarCard()">
-        <img src="{{card.imagen}}" alt="Enzo Fernandez" class="card-imagen">
+        <img src="{{figurita.imagen}}" alt="Enzo Fernandez" class="card-imagen">
         <span class="material-symbols-outlined trash-can" *ngIf="!rutaDelete()">delete_forever</span>
         <div class="card-upper-container">
           <div class="card-upper-subcontainer">
-            <span class="card-detalles-largeFont">{{card | nombreApellido}}</span>
+            <span class="card-detalles-largeFont">{{figurita | nombreApellido}}</span>
             <div class="card-detalles-largeFont">
               <i class="fa-solid fa-id-badge"></i>
               <span>5</span>
             </div>
             <div class="card-detalles-largeFont">
               <i class="fa-solid fa-star"></i>
-              <span>{{ card.valoracionTotal}}</span>
+              <span>{{ figurita.valoracionTotal}}</span>
             </div>
           </div>
             <div class="card-upper-subcontainer">
@@ -20,14 +20,14 @@
                         <i class="fa-solid fa-weight-scale"></i>
                         <span>Peso</span>
                     </div>
-                    <span>{{card.peso}}</span>
+                    <span>{{figurita.peso}}</span>
                 </div>
                 <div class="card-detalles-mediumFont">
                     <div class="card-detalles-logo">
                         <i class="fa-solid fa-ruler"></i>
                         <span>Altura</span>
                     </div>
-                    <span>{{card.altura}}</span>
+                    <span>{{figurita.altura}}</span>
                 </div>
             </div>
         </div>
@@ -36,24 +36,24 @@
 
                 <div class="card-detalles-smallFont">
                     <span class="card-detalles-logo">Casaca</span>
-                    <span>{{card.numeroCamiseta}}</span>
+                    <span>{{figurita.numeroCamiseta}}</span>
                 </div>
                 <div class="card-detalles-smallFont">
                     <span class="card-detalles-logo">Nacimiento</span>
-                    <span>{{card.fechaNacimiento}}</span>
+                    <span>{{figurita.fechaNacimiento}}</span>
                 </div>
                 <div class="card-detalles-smallFont">
                     <span class="card-detalles-logo">Selección</span>
-                    <span>{{card.seleccion}} (<i class="fa-solid fa-trophy"></i> 3)</span>
+                    <span>{{figurita.seleccion}} (<i class="fa-solid fa-trophy"></i> 3)</span>
                 </div>
                 <div class="card-detalles-smallFont">
                     <span class="card-detalles-logo">Posición</span>
-                    <span>{{card.posicion}}</span>
+                    <span>{{figurita.posicion}}</span>
                 </div>
 
             </div>
             <div class="card-detalles-mediumFont card-detalles-center">
-                <span class="card-detalles-logo">{{card.cotizacionJugador}}</span>
+                <span class="card-detalles-logo">{{figurita.cotizacionJugador}}</span>
             </div>
             <div class="card-detalles-largeFont card-detalles-center" *ngIf="ruta()">
                 <span class="card-detalles-logo">Cedida por Daniel Gonzalez</span>

@@ -1,7 +1,7 @@
 import { PuntoDeVentaService } from '../../services/puntoDeVenta.service'
 import { PuntoDeVenta } from '../../dominio/puntoDeVenta'
 import { Component, OnInit } from '@angular/core'
-import { Router } from '@angular/router'
+/* import { Router } from '@angular/router' */
 import { mostrarError } from '../../util/errorHandler'
 
 export const errorHandler = (component: BusquedaSobresComponent) => ({

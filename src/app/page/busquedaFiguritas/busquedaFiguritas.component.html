@@ -1,11 +1,10 @@
 <body>
-    <app-nav></app-nav>
     <app-searchBar></app-searchBar>
   
     <main class="main-container">
       <app-filtro class="toolbox-container"></app-filtro>
       <section class="sub-main-container" >
-        <app-card *ngFor="let card of listaFiguritas" [card]="card" class="card-item"></app-card>
+        <app-card *ngFor="let figurita of listaFiguritas" [figurita]="figurita" class="card-item"></app-card>
       </section>
     </main>
-  </body>
+</body>

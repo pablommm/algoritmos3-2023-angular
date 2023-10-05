@@ -48,7 +48,7 @@ describe('CardComponent', () => {
 
     figuritaData.valoracionTotal = valoracionTotal(figuritaData)
 
-    component.card = figuritaData
+    component.figurita = figuritaData
 
     fixture.detectChanges()
   })

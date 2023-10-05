@@ -12,7 +12,7 @@ export class CardComponent {
   currentUrl = this.router.url
   constructor(private router: Router, private route :ActivatedRoute) {}
   
-  @Input() card!: Figurita
+  @Input() figurita!: Figurita
 
   OnInit(){
    

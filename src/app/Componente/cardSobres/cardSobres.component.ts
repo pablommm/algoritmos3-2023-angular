@@ -13,7 +13,7 @@ export class CardSobresComponent {
 
   constructor(private router: Router, private route :ActivatedRoute) {}
   
-  @Input() cardSobres!: PuntoDeVenta
+  @Input() puntoDeVenta!: PuntoDeVenta
 
   iconoPuntoDeVenta(puntoDeVenta: PuntoDeVenta) {
     const tipo = puntoDeVenta.tipo.toUpperCase()
