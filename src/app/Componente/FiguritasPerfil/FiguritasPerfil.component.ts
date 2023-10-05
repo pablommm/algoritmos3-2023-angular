@@ -1,17 +1,16 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { Router,ActivatedRoute } from '@angular/router'
 import { Figurita } from './../../dominio/figurita'
 import { FiguritaService } from '../../services/figurita.service'
 import { mostrarError } from '../../util/errorHandler'
 
+
 @Component({
-  selector: 'app-perfil-usuario-figuritas-fal',
-  templateUrl: './perfil-usuario-figuritas-fal.component.html',
-  styleUrls: ['./perfil-usuario-figuritas-fal.component.scss']
+  selector: 'app-FiguritasPerfil',
+  templateUrl: './FiguritasPerfil.component.html',
+  styleUrls: ['./FiguritasPerfil.component.css']
 })
-
-
-export class PerfilUsuarioFiguritasFalComponent {
+export class FiguritasPerfilComponent implements OnInit {
 
   listaFiguritas: Array<Figurita> = []
 
@@ -30,3 +29,5 @@ export class PerfilUsuarioFiguritasFalComponent {
 }
 
 }
+
+

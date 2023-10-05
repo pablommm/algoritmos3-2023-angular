@@ -12,9 +12,14 @@ import { LoginComponent } from './page/login/login.component'
 
 
 const routes: Routes = [
-  {path:'PerfilUsuario', component:PerfilUsuarioComponent},
-  {path:'FiguritaRepetida', component:PerfilUsuarioFiguritasRepComponent},
-  {path:'FiguritaFaltante', component:PerfilUsuarioFiguritasFalComponent},
+
+/*   {path:'Perfil', component:PerfilUsuarioComponent,children:[
+    {path:'Perfil/FiguritaRepetida', component:PerfilUsuarioFiguritasRepComponent},
+    {path:'FiguritaFaltante', component:PerfilUsuarioFiguritasFalComponent},
+  ]}, */
+  {path:'Perfil', component:PerfilUsuarioComponent},
+  {path:'Perfil/FiguritaRepetida', component:PerfilUsuarioFiguritasRepComponent},
+  {path:'Perfil/FiguritaFaltante', component:PerfilUsuarioFiguritasFalComponent},
   {path:'DetalleFigurita', component:DetallesFiguritaComponent},
   {path:'BusquedaSobre', component:BusquedaSobresComponent},
   {path:'BusquedaFiguritasPerfil', component:BusquedaFiguritasPerfilComponent},
