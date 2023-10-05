@@ -23,10 +23,10 @@ export class Figurita {
     public imagen: string = '',
     public valoracionBase?: number,
     public valoracionJugador: number = 0,
-    public valoracionTotal?: number,
+    public valoracionTotal?: number
   ) {}
 
-  static fromJson(figurita: Figurita): Figurita {
+  static fromJson(figurita: Object): Figurita {
     return Object.assign(new Figurita(), figurita)
   }
 }
@@ -34,9 +34,9 @@ export class Figurita {
 function calcularValoracionBase(figurita: Figurita): number {
   return Math.round(
     VALORACION_PISO *
-    valorOnFire(figurita) *
-    valorEsPar(figurita) *
-    valorNivelImpresion(figurita)
+      valorOnFire(figurita) *
+      valorEsPar(figurita) *
+      valorNivelImpresion(figurita)
   )
 }
 
@@ -49,7 +49,8 @@ function valorEsPar(figurita: Figurita): number {
 }
 
 function valorNivelImpresion(figurita: Figurita): number {
-  return figurita.nivelImpresion === 'medio' || figurita.nivelImpresion === 'alto'
+  return figurita.nivelImpresion === 'medio' ||
+    figurita.nivelImpresion === 'alto'
     ? VALOR_NIVEL_IMPRESION
     : 1
 }
