@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { RouterTestingModule } from "@angular/router/testing"
+import { RouterTestingModule } from '@angular/router/testing'
 import { CardComponent } from './card.component'
 import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
 import { PrecioSobrePipe } from 'src/app/pipes/precioSobre.pipe'
@@ -8,11 +8,11 @@ import { Figurita } from 'src/app/dominio/figurita'
 describe('CardComponent', () => {
   let component: CardComponent
   let fixture: ComponentFixture<CardComponent>
-  let figurita: Figurita 
+  let figurita: Figurita
 
   beforeEach(() => {
     figurita = {
-      imagen: "../../assets/cristiano.jpg",
+      imagen: '../../assets/cristiano.jpg',
       nombre: 'Cristiano',
       apellido: 'Ronaldo',
       fechaNacimiento: '17 de febrero',
@@ -39,7 +39,6 @@ describe('CardComponent', () => {
     fixture = TestBed.createComponent(CardComponent)
     component = fixture.componentInstance
 
-    
     component.figurita = figurita
 
     fixture.detectChanges()

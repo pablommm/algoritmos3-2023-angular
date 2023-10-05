@@ -1,7 +1,7 @@
-import { valoracionTotal } from 'src/app/dominio/figurita'
+/* import { valoracionTotal } from 'src/app/dominio/figurita' */
 import { Figurita } from '../dominio/figurita'
 import { Injectable } from '@angular/core'
-import { figuritas } from '../mocks/listaFiguritas'
+import { figuritas } from '../mocks/figuritas'
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class FiguritaService {
     try {
       const figuritasConValoracionBase = figuritas.map((figuritaJSON) => {
         const figurita = Figurita.fromJson(figuritaJSON)
-        figurita.valoracionTotal = valoracionTotal(figurita)
+        figurita.valoracionTotal = figurita.calcularValoracionTotal(figurita)
         return figurita
       })
       return figuritasConValoracionBase

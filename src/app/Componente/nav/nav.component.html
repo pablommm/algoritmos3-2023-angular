@@ -22,13 +22,13 @@
   <nav class="navbar-container navbar-aside-subcontainer">
     <ul class="navbar-list-aside">
       <a class="icon-container" (click)="toggleAside()"><i class="fa-regular fa-circle-xmark"></i></a>
-      <li [ngClass]="{ 'activeRoute': activeRoute('BusquedaFiguritas') }">
+      <li>
         <a routerLink="/BusquedaFiguritas" routerLinkActive="activeRoute">Figuritas</a>
       </li>
-      <li [ngClass]="{ 'activeRoute': activeRoute('BusquedaSobre') }">
+      <li>
         <a  routerLink="/BusquedaSobre" routerLinkActive="activeRoute">Sobres</a>
       </li>
-      <li [ngClass]="{ 'activeRoute': activeRoute('PerfilUsuario') }">
+      <li>
         <a routerLink="/PerfilUsuario" routerLinkActive="activeRoute" >Perfil</a>
       </li>
     </ul>

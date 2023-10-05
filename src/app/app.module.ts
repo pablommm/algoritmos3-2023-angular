@@ -1,4 +1,4 @@
-import { NgModule, } from '@angular/core'
+import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { HttpClientModule } from '@angular/common/http' // Agrega HttpClientModule
 import { FormsModule } from '@angular/forms' // Agrega FormsModule
@@ -49,15 +49,9 @@ import { FiguritasPerfilComponent } from './Componente/FiguritasPerfil/Figuritas
     TabComponent,
     FormComponent,
     FiguritasPerfilComponent
-  
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    AppRoutingModule,
-  ],
-  providers: [FiguritaService,],
-  bootstrap: [AppComponent],
+  imports: [BrowserModule, HttpClientModule, FormsModule, AppRoutingModule],
+  providers: [FiguritaService],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

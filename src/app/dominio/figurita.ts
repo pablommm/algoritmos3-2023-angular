@@ -26,35 +26,35 @@ export class Figurita {
     public valoracionTotal?: number
   ) {}
 
-  static fromJson(figurita: Object): Figurita {
+  static fromJson(figurita: object): Figurita {
     return Object.assign(new Figurita(), figurita)
   }
-}
 
-function calcularValoracionBase(figurita: Figurita): number {
-  return Math.round(
-    VALORACION_PISO *
-      valorOnFire(figurita) *
-      valorEsPar(figurita) *
-      valorNivelImpresion(figurita)
-  )
-}
+  valorOnFire(figurita: Figurita): number {
+    return figurita.estaOnFire ? VALOR_ON_FIRE : 1
+  }
 
-function valorOnFire(figurita: Figurita): number {
-  return figurita.estaOnFire ? VALOR_ON_FIRE : 1
-}
+  valorEsPar(figurita: Figurita): number {
+    return figurita.esPar ? VALOR_ES_PAR : 1
+  }
 
-function valorEsPar(figurita: Figurita): number {
-  return figurita.esPar ? VALOR_ES_PAR : 1
-}
+  valorNivelImpresion(figurita: Figurita): number {
+    return figurita.nivelImpresion === 'medio' ||
+      figurita.nivelImpresion === 'alto'
+      ? VALOR_NIVEL_IMPRESION
+      : 1
+  }
 
-function valorNivelImpresion(figurita: Figurita): number {
-  return figurita.nivelImpresion === 'medio' ||
-    figurita.nivelImpresion === 'alto'
-    ? VALOR_NIVEL_IMPRESION
-    : 1
-}
+  calcularValoracionBase(figurita: Figurita): number {
+    return Math.round(
+      VALORACION_PISO *
+        this.valorOnFire(figurita) *
+        this.valorEsPar(figurita) *
+        this.valorNivelImpresion(figurita)
+    )
+  }
 
-export function valoracionTotal(figurita: Figurita): number {
-  return calcularValoracionBase(figurita) + figurita.valoracionJugador
+  calcularValoracionTotal(figurita: Figurita): number {
+    return this.calcularValoracionBase(figurita) + figurita.valoracionJugador
+  }
 }

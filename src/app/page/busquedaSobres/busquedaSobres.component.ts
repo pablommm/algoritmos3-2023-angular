@@ -6,7 +6,8 @@ import { mostrarError } from '../../util/errorHandler'
 
 export const errorHandler = (component: BusquedaSobresComponent) => ({
   error: async (error: Error) => {
-    component.listaPuntoDeVentas = await component.puntoDeVentaService.todosLosPuntoDeVentas()
+    component.puntosDeVenta =
+      await component.puntoDeVentaService.todosLosPuntoDeVentas()
     mostrarError(component, error)
   }
 })
@@ -17,27 +18,21 @@ export const errorHandler = (component: BusquedaSobresComponent) => ({
   styleUrls: ['./busquedaSobres.component.scss'],
   providers: []
 })
-
 export class BusquedaSobresComponent implements OnInit {
-
-  listaPuntoDeVentas: Array<PuntoDeVenta> = []
+  puntosDeVenta: Array<PuntoDeVenta> = []
   errors = []
-  
-  constructor(public puntoDeVentaService : PuntoDeVentaService) {}
 
-   ngOnInit() {
-     this.obtenerTodosLosPuntoDeVentas()
+  constructor(public puntoDeVentaService: PuntoDeVentaService) {}
+
+  ngOnInit() {
+    this.obtenerTodosLosPuntoDeVentas()
   }
-  
-
-  
 
   obtenerTodosLosPuntoDeVentas() {
     try {
-      this.listaPuntoDeVentas = this.puntoDeVentaService.todosLosPuntoDeVentas()
+      this.puntosDeVenta = this.puntoDeVentaService.todosLosPuntoDeVentas()
     } catch (error) {
       mostrarError(this, error)
+    }
   }
-  
-}
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { Router,ActivatedRoute } from '@angular/router'
+import { Router, ActivatedRoute } from '@angular/router'
 import { Figurita } from './../../dominio/figurita'
 import { FiguritaService } from '../../services/figurita.service'
 import { mostrarError } from '../../util/errorHandler'
@@ -9,24 +9,22 @@ import { mostrarError } from '../../util/errorHandler'
   templateUrl: './perfil-usuario-figuritas-fal.component.html',
   styleUrls: ['./perfil-usuario-figuritas-fal.component.scss']
 })
-
-
 export class PerfilUsuarioFiguritasFalComponent {
+  figuritas: Array<Figurita> = []
 
-  listaFiguritas: Array<Figurita> = []
-
-  constructor(private router: Router, private route :ActivatedRoute, public figuritaService : FiguritaService) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    public figuritaService: FiguritaService
+  ) {}
   ngOnInit() {
     this.obtenerTodasLasFiguritas()
   }
   obtenerTodasLasFiguritas() {
     try {
-      this.listaFiguritas = this.figuritaService.todasLasFiguritas()
+      this.figuritas = this.figuritaService.todasLasFiguritas()
     } catch (error) {
       mostrarError(this, error)
+    }
   }
-
- 
-}
-
 }
