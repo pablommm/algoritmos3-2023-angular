@@ -1,12 +1,14 @@
-import './app.module'
+import { NavComponent } from './Componente/nav/nav.component'
 import { TestBed } from '@angular/core/testing'
 import { RouterTestingModule } from '@angular/router/testing'
 import { AppComponent } from './app.component'
+import { FooterComponent } from '../../src/app/Componente/footer/footer.component'
+
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [RouterTestingModule],
-    declarations: [AppComponent]
+    declarations: [AppComponent, FooterComponent, NavComponent] // Include the original 
   }))
 
   it('should create the app', () => {

@@ -1,11 +1,36 @@
-<body>
+
 	<app-nav></app-nav>
 	<main class="main-container">
-		<app-tool-boox class="toolbox-container"></app-tool-boox>
-
+		<div class="toolbox-container">
+			<img src="../../assets/alexis.jpg" class="imagen_perfil" />
+			<div class="informacion">
+			  <div>
+				<span class="info-datos-personales"> {{cambioDeUsuario.nombreUsuario}} </span>
+				<a (click)="cambioDeUsuario.hizoClick()"><i class="fa-solid fa-pencil"></i></a>
+				
+			</div>
+			  <div *ngIf="cambioDeUsuario.editando">
+				
+				<input type="text" [(ngModel)]="cambioDeUsuario.nombreUsuario" (keyup.enter)="cambioDeUsuario.guardar()">
+				
+				
+				</div>
+			  <div>
+		  
+			  <div>
+				<span class="info-datos-personales"> edad : {{datosDePerfil.edad}}</span>
+				
+			  </div>
+		  
+			  <div>
+				<span class="info-datos-personales">Ubicación: {{datosDePerfil.pais}}</span>
+				
+			  </div>
+			</div>
+		  </div>
+		</div>
 		<section class="sub-main-container">
 			<app-tab></app-tab>
 	<app-form></app-form>
 		</section>
 	</main>
-</body>

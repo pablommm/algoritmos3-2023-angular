@@ -93,9 +93,13 @@
 	font-size: 1.8em;
 }
 
-/* .trash-can{
-	 display: none; 
-} */
+.trash-can {
+ 
+  color: white;
+  position: absolute;
+  top: 0.5em;
+  right: 0.2em;
+}
 
 @media (min-width: 401px) {
 	.card-upper-container,
