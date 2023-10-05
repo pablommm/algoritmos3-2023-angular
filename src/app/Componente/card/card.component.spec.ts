@@ -8,7 +8,7 @@ import { Figurita } from 'src/app/dominio/figurita'
 describe('CardComponent', () => {
   let component: CardComponent
   let fixture: ComponentFixture<CardComponent>
-  let figurita: Figurita // Definimos un objeto 'figurita' para pruebas
+  let figurita: Figurita 
 
   beforeEach(() => {
     figurita = {
@@ -39,7 +39,7 @@ describe('CardComponent', () => {
     fixture = TestBed.createComponent(CardComponent)
     component = fixture.componentInstance
 
-    // Pasamos 'figurita' al componente
+    
     component.figurita = figurita
 
     fixture.detectChanges()

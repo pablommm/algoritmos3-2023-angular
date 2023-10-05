@@ -1,17 +1,11 @@
 <body>
     <app-searchBar></app-searchBar>
-    
+  
     <main class="main-container">
-
-        <app-filtro class="toolbox-container"></app-filtro>
-        <section class="sub-main-container">
-            <app-card class="card-item"></app-card>
-            <app-card class="card-item"></app-card>
-            <app-card class="card-item"></app-card>
-            <app-card class="card-item"></app-card>
-            <app-card class="card-item"></app-card>
-            <app-card class="card-item"></app-card>
-        </section>  
+      <app-filtro class="toolbox-container"></app-filtro>
+      <section class="sub-main-container" >
+        <app-card *ngFor="let figurita of listaFiguritas" [figurita]="figurita" class="card-item"></app-card>
+      </section>
     </main>
 </body>
 

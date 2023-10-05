@@ -9,9 +9,7 @@
 			</div>
 			<div *ngIf="cambioDeUsuario.editando">
 
-				<input type="text" [(ngModel)]="cambioDeUsuario.nombreUsuario"
-					(keyup.enter)="cambioDeUsuario.guardar()">
-
+				<input type="text" [(ngModel)]="cambioDeUsuario.nombreUsuario" name="nombreUsuario" (keyup.enter)="cambioDeUsuario.guardar()">
 
 			</div>
 			<div>

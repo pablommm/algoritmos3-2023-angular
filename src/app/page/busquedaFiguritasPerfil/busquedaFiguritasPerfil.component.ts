@@ -1,44 +1,60 @@
+import { Figurita } from './../../dominio/figurita'
 import { Component, OnInit } from '@angular/core'
+import { FiguritaService } from '../../services/figurita.service'
+/* import { Router } from '@angular/router' */
+import { mostrarError } from '../../util/errorHandler'
+/* import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe' */
+
+export const errorHandler = (component: BusquedaFiguritasPerfilComponent) => ({
+  error: async (error: Error) => {
+    component.listaFiguritas =
+      await component.figuritaService.todasLasFiguritas()
+    mostrarError(component, error)
+  }
+})
 
 @Component({
   selector: 'app-busquedaFiguritasPerfil',
   templateUrl: './busquedaFiguritasPerfil.component.html',
-  styleUrls: ['./busquedaFiguritasPerfil.component.scss']
+  styleUrls: ['./busquedaFiguritasPerfil.component.scss'],
+  providers: []
 })
 export class BusquedaFiguritasPerfilComponent implements OnInit {
+  listaFiguritas: Array<Figurita> = []
+  errors = []
 
-  constructor() { }
+  constructor(public figuritaService: FiguritaService) {}
 
   ngOnInit() {
+    this.obtenerTodasLasFiguritas()
   }
-  filtros=new Filtros()
 
+  obtenerTodasLasFiguritas() {
+    try {
+      this.listaFiguritas = this.figuritaService.todasLasFiguritas()
+    } catch (error) {
+      mostrarError(this, error)
+    }
+  }
+  filtros = new Filtros()
 }
-export class Filtros{
-  desde=''
-  hasta=''
-  esPromesa=false
-  esOnFire=false
 
+export class Filtros {
+  desde = ''
+  hasta = ''
+  esPromesa = false
+  esOnFire = false
 
-  validacionHasta(){
-    if(this.desde !='' && this.hasta!=''){
-       if (this.desde > this.hasta){
+  validacionHasta() {
+    if (this.desde != '' && this.hasta != '') {
+      if (this.desde > this.hasta) {
         alert('El valor del campo desde no puede ser menor que el de hasta')
+      }
+    }
   }
-  }
-}
-cambiarEsOnFire() {
-  this.esOnFire = !this.esOnFire
-  alert(this.esOnFire)
-}
-/*cambiarEsPromesa(Event) {
-  this.esPromesa = event.target.checked
-  alert(this.esPromesa)
-}*/
-  busqueda(){
-    this.validacionHasta()
-    alert(this.desde +"...." +this.hasta)
-  }
-}
 
+  busqueda() {
+    this.validacionHasta()
+    alert(this.desde + '....' + this.hasta)
+  }
+}
