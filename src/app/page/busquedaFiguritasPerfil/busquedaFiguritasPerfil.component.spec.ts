@@ -10,6 +10,7 @@ import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
 import { PrecioSobrePipe } from 'src/app/pipes/precioSobre.pipe'
 import { FormsModule } from '@angular/forms'
 
+
 describe('BusquedaFiguritasPerfilComponent', () => {
   let component: BusquedaFiguritasPerfilComponent
   let fixture: ComponentFixture<BusquedaFiguritasPerfilComponent>
@@ -18,7 +19,7 @@ describe('BusquedaFiguritasPerfilComponent', () => {
     TestBed.configureTestingModule({
       declarations: [BusquedaFiguritasPerfilComponent, NavComponent, SearchBarComponent, FiltroComponent, CardComponent, NombreApellidoPipe, PrecioSobrePipe],
       imports: [
-        RouterTestingModule, FormsModule 
+        RouterTestingModule, FormsModule,  
     ],
     }).compileComponents()
   }))
