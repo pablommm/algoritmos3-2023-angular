@@ -1,6 +1,6 @@
 /* import { Figurita } from '../dominio/figurita'
  */
-export const figuritas: Object[] = [
+export const figuritas: object[] = [
   {
     nombre: 'Enzo',
     apellido: 'Fernández',

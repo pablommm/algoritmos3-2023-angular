@@ -1,9 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { CardComponent } from './../Componente/card/card.component'
 import { Figurita } from '../dominio/figurita'
-import { valoracionTotal } from '../dominio/figurita'
 import { ActivatedRouteStub } from '../activatedRouteStub'
-import { RouterTestingModule } from "@angular/router/testing"
+import { RouterTestingModule } from '@angular/router/testing'
 import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
 import { PrecioSobrePipe } from 'src/app/pipes/precioSobre.pipe'
 
@@ -17,8 +16,8 @@ describe('CardComponent', () => {
       declarations: [CardComponent, NombreApellidoPipe, PrecioSobrePipe],
       imports: [RouterTestingModule],
       providers: [
-        { provide: activatedRouteStub, useValue: activatedRouteStub }, // Proporciona ActivatedRouteStub como valor para ActivatedRoute.
-      ],
+        { provide: activatedRouteStub, useValue: activatedRouteStub } // Proporciona ActivatedRouteStub como valor para ActivatedRoute.
+      ]
     }).compileComponents()
   })
 
@@ -26,7 +25,6 @@ describe('CardComponent', () => {
     fixture = TestBed.createComponent(CardComponent)
     component = fixture.componentInstance
 
-    
     const figuritaData: Figurita = new Figurita()
     figuritaData.nombre = 'Cristiano'
     figuritaData.apellido = 'Ronaldo'
@@ -43,10 +41,11 @@ describe('CardComponent', () => {
     figuritaData.estaOnFire = true
     figuritaData.esPar = false
     figuritaData.nivelImpresion = 'bajo'
-    figuritaData.imagen = "../../assets/cristiano.jpg"
+    figuritaData.imagen = '../../assets/cristiano.jpg'
     figuritaData.valoracionJugador = 300
 
-    figuritaData.valoracionTotal = valoracionTotal(figuritaData)
+    figuritaData.valoracionTotal =
+      figuritaData.calcularValoracionTotal(figuritaData)
 
     component.figurita = figuritaData
 
@@ -54,9 +53,10 @@ describe('CardComponent', () => {
   })
 
   it('debería mostrar correctamente la valoración total', () => {
-    const valoracionTotalElement = fixture.nativeElement.querySelector('.card-detalles-largeFont .fa-solid.fa-star + span')
+    const valoracionTotalElement = fixture.nativeElement.querySelector(
+      '.card-detalles-largeFont .fa-solid.fa-star + span'
+    )
 
-    
-    expect(valoracionTotalElement.textContent.trim()).toBe('420') 
+    expect(valoracionTotalElement.textContent.trim()).toBe('420')
   })
 })

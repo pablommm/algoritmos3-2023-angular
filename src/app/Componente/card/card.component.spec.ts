@@ -12,23 +12,28 @@ describe('CardComponent', () => {
 
   beforeEach(() => {
     figurita = {
-      imagen: '../../assets/cristiano.jpg',
-      nombre: 'Cristiano',
-      apellido: 'Ronaldo',
-      fechaNacimiento: '17 de febrero',
-      numeroCamiseta: 7,
-      seleccion: 'Portugal',
-      anioDebutSeleccion: 2003,
-      altura: 1.85,
-      peso: 80,
-      posicion: 'Delantero',
-      pais: 'Portugal',
-      cotizacionJugador: '500 millones de euros',
+      nombre: 'Enzo',
+      apellido: 'Fernández',
+      fechaNacimiento: '17-01-2001',
+      numeroCamiseta: 8,
+      seleccion: 'Argentina',
+      anioDebutSeleccion: 2022,
+      altura: 1.78,
+      peso: 76,
+      posicion: 'Centrocampista',
+      pais: 'ARG',
+      cotizacionJugador: '131.4 millones de dólares',
       esLider: true,
       estaOnFire: true,
       esPar: false,
-      nivelImpresion: 'bajo',
-      valoracionJugador: 300
+      nivelImpresion: 'alto',
+      valoracionJugador: 250,
+      imagen: '../../assets/enzofe.jpg',
+      valorOnFire: () => 1.2,
+      valorEsPar: () => 1.1,
+      valorNivelImpresion: () => 0.85,
+      calcularValoracionBase: () => 0,
+      calcularValoracionTotal: () => 0
     }
 
     TestBed.configureTestingModule({
