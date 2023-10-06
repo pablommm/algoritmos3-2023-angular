@@ -1,6 +1,6 @@
 /* import { Usuario } from '../dominio/usuario' */
 
-export const usuario: object = [
+export const usuario: object[] = [
   {
     nombre: 'Martin',
     apellido: 'Demichelis',

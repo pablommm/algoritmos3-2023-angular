@@ -9,7 +9,8 @@ export class UsuarioService {
   constructor() {}
 
   elUsuario(): Usuario {
-    const usuarios = Usuario.fromJson(usuario)
+    const usuarios = Usuario.fromJson(usuario[0])
+    /* const objetoUsuario = usuario[0] */
     return usuarios
   }
 }

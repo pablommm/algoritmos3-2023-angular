@@ -21,14 +21,15 @@ export class FormComponent implements OnInit {
   constructor(public usuarioService: UsuarioService) {}
 
   ngOnInit() {
-    /* this.obtenerElUsuario() */
+    this.obtenerElUsuario()
   }
 
-  /* obtenerElUsuario() {
+  obtenerElUsuario() {
     try {
       this.usuarioMock = this.usuarioService.elUsuario()
+      /* alert(this.usuarioMock) */
     } catch (error) {
       mostrarError(this, error)
     }
-  } */
+  }
 }

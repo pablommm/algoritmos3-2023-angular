@@ -4,32 +4,34 @@
   <div class="subtitulo-contenedor">
     <div>
       <label for="nombre">Nombre</label>
-      <!-- <input type="text" [(ngModel)]="usuario.nombre" placeholder="{{usuario.nombre}}" /> -->
-      <!-- <input type="text" [(ngModel)]="usuario.nombre" name="usuario.nombre"> -->
-      <div>{{usuarioMock.nombre}}</div>
+      <input type="text" [(ngModel)]="usuarioMock.nombre" name="usuario.nombre">
       <label for="Apellido">Apellido</label>
-      <input type="text" placeholder="Apellido" />
+      <input type="text" [(ngModel)]="usuarioMock.apellido" placeholder="Apellido" />
     </div>
     <div>
       <label for="Correo Electronico">Correo Electrónico</label>
-      <input type="email" placeholder="Correo Electrónico" />
-      <label for="Fecha de nacimiento">Fecha de nacimiento</label>
-      <input type="date" placeholder="Fecha de nacimiento" />
+      <input type="email" [(ngModel)]="usuarioMock.email" placeholder="Correo Electrónico" />
+      <!-- <label for="Fecha de nacimiento" [(ngModel)]="usuarioMock.fechaDeNacimiento">Fecha de nacimiento</label> -->
+      <label for="Fecha de nacimiento" [(ngModel)]="usuarioMock.fechaDeNacimiento">{{usuarioMock.fechaDeNacimiento}}</label>
+      <input type="date" [(ngModel)]="usuarioMock.fechaDeNacimiento" placeholder="Fecha de nacimiento" value="usuarioMock.fechaDeNacimiento" />
     </div>
   </div>
   <span class="subtitulo">Dirección</span>
   <div class="subtitulo-contenedor">
     <div>
+      <!-- Hay que implementar el listado de provincias, ya que no viene con el usuario -->
       <label for="Provincia">Provincia</label>
       <form action="Provincia">
+
         <select class="select">
           <option value="seleccione">Seleccione una opción</option>
         </select>
       </form>
       <label for="Calle">Calle</label>
-      <input type="text" placeholder="Calle" />
+      <input type="text" [(ngModel)]="usuarioMock.calle" placeholder="Calle" />
     </div>
     <div>
+      <!-- Hay que implementar el listado de localidades, ya que no viene con el usuario -->
       <label for="Localidad">Localidad</label>
       <form action="Localidad">
         <select class="select">
@@ -37,27 +39,28 @@
         </select>
       </form>
       <label for="Altura">Altura</label>
-      <input type="number" placeholder="Altura" />
+      <input type="number" [(ngModel)]="usuarioMock.altura" placeholder="Altura" />
     </div>
   </div>
   <span class="subtitulo">Ubicación Geográfica</span>
   <div class="subtitulo-contenedor">
     <div>
       <label for="PosiciónX">Posición X</label>
-      <input type="number" placeholder="Posición X" />
+      <input type="number" [(ngModel)]="usuarioMock.posicionX" placeholder="Posición X" />
     </div>
     <div>
       <label for="PosiciónY">Posición Y</label>
-      <input type="number" placeholder="Posición y" />
+      <input type="number" [(ngModel)]="usuarioMock.posicionY" placeholder="Posición y" />
     </div>
     <div class="distancia">
       <label for="distanciaMaxima">Distancia máxima de Cercanía</label>
-      <input type="number" placeholder="Distancia máxima de Cercanía" />
+      <input type="number" [(ngModel)]="usuarioMock.distanciaMaximaCercania" placeholder="Distancia máxima de Cercanía" />
     </div>
   </div>
   <span class="subtitulo">Criterio para el Cambio</span>
   <div class="subtitulo-contenedor">
     <div>
+      <!-- Hay que implementar el listado de criterios, ya que no viene con el usuario -->
       <label for="Criterio">Criterio</label>
       <form action="Criterios">
         <select class="select">
