@@ -22,4 +22,27 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy()
   })
+
+  it('Se valida que el usuario ingresado contenga @ correctamente', () => {
+    // Arrange
+    component.usuario = 'test@test.com';
+
+    // Act
+    const containsAt = component.usuario.includes('@')
+
+    // Assert
+    expect(component.usuario).toBeTruthy();
+  });
+
+it('se ingres usuario sin @ y lo detecta', () => {
+  // Arrange
+  
+  component.usuario = 'Usuariotest';
+
+  // Act
+  const containsAt = component.usuario.includes('@')
+
+  // Assert
+  expect(containsAt).toBeFalsy();
+  });
 })
