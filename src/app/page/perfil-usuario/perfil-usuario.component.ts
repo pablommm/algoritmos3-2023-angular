@@ -46,14 +46,14 @@ export class CambioUsername {
   hizoClick (){
     console.log(this.editando)
     alert('Has hecho click en el icono de lápiz')
-    this.editando= true
+    this.editando = true
     console.log(this.editando)
     console.log(this.nombreUsuario)
 
   }
   guardar() {
     if (this.nombreUsuario.length != 0) {
-      this.nuevoNombreUsuario = this.nombreUsuario
+      this.nombreUsuario = this.nuevoNombreUsuario
     } else {
       alert('error')
         }

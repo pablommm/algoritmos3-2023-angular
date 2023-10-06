@@ -45,4 +45,17 @@ it('se ingres usuario sin @ y lo detecta', () => {
   // Assert
   expect(containsAt).toBeFalsy();
   });
+
+
+it('que la contraseña no sea vacia', () => {
+  // Arrange
+  component.password = '';
+
+  // Act
+  const containsAt = component.password.length>0
+
+  // Assert
+  /* expect(containsAt).toBe(0) ; */
+  expect(containsAt).toBeFalsy() ;
+  });
 })
