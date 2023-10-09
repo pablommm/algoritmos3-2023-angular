@@ -1,19 +1,20 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing'
+import { ComponentFixture, TestBed } from '@angular/core/testing'
 /* import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core'; */
-
 import { FormComponent } from './form.component'
+import { FormsModule } from '@angular/forms'
 
 describe('FormComponent', () => {
   let component: FormComponent
   let fixture: ComponentFixture<FormComponent>
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FormComponent]
+      declarations: [FormComponent],
+      imports: [FormsModule]
     }).compileComponents()
-  }))
+  })
 
   beforeEach(() => {
     fixture = TestBed.createComponent(FormComponent)

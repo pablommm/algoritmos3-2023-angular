@@ -6,14 +6,14 @@
       <label for="nombre">Nombre</label>
       <input type="text" [(ngModel)]="usuarioMock.nombre" name="usuario.nombre">
       <label for="Apellido">Apellido</label>
-      <input type="text" [(ngModel)]="usuarioMock.apellido" placeholder="Apellido" />
+      <input type="text" [(ngModel)]="usuarioMock.apellido" placeholder="Apellido" name="usuario.apellido"/>
     </div>
     <div>
       <label for="Correo Electronico">Correo Electrónico</label>
-      <input type="email" [(ngModel)]="usuarioMock.email" placeholder="Correo Electrónico" />
-      <!-- <label for="Fecha de nacimiento" [(ngModel)]="usuarioMock.fechaDeNacimiento">Fecha de nacimiento</label> -->
-      <label for="Fecha de nacimiento" [(ngModel)]="usuarioMock.fechaDeNacimiento">{{usuarioMock.fechaDeNacimiento}}</label>
-      <input type="date" [(ngModel)]="usuarioMock.fechaDeNacimiento" placeholder="Fecha de nacimiento" value="usuarioMock.fechaDeNacimiento" />
+      <input type="email" [(ngModel)]="usuarioMock.email" placeholder="Correo Electrónico" name="usuario.email"/>
+      <!-- <label for="Fecha de nacimiento" [[ngModel)]="usuarioMock.fechaDeNacimiento">Fecha de nacimiento</label> -->
+       <label for="Fecha de nacimiento"  name="usuario.fechaNacVisual">{{usuarioMock.fechaDeNacimiento}} </label>
+      <input type="date" [(ngModel)]="usuarioMock.fechaDeNacimiento" placeholder="Fecha de nacimiento" name="usuario.fechaNacInput" value="usuarioMock.fechaDeNacimiento" />
     </div>
   </div>
   <span class="subtitulo">Dirección</span>
@@ -28,7 +28,7 @@
         </select>
       </form>
       <label for="Calle">Calle</label>
-      <input type="text" [(ngModel)]="usuarioMock.calle" placeholder="Calle" />
+      <input type="text" [(ngModel)]="usuarioMock.calle" placeholder="Calle" name="usuario.calle"/>
     </div>
     <div>
       <!-- Hay que implementar el listado de localidades, ya que no viene con el usuario -->
@@ -39,22 +39,22 @@
         </select>
       </form>
       <label for="Altura">Altura</label>
-      <input type="number" [(ngModel)]="usuarioMock.altura" placeholder="Altura" />
+      <input type="number" [(ngModel)]="usuarioMock.altura" placeholder="Altura" name="usuario.altura" />
     </div>
   </div>
   <span class="subtitulo">Ubicación Geográfica</span>
   <div class="subtitulo-contenedor">
     <div>
       <label for="PosiciónX">Posición X</label>
-      <input type="number" [(ngModel)]="usuarioMock.posicionX" placeholder="Posición X" />
+      <input type="number" [(ngModel)]="usuarioMock.posicionX" placeholder="Posición X" name="usuario.posicionX" />
     </div>
     <div>
       <label for="PosiciónY">Posición Y</label>
-      <input type="number" [(ngModel)]="usuarioMock.posicionY" placeholder="Posición y" />
+      <input type="number" [(ngModel)]="usuarioMock.posicionY" placeholder="Posición y" name="usuario.posicionY" />
     </div>
     <div class="distancia">
       <label for="distanciaMaxima">Distancia máxima de Cercanía</label>
-      <input type="number" [(ngModel)]="usuarioMock.distanciaMaximaCercania" placeholder="Distancia máxima de Cercanía" />
+      <input type="number" [(ngModel)]="usuarioMock.distanciaMaximaCercania" placeholder="Distancia máxima de Cercanía" name="usuario.distanciaMax"/>
     </div>
   </div>
   <span class="subtitulo">Criterio para el Cambio</span>
