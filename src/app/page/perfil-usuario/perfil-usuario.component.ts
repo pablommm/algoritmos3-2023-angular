@@ -41,7 +41,7 @@ export class DatosDePerfil {
 export class CambioUsername {
   editando = false
   nombreUsuario='pepe'
-  nuevoNombreUsuario=''
+  nuevoNombreUsuario='nuevopepe'
 
   hizoClick (){
     console.log(this.editando)
@@ -52,7 +52,7 @@ export class CambioUsername {
 
   }
   guardar() {
-    if (this.nombreUsuario.length != 0) {
+    if (this.nuevoNombreUsuario.length != 0) {
       this.nombreUsuario = this.nuevoNombreUsuario
     } else {
       alert('error')

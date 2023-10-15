@@ -25,37 +25,37 @@ describe('LoginComponent', () => {
 
   it('Se valida que el usuario ingresado contenga @ correctamente', () => {
     // Arrange
-    component.usuario = 'test@test.com';
+    component.usuario = 'test@test.com'
 
     // Act
     const containsAt = component.usuario.includes('@')
 
     // Assert
-    expect(component.usuario).toBeTruthy();
-  });
+    expect(containsAt).toBeTruthy()
+  })
 
 it('se ingres usuario sin @ y lo detecta', () => {
   // Arrange
   
-  component.usuario = 'Usuariotest';
+  component.usuario = 'Usuariotest'
 
   // Act
   const containsAt = component.usuario.includes('@')
 
   // Assert
-  expect(containsAt).toBeFalsy();
-  });
+  expect(containsAt).toBeFalsy()
+  })
 
 
 it('que la contraseña no sea vacia', () => {
   // Arrange
-  component.password = '';
+  component.password = ''
 
   // Act
   const containsAt = component.password.length>0
 
   // Assert
   /* expect(containsAt).toBe(0) ; */
-  expect(containsAt).toBeFalsy() ;
-  });
+  expect(containsAt).toBeFalsy() 
+  })
 })

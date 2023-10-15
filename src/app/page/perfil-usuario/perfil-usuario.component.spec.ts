@@ -25,13 +25,16 @@ describe('PerfilUsuarioComponent', () => {
 
 
   it('se valida que el cambio de nombre de usuario realmente funcione', () => {
-    //algo esta mal o con el test o con el method que no se guarda los cambios de nombre
-    component.cambioDeUsuario.nombreUsuario = "pepe"
+    
+    // defino nombres viejos y nuevo
+    component.cambioDeUsuario.nombreUsuario = "pepe"    
     component.cambioDeUsuario.nuevoNombreUsuario = "Guachin"
-    //accion
-    const containsAt = component.cambioDeUsuario.guardar
-
-    expect(component.cambioDeUsuario.nombreUsuario).toBe("pepe");
+    
+    // realizo accion
+    component.cambioDeUsuario.hizoClick()
+    component.cambioDeUsuario.guardar()
+    // espero resultado
+    expect(component.cambioDeUsuario.nombreUsuario).toBe("Guachin")
 
   })
 })
