@@ -9,24 +9,12 @@ import { Router,ActivatedRoute } from '@angular/router'
 })
 
 export class PerfilUsuarioComponent {
- 
+  
   cambioDeUsuario = new CambioUsername()
   datosDePerfil = new DatosDePerfil()
 
   constructor(private router: Router, private route :ActivatedRoute) {}
   ngOnInit() {}
-
-  faltantes(){
-    this.router.navigateByUrl('/FiguritaFaltante')
-
-  }
-  repetidas(){
-    this.router.navigateByUrl('/FiguritaRepetida')
-
-  }
-  informacion(){
-    this.router.navigateByUrl('/PerfilUsuario')
-  }
 
 }
 
