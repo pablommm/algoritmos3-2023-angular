@@ -12,8 +12,8 @@
       <label for="Correo Electronico">Correo Electrónico</label>
       <input type="email" [(ngModel)]="usuarioMock.email" placeholder="Correo Electrónico" name="usuario.email"/>
       <!-- <label for="Fecha de nacimiento" [[ngModel)]="usuarioMock.fechaDeNacimiento">Fecha de nacimiento</label> -->
-       <label for="Fecha de nacimiento"  name="usuario.fechaNacVisual">{{usuarioMock.fechaDeNacimiento}} </label>
-      <input type="date" [(ngModel)]="usuarioMock.fechaDeNacimiento" placeholder="Fecha de nacimiento" name="usuario.fechaNacInput" value="usuarioMock.fechaDeNacimiento" />
+       <label for="Fecha de nacimiento"  name="usuario.fechaNacVisual">Fecha de nacimiento</label>
+      <input type="date" placeholder="Fecha de nacimiento" name="usuario.fechaNacInput" #date [ngModel]="usuarioMock.fechaDeNacimiento | date: 'yyyy-MM-dd'" (ngModelChange)="actualizarFecha(date.valueAsDate!)" />
     </div>
   </div>
   <span class="subtitulo">Dirección</span>

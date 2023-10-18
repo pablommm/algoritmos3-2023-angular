@@ -16,6 +16,10 @@ export const errorHandler = (component: FormComponent) => ({
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
+  actualizarFecha(fecha: Date) {
+    this.usuarioMock.fechaDeNacimiento = fecha
+  }
+
   usuarioMock!: Usuario
   errors = []
   constructor(public usuarioService: UsuarioService) {}
