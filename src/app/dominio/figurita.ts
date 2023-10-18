@@ -5,6 +5,7 @@ const VALOR_NIVEL_IMPRESION = 0.85
 
 export class Figurita {
   constructor(
+    public id?: number,
     public nombre: string = '',
     public apellido: string = '',
     public fechaNacimiento: string = '',

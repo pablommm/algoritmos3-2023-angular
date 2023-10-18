@@ -2,6 +2,7 @@
  */
 export const figuritas: object[] = [
   {
+    id: 1,
     nombre: 'Enzo',
     apellido: 'Fernández',
     fechaNacimiento: '17-01-2001',
@@ -21,6 +22,7 @@ export const figuritas: object[] = [
     imagen: '../../assets/enzofe.jpg'
   },
   {
+    id: 2,
     nombre: 'Lionel',
     apellido: 'Messi',
     fechaNacimiento: '24-06-1987',
@@ -40,6 +42,7 @@ export const figuritas: object[] = [
     imagen: '../../assets/messi.jpg'
   },
   {
+    id: 3,
     nombre: 'Emiliano',
     apellido: 'Martínez',
     fechaNacimiento: '02-09-1992',
@@ -59,6 +62,7 @@ export const figuritas: object[] = [
     imagen: '../../assets/dibu.jpg'
   },
   {
+    id: 4,
     nombre: 'Nicolas',
     apellido: 'Tagliafico',
     fechaNacimiento: '31-08-1992',
@@ -78,6 +82,7 @@ export const figuritas: object[] = [
     imagen: '../../assets/nicolas-tagliafico.jpg'
   },
   {
+    id: 5,
     nombre: 'Giovani',
     apellido: 'Lo Celso',
     fechaNacimiento: '09-04-1996',
@@ -97,6 +102,7 @@ export const figuritas: object[] = [
     imagen: '../../assets/locelso.jpg'
   },
   {
+    id: 6,
     nombre: 'Andrés',
     apellido: "D'Alessandro",
     fechaNacimiento: '15-04-1981',
@@ -116,6 +122,7 @@ export const figuritas: object[] = [
     imagen: '../../assets/dalessandro2.jpg'
   },
   {
+    id: 7,
     nombre: 'Lucas',
     apellido: 'Ocampos',
     fechaNacimiento: '11-07-1994',
