@@ -5,7 +5,7 @@ import { mostrarError } from '../../util/errorHandler'
 
 export const errorHandler = (component: FormComponent) => ({
   error: async (error: Error) => {
-    component.usuarioMock = await component.usuarioService.elUsuario()
+    component.usuario = await component.usuarioService.elUsuario()
     mostrarError(component, error)
   }
 })
@@ -17,10 +17,10 @@ export const errorHandler = (component: FormComponent) => ({
 })
 export class FormComponent implements OnInit {
   actualizarFecha(fecha: Date) {
-    this.usuarioMock.fechaDeNacimiento = fecha
+    this.usuario.fechaDeNacimiento = fecha
   }
 
-  usuarioMock!: Usuario
+  usuario!: Usuario
   errors = []
   constructor(public usuarioService: UsuarioService) {}
 
@@ -30,8 +30,8 @@ export class FormComponent implements OnInit {
 
   obtenerElUsuario() {
     try {
-      this.usuarioMock = this.usuarioService.elUsuario()
-      /* alert(this.usuarioMock) */
+      this.usuario = this.usuarioService.elUsuario()
+      /* alert(this.usuario) */
     } catch (error) {
       mostrarError(this, error)
     }
