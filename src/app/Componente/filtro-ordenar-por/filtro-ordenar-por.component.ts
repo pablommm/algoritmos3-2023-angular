@@ -16,7 +16,18 @@ export class FiltroOrdenarPorComponent {
 
   ordernarMenorDistancia(){
     return  this.puntoDeVentaService.todosLosPuntoDeVentas().sort((a,b) => a.distancia - b.distancia)
+  }
 
+  ordernarMasBarato(){
+    return  this.puntoDeVentaService.todosLosPuntoDeVentas().sort((a,b) => a.precio - b.precio)
+  }
+
+  ordernarMasSobres(){
+    return  this.puntoDeVentaService.todosLosPuntoDeVentas().sort((a,b) => a.stock - b.stock)
+  }
+
+  ordernarMasCercanos(){
+    return  this.puntoDeVentaService.todosLosPuntoDeVentas()//completar logica
   }
 
 }
