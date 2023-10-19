@@ -7,7 +7,7 @@ import { PuntoDeVenta } from '../dominio/puntoDeVenta'
 export class PrecioSobrePipe implements PipeTransform {
 
   transform(puntoDeVenta: PuntoDeVenta): string {
-    return ("Precio por sobre").concat(" ").concat("$").concat(puntoDeVenta.precio)
+    return ("Precio por sobre").concat(" ").concat("$").concat(puntoDeVenta.precio.toString())
   }
 
 

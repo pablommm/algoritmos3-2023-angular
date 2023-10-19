@@ -29,9 +29,9 @@ describe('Service: PuntoDeVentaService', () => {
     puntoDeVentaData.nombre = 'Carrefour'
     puntoDeVentaData.direccion = 'Av. San Martin 4930'
     puntoDeVentaData.ubicacionGeografica = '(34.9696; 38.5940)'
-    puntoDeVentaData.distancia = '3 kilómetros'
+    puntoDeVentaData.distancia = 3
     puntoDeVentaData.stock = 3
-    puntoDeVentaData.precio = '120'
+    puntoDeVentaData.precio = 120
     puntoDeVentaData.tipo = 'Supermercado'
 
     component.puntoDeVenta = puntoDeVentaData

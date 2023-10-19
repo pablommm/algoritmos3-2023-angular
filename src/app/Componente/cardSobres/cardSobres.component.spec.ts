@@ -22,9 +22,9 @@ describe('CardSobresComponent', () => {
       "nombre": "Carrefour",
       "direccion": "Av. San Martin 4930",
       "ubicacionGeografica": "(34.9696; 38.5940)",
-      "distancia": "3 kilómetros",
+      "distancia": 3,
       "stock": 3,
-      "precio": "120",
+      "precio": 120,
       "tipo": "Supermercado"
     },
     TestBed.configureTestingModule({

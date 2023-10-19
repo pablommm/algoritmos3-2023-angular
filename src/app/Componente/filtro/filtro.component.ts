@@ -7,11 +7,8 @@ import { Component } from '@angular/core'
 })
 export class FiltroComponent {
 
-
-
 filtros= new Filtros()
 }
-
 
 export class Filtros{
   desde=''
