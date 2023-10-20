@@ -19,20 +19,21 @@ export const errorHandler = (component: BusquedaSobresComponent) => ({
   providers: []
 })
 export class BusquedaSobresComponent implements OnInit {
-  puntosDeVenta: Array<PuntoDeVenta> = []
+  puntosDeVenta!: PuntoDeVenta[]
   errors = []
 
   constructor(public puntoDeVentaService: PuntoDeVentaService) {}
 
-  ngOnInit() {
-    this.obtenerTodosLosPuntoDeVentas()
+  async ngOnInit() {
+    this.puntosDeVenta = await this.puntoDeVentaService.todosLosPuntoDeVentas()
+    console.log(this.puntosDeVenta)
   }
 
-  obtenerTodosLosPuntoDeVentas() {
+  /* obtenerTodosLosPuntoDeVentas() {
     try {
       this.puntosDeVenta = this.puntoDeVentaService.todosLosPuntoDeVentas()
     } catch (error) {
       mostrarError(this, error)
     }
-  }
+  } */
 }

@@ -1,3 +1,13 @@
+export type PuntoDeVentaJSON = {
+  nombre: string
+  direccion: string
+  ubicacionGeografica: string
+  distancia: number
+  stock: number
+  precio: number
+  tipo: string
+}
+
 export class PuntoDeVenta {
   constructor(
     public nombre: string = '',
@@ -6,12 +16,10 @@ export class PuntoDeVenta {
     public distancia: number = 0,
     public stock: number = 0,
     public precio: number = 0,
-    public tipo: string = '',
+    public tipo: string = ''
   ) {}
 
   static fromJson(puntoDeVenta: PuntoDeVenta): PuntoDeVenta {
     return Object.assign(new PuntoDeVenta(), puntoDeVenta)
   }
-
-  
 }

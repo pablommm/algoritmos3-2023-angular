@@ -1,19 +1,12 @@
 import { Component } from '@angular/core'
 
-import { PuntoDeVentaService } from 'src/app/services/puntoDeVenta.service'
-
 @Component({
   selector: 'app-filtro-ordenar-por',
   templateUrl: './filtro-ordenar-por.component.html',
   styleUrls: ['./filtro-ordenar-por.component.scss']
 })
-export class FiltroOrdenarPorComponent {
-  constructor(
-    public puntoDeVentaService: PuntoDeVentaService,
-    event: Event
-  ) {}
-
-  /*
+export class FiltroOrdenarPorComponent {}
+/*
   onRadioChange(event) {
     // Obtén el valor del input radio seleccionado
     const radioValue = event.target.value
@@ -39,9 +32,9 @@ export class FiltroOrdenarPorComponent {
         // Completa la lógica
         break
     }
-  }*/
-}
-/*
+  }/
+
+/
   ordernarMenorDistancia(){
     return  this.puntoDeVentaService.todosLosPuntoDeVentas().sort((a,b) => a.distancia - b.distancia)
   }
