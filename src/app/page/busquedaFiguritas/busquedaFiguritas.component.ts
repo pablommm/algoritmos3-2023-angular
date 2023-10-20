@@ -35,6 +35,8 @@ export class BusquedaFiguritasComponent implements OnInit {
       mostrarError(this, error)
     }
   }
-  
-}
 
+  filtre(busqueda: string) {
+    alert('me llegó al componente padre ' + busqueda)
+  }
+}

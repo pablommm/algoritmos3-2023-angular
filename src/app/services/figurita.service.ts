@@ -9,7 +9,7 @@ import { figuritas } from '../mocks/figuritas'
 export class FiguritaService {
   constructor() {}
 
-  todasLasFiguritas(): Figurita[] {
+  todasLasFiguritas(/* toSearch: string */): Figurita[] {
     try {
       const figuritasConValoracionBase = figuritas.map((figuritaJSON) => {
         const figurita = Figurita.fromJson(figuritaJSON)
@@ -22,4 +22,13 @@ export class FiguritaService {
       return []
     }
   }
+
+  /* async getAll(toSearch = '') {
+    console.info('PATH: ', this.pathUrl + '/search/' + toSearch)
+    const activities$ = this.http.get<ActivityDTO[]>(
+      this.pathUrl + '/search/' + toSearch
+    )
+    const activities = await lastValueFrom(activities$)
+    return activities.map((activityDTO) => activityFromJSON(activityDTO))
+  } */
 }

@@ -19,7 +19,7 @@ export class PuntoDeVenta {
     public tipo: string = ''
   ) {}
 
-  static fromJson(puntoDeVenta: PuntoDeVenta): PuntoDeVenta {
+  static fromJson(puntoDeVenta: PuntoDeVentaJSON): PuntoDeVenta {
     return Object.assign(new PuntoDeVenta(), puntoDeVenta)
   }
 }
