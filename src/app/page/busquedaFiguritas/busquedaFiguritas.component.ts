@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core'
 import { FiguritaService } from '../../services/figurita.service'
 /* import { Router } from '@angular/router' */
 import { mostrarError } from '../../util/errorHandler'
+import { Filtro } from 'src/app/dominio/filtro'
 /* import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe' */
 
 export const errorHandler = (component: BusquedaFiguritasComponent) => ({
@@ -21,6 +22,7 @@ export const errorHandler = (component: BusquedaFiguritasComponent) => ({
 export class BusquedaFiguritasComponent implements OnInit {
   figuritas: Array<Figurita> = []
   errors = []
+  filtro = new Filtro()
 
   constructor(public figuritaService: FiguritaService) {}
 
@@ -38,5 +40,6 @@ export class BusquedaFiguritasComponent implements OnInit {
 
   filtre(busqueda: string) {
     alert('me llegó al componente padre ' + busqueda)
+    this.filtro.filtrar()
   }
 }
