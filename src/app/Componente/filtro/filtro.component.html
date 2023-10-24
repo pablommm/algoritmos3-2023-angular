@@ -6,20 +6,20 @@
       <div class="desde-hasta-container">
         <div class="desde-hasta-subcontainer">
           <label for="desde">Desde</label>
-          <input type="number" min="0" id="desde" placeholder="Desde..."[(ngModel)]='filtros.desde'>
+          <input type="number" min="0" id="desde" placeholder="Desde..."[(ngModel)]='filtro.desde'>
         </div>
         <div class="desde-hasta-subcontainer">
           <label for="hasta">Hasta</label>
-          <input type="number" min="0" id="hasta" placeholder="Hasta..." [(ngModel)]='filtros.hasta' (keyup.enter)="filtros.busqueda()">
+          <input type="number" min="0" id="hasta" placeholder="Hasta..." [(ngModel)]='filtro.hasta' (keyup.enter)="filtro.busqueda()">
         </div>
       </div>
       <div class="checkbox-container">
         <div class="checkbox-item">
-          <input type="checkbox" id="onFireCheckbox" class="checkbox-input" [(ngModel)]="filtros.esOnFire" name="esOnFire">
+          <input type="checkbox" id="onFireCheckbox" class="checkbox-input" [(ngModel)]="filtro.esOnFire" name="esOnFire">
           <label for="onFireCheckbox">On fire</label>
         </div>
         <div class="checkbox-item">
-          <input type="checkbox" id="esPromesaCheckbox" class="checkbox-input" [(ngModel)]="filtros.esPromesa" name="esPromesa">
+          <input type="checkbox" id="esPromesaCheckbox" class="checkbox-input" [(ngModel)]="filtro.esPromesa" name="esPromesa">
           <label for="esPromesaCheckbox">Es promesa</label>
         </div>
       </div>

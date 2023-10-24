@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core'
+import { SearchBar } from 'src/app/dominio/filtro'
 
 @Component({
   selector: 'app-searchBar',
@@ -8,13 +9,13 @@ import { Component, EventEmitter, Output } from '@angular/core'
 export class SearchBarComponent {
   constructor() {}
 
-  @Output() newItemEvent = new EventEmitter<string>()
+  @Output() newItemEvent = new EventEmitter<SearchBar>()
 
-  criterioDeBusqueda = ''
+  searchbar = new SearchBar()
 
   filtrar() {
     alert('FILTRE! :)')
-    this.newItemEvent.emit(this.criterioDeBusqueda)
+    this.newItemEvent.emit(this.searchbar)
   }
 
   /* buscador= new Buscador */

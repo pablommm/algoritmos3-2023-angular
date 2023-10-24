@@ -11,29 +11,38 @@ import { LoginComponent } from './page/login/login.component'
 import { CardComponent } from './Componente/card/card.component'
 import { FormComponent } from './Componente/form/form.component'
 
-
-
 const routes: Routes = [
-
- {path:'Perfil', component:PerfilUsuarioComponent,children:[
-    {path:'padinfo' , component:FormComponent},
-    {path:'FiguritaRepetida', component:PerfilUsuarioFiguritasRepComponent},
-    {path:'FiguritaFaltante', component:PerfilUsuarioFiguritasFalComponent},
-  ]}, 
+  {
+    path: 'Perfil',
+    component: PerfilUsuarioComponent,
+    children: [
+      { path: 'padinfo', component: FormComponent },
+      {
+        path: 'FiguritaRepetida',
+        component: PerfilUsuarioFiguritasRepComponent
+      },
+      {
+        path: 'FiguritaFaltante',
+        component: PerfilUsuarioFiguritasFalComponent
+      }
+    ]
+  },
   // {path:'Perfil', component:PerfilUsuarioComponent},
   // {path:'Perfil/FiguritaRepetida', component:PerfilUsuarioFiguritasRepComponent},
   // {path:'Perfil/FiguritaFaltante', component:PerfilUsuarioFiguritasFalComponent},
-  {path:'DetalleFigurita', component:DetallesFiguritaComponent},
-  {path:'BusquedaSobre', component:BusquedaSobresComponent},
-  {path:'BusquedaFiguritasPerfil', component:BusquedaFiguritasPerfilComponent},
-  {path:'BusquedaFiguritas', component:BusquedaFiguritasComponent},
-  {path:'Login', component:LoginComponent},
-  {path:'**', component:BusquedaFiguritasComponent}
-
+  { path: 'DetalleFigurita', component: DetallesFiguritaComponent },
+  { path: 'BusquedaSobre', component: BusquedaSobresComponent },
+  {
+    path: 'BusquedaFiguritasPerfil',
+    component: BusquedaFiguritasPerfilComponent
+  },
+  { path: 'BusquedaFiguritas', component: BusquedaFiguritasComponent },
+  { path: 'Login', component: LoginComponent },
+  { path: '**', component: BusquedaFiguritasComponent }
 ]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,25 +1,28 @@
 export type PuntoDeVentaJSON = {
+  id: number
   nombre: string
   direccion: string
   ubicacionGeografica: string
   distancia: number
-  stock: number
+  stockDeSobres: number
   precio: number
   tipo: string
 }
 
 export class PuntoDeVenta {
   constructor(
+    public id: number = 0,
     public nombre: string = '',
     public direccion: string = '',
     public ubicacionGeografica: string = '',
     public distancia: number = 0,
-    public stock: number = 0,
+    public stockDeSobres: number = 0,
     public precio: number = 0,
     public tipo: string = ''
   ) {}
 
-  static fromJson(puntoDeVenta: PuntoDeVentaJSON): PuntoDeVenta {
-    return Object.assign(new PuntoDeVenta(), puntoDeVenta)
+  static fromJson(puntoDeVentaJSON: PuntoDeVentaJSON): PuntoDeVenta {
+    console.log(puntoDeVentaJSON)
+    return Object.assign(new PuntoDeVenta(), puntoDeVentaJSON)
   }
 }

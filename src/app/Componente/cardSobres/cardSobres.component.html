@@ -2,6 +2,7 @@
   <section class="card-content">
       <header class="card-upper-container">
           <div class="card-upper-subcontainer">
+            <span class="card-detalles-highlight">{{puntoDeVenta.id}}</span>
               <span class="card-detalles-highlight">{{puntoDeVenta.nombre}}</span>
               <i class={{iconoPuntoDeVenta(puntoDeVenta)}}></i>
           </div>
@@ -27,7 +28,7 @@
       <div class="card-detalles-container">
           <div class="card-detalles-mediumFont">
               <span class="card-detalles-logo">Stock de Sobres</span>
-              <span>{{puntoDeVenta.stock}} unidades</span>
+              <span>{{puntoDeVenta.stockDeSobres}} unidades</span>
           </div>
           <div class="card-detalles-mediumFont">
               <span>Pedidos Pendientes</span>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { Output, EventEmitter } from '@angular/core'
+import { Filtro } from 'src/app/dominio/filtro'
 
 @Component({
   selector: 'app-filtro',
@@ -9,25 +10,10 @@ import { Output, EventEmitter } from '@angular/core'
 export class FiltroComponent {
   @Output() newItemEvent = new EventEmitter()
 
-  filtros = new Filtros()
-}
+  filtro = new Filtro()
 
-export class Filtros {
-  desde = ''
-  hasta = ''
-  esPromesa = false
-  esOnFire = false
-
-  validacionHasta() {
-    if (this.desde != '' && this.hasta != '') {
-      if (this.desde > this.hasta) {
-        alert('El valor del campo desde no puede ser menor que el de hasta')
-      }
-    }
-  }
-
-  busqueda() {
-    this.validacionHasta()
-    alert(this.desde + '....' + this.hasta)
+  filtrar() {
+    alert('FILTRE! :)')
+    this.newItemEvent.emit(this.filtro)
   }
 }
