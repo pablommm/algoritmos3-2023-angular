@@ -19,11 +19,36 @@ export class FormComponent implements OnInit {
   actualizarFecha(fecha: Date) {
     this.usuario.fechaDeNacimiento = fecha
   }
+   
+  provincias = ["Buenos Aires", "Cordoba", "Mendoza"]
+  localidades = ["La Matanza", "La Plata", "Lanús", "Lomas de Zamora"]
 
+  localidadvacia : string[] = []
+    /*
+  localidadesBuenosAires: string[] = ["La Matanza", "La Plata", "Lanús", "Lomas de Zamora"]
+  localidadesCordoba: string[] = ["Río Cuarto", "Córdoba", "Villa María", "Morteros"]
+  localidadesMendoza: string[] = ["Mendoza", "San Rafael", "Godoy Cruz", "Guaymallén"]
+  */
+
+  localidadSelecionada = ""
+  provinciaSelecionada = ""
   usuario!: Usuario
   errors = []
   constructor(public usuarioService: UsuarioService) {}
 
+/*  getLocalidades() {
+    switch (this.provinciaSelecionada) {
+      case "Buenos Aires":
+        return this.localidadesBuenosAires
+      case "Mendoza":
+        return this.localidadesMendoza
+      case "Cordoba":
+        return this.localidadesCordoba
+      default:
+        return this.localidadvacia
+    }
+  }
+*/
   ngOnInit() {
     this.obtenerElUsuario()
   }
