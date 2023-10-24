@@ -1,9 +1,7 @@
 <body>
-    <app-searchBar ></app-searchBar>
-  
-    <!-- (newItemEvent)="enviarAlBack($event)" -->
+    <app-searchBar (newItemEvent)="realizarBusqueda($event)"></app-searchBar>
     <main class="main-container">
-      <app-filtro class="toolbox-container"></app-filtro>
+      <app-filtro class="toolbox-container" [filtro]="filtros"></app-filtro>
       <section class="sub-main-container" >
         <app-card *ngFor="let figurita of figuritas" [figurita]="figurita" class="card-item"></app-card>
       </section>

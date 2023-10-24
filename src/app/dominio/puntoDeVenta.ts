@@ -1,8 +1,13 @@
+type UbicacionGeografica = {
+  x: string
+  y: string
+}
+
 export type PuntoDeVentaJSON = {
   id: number
   nombre: string
   direccion: string
-  ubicacionGeografica: string
+  ubicacionGeografica: UbicacionGeografica
   distancia: number
   stockDeSobres: number
   precio: number
@@ -23,6 +28,8 @@ export class PuntoDeVenta {
 
   static fromJson(puntoDeVentaJSON: PuntoDeVentaJSON): PuntoDeVenta {
     console.log(puntoDeVentaJSON)
-    return Object.assign(new PuntoDeVenta(), puntoDeVentaJSON)
+    return Object.assign(new PuntoDeVenta(), puntoDeVentaJSON, {
+      ubicacionGeografica: `(${puntoDeVentaJSON.ubicacionGeografica.x},${puntoDeVentaJSON.ubicacionGeografica.y})`
+    })
   }
 }

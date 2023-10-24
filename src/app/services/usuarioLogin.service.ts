@@ -8,8 +8,14 @@ import { usuariosLogin } from '../mocks/usuariosLogin'
 export class UsuarioLoginService {
   constructor() {}
 
+  usuarioLogin = new UsuarioLogin()
+
   verificarUsuario(usuarioLogin: UsuarioLogin) {
     console.log(usuarioLogin.usuario)
+
+    /* POST PARA HACER EL LOGIN POSTA CONTRA EL BACK */
+
+    this.usuarioLogin = usuarioLogin
 
     const usuarioEncontrado = usuariosLogin.find(
       (u) =>
@@ -17,11 +23,6 @@ export class UsuarioLoginService {
         u.contrasenia === usuarioLogin.contrasenia
     )
 
-    if (usuarioEncontrado) {
-      return true
-    } else {
-      alert('Usuario/Contraseña inválidos, ingrese correctamente los valores')
-      return false
-    }
+    return usuarioEncontrado
   }
 }

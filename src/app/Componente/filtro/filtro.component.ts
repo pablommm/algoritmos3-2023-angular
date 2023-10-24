@@ -1,5 +1,4 @@
-import { Component } from '@angular/core'
-import { Output, EventEmitter } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { Filtro } from 'src/app/dominio/filtro'
 
 @Component({
@@ -8,12 +7,9 @@ import { Filtro } from 'src/app/dominio/filtro'
   styleUrls: ['./filtro.component.scss']
 })
 export class FiltroComponent {
-  @Output() newItemEvent = new EventEmitter()
-
-  filtro = new Filtro()
+  @Input() filtro!: Filtro
 
   filtrar() {
     alert('FILTRE! :)')
-    this.newItemEvent.emit(this.filtro)
   }
 }

@@ -1,59 +1,10 @@
-/* export class Filtro {
-  criterioDeBusqueda = ''
-  filtrar() {
-    alert('filtrando')
-    alert(this.criterioDeBusqueda)
-  }
-}
-
-export class Buscador {}
- */
-
-export class Filtros {
-  public searchBar!: SearchBar
-  public filtro!: Filtro
-  public filtroOrdenarPor!: FiltroOrdenarPor
-
-  setSearchBar(searchbar: SearchBar) {
-    this.searchBar = searchbar
-  }
-
-  setFiltro(filtro: Filtro) {
-    this.filtro = filtro
-  }
-
-  /* llamadoASearchbar() {
-    return this.searchbar
-  }
-
-  llamadoAFiltros() {
-    return this.filtro
-  }
-
-  llamarAOrdenarPor() {
-    return this.filtroOrdenarPor
-  } */
-  /*
-    static fromJson(filtro: object): DominioFiltro {
-      return Object.assign(new DominioFiltro(), filtro)
-    }
-*/
-}
-
-export class SearchBar {
-  criterioDeBusqueda = ''
-
-  filtrar() {
-    alert('filtrando')
-    alert(this.criterioDeBusqueda)
-  }
-}
-
 export class Filtro {
   desde = ''
   hasta = ''
   esPromesa = false
   esOnFire = false
+  campoDeBusqueda = ''
+  criterioOrdenamiento: string = ''
 
   validacionHasta() {
     if (this.desde != '' && this.hasta != '') {
@@ -67,13 +18,16 @@ export class Filtro {
     this.validacionHasta()
     alert(this.desde + '....' + this.hasta)
   }
-}
-
-export class FiltroOrdenarPor {
-  selecionOrden: string = ''
 
   selecionaronOrden(parametro: string) {
-    this.selecionOrden = parametro
-    console.log(this.selecionOrden)
+    this.criterioOrdenamiento = parametro
+    console.log(this.criterioOrdenamiento)
   }
+}
+
+export enum CriterioOrdenamiento {
+  MenorDistancia = 'MenorDistancia',
+  MasBarato = 'MasBarato',
+  MasSobres = 'MasSobres',
+  MasCercano = 'MasCercano'
 }

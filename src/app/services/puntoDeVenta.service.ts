@@ -25,7 +25,7 @@ export class PuntoDeVentaService {
 
   async todosLosPuntoDeVentas() {
     const puntoDeVentas$ = this.httpClient.get<PuntoDeVentaJSON[]>(
-      REST_SERVER_URL + '/puntoDeVentas/'
+      `${REST_SERVER_URL}/puntoDeVentas/`
     )
 
     /* Query Params? */

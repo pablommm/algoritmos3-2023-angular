@@ -1,4 +1,4 @@
-<div class="toolbox-content">
+<!-- <div class="toolbox-content">
     <div class="botonesRadio">
         <div class="botonRadio-item">
             <input type="radio" id="sobresChoice1" name="sobres" value="Menor distancia" (click)="filtroOrdenarPor.selecionaronOrden('Menor distancia')" />
@@ -14,6 +14,28 @@
         </div>
         <div class="botonRadio-item">
             <input type="radio" id="sobresChoice4" name="sobres" value="Solo los más cercanos" (click)="filtroOrdenarPor.selecionaronOrden('Solo los mas cercanos')"/>
+            <label for="sobresChoice4">Solo los más cercanos</label>
+        </div>
+    </div>
+</div>
+ -->
+<div class="toolbox-content">
+    <div class="botonesRadio">
+        <div class="botonRadio-item">
+            <input type="radio" id="sobresChoice1" name="sobres" value="MenorDistancia" [(ngModel)]="criterioOrdenamiento"/>
+            <label for="sobresChoice1">{{criterioOrdenamiento}}</label>
+            <label for="sobresChoice1">Menor distancia</label>
+        </div>
+        <div class="botonRadio-item">
+            <input type="radio" id="sobresChoice2" name="sobres" value="MasBarato" [(ngModel)]="criterioOrdenamiento"/>
+            <label for="sobresChoice2">Más Barato</label>
+        </div>
+        <div class="botonRadio-item">
+            <input type="radio" id="sobresChoice3" name="sobres" value="MasSobres" [(ngModel)]="criterioOrdenamiento"/>
+            <label for="sobresChoice3">Más Sobres</label>
+        </div>
+        <div class="botonRadio-item">
+            <input type="radio" id="sobresChoice4" name="sobres" value="MasCercano" [(ngModel)]="criterioOrdenamiento"/>
             <label for="sobresChoice4">Solo los más cercanos</label>
         </div>
     </div>

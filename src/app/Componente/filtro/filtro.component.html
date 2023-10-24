@@ -6,11 +6,11 @@
       <div class="desde-hasta-container">
         <div class="desde-hasta-subcontainer">
           <label for="desde">Desde</label>
-          <input type="number" min="0" id="desde" placeholder="Desde..."[(ngModel)]='filtro.desde'>
+          <input type="number" min="0" id="desde" placeholder="Desde..." [(ngModel)]="filtro.desde">
         </div>
         <div class="desde-hasta-subcontainer">
           <label for="hasta">Hasta</label>
-          <input type="number" min="0" id="hasta" placeholder="Hasta..." [(ngModel)]='filtro.hasta' (keyup.enter)="filtro.busqueda()">
+          <input type="number" min="0" id="hasta" placeholder="Hasta..." [(ngModel)]="filtro.hasta">
         </div>
       </div>
       <div class="checkbox-container">

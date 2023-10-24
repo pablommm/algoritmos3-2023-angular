@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
-import { Router,ActivatedRoute } from '@angular/router'
+import { Router, ActivatedRoute } from '@angular/router'
+import { UsuarioLogin } from 'src/app/dominio/usuarioLogin'
 import { UsuarioLoginService } from 'src/app/services/usuarioLogin.service'
 //import { login } from './maquetado/css/login.css'
 
@@ -8,49 +9,41 @@ import { UsuarioLoginService } from 'src/app/services/usuarioLogin.service'
   templateUrl: './login.component.html',
   //styleUrls : ['./login.component.scss',]
   styleUrls: [
-  '../../../../Maquetado/css/footer.css',
-  '../../../../Maquetado/css/input.css',
-  '../../../../Maquetado/css/button.css',
-  '../../../../Maquetado/css/login.css'
-
-]
+    '../../../../Maquetado/css/footer.css',
+    '../../../../Maquetado/css/input.css',
+    '../../../../Maquetado/css/button.css',
+    '../../../../Maquetado/css/login.css'
+  ]
 })
-
-
 export class LoginComponent {
-  constructor(private router: Router, private route :ActivatedRoute) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
   title = 'Login'
 
-  usuarioLoginService: UsuarioLoginService = new UsuarioLoginService
+  usuarioLoginService: UsuarioLoginService = new UsuarioLoginService()
 
-  usuario = ""
-  password = ""
+  usuarioLogin = new UsuarioLogin()
 
-  ingresar(){
-    if(this.validarUsuario() && this.usuarioLoginService.verificarUsuario({usuario: this.usuario.toLowerCase(), contrasenia: this.password})){
+  ingresar() {
+    if (
+      this.validarUsuario() &&
+      this.usuarioLoginService.verificarUsuario(this.usuarioLogin)
+    ) {
       this.router.navigateByUrl('/BusquedaFiguritas')
     }
   }
 
-  validarUsuario(){
-    return (this.validarEmail() && this.validarPassword())
+  validarUsuario() {
+    return this.validarEmail() && this.validarPassword()
   }
 
-  validarEmail(){
-    if(this.usuario.includes("@")){
-      return true
-    } else {
-      alert("El usuario debe contener @")
-      return false
-    }
+  validarEmail() {
+    return this.usuarioLogin.usuario.includes('@')
   }
 
-  validarPassword(){
-    if(this.password != ""){
-      return true
-    }else{
-      alert("La contraseña no puede ser vacía")
-      return false
-    }
+  validarPassword() {
+    return this.usuarioLogin.contrasenia != ''
   }
 }
