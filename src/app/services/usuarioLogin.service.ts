@@ -1,12 +1,16 @@
+import { usuario } from './../mocks/usuarios';
 import { Injectable } from '@angular/core'
 import { UsuarioLogin } from '../dominio/usuarioLogin'
 import { usuariosLogin } from '../mocks/usuariosLogin'
+import { HttpClient } from '@angular/common/http'
+import { REST_SERVER_URL } from './configuration'
+import { lastValueFrom } from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioLoginService {
-  constructor() {}
+  constructor(private httpClient: HttpClient) {}
 
   usuarioLogin = new UsuarioLogin()
 
@@ -24,5 +28,15 @@ export class UsuarioLoginService {
     )
 
     return usuarioEncontrado
+  }
+
+  async back() {
+    /* const usuarioLogin$ = this.httpClient.<[]>(
+      `${REST_SERVER_URL}/login/`
+    )
+    const usuarioLoginJSON = await lastValueFrom(usuarioLogin$)
+     console.log(puntoDeVentasJSON) 
+    console.log(usuarioLoginJSON)*/
+    
   }
 }
