@@ -1,5 +1,8 @@
-import { Component, EventEmitter, Output } from '@angular/core'
-import { CriterioOrdenamiento } from 'src/app/dominio/filtro'
+import { Component, Input } from '@angular/core'
+import {
+  CriterioOrdenamiento,
+  FiltroPuntosDeVenta
+} from 'src/app/dominio/filtro'
 @Component({
   selector: 'app-filtro-ordenar-por',
   templateUrl: './filtro-ordenar-por.component.html',
@@ -7,13 +10,14 @@ import { CriterioOrdenamiento } from 'src/app/dominio/filtro'
 })
 export class FiltroOrdenarPorComponent {
   constructor() {}
-  @Output() newItemEvent = new EventEmitter<CriterioOrdenamiento>()
+  @Input() filtro!: FiltroPuntosDeVenta
 
-  criterioOrdenamiento: CriterioOrdenamiento = CriterioOrdenamiento.MasBarato
+  criterioOrdenamiento: CriterioOrdenamiento =
+    CriterioOrdenamiento.MenorDistancia
 
   filtrar() {
-    alert('FILTRE! :)')
-    this.newItemEvent.emit(this.criterioOrdenamiento)
+    /* alert('FILTRE! :)') */
+    /* this.newItemEvent.emit(this.criterioOrdenamiento) */
   }
 
   /* CAMBIAR A ENUM LA IMPLEMENTACION DE LA BUSQUEDA */

@@ -37,7 +37,7 @@ export class FiltroFiguritas extends Filtro {
 }
 
 export class FiltroPuntosDeVenta extends Filtro {
-  criterioOrdenamiento: string = ''
+  criterioOrdenamiento: string = CriterioOrdenamiento.MenorDistancia
 
   selecionaronOrden(parametro: string) {
     this.criterioOrdenamiento = parametro
@@ -48,10 +48,6 @@ export class FiltroPuntosDeVenta extends Filtro {
     const params = new HttpParams()
       .set('campoDeBusqueda', this.campoDeBusqueda)
       .set('criterioOrdenamiento', this.criterioOrdenamiento)
-    /* let params = new HttpParams()
-
-    params = params.append('campoDeBusqueda', this.campoDeBusqueda)
-    params = params.append('criterioOrdenamiento', this.criterioOrdenamiento) */
 
     return params
   }

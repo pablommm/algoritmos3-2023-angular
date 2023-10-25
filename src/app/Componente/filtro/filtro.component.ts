@@ -10,6 +10,6 @@ export class FiltroComponent {
   @Input() filtro!: FiltroFiguritas
 
   filtrar() {
-    alert('FILTRE! :)')
+    /* alert('FILTRE! :)') */
   }
 }
