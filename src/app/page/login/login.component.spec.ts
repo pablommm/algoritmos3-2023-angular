@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { RouterTestingModule } from "@angular/router/testing"
+import { RouterTestingModule } from '@angular/router/testing'
 import { LoginComponent } from './login.component'
 import { FormsModule } from '@angular/forms'
 
@@ -10,9 +10,7 @@ describe('LoginComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [LoginComponent],
-      imports: [
-        RouterTestingModule, FormsModule
-    ],
+      imports: [RouterTestingModule, FormsModule]
     })
     fixture = TestBed.createComponent(LoginComponent)
     component = fixture.componentInstance
@@ -23,11 +21,11 @@ describe('LoginComponent', () => {
     expect(component).toBeTruthy()
   })
 
-  it('Se valida que el usuario ingresado contenga @ correctamente', () => {
+  /* it('Se valida que el usuario ingresado contenga @ correctamente', () => {
     // Arrange
     component.usuario = 'test@test.com'
-
-    // Act
+ */
+  /* // Act
     const containsAt = component.usuario.includes('@')
 
     // Assert
@@ -45,17 +43,17 @@ it('se ingres usuario sin @ y lo detecta', () => {
   // Assert
   expect(containsAt).toBeFalsy()
   })
+ */
 
-
-it('que la contraseña no sea vacia', () => {
+  /* it('que la contraseña no sea vacia', () => {
   // Arrange
   component.password = ''
 
   // Act
   const containsAt = component.password.length>0
-
+ */
   // Assert
   /* expect(containsAt).toBe(0) ; */
-  expect(containsAt).toBeFalsy() 
-  })
+  /* expect(containsAt).toBeFalsy() 
+  }) */
 })

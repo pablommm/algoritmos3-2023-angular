@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing'
 import { CardComponent } from './card.component'
 import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
 import { PrecioSobrePipe } from 'src/app/pipes/precioSobre.pipe'
+import { DistanciaSobrePipePipe } from 'src/app/pipes/distanciaSobrePipe.pipe'
 import { Figurita } from 'src/app/dominio/figurita'
 
 describe('CardComponent', () => {
@@ -37,7 +38,12 @@ describe('CardComponent', () => {
     }
 
     TestBed.configureTestingModule({
-      declarations: [CardComponent, NombreApellidoPipe, PrecioSobrePipe],
+      declarations: [
+        CardComponent,
+        NombreApellidoPipe,
+        PrecioSobrePipe,
+        DistanciaSobrePipePipe
+      ],
       imports: [RouterTestingModule]
     })
 

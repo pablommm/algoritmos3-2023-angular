@@ -6,6 +6,7 @@ import { RouterTestingModule } from '@angular/router/testing'
 import { RouterModule } from '@angular/router'
 import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
 import { PrecioSobrePipe } from 'src/app/pipes/precioSobre.pipe'
+import { DistanciaSobrePipePipe } from 'src/app/pipes/distanciaSobrePipe.pipe'
 
 import { CardSobresComponent } from './cardSobres.component'
 import { PuntoDeVenta } from 'src/app/dominio/puntoDeVenta'
@@ -30,7 +31,8 @@ describe('CardSobresComponent', () => {
         declarations: [
           CardSobresComponent,
           NombreApellidoPipe,
-          PrecioSobrePipe
+          PrecioSobrePipe,
+          DistanciaSobrePipePipe
         ],
         imports: [RouterTestingModule, RouterModule.forRoot([])]
       }).compileComponents()

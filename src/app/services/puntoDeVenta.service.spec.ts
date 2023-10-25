@@ -4,6 +4,7 @@ import { CardSobresComponent } from '../Componente/cardSobres/cardSobres.compone
 import { ActivatedRouteStub } from '../activatedRouteStub'
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { PrecioSobrePipe } from 'src/app/pipes/precioSobre.pipe'
+import { DistanciaSobrePipePipe } from '../pipes/distanciaSobrePipe.pipe'
 import { PuntoDeVenta } from '../dominio/puntoDeVenta'
 
 describe('Service: PuntoDeVentaService', () => {
@@ -13,7 +14,11 @@ describe('Service: PuntoDeVentaService', () => {
 
   beforeEach(async () => {
     TestBed.configureTestingModule({
-      declarations: [CardSobresComponent, PrecioSobrePipe],
+      declarations: [
+        CardSobresComponent,
+        PrecioSobrePipe,
+        DistanciaSobrePipePipe
+      ],
       imports: [RouterTestingModule],
       providers: [
         { provide: activatedRouteStub, useValue: activatedRouteStub } // Proporciona ActivatedRouteStub como valor para ActivatedRoute.

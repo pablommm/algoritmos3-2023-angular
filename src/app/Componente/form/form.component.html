@@ -23,7 +23,7 @@
       <label for="Provincia">Provincia</label>
       <form action="Provincia">
 
-        <select [(ngModel)]="provinciaSelecionada" class="select">
+        <select [(ngModel)]="provinciaSelecionada" class="select" name="provinciaSelecionada">
           <option *ngFor="let provincia of provincias" [value]="provincia"> {{provincia}} </option>
           
         </select>
@@ -36,7 +36,7 @@
       <!-- Hay que implementar el listado de localidades, ya que no viene con el usuario -->
       <label for="Localidad">Localidad</label>
       <form action="Localidad">
-        <select  [(ngModel)]="localidadSelecionada" class="select">
+        <select  [(ngModel)]="localidadSelecionada" class="select" name="localidadSelecionada">
           <option *ngFor="let localidad of localidades" >{{localidad}}</option>
         </select>
       </form>

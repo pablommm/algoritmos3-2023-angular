@@ -1,4 +1,4 @@
-import { usuario } from './../mocks/usuarios';
+import { usuario } from './../mocks/usuarios'
 import { Injectable } from '@angular/core'
 import { UsuarioLogin } from '../dominio/usuarioLogin'
 import { usuariosLogin } from '../mocks/usuariosLogin'
@@ -10,8 +10,8 @@ import { lastValueFrom } from 'rxjs'
   providedIn: 'root'
 })
 export class UsuarioLoginService {
-  constructor(private httpClient: HttpClient) {}
-
+  /*   constructor(private httpClient: HttpClient) {}
+   */
   usuarioLogin = new UsuarioLogin()
 
   verificarUsuario(usuarioLogin: UsuarioLogin) {
@@ -37,6 +37,5 @@ export class UsuarioLoginService {
     const usuarioLoginJSON = await lastValueFrom(usuarioLogin$)
      console.log(puntoDeVentasJSON) 
     console.log(usuarioLoginJSON)*/
-    
   }
 }
