@@ -6,7 +6,7 @@ import { PuntoDeVenta } from '../dominio/puntoDeVenta'
 })
 export class DistanciaSobrePipePipe implements PipeTransform {
   transform(puntoDeVenta: PuntoDeVenta): string {
-    return puntoDeVenta.precio.toString().concat('km')
+    return `${puntoDeVenta.precio.toString()} km`
   }
 }
 

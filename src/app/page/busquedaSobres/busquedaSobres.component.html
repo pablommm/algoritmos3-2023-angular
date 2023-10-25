@@ -1,5 +1,5 @@
 <body>
-    <app-searchBar></app-searchBar>
+    <app-searchBar (newItemEvent)="realizarBusqueda($event)"></app-searchBar>
 
     <main class="main-container">
         <app-filtro-ordenar-por class="toolbox-container"></app-filtro-ordenar-por>

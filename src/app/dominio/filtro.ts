@@ -1,10 +1,15 @@
-export class Filtro {
+import { HttpParams } from '@angular/common/http'
+
+abstract class Filtro {
+  campoDeBusqueda = ''
+  asHttpParams() {}
+}
+
+export class FiltroFiguritas extends Filtro {
   desde = ''
   hasta = ''
   esPromesa = false
   esOnFire = false
-  campoDeBusqueda = ''
-  criterioOrdenamiento: string = ''
 
   validacionHasta() {
     if (this.desde != '' && this.hasta != '') {
@@ -19,9 +24,36 @@ export class Filtro {
     alert(this.desde + '....' + this.hasta)
   }
 
+  override asHttpParams(): HttpParams {
+    const params = new HttpParams()
+      .set('campoDeBusqueda', this.campoDeBusqueda)
+      .set('desde', this.desde)
+      .set('hasta', this.hasta)
+      .set('esPromesa', this.esPromesa)
+      .set('esOnFire', this.esOnFire)
+
+    return params
+  }
+}
+
+export class FiltroPuntosDeVenta extends Filtro {
+  criterioOrdenamiento: string = ''
+
   selecionaronOrden(parametro: string) {
     this.criterioOrdenamiento = parametro
     console.log(this.criterioOrdenamiento)
+  }
+
+  override asHttpParams(): HttpParams {
+    const params = new HttpParams()
+      .set('campoDeBusqueda', this.campoDeBusqueda)
+      .set('criterioOrdenamiento', this.criterioOrdenamiento)
+    /* let params = new HttpParams()
+
+    params = params.append('campoDeBusqueda', this.campoDeBusqueda)
+    params = params.append('criterioOrdenamiento', this.criterioOrdenamiento) */
+
+    return params
   }
 }
 

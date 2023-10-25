@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core'
-import { Filtro } from 'src/app/dominio/filtro'
+import { FiltroFiguritas } from 'src/app/dominio/filtro'
 
 @Component({
   selector: 'app-filtro',
@@ -7,7 +7,7 @@ import { Filtro } from 'src/app/dominio/filtro'
   styleUrls: ['./filtro.component.scss']
 })
 export class FiltroComponent {
-  @Input() filtro!: Filtro
+  @Input() filtro!: FiltroFiguritas
 
   filtrar() {
     alert('FILTRE! :)')

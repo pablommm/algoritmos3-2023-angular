@@ -21,18 +21,17 @@ export class LoginComponent {
     private route: ActivatedRoute
   ) {}
   title = 'Login'
-
-  usuarioLoginService: UsuarioLoginService = new UsuarioLoginService()
-
   usuarioLogin = new UsuarioLogin()
 
   ingresar() {
-    if (
+    /* if (
       this.validarUsuario() &&
       this.usuarioLoginService.verificarUsuario(this.usuarioLogin)
     ) {
       this.router.navigateByUrl('/BusquedaFiguritas')
-    }
+    } */
+
+    true
   }
 
   validarUsuario() {
