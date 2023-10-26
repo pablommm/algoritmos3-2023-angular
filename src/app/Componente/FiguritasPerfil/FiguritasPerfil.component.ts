@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { Router, ActivatedRoute } from '@angular/router'
 import { Figurita } from './../../dominio/figurita'
 import { FiguritaService } from '../../services/figurita.service'
-import { mostrarError } from '../../util/errorHandler'
+/* import { mostrarError } from '../../util/errorHandler' */
 
 @Component({
   selector: 'app-FiguritasPerfil',
@@ -21,10 +21,10 @@ export class FiguritasPerfilComponent implements OnInit {
     await this.obtenerTodasLasFiguritas()
   }
   obtenerTodasLasFiguritas() {
-    try {
+    /* try {
       this.figuritas = this.figuritaService.todasLasFiguritas()
     } catch (error) {
       mostrarError(this, error)
-    }
+    } */
   }
 }

@@ -33,11 +33,11 @@ export class PerfilUsuarioFiguritasRepComponent {
   }
 
   private async obtenerTodasLasFiguritas() {
-    try {
+    /* try {
       this.figuritas = this.figuritaService.todasLasFiguritas()
     } catch (error) {
       mostrarError(this, error)
-    }
+    } */
   }
 }
 

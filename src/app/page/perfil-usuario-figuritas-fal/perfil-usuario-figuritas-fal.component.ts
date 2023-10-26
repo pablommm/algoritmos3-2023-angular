@@ -21,10 +21,10 @@ export class PerfilUsuarioFiguritasFalComponent {
     this.obtenerTodasLasFiguritas()
   }
   obtenerTodasLasFiguritas() {
-    try {
+    /* try {
       this.figuritas = this.figuritaService.todasLasFiguritas()
     } catch (error) {
       mostrarError(this, error)
-    }
+    } */
   }
 }

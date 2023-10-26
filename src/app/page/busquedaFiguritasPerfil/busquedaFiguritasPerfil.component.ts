@@ -7,7 +7,7 @@ import { mostrarError } from '../../util/errorHandler'
 
 export const errorHandler = (component: BusquedaFiguritasPerfilComponent) => ({
   error: async (error: Error) => {
-    component.figuritas = await component.figuritaService.todasLasFiguritas()
+    /* component.figuritas = await component.figuritaService.todasLasFiguritas() */
     mostrarError(component, error)
   }
 })
@@ -29,13 +29,10 @@ export class BusquedaFiguritasPerfilComponent implements OnInit {
   }
 
   obtenerTodasLasFiguritas() {
-    try {
+    /* try {
       this.figuritas = this.figuritaService.todasLasFiguritas()
     } catch (error) {
       mostrarError(this, error)
-    }
+    } */
   }
-
 }
-
-
