@@ -32,7 +32,7 @@ export class PerfilUsuarioFiguritasRepComponent {
     this.router.navigateByUrl('/PerfilUsuario')
   }
 
-  obtenerTodasLasFiguritas() {
+  private async obtenerTodasLasFiguritas() {
     try {
       this.figuritas = this.figuritaService.todasLasFiguritas()
     } catch (error) {

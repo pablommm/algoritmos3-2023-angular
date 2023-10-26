@@ -1,29 +1,32 @@
 /* import { valoracionTotal } from 'src/app/dominio/figurita' */
-import { Figurita } from '../dominio/figurita'
+import { Figurita, FiguritaJSON } from '../dominio/figurita'
 import { Injectable } from '@angular/core'
-import { figuritas } from '../mocks/figuritas'
+import { HttpClient } from '@angular/common/http'
+import { REST_SERVER_URL } from './configuration'
+import { FiltroFiguritas } from '../dominio/filtro'
+import { lastValueFrom } from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
 export class FiguritaService {
-  constructor() {}
+  constructor(private httpClient: HttpClient) {}
 
-  todasLasFiguritas(/* toSearch: string */): Figurita[] {
-    try {
-      const figuritasConValoracionBase = figuritas.map((figuritaJSON) => {
-        const figurita = Figurita.fromJson(figuritaJSON)
-        figurita.valoracionTotal = figurita.calcularValoracionTotal(figurita)
-        return figurita
-      })
-      return figuritasConValoracionBase
-    } catch (error) {
-      console.error('Error al cargar las figuritas', error)
-      return []
-    }
+  async todasLasFiguritas(filtro: FiltroFiguritas) {
+    const figuritas$ = this.httpClient.get<FiguritaJSON[]>(
+      `${REST_SERVER_URL}/Figuritas/`,
+      { params: filtro.asHttpParams() }
+    )
+
+    const figuritaJSON = await lastValueFrom(figuritas$)
+
+    return figuritaJSON.map((figuritaJSON: FiguritaJSON) =>
+      Figurita.fromJson(figuritaJSON)
+    )
   }
+}
 
-  /* async getAll(toSearch = '') {
+/* async getAll(toSearch = '') {
     console.info('PATH: ', this.pathUrl + '/search/' + toSearch)
     const activities$ = this.http.get<ActivityDTO[]>(
       this.pathUrl + '/search/' + toSearch
@@ -31,4 +34,3 @@ export class FiguritaService {
     const activities = await lastValueFrom(activities$)
     return activities.map((activityDTO) => activityFromJSON(activityDTO))
   } */
-}

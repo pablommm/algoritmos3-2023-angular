@@ -17,8 +17,8 @@ export class FiguritasPerfilComponent implements OnInit {
     private route: ActivatedRoute,
     public figuritaService: FiguritaService
   ) {}
-  ngOnInit() {
-    this.obtenerTodasLasFiguritas()
+  async ngOnInit() {
+    await this.obtenerTodasLasFiguritas()
   }
   obtenerTodasLasFiguritas() {
     try {

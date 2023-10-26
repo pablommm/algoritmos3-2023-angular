@@ -1,7 +1,30 @@
-const VALORACION_PISO = 100
+/* const VALORACION_PISO = 100
 const VALOR_ON_FIRE = 1.2
 const VALOR_ES_PAR = 1.1
-const VALOR_NIVEL_IMPRESION = 0.85
+const VALOR_NIVEL_IMPRESION = 0.85 */
+
+export type FiguritaJSON = {
+  nivelDeImpresion: string
+  OnFire: boolean
+  id: number
+  seleccion: string
+  altura: number
+  posicion: string
+  pais: string
+  anioDebut: number
+  peso: number
+  numeroCamiseta: number
+  cotizacionJugador: string
+  fechaNacimiento: string
+  nombre: string
+  apellido: string
+  valoracionFigurita: number
+  /* esLider: boolean
+  esPar: boolean
+  imagen: string
+  valoracionBase: number
+  valoracionJugador: number */
+}
 
 export class Figurita {
   constructor(
@@ -11,27 +34,27 @@ export class Figurita {
     public fechaNacimiento: string = '',
     public numeroCamiseta?: number,
     public seleccion: string = '',
-    public anioDebutSeleccion?: number,
+    public anioDebut?: number,
     public altura?: number,
     public peso?: number,
     public posicion: string = '',
     public pais: string = '',
     public cotizacionJugador: string = '',
-    public esLider?: boolean,
-    public estaOnFire?: boolean,
+    public OnFire?: boolean,
+    /* public esLider?: boolean,
     public esPar?: boolean,
     public nivelImpresion: string = '',
     public imagen: string = '',
     public valoracionBase?: number,
-    public valoracionJugador: number = 0,
-    public valoracionTotal?: number
+    public valoracionJugador: number = 0, */
+    public valoracionFigurita?: number
   ) {}
 
   static fromJson(figurita: object): Figurita {
     return Object.assign(new Figurita(), figurita)
   }
 
-  valorOnFire(figurita: Figurita): number {
+  /* valorOnFire(figurita: Figurita): number {
     return figurita.estaOnFire ? VALOR_ON_FIRE : 1
   }
 
@@ -57,5 +80,5 @@ export class Figurita {
 
   calcularValoracionTotal(figurita: Figurita): number {
     return this.calcularValoracionBase(figurita) + figurita.valoracionJugador
-  }
+  } */
 }
