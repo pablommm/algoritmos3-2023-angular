@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 import { Router, ActivatedRoute } from '@angular/router'
 import { UsuarioLogin } from 'src/app/dominio/usuarioLogin'
-import { UsuarioLoginService } from 'src/app/services/usuarioLogin.service'
+//import { UsuarioLoginService } from 'src/app/services/usuarioLogin.service'
 //import { login } from './maquetado/css/login.css'
 
 @Component({
