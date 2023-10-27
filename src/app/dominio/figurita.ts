@@ -41,9 +41,9 @@ export class Figurita {
     public pais: string = '',
     public cotizacionJugador: string = '',
     public OnFire?: boolean,
+    public nivelDeImpresion: string = '',
     /* public esLider?: boolean,
     public esPar?: boolean,
-    public nivelImpresion: string = '',
     public imagen: string = '',
     public valoracionBase?: number,
     public valoracionJugador: number = 0, */

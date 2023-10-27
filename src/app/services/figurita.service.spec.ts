@@ -37,21 +37,15 @@ describe('CardComponent', () => {
     figuritaData.fechaNacimiento = '17 de febrero'
     figuritaData.numeroCamiseta = 7
     figuritaData.seleccion = 'Portugal'
-    figuritaData.anioDebutSeleccion = 2003
+    figuritaData.anioDebut = 2003
     figuritaData.altura = 1.85
     figuritaData.peso = 80
     figuritaData.posicion = 'Delantero'
     figuritaData.pais = 'Portugal'
     figuritaData.cotizacionJugador = '500 millones de euros'
-    figuritaData.esLider = true
-    figuritaData.estaOnFire = true
-    figuritaData.esPar = false
-    figuritaData.nivelImpresion = 'bajo'
-    figuritaData.imagen = '../../assets/cristiano.jpg'
-    figuritaData.valoracionJugador = 300
-
-    figuritaData.valoracionTotal =
-      figuritaData.calcularValoracionTotal(figuritaData)
+    figuritaData.OnFire = true
+    figuritaData.nivelDeImpresion = 'bajo'
+    figuritaData.valoracionFigurita = 300
 
     component.figurita = figuritaData
 

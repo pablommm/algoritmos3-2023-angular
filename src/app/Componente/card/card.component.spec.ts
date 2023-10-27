@@ -18,23 +18,15 @@ describe('CardComponent', () => {
       fechaNacimiento: '17-01-2001',
       numeroCamiseta: 8,
       seleccion: 'Argentina',
-      anioDebutSeleccion: 2022,
+      anioDebut: 2022,
       altura: 1.78,
       peso: 76,
       posicion: 'Centrocampista',
       pais: 'ARG',
       cotizacionJugador: '131.4 millones de dólares',
-      esLider: true,
-      estaOnFire: true,
-      esPar: false,
-      nivelImpresion: 'alto',
-      valoracionJugador: 250,
-      imagen: '../../assets/enzofe.jpg',
-      valorOnFire: () => 1.2,
-      valorEsPar: () => 1.1,
-      valorNivelImpresion: () => 0.85,
-      calcularValoracionBase: () => 0,
-      calcularValoracionTotal: () => 0
+      OnFire: true,
+      nivelDeImpresion: 'alto',
+      valoracionFigurita: 250
     }
 
     TestBed.configureTestingModule({
