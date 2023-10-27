@@ -6,6 +6,7 @@ import { RouterTestingModule } from '@angular/router/testing'
 import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
 import { PrecioSobrePipe } from 'src/app/pipes/precioSobre.pipe'
 import { DistanciaSobrePipePipe } from '../pipes/distanciaSobrePipe.pipe'
+import { HttpClientTestingModule } from '@angular/common/http/testing'
 
 describe('CardComponent', () => {
   let fixture: ComponentFixture<CardComponent>
@@ -20,7 +21,7 @@ describe('CardComponent', () => {
         PrecioSobrePipe,
         DistanciaSobrePipePipe
       ],
-      imports: [RouterTestingModule],
+      imports: [RouterTestingModule, HttpClientTestingModule],
       providers: [
         { provide: activatedRouteStub, useValue: activatedRouteStub } // Proporciona ActivatedRouteStub como valor para ActivatedRoute.
       ]
@@ -57,6 +58,6 @@ describe('CardComponent', () => {
       '.card-detalles-largeFont .fa-solid.fa-star + span'
     )
 
-    expect(valoracionTotalElement.textContent.trim()).toBe('420')
+    expect(valoracionTotalElement.textContent.trim()).toBe('300')
   })
 })

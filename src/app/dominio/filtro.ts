@@ -6,13 +6,13 @@ abstract class Filtro {
 }
 
 export class FiltroFiguritas extends Filtro {
-  desde = ''
-  hasta = ''
+  desde = 0
+  hasta = 0
   esPromesa = false
   esOnFire = false
 
   validacionHasta() {
-    if (this.desde != '' && this.hasta != '') {
+    if (this.desde >= 0 && this.hasta >= 0) {
       if (this.desde > this.hasta) {
         alert('El valor del campo desde no puede ser menor que el de hasta')
       }

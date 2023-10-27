@@ -4,13 +4,14 @@ import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing'
 import { DebugElement } from '@angular/core' */
 import { NavComponent } from 'src/app/Componente/nav/nav.component'
 import { SearchBarComponent } from 'src/app/Componente/searchBar/searchBar.component'
-import { RouterTestingModule } from "@angular/router/testing"
+import { RouterTestingModule } from '@angular/router/testing'
 import { FiltroComponent } from 'src/app/Componente/filtro/filtro.component'
 import { CardComponent } from 'src/app/Componente/card/card.component'
 import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
 import { FormsModule } from '@angular/forms'
-
+import { HttpClientTestingModule } from '@angular/common/http/testing'
 import { BusquedaFiguritasComponent } from './busquedaFiguritas.component'
+import { HttpClientModule } from '@angular/common/http'
 
 describe('BusquedaFiguritasComponent', () => {
   let component: BusquedaFiguritasComponent
@@ -18,8 +19,20 @@ describe('BusquedaFiguritasComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [BusquedaFiguritasComponent, NavComponent, SearchBarComponent, FiltroComponent, CardComponent, NombreApellidoPipe],
-      imports: [RouterTestingModule, FormsModule],
+      declarations: [
+        BusquedaFiguritasComponent,
+        NavComponent,
+        SearchBarComponent,
+        FiltroComponent,
+        CardComponent,
+        NombreApellidoPipe
+      ],
+      imports: [
+        RouterTestingModule,
+        FormsModule,
+        HttpClientTestingModule,
+        HttpClientModule
+      ]
     }).compileComponents()
   }))
 
