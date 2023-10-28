@@ -27,10 +27,10 @@ export class BusquedaSobresComponent implements OnInit {
   constructor(public puntoDeVentaService: PuntoDeVentaService) {}
 
   async ngOnInit() {
-    await this.getFiguritas()
+    await this.getPuntosDeVenta()
   }
 
-  private async getFiguritas() {
+  private async getPuntosDeVenta() {
     this.puntosDeVenta = await this.puntoDeVentaService.todosLosPuntoDeVentas(
       this.filtros
     )
@@ -39,7 +39,7 @@ export class BusquedaSobresComponent implements OnInit {
 
   async realizarBusqueda(campoDeBusqueda: string) {
     this.filtros.campoDeBusqueda = campoDeBusqueda
-    this.getFiguritas()
+    this.getPuntosDeVenta()
     /* ENVIAR AL SERVICE */
   }
 

@@ -4,7 +4,6 @@ import { PerfilUsuarioFiguritasRepComponent } from './perfil-usuario-figuritas-r
 import { NavComponent } from 'src/app/Componente/nav/nav.component'
 import { CardComponent } from 'src/app/Componente/card/card.component'
 import { TabComponent } from 'src/app/Componente/tab/tab.component'
-import { FiguritasPerfilComponent } from 'src/app/Componente/FiguritasPerfil/FiguritasPerfil.component'
 import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
 import { PrecioSobrePipe } from 'src/app/pipes/precioSobre.pipe'
 import { DistanciaSobrePipePipe } from 'src/app/pipes/distanciaSobrePipe.pipe'
@@ -21,7 +20,6 @@ describe('PerfilUsuarioFiguritasRepComponent', () => {
         NavComponent,
         CardComponent,
         TabComponent,
-        FiguritasPerfilComponent,
         NombreApellidoPipe,
         PrecioSobrePipe,
         DistanciaSobrePipePipe

@@ -3,15 +3,23 @@
 @import url(../../../../Maquetado/css/input.css);
 @import url(../../../../Maquetado/css/cards.css);
 @import url(../../../../Maquetado/css/toolbox.css);
-@import url(../../../../Maquetado/css/busquedaFiguritas.css);
 @import url(../../../../Maquetado/css/perfilUsuario.css);
+@import url(../../../../Maquetado/css/busquedaFiguritas.css);
 
 
+
+.card-item{
+    margin-left: 2em;
+}
 
 @media (min-width: 769px) {    
 
     .toolbox-container{
         margin-top: 2em;
         margin-bottom: -1em;
+    
+    }
+    .card-item{
+        margin-left: 6em;
     }
 }

@@ -14,8 +14,23 @@ export class FiguritaService {
 
   async todasLasFiguritas(filtro: FiltroFiguritas) {
     const figuritas$ = this.httpClient.get<FiguritaJSON[]>(
-      `${REST_SERVER_URL}/Figuritas/`,
+      `${REST_SERVER_URL}/FiguritasRepetidas/0`,
       { params: filtro.asHttpParams() }
+    )
+
+    const figuritaJSON = await lastValueFrom(figuritas$)
+    console.log(figuritaJSON)
+
+    return figuritaJSON.map((figuritaJSON: FiguritaJSON) =>
+      Figurita.fromJson(figuritaJSON)
+    )
+  }
+
+  //Falta usuarioLogin para poder funcionar
+
+  /* async todasLasFiguritasRepetidas(filtro: FiltroFiguritas, id: number) {
+    const figuritas$ = this.httpClient.get<FiguritaJSON[]>(
+      `${REST_SERVER_URL}/FiguritasRepetidas/${id}`
     )
 
     const figuritaJSON = await lastValueFrom(figuritas$)
@@ -24,13 +39,16 @@ export class FiguritaService {
       Figurita.fromJson(figuritaJSON)
     )
   }
-}
 
-/* async getAll(toSearch = '') {
-    console.info('PATH: ', this.pathUrl + '/search/' + toSearch)
-    const activities$ = this.http.get<ActivityDTO[]>(
-      this.pathUrl + '/search/' + toSearch
+  async todasLasFiguritasFaltantes(filtro: FiltroFiguritas, id: number) {
+    const figuritas$ = this.httpClient.get<FiguritaJSON[]>(
+      `${REST_SERVER_URL}/FiguritasFaltantes/${id}`
     )
-    const activities = await lastValueFrom(activities$)
-    return activities.map((activityDTO) => activityFromJSON(activityDTO))
+
+    const figuritaJSON = await lastValueFrom(figuritas$)
+
+    return figuritaJSON.map((figuritaJSON: FiguritaJSON) =>
+      Figurita.fromJson(figuritaJSON)
+    )
   } */
+}

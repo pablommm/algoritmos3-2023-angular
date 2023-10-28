@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router'
 import { Figurita } from './../../dominio/figurita'
 import { FiguritaService } from '../../services/figurita.service'
 import { mostrarError } from '../../util/errorHandler'
+import { FiltroFiguritas } from 'src/app/dominio/filtro'
 
 @Component({
   selector: 'app-perfil-usuario-figuritas-rep',
@@ -12,6 +13,7 @@ import { mostrarError } from '../../util/errorHandler'
 export class PerfilUsuarioFiguritasRepComponent {
   figuritas: Array<Figurita> = []
   agregar = new Aniadir()
+  filtros = new FiltroFiguritas()
 
   constructor(
     private router: Router,
@@ -33,11 +35,13 @@ export class PerfilUsuarioFiguritasRepComponent {
   }
 
   private async obtenerTodasLasFiguritas() {
-    /* try {
-      this.figuritas = this.figuritaService.todasLasFiguritas()
+    try {
+      this.figuritas = await this.figuritaService.todasLasFiguritas(
+        this.filtros
+      )
     } catch (error) {
       mostrarError(this, error)
-    } */
+    }
   }
 }
 

@@ -3,7 +3,8 @@
 		<!-- <app-tool-boox class = "toolbox-container"></app-tool-boox> -->
 		
 		<section class="sub-main-container">
-			<app-FiguritasPerfil></app-FiguritasPerfil>
+			<!-- <app-FiguritasPerfil></app-FiguritasPerfil> -->
+			<app-card *ngFor="let figurita of figuritas" [figurita]="figurita" class="card-item"></app-card>
 			<span class="material-symbols-outlined plus-icon" routerLink="/BusquedaFiguritasPerfil" (click)="agregar.aniadir()">add</span>
 		</section>
 	</div>

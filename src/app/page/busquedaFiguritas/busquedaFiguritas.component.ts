@@ -27,10 +27,10 @@ export class BusquedaFiguritasComponent implements OnInit {
   constructor(public figuritaService: FiguritaService) {}
 
   async ngOnInit() {
-    await this.obtenerTodasLasFiguritas()
+    await this.getFiguritas()
   }
 
-  private async obtenerTodasLasFiguritas() {
+  private async getFiguritas() {
     try {
       this.figuritas = await this.figuritaService.todasLasFiguritas(
         this.filtros
@@ -42,7 +42,7 @@ export class BusquedaFiguritasComponent implements OnInit {
 
   async realizarBusqueda(campoDeBusqueda: string) {
     this.filtros.campoDeBusqueda = campoDeBusqueda
-    this.obtenerTodasLasFiguritas()
+    this.getFiguritas()
     /* ENVIAR AL SERVICE */
   }
 

@@ -1,9 +1,9 @@
 <body>
 	<div class="main-container">
 		<section class="sub-main-container">
-		<app-FiguritasPerfil></app-FiguritasPerfil>
-		<span class="material-symbols-outlined plus-icon" routerLink="/BusquedaFiguritasPerfil">add</span>
-
+			<!-- <app-FiguritasPerfil></app-FiguritasPerfil> -->
+			<app-card *ngFor="let figurita of figuritas" [figurita]="figurita" class="card-item"></app-card>
+			<span class="material-symbols-outlined plus-icon" routerLink="/BusquedaFiguritasPerfil">add</span>
 		</section>
 	</div>
 
