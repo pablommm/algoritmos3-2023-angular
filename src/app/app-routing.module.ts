@@ -8,7 +8,6 @@ import { BusquedaFiguritasComponent } from './page/busquedaFiguritas/busquedaFig
 import { BusquedaSobresComponent } from './page/busquedaSobres/busquedaSobres.component'
 import { BusquedaFiguritasPerfilComponent } from './page/busquedaFiguritasPerfil/busquedaFiguritasPerfil.component'
 import { LoginComponent } from './page/login/login.component'
-import { CardComponent } from './Componente/card/card.component'
 import { FormComponent } from './Componente/form/form.component'
 
 const routes: Routes = [
@@ -30,7 +29,7 @@ const routes: Routes = [
   // {path:'Perfil', component:PerfilUsuarioComponent},
   // {path:'Perfil/FiguritaRepetida', component:PerfilUsuarioFiguritasRepComponent},
   // {path:'Perfil/FiguritaFaltante', component:PerfilUsuarioFiguritasFalComponent},
-  { path: 'DetalleFigurita', component: DetallesFiguritaComponent },
+  { path: 'DetalleFigurita/:id', component: DetallesFiguritaComponent },
   { path: 'BusquedaSobre', component: BusquedaSobresComponent },
   {
     path: 'BusquedaFiguritasPerfil',

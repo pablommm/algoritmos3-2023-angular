@@ -3,7 +3,7 @@
     <main class="main-container">
       <app-filtro class="toolbox-container" [filtro]="filtros"></app-filtro>
       <section class="sub-main-container" >
-        <app-card *ngFor="let figurita of figuritas" [figurita]="figurita" class="card-item"></app-card>
+        <app-card *ngFor="let figurita of figuritas" [figurita]="figurita" class="card-item" (click)="mostrarDetalles(figurita)"></app-card>
       </section>
     </main>
 </body>

@@ -26,6 +26,16 @@ export class FiguritaService {
     )
   }
 
+  async getFiguritaById(idFigurita: number) {
+    const figurita$ = this.httpClient.get<FiguritaJSON>(
+      `${REST_SERVER_URL}/DetalleFigurita/${idFigurita}`
+    )
+
+    const figuritaJSON = await lastValueFrom(figurita$)
+
+    return Figurita.fromJson(figuritaJSON)
+  }
+
   //Falta usuarioLogin para poder funcionar
 
   /* async todasLasFiguritasRepetidas(filtro: FiltroFiguritas, id: number) {

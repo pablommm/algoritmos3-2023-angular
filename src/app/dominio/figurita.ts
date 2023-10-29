@@ -4,22 +4,27 @@ const VALOR_ES_PAR = 1.1
 const VALOR_NIVEL_IMPRESION = 0.85 */
 
 export type FiguritaJSON = {
-  nivelDeImpresion: string
-  OnFire: boolean
-  id: number
-  seleccion: string
-  altura: number
-  posicion: string
-  pais: string
-  anioDebut: number
-  peso: number
-  numeroCamiseta: number
-  cotizacionJugador: string
-  fechaNacimiento: string
   nombre: string
   apellido: string
+  fechaNacimiento: string
+  numeroCamiseta: number
+  seleccion: string
+  anioDebut: number
+  altura: number
+  peso: number
+  posicion: string
+  pais: string
+  cotizacionJugador: string
+  OnFire: boolean
+  nivelDeImpresion: string
+  id: number
   valoracionFigurita: number
-  /* esLider: boolean
+  valoracionBase: number
+  copasDelMundo: number
+  copasConfederacion: number
+  esLider: boolean
+  numero: number
+  /*
   esPar: boolean
   imagen: string
   valoracionBase: number
@@ -42,16 +47,28 @@ export class Figurita {
     public cotizacionJugador: string = '',
     public OnFire?: boolean,
     public nivelDeImpresion: string = '',
-    /* public esLider?: boolean,
+    public esLider?: boolean,
+    /*
     public esPar?: boolean,
     public imagen: string = '',
-    public valoracionBase?: number,
     public valoracionJugador: number = 0, */
-    public valoracionFigurita?: number
+    public valoracionBase?: number,
+    public valoracionFigurita?: number,
+    public numero?: number,
+    public copasDelMundo?: number,
+    public copasConfederacion?: number
   ) {}
 
   static fromJson(figurita: object): Figurita {
     return Object.assign(new Figurita(), figurita)
+  }
+
+  lider() {
+    return this.esLider ? 'Es Lider' : 'No es Lider'
+  }
+
+  valBase() {
+    return this.valoracionBase?.toFixed(2)
   }
 
   /* valorOnFire(figurita: Figurita): number {

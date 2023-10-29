@@ -4,13 +4,13 @@
 			<article class="card-item">
 				<header class="card-header-container">
 					<div class="card-name-container">
-						<span class="card-nombre">Lionel Messi</span>
-						<span>(de Carlos Raffo)</span>
+						<span class="card-nombre">{{figurita | nombreApellido}}</span>
+						<span>(de Carlos Raffo) FALTA CODEAR</span>
 					</div>
 					<div class="card-logos-container">
 						<i class="fa-solid fa-fire fire"></i>
 						<i class="fa-solid fa-id-badge"></i>
-						<span>5</span>
+						<span>{{figurita.numero}}</span>
 					</div>
 				</header>
 
@@ -24,35 +24,35 @@
 									<i class="fa-solid fa-weight-scale"></i>
 									<span>Peso</span>
 								</div>
-								<span>72 kilos</span>
+								<span>{{figurita.peso}} kg</span>
 							</div>
 							<div class="card-detalles-smallFont">
 								<div class="card-detalles-logo">
 									<span>Nacimiento</span>
 								</div>
-								<span>24/06/1987 (36 años)</span>
+								<span>{{figurita.fechaNacimiento}} (36 años) FALTA CODEAR</span>
 							</div>
 							<div class="card-detalles-smallFont">
 								<div class="card-detalles-logo">
 									<span>Casaca</span>
 								</div>
-								<span>10</span>
+								<span>{{figurita.numeroCamiseta}}</span>
 							</div>
 							<div class="card-detalles-smallFont">
 								<div class="card-detalles-logo">
 									<span>Selección</span>
 								</div>
-								<span>Argentina (<i class="fa-solid fa-trophy"></i> 3)</span>
+								<span>{{figurita.seleccion}} (<i class="fa-solid fa-trophy"></i> {{figurita.copasDelMundo}})</span>
 							</div>
 							<div class="card-detalles-smallFont">
 								<div class="card-detalles-logo">
 									<span>Año debut</span>
 								</div>
-								<span>2005</span>
+								<span>{{figurita.anioDebut}}</span>
 							</div>
 							<div class="card-detalles-smallFont">
 								<div class="card-detalles-logo">
-									<span>CONMEBOL (<i class="fa-solid fa-trophy"></i> 3)</span>
+									<span>CONMEBOL (<i class="fa-solid fa-trophy"></i> {{figurita.copasConfederacion}})</span>
 								</div>
 								<span></span>
 							</div>
@@ -60,15 +60,15 @@
 								<div class="card-detalles-logo">
 									<span>Posición</span>
 								</div>
-								<span>Delantero</span>
+								<span>{{figurita.posicion}}</span>
 							</div>
 							<div class="card-detalles-smallFont">
 								<div class="card-detalles-logo">
-									<span>Es líder</span>
+									<span>{{figurita.lider()}}</span>
 								</div>
 							</div>
 							<div class="card-detalles-largeFont card-detalles-center">
-								<span class="card-detalles-logo">Cotización USD 80.000.000</span>
+								<span class="card-detalles-logo">Cotización USD {{figurita.cotizacionJugador}}</span>
 							</div>
 						</div>
 					</div>
@@ -76,15 +76,15 @@
 						<div class="card-detalles-container card-valoracion-container">
 							<div class="card-detalles-largeFont">
 								<span class="card-detalles-logo">Nivel de impresión</span>
-								<span>Bajo</span>
+								<span>{{figurita.nivelDeImpresion}}</span>
 							</div>
 							<div class="card-detalles-largeFont">
 								<span class="card-detalles-logo">Valoración Base</span>
-								<span>102</span>
+								<span>{{figurita.valBase()}}</span>
 							</div>
 							<div class="card-detalles-largeFont">
 								<span class="card-detalles-logo">Valoración Total</span>
-								<span>124</span>
+								<span>{{figurita.valoracionFigurita}}</span>
 							</div>
 						</div>
 						<div class="button-container">
