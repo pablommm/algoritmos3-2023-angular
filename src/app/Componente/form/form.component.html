@@ -4,7 +4,7 @@
   <div class="subtitulo-contenedor">
     <div>
       <label for="nombre">Nombre</label>
-      <input type="text" [(ngModel)]="usuario.nombre" name="usuario.nombre">
+      <input type="text" [(ngModel)]="usuario.name" name="usuario.nombre">
       <label for="Apellido">Apellido</label>
       <input type="text" [(ngModel)]="usuario.apellido" placeholder="Apellido" name="usuario.apellido"/>
     </div>
@@ -55,7 +55,7 @@
     </div>
     <div class="distancia">
       <label for="distanciaMaxima">Distancia máxima de Cercanía</label>
-      <input type="number" [(ngModel)]="usuario.distanciaMaximaCercania" placeholder="Distancia máxima de Cercanía" name="usuario.distanciaMax"/>
+      <input type="number" [(ngModel)]="usuario.kmCercania" placeholder="Distancia máxima de Cercanía" name="usuario.distanciaMax"/>
     </div>
   </div>
   <span class="subtitulo">Criterio para el Cambio</span>

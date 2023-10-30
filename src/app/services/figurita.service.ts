@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
 import { REST_SERVER_URL } from './configuration'
 import { FiltroFiguritas } from '../dominio/filtro'
-import { lastValueFrom } from 'rxjs'
+import { Observable, lastValueFrom } from 'rxjs'
+import { UsuarioLogin } from '../dominio/usuarioLogin'
 
 @Injectable({
   providedIn: 'root'
@@ -14,16 +15,31 @@ export class FiguritaService {
 
   async todasLasFiguritas(filtro: FiltroFiguritas) {
     const figuritas$ = this.httpClient.get<FiguritaJSON[]>(
-      `${REST_SERVER_URL}/FiguritasRepetidas/0`,
+      `${REST_SERVER_URL}/FiguritasRepetidas/${UsuarioLogin.getInstance().id}`,
       { params: filtro.asHttpParams() }
     )
 
-    const figuritaJSON = await lastValueFrom(figuritas$)
-    console.log(figuritaJSON)
+    return await this.awaitReturnFiguritas(figuritas$)
+  }
 
-    return figuritaJSON.map((figuritaJSON: FiguritaJSON) =>
-      Figurita.fromJson(figuritaJSON)
+  async figuritasFaltantesUsuario() {
+    const figuritas$ = this.httpClient.get<FiguritaJSON[]>(
+      `${REST_SERVER_URL}/PerfilUsuario/FiguritasFaltantes/${
+        UsuarioLogin.getInstance().id
+      }`
     )
+
+    return await this.awaitReturnFiguritas(figuritas$)
+  }
+
+  async figuritasRepetidasUsuario() {
+    const figuritas$ = this.httpClient.get<FiguritaJSON[]>(
+      `${REST_SERVER_URL}/PerfilUsuario/FiguritasRepetidas/${
+        UsuarioLogin.getInstance().id
+      }`
+    )
+
+    return await this.awaitReturnFiguritas(figuritas$)
   }
 
   async getFiguritaById(idFigurita: number) {
@@ -36,29 +52,12 @@ export class FiguritaService {
     return Figurita.fromJson(figuritaJSON)
   }
 
-  //Falta usuarioLogin para poder funcionar
-
-  /* async todasLasFiguritasRepetidas(filtro: FiltroFiguritas, id: number) {
-    const figuritas$ = this.httpClient.get<FiguritaJSON[]>(
-      `${REST_SERVER_URL}/FiguritasRepetidas/${id}`
-    )
-
+  private async awaitReturnFiguritas(figuritas$: Observable<FiguritaJSON[]>) {
     const figuritaJSON = await lastValueFrom(figuritas$)
+    console.log(figuritaJSON)
 
     return figuritaJSON.map((figuritaJSON: FiguritaJSON) =>
       Figurita.fromJson(figuritaJSON)
     )
   }
-
-  async todasLasFiguritasFaltantes(filtro: FiltroFiguritas, id: number) {
-    const figuritas$ = this.httpClient.get<FiguritaJSON[]>(
-      `${REST_SERVER_URL}/FiguritasFaltantes/${id}`
-    )
-
-    const figuritaJSON = await lastValueFrom(figuritas$)
-
-    return figuritaJSON.map((figuritaJSON: FiguritaJSON) =>
-      Figurita.fromJson(figuritaJSON)
-    )
-  } */
 }

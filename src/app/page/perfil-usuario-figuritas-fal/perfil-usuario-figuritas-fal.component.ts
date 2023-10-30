@@ -21,14 +21,12 @@ export class PerfilUsuarioFiguritasFalComponent {
   ) {}
 
   async ngOnInit() {
-    await this.obtenerTodasLasFiguritas()
+    await this.figuritasFaltantesUsuario()
   }
 
-  private async obtenerTodasLasFiguritas() {
+  private async figuritasFaltantesUsuario() {
     try {
-      this.figuritas = await this.figuritaService.todasLasFiguritas(
-        this.filtros
-      )
+      this.figuritas = await this.figuritaService.figuritasFaltantesUsuario()
     } catch (error) {
       mostrarError(this, error)
     }

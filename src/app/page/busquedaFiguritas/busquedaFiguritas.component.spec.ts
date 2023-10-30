@@ -9,7 +9,6 @@ import { FiltroComponent } from 'src/app/Componente/filtro/filtro.component'
 import { CardComponent } from 'src/app/Componente/card/card.component'
 import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
 import { FormsModule } from '@angular/forms'
-import { HttpClientTestingModule } from '@angular/common/http/testing'
 import { BusquedaFiguritasComponent } from './busquedaFiguritas.component'
 import { HttpClientModule } from '@angular/common/http'
 
@@ -27,12 +26,7 @@ describe('BusquedaFiguritasComponent', () => {
         CardComponent,
         NombreApellidoPipe
       ],
-      imports: [
-        RouterTestingModule,
-        FormsModule,
-        HttpClientTestingModule,
-        HttpClientModule
-      ]
+      imports: [RouterTestingModule, FormsModule, HttpClientModule]
     }).compileComponents()
   }))
 

@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
 import { lastValueFrom } from 'rxjs'
 import { UsuarioLogin } from '../dominio/usuarioLogin'
+import { REST_SERVER_URL } from './configuration'
 //import { REST_SERVER_URL } from './configuration'
 //import { lastValueFrom } from 'rxjs'
 
@@ -29,10 +30,10 @@ export class UsuarioLoginService {
     return usuarioEncontrado
   } */
 
-  async usuariosLogin(usuario: UsuarioLogin) {
+  async usuariosLogin() {
     const usuarioLogin$ = this.httpClient.post<number>(
-      '${REST_SERVER_URL}/usuarioLogin/',
-      usuario
+      `${REST_SERVER_URL}/usuarioLogin`,
+      UsuarioLogin.getInstance().toJSON()
     )
     const usuarioLogin = await lastValueFrom(usuarioLogin$)
     console.log(usuarioLogin)

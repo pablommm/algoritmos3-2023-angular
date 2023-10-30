@@ -23,15 +23,17 @@ export class LoginComponent {
     private usuarioLoginService: UsuarioLoginService
   ) {}
   title = 'Login'
-  usuarioLogin = new UsuarioLogin()
+  usuarioLogin = UsuarioLogin.getInstance()
+  idLogin!: number
 
   async ingresar() {
     if (
       this.validarUsuario() &&
       this.usuarioLoginService.validarUsuario(
-        await this.usuarioLoginService.usuariosLogin(this.usuarioLogin)
+        await this.usuarioLoginService.usuariosLogin()
       )
     ) {
+      this.usuarioLogin.id = await this.usuarioLoginService.usuariosLogin()
       this.router.navigateByUrl('/BusquedaFiguritas')
     } else {
       console.log('ERROR')
@@ -43,10 +45,10 @@ export class LoginComponent {
   }
 
   validarEmail() {
-    return this.usuarioLogin.usuario.includes('@')
+    return !UsuarioLogin.getInstance().user.includes('@')
   }
 
   validarPassword() {
-    return this.usuarioLogin.contrasenia != ''
+    return UsuarioLogin.getInstance().pass != ''
   }
 }

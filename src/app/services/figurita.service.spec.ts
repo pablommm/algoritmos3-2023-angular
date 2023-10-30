@@ -6,7 +6,7 @@ import { RouterTestingModule } from '@angular/router/testing'
 import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
 import { PrecioSobrePipe } from 'src/app/pipes/precioSobre.pipe'
 import { DistanciaSobrePipePipe } from '../pipes/distanciaSobrePipe.pipe'
-import { HttpClientTestingModule } from '@angular/common/http/testing'
+import { HttpClientModule } from '@angular/common/http'
 
 describe('CardComponent', () => {
   let fixture: ComponentFixture<CardComponent>
@@ -21,7 +21,7 @@ describe('CardComponent', () => {
         PrecioSobrePipe,
         DistanciaSobrePipePipe
       ],
-      imports: [RouterTestingModule, HttpClientTestingModule],
+      imports: [RouterTestingModule, HttpClientModule],
       providers: [
         { provide: activatedRouteStub, useValue: activatedRouteStub } // Proporciona ActivatedRouteStub como valor para ActivatedRoute.
       ]

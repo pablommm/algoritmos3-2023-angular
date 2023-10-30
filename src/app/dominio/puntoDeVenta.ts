@@ -1,4 +1,4 @@
-type UbicacionGeografica = {
+export type UbicacionGeografica = {
   x: string
   y: string
 }

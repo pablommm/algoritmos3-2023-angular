@@ -83,9 +83,9 @@ export class FormComponent implements OnInit {
     this.obtenerElUsuario()
   }
 
-  obtenerElUsuario() {
+  async obtenerElUsuario() {
     try {
-      this.usuario = this.usuarioService.elUsuario()
+      this.usuario = await this.usuarioService.usuarioLogueado()
       /* alert(this.usuario) */
     } catch (error) {
       mostrarError(this, error)

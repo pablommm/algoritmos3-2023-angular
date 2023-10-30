@@ -1,7 +1,4 @@
-/* tslint:disable:no-unused-variable */
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing'
-/* import { By } from '@angular/platform-browser'
-import { DebugElement } from '@angular/core' */
+/* import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing'
 import { RouterTestingModule } from '@angular/router/testing'
 import { RouterModule } from '@angular/router'
 import { NombreApellidoPipe } from 'src/app/pipes/nombreApellido.pipe'
@@ -49,3 +46,4 @@ describe('CardSobresComponent', () => {
     expect(component).toBeTruthy()
   })
 })
+ */

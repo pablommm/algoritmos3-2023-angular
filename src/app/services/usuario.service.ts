@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core'
 import { usuario } from '../mocks/usuarios'
-import { Usuario } from '../dominio/usuario'
+import { Usuario, UsuarioJSON } from '../dominio/usuario'
+import { REST_SERVER_URL } from './configuration'
+import { HttpClient } from '@angular/common/http'
+import { UsuarioLogin } from '../dominio/usuarioLogin'
+import { lastValueFrom } from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
-  constructor() {}
+  constructor(private httpClient: HttpClient) {}
 
   elUsuario(): Usuario {
     const usuarios = Usuario.fromJson(usuario[0])
@@ -14,25 +18,19 @@ export class UsuarioService {
     return usuarios
   }
 
-  /*
-  async getTiposUsuarios() {
+  /* async getTiposUsuarios() {
     `${REST_SERVER_URL}/listaTiposUsuarios`
-  }
+  } */
 
+  async usuarioLogueado() {
+    console.log(UsuarioLogin.getInstance().id)
 
-  /*
-    async todasLasFiguritas(filtro: FiltroFiguritas) {
-    const figuritas$ = this.httpClient.get<FiguritaJSON[]>(
-      `${REST_SERVER_URL}/FiguritasRepetidas/0`,
-      { params: filtro.asHttpParams() }
+    const usuarioJSON$ = this.httpClient.get<UsuarioJSON>(
+      `${REST_SERVER_URL}/Usuario/${UsuarioLogin.getInstance().id}`
     )
 
-    const figuritaJSON = await lastValueFrom(figuritas$)
-    console.log(figuritaJSON)
+    const usuarioJSON = await lastValueFrom(usuarioJSON$)
 
-    return figuritaJSON.map((figuritaJSON: FiguritaJSON) =>
-      Figurita.fromJson(figuritaJSON)
-    )
+    return Usuario.fromJson(usuarioJSON)
   }
- */
 }

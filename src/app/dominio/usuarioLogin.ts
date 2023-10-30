@@ -1,22 +1,29 @@
-//import { Usuario } from './usuario'
-
 export type UsuarioLoginJSON = {
- usuario : string
- contrasenia :string
+  user: string
+  pass: string
 }
 
 export class UsuarioLogin {
-  constructor(
-    public usuario: string = '',
-    public contrasenia: string = ''
+  private constructor(
+    public user: string = '',
+    public pass: string = ''
   ) {}
+
   public id!: number
 
-  static fromJson(usuarioLoginJSON: UsuarioLoginJSON): UsuarioLogin {
-    console.log(usuarioLoginJSON)
-    return Object.assign(new UsuarioLogin(), usuarioLoginJSON, {
-      
-    })
+  private static instance: UsuarioLogin | null = null
+
+  toJSON(): UsuarioLoginJSON {
+    return {
+      user: this.user,
+      pass: this.pass
+    }
   }
 
+  public static getInstance(): UsuarioLogin {
+    if (UsuarioLogin.instance === null) {
+      UsuarioLogin.instance = new UsuarioLogin()
+    }
+    return UsuarioLogin.instance
+  }
 }

@@ -21,7 +21,7 @@ export class PerfilUsuarioFiguritasRepComponent {
     public figuritaService: FiguritaService
   ) {}
   ngOnInit() {
-    this.obtenerTodasLasFiguritas()
+    this.figuritasRepetidasUsuario()
   }
 
   faltantes() {
@@ -34,11 +34,9 @@ export class PerfilUsuarioFiguritasRepComponent {
     this.router.navigateByUrl('/PerfilUsuario')
   }
 
-  private async obtenerTodasLasFiguritas() {
+  private async figuritasRepetidasUsuario() {
     try {
-      this.figuritas = await this.figuritaService.todasLasFiguritas(
-        this.filtros
-      )
+      this.figuritas = await this.figuritaService.figuritasRepetidasUsuario()
     } catch (error) {
       mostrarError(this, error)
     }
