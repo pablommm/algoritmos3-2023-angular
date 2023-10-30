@@ -32,4 +32,8 @@ export class PuntoDeVenta {
       ubicacionGeografica: `(${puntoDeVentaJSON.ubicacionGeografica.x},${puntoDeVentaJSON.ubicacionGeografica.y})`
     })
   }
+
+  geolocalizacion() {
+    return this.ubicacionGeografica
+  }
 }

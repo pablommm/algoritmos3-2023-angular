@@ -70,6 +70,11 @@
 	color: var(--fire-color);
 }
 
+.card-ubicacion {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .card-detalles-largeFont,
 .card-detalles-mediumFont,
 .card-detalles-smallFont {

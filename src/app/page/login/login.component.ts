@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { Router, ActivatedRoute } from '@angular/router'
 import { UsuarioLogin } from 'src/app/dominio/usuarioLogin'
+import { UsuarioLoginService } from 'src/app/services/usuarioLogin.service'
 //import { UsuarioLoginService } from 'src/app/services/usuarioLogin.service'
 //import { login } from './maquetado/css/login.css'
 
@@ -18,20 +19,23 @@ import { UsuarioLogin } from 'src/app/dominio/usuarioLogin'
 export class LoginComponent {
   constructor(
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private usuarioLoginService: UsuarioLoginService
   ) {}
   title = 'Login'
   usuarioLogin = new UsuarioLogin()
 
-  ingresar() {
-    /* if (
+  async ingresar() {
+    if (
       this.validarUsuario() &&
-      this.usuarioLoginService.verificarUsuario(this.usuarioLogin)
+      this.usuarioLoginService.validarUsuario(
+        await this.usuarioLoginService.usuariosLogin(this.usuarioLogin)
+      )
     ) {
       this.router.navigateByUrl('/BusquedaFiguritas')
-    } */
-
-    true
+    } else {
+      console.log('ERROR')
+    }
   }
 
   validarUsuario() {

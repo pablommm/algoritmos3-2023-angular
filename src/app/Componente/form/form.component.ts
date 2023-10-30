@@ -25,37 +25,59 @@ export class FormComponent implements OnInit {
   constructor(
     public usuarioService: UsuarioService,
     private router: Router
-    ) {}
+  ) {}
 
-  localidadSelecionada = ""
-  provinciaSelecionada = ""
-  provincias = ["Buenos Aires", "Cordoba", "Mendoza"]
-  localidadesBuenosAires: string[] = ["La Matanza", "La Plata", "Lanús", "Lomas de Zamora"]
-  localidadesCordoba: string[] = ["Río Cuarto", "Córdoba", "Villa María", "Morteros"]
-  localidadesMendoza: string[] = ["Mendoza", "San Rafael", "Godoy Cruz", "Guaymallén"]
-  localidadvacia : string[] = []
-  criterioSelecionado = ""
-  criterios = ["nacionalista","Conservador","Fanatico", "Desprendido", "Apostador", "Interesado", "Conservador"]
-  selecciones: string[] = ["Argentina", "Brasil","Portugal"]
+  localidadSelecionada = ''
+  provinciaSelecionada = ''
+  provincias = ['Buenos Aires', 'Cordoba', 'Mendoza']
+  localidadesBuenosAires: string[] = [
+    'La Matanza',
+    'La Plata',
+    'Lanús',
+    'Lomas de Zamora'
+  ]
+  localidadesCordoba: string[] = [
+    'Río Cuarto',
+    'Córdoba',
+    'Villa María',
+    'Morteros'
+  ]
+  localidadesMendoza: string[] = [
+    'Mendoza',
+    'San Rafael',
+    'Godoy Cruz',
+    'Guaymallén'
+  ]
+  localidadvacia: string[] = []
+  criterioSelecionado = ''
+  criterios = [
+    'Nacionalista',
+    'Conservador',
+    'Fanatico',
+    'Desprendido',
+    'Apostador',
+    'Interesado',
+    'Conservador'
+  ]
+  selecciones: string[] = ['Argentina', 'Brasil', 'Portugal']
   seleccionesElegidas = []
   currentUrl = this.router.url
-  setProvincia(valor: string){
-    this.provinciaSelecionada = valor    
+  setProvincia(valor: string) {
+    this.provinciaSelecionada = valor
   }
 
   getLocalidades() {
     switch (this.provinciaSelecionada) {
-      case "Buenos Aires":
+      case 'Buenos Aires':
         return this.localidadesBuenosAires
-      case "Mendoza":
+      case 'Mendoza':
         return this.localidadesMendoza
-      case "Cordoba":
+      case 'Cordoba':
         return this.localidadesCordoba
       default:
         return this.localidadvacia
     }
   }
-
 
   ngOnInit() {
     this.obtenerElUsuario()
@@ -69,18 +91,15 @@ export class FormComponent implements OnInit {
       mostrarError(this, error)
     }
   }
- 
- 
- setCriterio(valor:string){
-  this.criterioSelecionado = valor
- }
- esNacionalista(){
-  if (this.criterioSelecionado === "nacionalista"){
-    return this.currentUrl === '/Perfil/padinfo'
-  }
-  else{
-    return false
-  }
- }
 
+  setCriterio(valor: string) {
+    this.criterioSelecionado = valor
+  }
+  esNacionalista() {
+    if (this.criterioSelecionado === 'Nacionalista') {
+      return this.currentUrl === '/Perfil/padinfo'
+    } else {
+      return false
+    }
+  }
 }

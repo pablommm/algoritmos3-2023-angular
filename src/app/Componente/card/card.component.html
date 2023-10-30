@@ -9,12 +9,12 @@
             <span class="card-detalles-largeFont">{{figurita | nombreApellido}}</span>
             <div class="card-detalles-largeFont">
               <i class="fa-solid fa-id-badge"></i>
-              <span>5</span>
+              <span>{{figurita.numero}}</span>
             </div>
             <div class="card-detalles-largeFont">
                 <i *ngIf="figurita.onFire" class="fa-solid fa-fire fire"></i>
               <i class="fa-solid fa-star"></i>
-              <span>{{ figurita.valoracionFigurita}}</span>
+              <span>{{figurita.valoracionFigurita}}</span>
             </div>
           </div>
             <div class="card-upper-subcontainer">
