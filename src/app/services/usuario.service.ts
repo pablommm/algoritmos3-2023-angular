@@ -18,7 +18,7 @@ export class UsuarioService {
   async getTiposUsuarios() {
     `${REST_SERVER_URL}/listaTiposUsuarios`
   }
-*/
+
 
   /*
     async todasLasFiguritas(filtro: FiltroFiguritas) {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { Usuario } from 'src/app/dominio/usuario'
 import { UsuarioService } from 'src/app/services/usuario.service'
 import { mostrarError } from '../../util/errorHandler'
+import { Router } from '@angular/router'
 
 export const errorHandler = (component: FormComponent) => ({
   error: async (error: Error) => {
@@ -19,6 +20,13 @@ export class FormComponent implements OnInit {
   actualizarFecha(fecha: Date) {
     this.usuario.fechaDeNacimiento = fecha
   }
+  usuario!: Usuario
+  errors = []
+  constructor(
+    public usuarioService: UsuarioService,
+    private router: Router
+    ) {}
+
   localidadSelecionada = ""
   provinciaSelecionada = ""
   provincias = ["Buenos Aires", "Cordoba", "Mendoza"]
@@ -26,7 +34,11 @@ export class FormComponent implements OnInit {
   localidadesCordoba: string[] = ["Río Cuarto", "Córdoba", "Villa María", "Morteros"]
   localidadesMendoza: string[] = ["Mendoza", "San Rafael", "Godoy Cruz", "Guaymallén"]
   localidadvacia : string[] = []
-
+  criterioSelecionado = ""
+  criterios = ["nacionalista","Conservador","Fanatico", "Desprendido", "Apostador", "Interesado", "Conservador"]
+  selecciones: string[] = ["Argentina", "Brasil","Portugal"]
+  seleccionesElegidas = []
+  currentUrl = this.router.url
   setProvincia(valor: string){
     this.provinciaSelecionada = valor    
   }
@@ -44,9 +56,6 @@ export class FormComponent implements OnInit {
     }
   }
 
-  usuario!: Usuario
-  errors = []
-  constructor(public usuarioService: UsuarioService) {}
 
   ngOnInit() {
     this.obtenerElUsuario()
@@ -60,4 +69,18 @@ export class FormComponent implements OnInit {
       mostrarError(this, error)
     }
   }
+ 
+ 
+ setCriterio(valor:string){
+  this.criterioSelecionado = valor
+ }
+ esNacionalista(){
+  if (this.criterioSelecionado === "nacionalista"){
+    return this.currentUrl === '/Perfil/padinfo'
+  }
+  else{
+    return false
+  }
+ }
+
 }
