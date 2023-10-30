@@ -15,7 +15,7 @@ export type FiguritaJSON = {
   posicion: string
   pais: string
   cotizacionJugador: string
-  OnFire: boolean
+  onFire: boolean
   nivelDeImpresion: string
   id: number
   valoracionFigurita: number
@@ -24,6 +24,7 @@ export type FiguritaJSON = {
   copasConfederacion: number
   esLider: boolean
   numero: number
+  imagen: string
   /*
   esPar: boolean
   imagen: string
@@ -45,9 +46,10 @@ export class Figurita {
     public posicion: string = '',
     public pais: string = '',
     public cotizacionJugador: string = '',
-    public OnFire?: boolean,
+    public onFire?: boolean,
     public nivelDeImpresion: string = '',
     public esLider?: boolean,
+    public imagen?: string,
     /*
     public esPar?: boolean,
     public imagen: string = '',

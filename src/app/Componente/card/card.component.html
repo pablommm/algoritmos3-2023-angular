@@ -2,7 +2,7 @@
     <section class="card-content">
         <!-- (click)="selecionarCard() -->
         <!-- <img src="{{figurita.imagen}}" alt="Imágen no encontrada" class="card-imagen"> -->
-        <img src="../../../assets/enzofe.jpg" alt="Imágen no encontrada" class="card-imagen">
+        <img [src]="figurita.imagen"  alt="Imágen no encontrada" class="card-imagen">
         <span class="material-symbols-outlined trash-can" *ngIf="!rutaDelete()">delete_forever</span>
         <div class="card-upper-container">
           <div class="card-upper-subcontainer">
@@ -12,6 +12,7 @@
               <span>5</span>
             </div>
             <div class="card-detalles-largeFont">
+                <i *ngIf="figurita.onFire" class="fa-solid fa-fire fire"></i>
               <i class="fa-solid fa-star"></i>
               <span>{{ figurita.valoracionFigurita}}</span>
             </div>

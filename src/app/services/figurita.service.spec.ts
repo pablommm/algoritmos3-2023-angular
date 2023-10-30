@@ -44,7 +44,7 @@ describe('CardComponent', () => {
     figuritaData.posicion = 'Delantero'
     figuritaData.pais = 'Portugal'
     figuritaData.cotizacionJugador = '500 millones de euros'
-    figuritaData.OnFire = true
+    figuritaData.onFire = true
     figuritaData.nivelDeImpresion = 'bajo'
     figuritaData.valoracionFigurita = 300
 

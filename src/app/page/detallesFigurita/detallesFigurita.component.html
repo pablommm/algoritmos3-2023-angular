@@ -8,7 +8,7 @@
 						<span>(de Carlos Raffo) FALTA CODEAR</span>
 					</div>
 					<div class="card-logos-container">
-						<i class="fa-solid fa-fire fire"></i>
+						<i *ngIf="figurita.onFire" class="fa-solid fa-fire fire"></i>
 						<i class="fa-solid fa-id-badge"></i>
 						<span>{{figurita.numero}}</span>
 					</div>
@@ -16,7 +16,7 @@
 
 				<section class="card-content">
 					<div class="card-upper-container">
-						<img src="../../assets/messi.jpg" alt="Imágen no encontrada" class="card-imagen" />
+						<img [src]="figurita.imagen" alt="Imágen no encontrada" class="card-imagen" />
 
 						<div class="card-detalles-container">
 							<div class="card-detalles-smallFont">

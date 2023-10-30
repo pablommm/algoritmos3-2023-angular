@@ -5,6 +5,7 @@ import { PerfilUsuarioComponent } from './perfil-usuario.component'
 import { TabComponent } from 'src/app/Componente/tab/tab.component'
 import { FormComponent } from 'src/app/Componente/form/form.component'
 import { HttpClientTestingModule } from '@angular/common/http/testing'
+import { FormsModule } from '@angular/forms'
 
 describe('PerfilUsuarioComponent', () => {
   let component: PerfilUsuarioComponent
@@ -18,7 +19,7 @@ describe('PerfilUsuarioComponent', () => {
         TabComponent,
         FormComponent
       ],
-      imports: [RouterTestingModule, HttpClientTestingModule]
+      imports: [RouterTestingModule, HttpClientTestingModule, FormsModule]
     })
     fixture = TestBed.createComponent(PerfilUsuarioComponent)
     component = fixture.componentInstance
