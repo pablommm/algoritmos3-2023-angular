@@ -9,7 +9,7 @@ export class UsuarioLogin {
     public pass: string = ''
   ) {}
 
-  public id!: number
+  public id: number = 2
 
   private static instance: UsuarioLogin | null = null
 

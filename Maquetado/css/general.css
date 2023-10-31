@@ -47,6 +47,7 @@ body {
 .sub-main-container {
 	flex-wrap: wrap;
 	gap: 1.2em;
+	align-self: flex-start;
 }
 
 @media (min-width: 401px) {
