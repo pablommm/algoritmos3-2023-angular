@@ -60,13 +60,20 @@ export class FiguritaService {
       Figurita.fromJson(figuritaJSON)
     )
   }
-  async todasLasFiguritaDelAlbum() {
-    const figurita$ = this.httpClient.get<FiguritaJSON[]>(
-      `${REST_SERVER_URL}/BusquedaFiguritasPerfil/`)
-      
-      const figuritaJSON = await lastValueFrom(figurita$)
 
-      return Figurita.fromJson(figuritaJSON)
-  } 
+  /* async todasLasFiguritaDelAlbum() {
+    return this.awaitReturnFiguritas(
+      this.httpClient.get<FiguritaJSON[]>(
+        `${REST_SERVER_URL}/BusquedaFiguritasPerfil/`
+      )
+    )
+  } */
 
+  async todasLasFiguritaDelAlbum(/* filtro: FiltroFiguritas */) {
+    const figuritas$ = this.httpClient.get<FiguritaJSON[]>(
+      `${REST_SERVER_URL}/BusquedaFiguritasPerfil/`
+      /* { params: filtro.asHttpParams() } */
+    )
+    return await this.awaitReturnFiguritas(figuritas$)
+  }
 }

@@ -21,7 +21,7 @@ export class CardComponent {
   OnInit() {}
 
   selecionarCard() {
-    this.router.navigateByUrl('/DetalleFigurita') //en el futuro hay que modificarlo para que te lleve a la figurita que coresponde
+    this.router.navigateByUrl('/DetalleFigurita')
   }
 
   rutaDelete() {

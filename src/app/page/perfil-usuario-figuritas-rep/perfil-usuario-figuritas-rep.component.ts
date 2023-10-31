@@ -45,6 +45,6 @@ export class PerfilUsuarioFiguritasRepComponent {
 
 export class Aniadir {
   aniadir() {
-    alert('agregandooo...')
+    /* alert('agregandooo...') */
   }
 }
