@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http'
 import { REST_SERVER_URL } from './configuration'
 import { lastValueFrom } from 'rxjs'
 import { FiltroPuntosDeVenta } from '../dominio/filtro'
+import { UsuarioLogin } from '../dominio/usuarioLogin'
 /* import { PuntoDeVenta } from '../dominio/puntoDeVenta' */
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class PuntoDeVentaService {
 
   async todosLosPuntoDeVentas(filtro: FiltroPuntosDeVenta) {
     const puntoDeVentas$ = this.httpClient.get<PuntoDeVentaJSON[]>(
-      `${REST_SERVER_URL}/puntoDeVentas/`,
+      `${REST_SERVER_URL}/puntoDeVentas/${UsuarioLogin.getInstance().id}`,
       { params: filtro.asHttpParams() }
     )
 
