@@ -2,7 +2,7 @@ import { Figurita } from './../../dominio/figurita'
 import { Component, OnInit } from '@angular/core'
 import { FiguritaService } from '../../services/figurita.service'
 import { mostrarError } from 'src/app/util/errorHandler'
-/* import { FiltroFiguritas } from 'src/app/dominio/filtro' */
+import { FiltroFiguritas } from 'src/app/dominio/filtro'
 
 export const errorHandler = (component: BusquedaFiguritasPerfilComponent) => ({
   error: async (error: Error) => {
@@ -19,7 +19,7 @@ export const errorHandler = (component: BusquedaFiguritasPerfilComponent) => ({
 export class BusquedaFiguritasPerfilComponent implements OnInit {
   figuritas: Array<Figurita> = []
   errors = []
-  /* filtros = new FiltroFiguritas() */
+  filtros = new FiltroFiguritas()
 
   constructor(private figuritaService: FiguritaService) {}
 
@@ -29,17 +29,16 @@ export class BusquedaFiguritasPerfilComponent implements OnInit {
 
   private async obtenerTodasLasFiguritas() {
     try {
-      this.figuritas = await this.figuritaService
-        .todasLasFiguritaDelAlbum
-        /* this.filtros */
-        ()
+      this.figuritas = await this.figuritaService.todasLasFiguritaDelAlbum(
+        this.filtros
+      )
     } catch (error) {
       mostrarError(this, error)
     }
   }
 
-  async realizarBusqueda(/* campoDeBusqueda: string */) {
-    /* this.filtros.campoDeBusqueda = campoDeBusqueda */
+  async realizarBusqueda(campoDeBusqueda: string) {
+    this.filtros.campoDeBusqueda = campoDeBusqueda
     this.obtenerTodasLasFiguritas()
   }
 }

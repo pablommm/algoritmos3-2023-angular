@@ -30,6 +30,9 @@ export class BusquedaFiguritasComponent implements OnInit {
       this.figuritas = await this.figuritaService.todasLasFiguritas(
         this.filtros
       )
+      console.log(this.figuritas)
+      console.log(this.filtros.desde)
+      console.log(this.filtros.hasta)
     } catch (error) {
       mostrarError(this, error)
     }

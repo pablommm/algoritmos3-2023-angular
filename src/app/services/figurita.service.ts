@@ -69,10 +69,10 @@ export class FiguritaService {
     )
   } */
 
-  async todasLasFiguritaDelAlbum(/* filtro: FiltroFiguritas */) {
+  async todasLasFiguritaDelAlbum(filtro: FiltroFiguritas) {
     const figuritas$ = this.httpClient.get<FiguritaJSON[]>(
-      `${REST_SERVER_URL}/BusquedaFiguritasPerfil/`
-      /* { params: filtro.asHttpParams() } */
+      `${REST_SERVER_URL}/BusquedaFiguritasPerfil/`,
+      { params: filtro.asHttpParams() }
     )
     return await this.awaitReturnFiguritas(figuritas$)
   }
