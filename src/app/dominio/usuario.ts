@@ -3,11 +3,13 @@ export type UsuarioJSON = {
   apellido: string
   email: string
   fechaDeNacimiento: Date
-  kmCercania: number
-  calle: string
-  altura: number
+  kmCercania: number 
   posicionX: number
   posicionY: number
+  provincia: string 
+  localidad: string 
+  calle: string 
+  altura: number 
 }
 
 export class Usuario {
@@ -17,10 +19,13 @@ export class Usuario {
     public email: string = '',
     public fechaDeNacimiento: Date = new Date(),
     public kmCercania: number = 0,
-    public calle: string = '',
-    public altura: number = 0,
+    
     public posicionX: number = 0,
-    public posicionY: number = 0 //public distanciaMaximaCercania: number = 0,
+    public posicionY: number = 0, //public distanciaMaximaCercania: number = 0,
+    public provincia: string = "",
+    public localidad: string = "",
+    public calle: string = "",
+    public altura: number = 0,
   ) //public provincia: string = '',
   //public localidad: string = '',
   //public criterioCambio: string = ''
@@ -30,3 +35,5 @@ export class Usuario {
     return Object.assign(new Usuario(), usuario)
   }
 }
+
+
