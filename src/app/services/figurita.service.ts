@@ -60,4 +60,13 @@ export class FiguritaService {
       Figurita.fromJson(figuritaJSON)
     )
   }
+  async todasLasFiguritaDelAlbum() {
+    const figurita$ = this.httpClient.get<FiguritaJSON[]>(
+      `${REST_SERVER_URL}/BusquedaFiguritasPerfil/`)
+      
+      const figuritaJSON = await lastValueFrom(figurita$)
+
+      return Figurita.fromJson(figuritaJSON)
+  } 
+
 }
