@@ -3,6 +3,7 @@ import { Usuario } from 'src/app/dominio/usuario'
 import { UsuarioService } from 'src/app/services/usuario.service'
 import { mostrarError } from '../../util/errorHandler'
 import { Router } from '@angular/router'
+import { Direccion } from 'src/app/dominio/direccion'
 
 export const errorHandler = (component: FormComponent) => ({
   error: async (error: Error) => {
@@ -20,6 +21,8 @@ export class FormComponent implements OnInit {
   actualizarFecha(fecha: Date) {
     this.usuario.fechaDeNacimiento = fecha
   }
+
+  direccion!: Direccion
   usuario!: Usuario
   errors = []
   constructor(

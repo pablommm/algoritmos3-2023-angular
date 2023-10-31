@@ -23,8 +23,8 @@
       <label for="Provincia">Provincia</label>
       <form action="Provincia">
 
-        <select [(ngModel)]="provinciaSelecionada" class="select" name="provinciaSelecionada">
-          <option *ngFor="let provincia of provincias"  (click)="setProvincia(provincia)"> {{provincia}} </option>          
+        <select [(ngModel)]="direccion.provincia" class="select" name="provinciaSelecionada">
+          <option *ngFor="let provincia of direccion.provincia"  (click)="setProvincia(provincia)"> {{provincia}} </option>          
         </select>
 
       </form>
