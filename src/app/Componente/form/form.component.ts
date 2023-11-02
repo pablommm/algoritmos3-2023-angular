@@ -4,6 +4,7 @@ import { UsuarioService } from 'src/app/services/usuario.service'
 import { mostrarError } from '../../util/errorHandler'
 import { Router } from '@angular/router'
 import { Direccion } from 'src/app/dominio/direccion'
+import { DirecionService } from 'src/app/services/direcion.service'
 
 export const errorHandler = (component: FormComponent) => ({
   error: async (error: Error) => {
@@ -26,32 +27,15 @@ export class FormComponent implements OnInit {
   usuario!: Usuario
   errors = []
   constructor(
+    //public cosa: Direccion,
     public usuarioService: UsuarioService,
+    public cosa: DirecionService,
     private router: Router
   ) {}
 
   localidadSelecionada = ''
   provinciaSelecionada = ''
-  provincias = ['Buenos Aires', 'Cordoba', 'Mendoza']
-  localidadesBuenosAires: string[] = [
-    'La Matanza',
-    'La Plata',
-    'Lanús',
-    'Lomas de Zamora'
-  ]
-  localidadesCordoba: string[] = [
-    'Río Cuarto',
-    'Córdoba',
-    'Villa María',
-    'Morteros'
-  ]
-  localidadesMendoza: string[] = [
-    'Mendoza',
-    'San Rafael',
-    'Godoy Cruz',
-    'Guaymallén'
-  ]
-  localidadvacia: string[] = []
+
   criterioSelecionado = ''
   criterios = [
     'Nacionalista',
@@ -65,6 +49,7 @@ export class FormComponent implements OnInit {
   selecciones: string[] = ['Argentina', 'Brasil', 'Portugal']
   seleccionesElegidas = []
   currentUrl = this.router.url
+
   setProvincia(valor: string) {
     this.provinciaSelecionada = valor
   }
@@ -72,18 +57,20 @@ export class FormComponent implements OnInit {
   getLocalidades() {
     switch (this.provinciaSelecionada) {
       case 'Buenos Aires':
-        return this.localidadesBuenosAires
+        return this.direccion.localidadesBuenosAires
       case 'Mendoza':
-        return this.localidadesMendoza
+        return this.direccion.localidadesMendoza
       case 'Cordoba':
-        return this.localidadesCordoba
+        return this.direccion.localidadesCordoba
       default:
-        return this.localidadvacia
+        return this.direccion.localidadVacia
     }
   }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.obtenerElUsuario()
+    const dire = await this.cosa.obtenerDirecion()
+    console.log('CAAAAAA' + dire.localidadesCordoba)
   }
 
   async obtenerElUsuario() {
