@@ -3,7 +3,7 @@
 		
 		<section class="sub-main-container">
 			<app-card *ngFor="let figurita of figuritas" [figurita]="figurita" class="card-item"></app-card>
-			<span class="material-symbols-outlined plus-icon" routerLink="/BusquedaFiguritasPerfil" (click)="agregar.aniadir()">add</span>
+			<span class="material-symbols-outlined plus-icon" routerLink="/BusquedaFiguritasPerfil" (click)="esRutaRepetida()">add</span>
 		</section>
 	</div>
 </body>

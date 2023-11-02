@@ -12,8 +12,8 @@ import { FiltroFiguritas } from 'src/app/dominio/filtro'
 })
 export class PerfilUsuarioFiguritasRepComponent {
   figuritas: Array<Figurita> = []
-  agregar = new Aniadir()
   filtros = new FiltroFiguritas()
+  esRepetida = false
 
   constructor(
     private router: Router,
@@ -23,16 +23,16 @@ export class PerfilUsuarioFiguritasRepComponent {
   ngOnInit() {
     this.figuritasRepetidasUsuario()
   }
+  currentUrl = this.router.url
+  esRutaRepetida(){
+    if (this.currentUrl === '/Perfil/FiguritaRepetida'){
+      this.esRepetida = true 
+      alert(this.esRepetida)
+      // agregar comportamiento para añadir la figurita a la lista de repetida y faltantes
+  }
+}
 
-  faltantes() {
-    this.router.navigateByUrl('/FiguritaFaltante')
-  }
-  repetidas() {
-    this.router.navigateByUrl('/FiguritaRepetida')
-  }
-  informacion() {
-    this.router.navigateByUrl('/PerfilUsuario')
-  }
+
 
   private async figuritasRepetidasUsuario() {
     try {
@@ -43,8 +43,4 @@ export class PerfilUsuarioFiguritasRepComponent {
   }
 }
 
-export class Aniadir {
-  aniadir() {
-    /* alert('agregandooo...') */
-  }
-}
+
