@@ -1,10 +1,8 @@
-/* const VALORACION_PISO = 100
-const VALOR_ON_FIRE = 1.2
-const VALOR_ES_PAR = 1.1
-const VALOR_NIVEL_IMPRESION = 0.85 */
-
 export type FiguritaJSON = {
-  nombre: string
+  idUsuario: number
+  nombreUsuario: string
+  figurita: Figurita
+  /* nombre: string
   apellido: string
   fechaNacimiento: string
   numeroCamiseta: number
@@ -25,11 +23,7 @@ export type FiguritaJSON = {
   esLider: boolean
   numero: number
   imagen: string
-  /*
-  esPar: boolean
-  imagen: string
-  valoracionBase: number
-  valoracionJugador: number */
+  edad: number */
 }
 
 export class Figurita {
@@ -50,10 +44,7 @@ export class Figurita {
     public nivelDeImpresion: string = '',
     public esLider?: boolean,
     public imagen?: string,
-    /*
-    public esPar?: boolean,
-    public imagen: string = '',
-    public valoracionJugador: number = 0, */
+    public edad?: number,
     public valoracionBase?: number,
     public valoracionFigurita?: number,
     public numero?: number,
@@ -72,32 +63,4 @@ export class Figurita {
   valBase() {
     return this.valoracionBase?.toFixed(2)
   }
-
-  /* valorOnFire(figurita: Figurita): number {
-    return figurita.estaOnFire ? VALOR_ON_FIRE : 1
-  }
-
-  valorEsPar(figurita: Figurita): number {
-    return figurita.esPar ? VALOR_ES_PAR : 1
-  }
-
-  valorNivelImpresion(figurita: Figurita): number {
-    return figurita.nivelImpresion === 'medio' ||
-      figurita.nivelImpresion === 'alto'
-      ? VALOR_NIVEL_IMPRESION
-      : 1
-  }
-
-  calcularValoracionBase(figurita: Figurita): number {
-    return Math.round(
-      VALORACION_PISO *
-        this.valorOnFire(figurita) *
-        this.valorEsPar(figurita) *
-        this.valorNivelImpresion(figurita)
-    )
-  }
-
-  calcularValoracionTotal(figurita: Figurita): number {
-    return this.calcularValoracionBase(figurita) + figurita.valoracionJugador
-  } */
 }
