@@ -1,4 +1,4 @@
-import { Figurita } from './../../dominio/figurita'
+import { FiguritaUsuario } from './../../dominio/figurita'
 import { Component, OnInit } from '@angular/core'
 import { FiguritaService } from '../../services/figurita.service'
 import { mostrarError } from '../../util/errorHandler'
@@ -12,7 +12,7 @@ import { Router } from '@angular/router'
   providers: []
 })
 export class BusquedaFiguritasComponent implements OnInit {
-  figuritas: Array<Figurita> = []
+  figuritas: Array<FiguritaUsuario> = []
   errors = []
   filtros = new FiltroFiguritas()
 
@@ -23,6 +23,7 @@ export class BusquedaFiguritasComponent implements OnInit {
 
   async ngOnInit() {
     await this.getFiguritas()
+    console.log(this.figuritas)
   }
 
   private async getFiguritas() {
@@ -44,8 +45,8 @@ export class BusquedaFiguritasComponent implements OnInit {
     /* ENVIAR AL SERVICE */
   }
 
-  mostrarDetalles(figurita: Figurita) {
-    this.router.navigate(['/DetalleFigurita', figurita.id])
+  mostrarDetalles(figurita: FiguritaUsuario) {
+    this.router.navigate(['/DetalleFigurita', figurita.getId()])
   }
 
   /* filtrarSearchBar(searchBar: SearchBar) {

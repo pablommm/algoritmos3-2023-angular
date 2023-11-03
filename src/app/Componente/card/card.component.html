@@ -2,19 +2,19 @@
     <section class="card-content">
         <!-- (click)="selecionarCard() -->
         <!-- <img src="{{figurita.imagen}}" alt="Imágen no encontrada" class="card-imagen"> -->
-        <img [src]="figurita.imagen"  alt="Imágen no encontrada" class="card-imagen">
+        <img [src]="figurita.getImagen()"  alt="Imágen no encontrada" class="card-imagen">
         <span class="material-symbols-outlined trash-can" *ngIf="!rutaDelete()">delete_forever</span>
         <div class="card-upper-container">
           <div class="card-upper-subcontainer">
-            <span class="card-detalles-largeFont">{{figurita | nombreApellido}}</span>
+            <span class="card-detalles-largeFont">{{figurita.figurita | nombreApellido}}</span>
             <div class="card-detalles-largeFont">
               <i class="fa-solid fa-id-badge"></i>
-              <span>{{figurita.numero}}</span>
+              <span>{{figurita.getNumero()}}</span>
             </div>
             <div class="card-detalles-largeFont">
-                <i *ngIf="figurita.onFire" class="fa-solid fa-fire fire"></i>
+                <i *ngIf="figurita.getOnFire()" class="fa-solid fa-fire fire"></i>
               <i class="fa-solid fa-star"></i>
-              <span>{{figurita.valoracionFigurita}}</span>
+              <span>{{figurita.getValoracionFigurita()}}</span>
             </div>
           </div>
             <div class="card-upper-subcontainer">
@@ -23,14 +23,14 @@
                         <i class="fa-solid fa-weight-scale"></i>
                         <span>Peso</span>
                     </div>
-                    <span>{{figurita.peso}}</span>
+                    <span>{{figurita.getPeso()}}</span>
                 </div>
                 <div class="card-detalles-mediumFont">
                     <div class="card-detalles-logo">
                         <i class="fa-solid fa-ruler"></i>
                         <span>Altura</span>
                     </div>
-                    <span>{{figurita.altura}}</span>
+                    <span>{{figurita.getAltura()}}</span>
                 </div>
             </div>
         </div>
@@ -39,27 +39,27 @@
 
                 <div class="card-detalles-smallFont">
                     <span class="card-detalles-logo">Casaca</span>
-                    <span>{{figurita.numeroCamiseta}}</span>
+                    <span>{{figurita.getNumeroCamiseta()}}</span>
                 </div>
                 <div class="card-detalles-smallFont">
                     <span class="card-detalles-logo">Nacimiento</span>
-                    <span>{{figurita.fechaNacimiento}}</span>
+                    <span>{{figurita.getFechaNacimiento()}}</span>
                 </div>
                 <div class="card-detalles-smallFont">
                     <span class="card-detalles-logo">Selección</span>
-                    <span>{{figurita.seleccion}} (<i class="fa-solid fa-trophy"></i> 3)</span>
+                    <span>{{figurita.getSeleccion()}} (<i class="fa-solid fa-trophy"></i> 3)</span>
                 </div>
                 <div class="card-detalles-smallFont">
                     <span class="card-detalles-logo">Posición</span>
-                    <span>{{figurita.posicion}}</span>
+                    <span>{{figurita.getPosicion()}}</span>
                 </div>
 
             </div>
             <div class="card-detalles-mediumFont card-detalles-center">
-                <span class="card-detalles-logo">Cotización USD {{figurita.cotizacionJugador}}</span>
+                <span class="card-detalles-logo">Cotización USD {{figurita.getCotizacionJugador()}}</span>
             </div>
             <div class="card-detalles-largeFont card-detalles-center" *ngIf="ruta()">
-                <span class="card-detalles-logo">Cedida por Daniel Gonzalez</span>
+                <span class="card-detalles-logo">Cedida por {{figurita.nombreUsuario}}</span>
             </div>
         </div>
     </section>

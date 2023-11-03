@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing'
+/* import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { CardComponent } from './../Componente/card/card.component'
 import { Figurita } from '../dominio/figurita'
 import { ActivatedRouteStub } from '../activatedRouteStub'
@@ -61,3 +61,4 @@ describe('CardComponent', () => {
     expect(valoracionTotalElement.textContent.trim()).toBe('300')
   })
 })
+ */

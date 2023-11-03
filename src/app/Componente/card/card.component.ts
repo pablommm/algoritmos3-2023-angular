@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core'
-import { Figurita } from 'src/app/dominio/figurita'
+import { FiguritaUsuario } from 'src/app/dominio/figurita'
 import { Router, ActivatedRoute } from '@angular/router'
 
 @Component({
@@ -16,7 +16,7 @@ export class CardComponent {
 
   imagenNoEncontrada = '../assets/noImage.jpg'
 
-  @Input() figurita!: Figurita
+  @Input() figurita!: FiguritaUsuario
 
   OnInit() {}
 

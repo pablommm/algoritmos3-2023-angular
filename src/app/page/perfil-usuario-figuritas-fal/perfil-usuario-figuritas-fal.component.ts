@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { Router, ActivatedRoute } from '@angular/router'
-import { Figurita } from './../../dominio/figurita'
+import { FiguritaUsuario } from './../../dominio/figurita'
 import { FiguritaService } from '../../services/figurita.service'
 import { mostrarError } from '../../util/errorHandler'
 import { FiltroFiguritas } from 'src/app/dominio/filtro'
@@ -11,7 +11,7 @@ import { FiltroFiguritas } from 'src/app/dominio/filtro'
   styleUrls: ['./perfil-usuario-figuritas-fal.component.scss']
 })
 export class PerfilUsuarioFiguritasFalComponent {
-  figuritas: Array<Figurita> = []
+  figuritas: Array<FiguritaUsuario> = []
   filtros = new FiltroFiguritas()
 
   constructor(

@@ -26,6 +26,106 @@ export type FiguritaJSON = {
   edad: number */
 }
 
+export class FiguritaUsuario {
+  constructor(
+    public idUsuario?: number,
+    public nombreUsuario?: string,
+    public figurita: Figurita = new Figurita()
+  ) {}
+
+  static fromJson(figurita: object): FiguritaUsuario {
+    return Object.assign(new FiguritaUsuario(), figurita)
+  }
+
+  getId() {
+    return this.figurita.id
+  }
+
+  getNombre() {
+    return this.figurita.nombre
+  }
+
+  getApellido() {
+    return this.figurita.apellido
+  }
+
+  getFechaNacimiento() {
+    return this.figurita.fechaNacimiento
+  }
+
+  getNumeroCamiseta() {
+    return this.figurita.numeroCamiseta
+  }
+
+  getSeleccion() {
+    return this.figurita.seleccion
+  }
+
+  getAnioDebut() {
+    return this.figurita.anioDebut
+  }
+
+  getAltura() {
+    return this.figurita.altura
+  }
+
+  getPeso() {
+    return this.figurita.peso
+  }
+
+  getPosicion() {
+    return this.figurita.posicion
+  }
+
+  getPais() {
+    return this.figurita.pais
+  }
+
+  getCotizacionJugador() {
+    return this.figurita.cotizacionJugador
+  }
+
+  getOnFire() {
+    return this.figurita.onFire
+  }
+
+  getNivelDeImpresion() {
+    return this.figurita.nivelDeImpresion
+  }
+
+  getImagen() {
+    return this.figurita.imagen
+  }
+
+  getEdad() {
+    return this.figurita.edad
+  }
+
+  getValoracionBase() {
+    return this.figurita.valoracionBase?.toFixed(2)
+  }
+
+  getValoracionFigurita() {
+    return this.figurita.valoracionFigurita
+  }
+
+  getNumero() {
+    return this.figurita.numero
+  }
+
+  getCopasDelMundo() {
+    return this.figurita.copasDelMundo
+  }
+
+  getCopasConfederacion() {
+    return this.figurita.copasConfederacion
+  }
+
+  getEsLider() {
+    return this.figurita.esLider ? 'Es Lider' : 'No es Lider'
+  }
+}
+
 export class Figurita {
   constructor(
     public id?: number,
@@ -54,13 +154,5 @@ export class Figurita {
 
   static fromJson(figurita: object): Figurita {
     return Object.assign(new Figurita(), figurita)
-  }
-
-  lider() {
-    return this.esLider ? 'Es Lider' : 'No es Lider'
-  }
-
-  valBase() {
-    return this.valoracionBase?.toFixed(2)
   }
 }

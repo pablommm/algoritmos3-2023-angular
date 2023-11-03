@@ -1,5 +1,5 @@
 /* import { valoracionTotal } from 'src/app/dominio/figurita' */
-import { Figurita, FiguritaJSON } from '../dominio/figurita'
+import { FiguritaJSON, FiguritaUsuario } from '../dominio/figurita'
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
 import { REST_SERVER_URL } from './configuration'
@@ -49,7 +49,7 @@ export class FiguritaService {
 
     const figuritaJSON = await lastValueFrom(figurita$)
 
-    return Figurita.fromJson(figuritaJSON)
+    return FiguritaUsuario.fromJson(figuritaJSON)
   }
 
   private async awaitReturnFiguritas(figuritas$: Observable<FiguritaJSON[]>) {
@@ -57,7 +57,7 @@ export class FiguritaService {
     console.log(figuritaJSON)
 
     return figuritaJSON.map((figuritaJSON: FiguritaJSON) =>
-      Figurita.fromJson(figuritaJSON)
+      FiguritaUsuario.fromJson(figuritaJSON)
     )
   }
 

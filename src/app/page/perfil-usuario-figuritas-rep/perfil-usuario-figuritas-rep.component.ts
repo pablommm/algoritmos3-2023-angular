@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { Router, ActivatedRoute } from '@angular/router'
-import { Figurita } from './../../dominio/figurita'
+import { FiguritaUsuario } from './../../dominio/figurita'
 import { FiguritaService } from '../../services/figurita.service'
 import { mostrarError } from '../../util/errorHandler'
 import { FiltroFiguritas } from 'src/app/dominio/filtro'
@@ -11,7 +11,7 @@ import { FiltroFiguritas } from 'src/app/dominio/filtro'
   styleUrls: ['./perfil-usuario-figuritas-rep.component.scss']
 })
 export class PerfilUsuarioFiguritasRepComponent {
-  figuritas: Array<Figurita> = []
+  figuritas: Array<FiguritaUsuario> = []
   filtros = new FiltroFiguritas()
   esRepetida = false
 
@@ -24,15 +24,13 @@ export class PerfilUsuarioFiguritasRepComponent {
     this.figuritasRepetidasUsuario()
   }
   currentUrl = this.router.url
-  esRutaRepetida(){
-    if (this.currentUrl === '/Perfil/FiguritaRepetida'){
-      this.esRepetida = true 
+  esRutaRepetida() {
+    if (this.currentUrl === '/Perfil/FiguritaRepetida') {
+      this.esRepetida = true
       alert(this.esRepetida)
       // agregar comportamiento para añadir la figurita a la lista de repetida y faltantes
+    }
   }
-}
-
-
 
   private async figuritasRepetidasUsuario() {
     try {
@@ -42,5 +40,3 @@ export class PerfilUsuarioFiguritasRepComponent {
     }
   }
 }
-
-

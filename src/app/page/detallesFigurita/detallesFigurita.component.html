@@ -4,19 +4,19 @@
 			<article class="card-item">
 				<header class="card-header-container">
 					<div class="card-name-container">
-						<span class="card-nombre">{{figurita | nombreApellido}}</span>
-						<span>(de Carlos Raffo) FALTA CODEAR</span>
+						<span class="card-nombre">{{figurita.figurita | nombreApellido}}</span>
+						<span>(de {{figurita.nombreUsuario}})</span>
 					</div>
 					<div class="card-logos-container">
-						<i *ngIf="figurita.onFire" class="fa-solid fa-fire fire"></i>
+						<i *ngIf="figurita.getOnFire()" class="fa-solid fa-fire fire"></i>
 						<i class="fa-solid fa-id-badge"></i>
-						<span>{{figurita.numero}}</span>
+						<span>{{figurita.getNumero()}}</span>
 					</div>
 				</header>
 
 				<section class="card-content">
 					<div class="card-upper-container">
-						<img [src]="figurita.imagen" alt="Imágen no encontrada" class="card-imagen" />
+						<img [src]="figurita.getImagen()" alt="Imágen no encontrada" class="card-imagen" />
 
 						<div class="card-detalles-container">
 							<div class="card-detalles-smallFont">
@@ -24,35 +24,35 @@
 									<i class="fa-solid fa-weight-scale"></i>
 									<span>Peso</span>
 								</div>
-								<span>{{figurita.peso}} kg</span>
+								<span>{{figurita.getPeso()}} kg</span>
 							</div>
 							<div class="card-detalles-smallFont">
 								<div class="card-detalles-logo">
 									<span>Nacimiento</span>
 								</div>
-								<span>{{figurita.fechaNacimiento}} ({{figurita.edad}} años)</span>
+								<span>{{figurita.getFechaNacimiento()}} ({{figurita.getEdad()}} años)</span>
 							</div>
 							<div class="card-detalles-smallFont">
 								<div class="card-detalles-logo">
 									<span>Casaca</span>
 								</div>
-								<span>{{figurita.numeroCamiseta}}</span>
+								<span>{{figurita.getNumeroCamiseta()}}</span>
 							</div>
 							<div class="card-detalles-smallFont">
 								<div class="card-detalles-logo">
 									<span>Selección</span>
 								</div>
-								<span>{{figurita.seleccion}} (<i class="fa-solid fa-trophy"></i> {{figurita.copasDelMundo}})</span>
+								<span>{{figurita.getSeleccion()}} (<i class="fa-solid fa-trophy"></i> {{figurita.getCopasDelMundo()}})</span>
 							</div>
 							<div class="card-detalles-smallFont">
 								<div class="card-detalles-logo">
 									<span>Año debut</span>
 								</div>
-								<span>{{figurita.anioDebut}}</span>
+								<span>{{figurita.getAnioDebut()}}</span>
 							</div>
 							<div class="card-detalles-smallFont">
 								<div class="card-detalles-logo">
-									<span>CONMEBOL (<i class="fa-solid fa-trophy"></i> {{figurita.copasConfederacion}})</span>
+									<span>CONMEBOL (<i class="fa-solid fa-trophy"></i> {{figurita.getCopasConfederacion()}})</span>
 								</div>
 								<span></span>
 							</div>
@@ -60,15 +60,15 @@
 								<div class="card-detalles-logo">
 									<span>Posición</span>
 								</div>
-								<span>{{figurita.posicion}}</span>
+								<span>{{figurita.getPosicion()}}</span>
 							</div>
 							<div class="card-detalles-smallFont">
 								<div class="card-detalles-logo">
-									<span>{{figurita.lider()}}</span>
+									<span>{{figurita.getEsLider()}}</span>
 								</div>
 							</div>
 							<div class="card-detalles-largeFont card-detalles-center">
-								<span class="card-detalles-logo">Cotización USD {{figurita.cotizacionJugador}}</span>
+								<span class="card-detalles-logo">Cotización USD {{figurita.getCotizacionJugador()}}</span>
 							</div>
 						</div>
 					</div>
@@ -76,15 +76,15 @@
 						<div class="card-detalles-container card-valoracion-container">
 							<div class="card-detalles-largeFont">
 								<span class="card-detalles-logo">Nivel de impresión</span>
-								<span>{{figurita.nivelDeImpresion}}</span>
+								<span>{{figurita.getNivelDeImpresion()}}</span>
 							</div>
 							<div class="card-detalles-largeFont">
 								<span class="card-detalles-logo">Valoración Base</span>
-								<span>{{figurita.valBase()}}</span>
+								<span>{{figurita.getValoracionBase()}}</span>
 							</div>
 							<div class="card-detalles-largeFont">
 								<span class="card-detalles-logo">Valoración Total</span>
-								<span>{{figurita.valoracionFigurita}}</span>
+								<span>{{figurita.getValoracionFigurita()}}</span>
 							</div>
 						</div>
 						<div class="button-container">

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { Router, ActivatedRoute } from '@angular/router'
 import { Location } from '@angular/common'
 import { FiguritaService } from 'src/app/services/figurita.service'
-import { Figurita } from 'src/app/dominio/figurita'
+import { FiguritaUsuario } from 'src/app/dominio/figurita'
 
 @Component({
   selector: 'app-detallesFigurita',
@@ -10,8 +10,7 @@ import { Figurita } from 'src/app/dominio/figurita'
   styleUrls: ['./detallesFigurita.component.scss']
 })
 export class DetallesFiguritaComponent implements OnInit {
-  figurita!: Figurita
-  //figurita: Figurita = this.figuritas[0]
+  figurita: FiguritaUsuario = new FiguritaUsuario()
 
   constructor(
     private router: Router,
@@ -21,9 +20,9 @@ export class DetallesFiguritaComponent implements OnInit {
   ) {}
 
   async ngOnInit() {
-    const idTarea = this.route.snapshot.params['id']
-    this.figurita = await this.figuritaService.getFiguritaById(idTarea)
-    /* console.log(this.figurita) */
+    const idFigurita = this.route.snapshot.params['id']
+    this.figurita = await this.figuritaService.getFiguritaById(idFigurita)
+    console.log(this.figurita)
   }
 
   volver() {

@@ -1,4 +1,4 @@
-import { Figurita } from './../../dominio/figurita'
+import { FiguritaUsuario } from './../../dominio/figurita'
 import { Component, OnInit } from '@angular/core'
 import { FiguritaService } from '../../services/figurita.service'
 import { mostrarError } from 'src/app/util/errorHandler'
@@ -17,7 +17,7 @@ export const errorHandler = (component: BusquedaFiguritasPerfilComponent) => ({
   providers: []
 })
 export class BusquedaFiguritasPerfilComponent implements OnInit {
-  figuritas: Array<Figurita> = []
+  figuritas: Array<FiguritaUsuario> = []
   errors = []
   filtros = new FiltroFiguritas()
 

@@ -33,10 +33,11 @@ describe('Service: PuntoDeVentaService', () => {
     const puntoDeVentaData: PuntoDeVenta = new PuntoDeVenta()
     puntoDeVentaData.nombre = 'Carrefour'
     puntoDeVentaData.direccion = 'Av. San Martin 4930'
-    puntoDeVentaData.ubicacionGeografica = '(34.9696; 38.5940)'
+    puntoDeVentaData.ubicacionGeograficaX = 34.9696
+    puntoDeVentaData.ubicacionGeograficaY = 38.594
     puntoDeVentaData.distancia = 3
     puntoDeVentaData.stockDeSobres = 3
-    puntoDeVentaData.precio = 120
+    puntoDeVentaData.importeACobrar = 120
     puntoDeVentaData.tipo = 'Supermercado'
 
     component.puntoDeVenta = puntoDeVentaData
