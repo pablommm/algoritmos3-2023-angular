@@ -52,26 +52,35 @@ export class FormComponent implements OnInit {
 
   setProvincia(valor: string) {
     this.provinciaSelecionada = valor
+    alert(this.provinciaSelecionada)
+    
   }
 
-  getLocalidades() {
-    switch (this.provinciaSelecionada) {
-      case 'Buenos Aires':
-        return this.direccion.localidadesBuenosAires
-      case 'Mendoza':
-        return this.direccion.localidadesMendoza
-      case 'Cordoba':
-        return this.direccion.localidadesCordoba
-      default:
-        return this.direccion.localidadVacia
-    }
-  }
 
   async ngOnInit() {
     this.obtenerElUsuario()
-    const dire = await this.cosa.obtenerDirecion()
-    console.log('CAAAAAA' + dire.localidadesCordoba)
+     this.direccion = await this.cosa.obtenerDirecion()
+    console.log('1' + this.direccion.provincias)
+    console.log('2' + this.direccion.localidadesBuenosAires)
+    console.log('3' + this.direccion.localidadesMendoza)
+    console.log('4' + this.direccion.localidadesCordoba)
+    console.log('5' + this.direccion.localidadVacia)
+    
   }
+  getLocalidades() {
+    switch (this.provinciaSelecionada) {
+      case "Buenos Aires":
+        return this.direccion.localidadesBuenosAires
+      case "Mendoza":
+        return this.direccion.localidadesMendoza
+      case "Cordoba":
+        return this.direccion.localidadesCordoba
+      default:
+        return "no encontre nada"
+    }
+  }
+
+
 
   async obtenerElUsuario() {
     try {

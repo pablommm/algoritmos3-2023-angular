@@ -15,7 +15,11 @@ export class Direccion {
     public localidadVacia: string = '',
     public prov: string = '',
     public provincias: string = ''
-  ) {}
+  ) {
+
+
+    
+  }
 
   static fromJson(direccion: DireccionJSON): Direccion {
     return Object.assign(new Direccion(), direccion)

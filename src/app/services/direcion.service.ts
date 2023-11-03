@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
 import { REST_SERVER_URL } from './configuration'
-import { Observable, lastValueFrom } from 'rxjs'
+import { lastValueFrom } from 'rxjs'
 import { Direccion, DireccionJSON } from '../dominio/direccion'
 
 @Injectable({
