@@ -67,6 +67,10 @@ export class FormComponent implements OnInit {
     console.log('5' + this.direccion.localidadVacia)
     
   }
+  alerta() {
+    console.log(this.localidadSelecionada)
+    alert(`La provincia seleccionada es ${this.localidadSelecionada}`)
+  }
   getLocalidades() {
     switch (this.provinciaSelecionada) {
       case "Buenos Aires":

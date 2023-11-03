@@ -5,6 +5,8 @@ export type DireccionJSON = {
   localidadVacia: string[]
   prov: string
   provincias: string
+  localidades :string[]
+  criterios :string[]
 }
 
 export class Direccion {
@@ -14,7 +16,9 @@ export class Direccion {
     public localidadesCordoba: string = '',
     public localidadVacia: string = '',
     public prov: string = '',
-    public provincias: string = ''
+    public provincias: string = '',
+    public localidades : string ='',
+    public criterios :string=''
   ) {
 
 

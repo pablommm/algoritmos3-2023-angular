@@ -36,7 +36,7 @@
       <label for="Localidad">Localidad</label>
       <form action="Localidad">
         <select  [(ngModel)]="localidadSelecionada" class="select" name="localidadSelecionada">
-          <option *ngFor="let localidad of getLocalidades()"  onchange=getLocalidades() >{{localidad}}</option>
+          <option *ngFor="let localidad of direccion.localidades"  onchange=getLocalidades() >{{localidad}}</option>
         </select>
       </form>
       <label for="Altura">Altura</label>
@@ -64,7 +64,7 @@
       <label for="Criterio">Criterio</label>
       <form action="Criterios">
         <select class="select" [(ngModel)]="criterioSelecionado"   name="criterioSelecionado">
-          <option *ngFor= "let criterio of criterios"  (click)="setCriterio(criterio)"> {{criterio}}</option>
+          <option *ngFor= "let criterio of direccion.criterios"  (click)="setCriterio(criterio)"> {{criterio}}</option>
         </select>
       </form>
     </div>
@@ -80,6 +80,6 @@
   </div>
   <div class="button-container">
     <button class="secondary-button">Cancelar</button>
-    <button class="primary-button">Guardar</button>
+    <button class="primary-button" (click)=" alerta()">Guardar</button>
   </div>
 </div>
