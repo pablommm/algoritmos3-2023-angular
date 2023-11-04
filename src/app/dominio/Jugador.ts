@@ -1,6 +1,6 @@
 
 export type JugadorJSON = {
-    //id :number
+    id :number
     nombre: string
     camiseta: number
 
@@ -8,9 +8,9 @@ export type JugadorJSON = {
   
   export class Jugador {
     constructor(
-      public localidadesBuenosAires: string = '',
-      public localidadesMendoza: string = '',
-      public localidadesCordoba: string = '',
+      public id: number = 0,
+      public nombre: string = '',
+      public camiseta: string = '',
 
     ) {}
   

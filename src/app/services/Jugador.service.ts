@@ -12,7 +12,7 @@ export class JugadorService {
 constructor(private httpClient: HttpClient) { }
 
 
-async todosLosPuntoDeVentas() {
+async obtenerJugadores() {
   const jugador$ = this.httpClient.get<JugadorJSON[]>(
     `${REST_SERVER_URL}/getJugadores/`
   )

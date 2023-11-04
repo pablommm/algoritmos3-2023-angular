@@ -1,5 +1,7 @@
 import { Component } from '@angular/core'
 import { Router, ActivatedRoute } from '@angular/router'
+import { Jugador } from 'src/app/dominio/Jugador'
+import { JugadorService } from 'src/app/services/Jugador.service'
 
 @Component({
   selector: 'app-perfil-usuario',
@@ -7,15 +9,31 @@ import { Router, ActivatedRoute } from '@angular/router'
   styleUrls: ['./perfil-usuario.component.scss']
 })
 export class PerfilUsuarioComponent {
+
+  
+  jugador! : Jugador[]
   cambioDeUsuario = new CambioUsername()
   datosDePerfil = new DatosDePerfil()
   jugadorFav = ''
   jugadores = ['Messi', 'Neymar', 'Cristiano']
   constructor(
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    public jugadorService : JugadorService
   ) {}
-  async ngOnInit() {}
+ 
+
+  async ngOnInit() {
+    //this.obtenerJugadores()
+     this.jugador = await this.jugadorService.obtenerJugadores()
+   
+  }
+
+  pepito(){
+    console.log(this.jugador)
+  }
+
+
 }
 
 export class DatosDePerfil {

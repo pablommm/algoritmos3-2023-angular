@@ -22,30 +22,21 @@ export class FormComponent implements OnInit {
   actualizarFecha(fecha: Date) {
     this.usuario.fechaDeNacimiento = fecha
   }
-
+  
   direccion!: Direccion
   usuario!: Usuario
   errors = []
   constructor(
     //public cosa: Direccion,
     public usuarioService: UsuarioService,
-    public cosa: DirecionService,
+    public direcionService: DirecionService,
     private router: Router
   ) {}
 
   localidadSelecionada = ''
   provinciaSelecionada = ''
-
   criterioSelecionado = ''
-  criterios = [
-    'Nacionalista',
-    'Conservador',
-    'Fanatico',
-    'Desprendido',
-    'Apostador',
-    'Interesado',
-    'Conservador'
-  ]
+
   selecciones: string[] = ['Argentina', 'Brasil', 'Portugal']
   seleccionesElegidas = []
   currentUrl = this.router.url
@@ -59,13 +50,8 @@ export class FormComponent implements OnInit {
 
   async ngOnInit() {
     this.obtenerElUsuario()
-     this.direccion = await this.cosa.obtenerDirecion()
-    console.log('1' + this.direccion.provincias)
-    console.log('2' + this.direccion.localidadesBuenosAires)
-    console.log('3' + this.direccion.localidadesMendoza)
-    console.log('4' + this.direccion.localidadesCordoba)
-    console.log('5' + this.direccion.localidadVacia)
-    
+     this.direccion = await this.direcionService.obtenerDirecion()
+   
   }
   alerta() {
     console.log(this.localidadSelecionada)
