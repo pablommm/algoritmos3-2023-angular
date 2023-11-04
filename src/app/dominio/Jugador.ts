@@ -1,6 +1,5 @@
 
 export type JugadorJSON = {
-    id :number
     nombre: string
     camiseta: number
 
@@ -8,13 +7,13 @@ export type JugadorJSON = {
   
   export class Jugador {
     constructor(
-      public id: number = 0,
+      /* public id: number = 0, */
       public nombre: string = '',
       public camiseta: string = '',
 
     ) {}
   
-        static fromJson(jugador: object): Jugador {
+        static fromJson(jugador: JugadorJSON): Jugador {
             return Object.assign(new Jugador(), jugador)
           }
       
