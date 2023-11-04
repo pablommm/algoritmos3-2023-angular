@@ -8,6 +8,7 @@ import { Router } from '@angular/router'
 import { Direccion } from 'src/app/dominio/direccion'
 import { DirecionService } from 'src/app/services/direcion.service'
 import { Seleccion } from 'src/app/dominio/Seleccion'
+import { Jugador } from 'src/app/dominio/Jugador';
 
 export const errorHandler = (component: FormComponent) => ({
   error: async (error: Error) => {
@@ -41,8 +42,7 @@ export class FormComponent implements OnInit {
   localidadSelecionada = ''
   provinciaSelecionada = ''
   criterioSelecionado = ''
-
-  selecciones: string[] = []
+  selecciones: Array<Seleccion> = []
   seleccionesElegidas = []
   currentUrl = this.router.url
 
@@ -52,17 +52,14 @@ export class FormComponent implements OnInit {
     
   }
 
-
   async ngOnInit() {
     this.obtenerElUsuario()
      this.direccion = await this.direcionService.obtenerDirecion()
-     this.seleccion = await this.seleccionService.todasLasSelecciones()
-
-   
-  }
+     this.selecciones = await this.seleccionService.todasLasSelecciones()
+    } 
   alerta() {
-    console.log(this.seleccion)
-    alert(`La provincia seleccionada es ${this.seleccion}`)
+     console.log(this.selecciones)
+     alert(`La provincia seleccionada es ${this.selecciones}`)
   }
   getLocalidades() {
     switch (this.provinciaSelecionada) {

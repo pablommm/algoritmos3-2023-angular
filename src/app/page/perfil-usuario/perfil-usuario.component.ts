@@ -10,13 +10,14 @@ import { JugadorService } from 'src/app/services/Jugador.service'
 })
 export class PerfilUsuarioComponent {
 
-  
+  jugadores: Array<Jugador> = []
   jugador! : Jugador[]
   cambioDeUsuario = new CambioUsername()
   datosDePerfil = new DatosDePerfil()
   jugadorFav = ''
-  jugadores = ['Messi', 'Neymar', 'Cristiano']
-  constructor(
+/*   jugadores = ['Messi', 'Neymar', 'Cristiano']
+ */  
+constructor(
     private router: Router,
     private route: ActivatedRoute,
     public jugadorService : JugadorService
@@ -25,12 +26,11 @@ export class PerfilUsuarioComponent {
 
   async ngOnInit() {
     //this.obtenerJugadores()
-     this.jugador = await this.jugadorService.obtenerJugadores()
-   
+     this.jugadores = await this.jugadorService.obtenerJugadores()
   }
 
   pepito(){
-    console.log(this.jugador)
+    console.log(this.jugadores)
   }
 
 
