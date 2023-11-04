@@ -14,7 +14,7 @@ export class SeleccionService {
 
   async todasLasSelecciones() {
     const seleccion$ = this.httpClient.get<SeleccionJSON[]>(
-      `${REST_SERVER_URL}/getJugadores/`
+      `${REST_SERVER_URL}/Selecciones`
     )
   
     const seleccionJSON = await lastValueFrom(seleccion$)
