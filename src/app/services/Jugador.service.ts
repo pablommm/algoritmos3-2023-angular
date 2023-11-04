@@ -14,12 +14,13 @@ constructor(private httpClient: HttpClient) { }
 
 async obtenerJugadores() {
   const jugador$ = this.httpClient.get<JugadorJSON[]>(
-    `${REST_SERVER_URL}/jugadores/`
+    `${REST_SERVER_URL}/jugadores`
   )
   const jugadorJSON = await lastValueFrom(jugador$)
-  return jugadorJSON.map((jugadorJSON: JugadorJSON) =>
-    Jugador.fromJson(jugadorJSON)
-  )
+  console.log(jugadorJSON)
+  return jugadorJSON.map((jugadorJSON: JugadorJSON) => Jugador.fromJson(jugadorJSON))
+  //return Jugador.fromJson(jugadorJSON)
+  
 }
 
 }

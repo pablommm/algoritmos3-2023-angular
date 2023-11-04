@@ -25,8 +25,8 @@ constructor(
  
 
   async ngOnInit() {
-    //this.obtenerJugadores()
-     this.jugadores = await this.jugadorService.obtenerJugadores()
+    //this.obtenerJugadores(){}
+     this.jugador = await this.jugadorService.obtenerJugadores()
   }
 
   pepito(){

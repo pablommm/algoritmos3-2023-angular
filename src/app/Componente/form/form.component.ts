@@ -1,5 +1,5 @@
-import { SeleccionService } from './../../services/Seleccion.service';
-import { JugadorService } from './../../services/Jugador.service';
+import { SeleccionService } from './../../services/Seleccion.service'
+//import { JugadorService } from './../../services/Jugador.service'
 import { Component, OnInit } from '@angular/core'
 import { Usuario } from 'src/app/dominio/usuario'
 import { UsuarioService } from 'src/app/services/usuario.service'
@@ -8,7 +8,7 @@ import { Router } from '@angular/router'
 import { Direccion } from 'src/app/dominio/direccion'
 import { DirecionService } from 'src/app/services/direcion.service'
 import { Seleccion } from 'src/app/dominio/Seleccion'
-import { Jugador } from 'src/app/dominio/Jugador';
+//import { Jugador } from 'src/app/dominio/Jugador'
 
 export const errorHandler = (component: FormComponent) => ({
   error: async (error: Error) => {
@@ -73,7 +73,6 @@ export class FormComponent implements OnInit {
         return "no encontre nada"
     }
   }
-
 
 
   async obtenerElUsuario() {
