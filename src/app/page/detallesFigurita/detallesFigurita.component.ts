@@ -21,11 +21,17 @@ export class DetallesFiguritaComponent implements OnInit {
 
   async ngOnInit() {
     const idFigurita = this.route.snapshot.params['id']
+    //const idUsuario = this.route.snapshot.params['idUsuario']
     this.figurita = await this.figuritaService.getFiguritaById(idFigurita)
     console.log(this.figurita)
   }
 
   volver() {
     this.location.back()
+  }
+
+  solicitar() {
+    this.figuritaService.solicitarFigurita(this.figurita)
+    this.volver()
   }
 }

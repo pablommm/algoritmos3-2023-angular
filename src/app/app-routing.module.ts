@@ -29,7 +29,10 @@ const routes: Routes = [
   // {path:'Perfil', component:PerfilUsuarioComponent},
   // {path:'Perfil/FiguritaRepetida', component:PerfilUsuarioFiguritasRepComponent},
   // {path:'Perfil/FiguritaFaltante', component:PerfilUsuarioFiguritasFalComponent},
-  { path: 'DetalleFigurita/:id', component: DetallesFiguritaComponent },
+  {
+    path: 'DetalleFigurita/:id/:idUsuario',
+    component: DetallesFiguritaComponent
+  },
   { path: 'BusquedaSobre', component: BusquedaSobresComponent },
   {
     path: 'BusquedaFiguritasPerfil',

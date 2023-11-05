@@ -37,7 +37,7 @@ export class FormComponent implements OnInit {
     public direcionService: DirecionService,
     private router: Router,
     public seleccionService: SeleccionService
-  ) { }
+  ) {}
 
   localidadSelecionada = ''
   provinciaSelecionada = ''
@@ -49,14 +49,13 @@ export class FormComponent implements OnInit {
   setProvincia(valor: string) {
     this.provinciaSelecionada = valor
     alert(this.provinciaSelecionada)
-
   }
 
   async ngOnInit() {
     this.obtenerElUsuario()
     this.direccion = await this.direcionService.obtenerDirecion()
     this.selecciones = await this.seleccionService.todasLasSelecciones()
-    console.log ("se completo el nOnInit")
+    console.log('se completo el nOnInit')
   }
   alerta() {
     console.log(this.selecciones)
@@ -64,17 +63,16 @@ export class FormComponent implements OnInit {
   }
   getLocalidades() {
     switch (this.provinciaSelecionada) {
-      case "Buenos Aires":
+      case 'Buenos Aires':
         return this.direccion.localidadesBuenosAires
-      case "Mendoza":
+      case 'Mendoza':
         return this.direccion.localidadesMendoza
-      case "Cordoba":
+      case 'Cordoba':
         return this.direccion.localidadesCordoba
       default:
-        return "no encontre nada"
+        return 'no encontre nada'
     }
   }
-
 
   async obtenerElUsuario() {
     try {

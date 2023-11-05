@@ -46,7 +46,11 @@ export class BusquedaFiguritasComponent implements OnInit {
   }
 
   mostrarDetalles(figurita: FiguritaUsuario) {
-    this.router.navigate(['/DetalleFigurita', figurita.getId()])
+    this.router.navigate([
+      '/DetalleFigurita',
+      figurita.getId(),
+      figurita.idUsuario
+    ])
   }
 
   /* filtrarSearchBar(searchBar: SearchBar) {
