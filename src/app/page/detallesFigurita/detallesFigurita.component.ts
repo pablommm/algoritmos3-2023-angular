@@ -11,6 +11,8 @@ import { FiguritaUsuario } from 'src/app/dominio/figurita'
 })
 export class DetallesFiguritaComponent implements OnInit {
   figurita: FiguritaUsuario = new FiguritaUsuario()
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  timer: any
 
   constructor(
     private router: Router,
@@ -27,11 +29,17 @@ export class DetallesFiguritaComponent implements OnInit {
   }
 
   volver() {
-    this.location.back()
+    this.router.navigate(['/BusquedaFiguritas'])
   }
 
   solicitar() {
     this.figuritaService.solicitarFigurita(this.figurita)
-    this.volver()
+    this.timer = setInterval(() => {
+      this.volver()
+    }, 200) // Update the counter every second
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.timer) // Clear the timer when the component is destroyed
   }
 }
