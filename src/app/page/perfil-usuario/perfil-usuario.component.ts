@@ -1,7 +1,8 @@
 import { Component } from '@angular/core'
 import { Router, ActivatedRoute } from '@angular/router'
-import { Jugador } from 'src/app/dominio/Jugador'
+import { JugadorDom } from 'src/app/dominio/Jugador'
 import { JugadorService } from 'src/app/services/Jugador.service'
+import { mostrarError } from 'src/app/util/errorHandler'
 
 @Component({
   selector: 'app-perfil-usuario',
@@ -10,8 +11,8 @@ import { JugadorService } from 'src/app/services/Jugador.service'
 })
 export class PerfilUsuarioComponent {
 
-  jugadores: Array<Jugador> = []
-  jugador! : Jugador[]
+  jugadores: Array<JugadorDom> = []
+  jugador! : JugadorDom[]
   cambioDeUsuario = new CambioUsername()
   datosDePerfil = new DatosDePerfil()
   jugadorFav = ''
@@ -26,10 +27,26 @@ constructor(
 
   async ngOnInit() {
     //this.obtenerJugadores(){}
-     this.jugador = await this.jugadorService.obtenerJugadores()
+    //this.jugadores = await this.jugadorService.todosLosJugadores()
+    //console.log("pase por el componente perfil usuario")
+    await this.getTodosLosJugadores()
+    console.log(this.jugadores)
+
+  }
+
+  async getTodosLosJugadores(){
+    try {
+      this.jugadores = await this.jugadorService.todosLosJugadores(
+        
+      )
+   
+    } catch (error) {
+      mostrarError(this, error)
+    }
   }
 
   pepito(){
+    console.log("hice click en el boton del lapiz")
     console.log(this.jugadores)
   }
 

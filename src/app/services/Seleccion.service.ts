@@ -18,7 +18,7 @@ export class SeleccionService {
     )
   
     const seleccionJSON = await lastValueFrom(seleccion$)
-  
+    console.log("pase por el selecion service")
     return seleccionJSON.map((seleccionJSON: SeleccionJSON) =>
       Seleccion.fromJson(seleccionJSON)
     )

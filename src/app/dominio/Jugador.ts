@@ -1,21 +1,22 @@
 
 export type JugadorJSON = {
     nombre: string
-    camiseta: number
+    nroDeCamiseta: number
 
 }
   
-  export class Jugador {
+  export class JugadorDom {
     constructor(
       /* public id: number = 0, */
       public nombre: string = '',
-      public camiseta: string = '',
+      public nroDeCamiseta: number = 0,
 
     ) {}
   
-        static fromJson(jugador: JugadorJSON): Jugador {
-            return Object.assign(new Jugador(), jugador)
-          }
+    static fromJson(jugador: object): JugadorDom {
+          console.log("pase por el dominio jugador")
+        return Object.assign(new JugadorDom(), jugador)
+      }
       
     }
   

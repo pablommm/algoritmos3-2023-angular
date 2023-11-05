@@ -21,8 +21,6 @@ export class Direccion {
     public criterios :string=''
   ) {
 
-
-    
   }
 
   static fromJson(direccion: DireccionJSON): Direccion {
