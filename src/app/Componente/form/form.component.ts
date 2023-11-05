@@ -26,7 +26,7 @@ export class FormComponent implements OnInit {
   actualizarFecha(fecha: Date) {
     this.usuario.fechaDeNacimiento = fecha
   }
-  
+
   direccion!: Direccion
   seleccion!: Seleccion
   usuario!: Usuario
@@ -36,8 +36,8 @@ export class FormComponent implements OnInit {
     public usuarioService: UsuarioService,
     public direcionService: DirecionService,
     private router: Router,
-    public seleccionService : SeleccionService
-  ) {}
+    public seleccionService: SeleccionService
+  ) { }
 
   localidadSelecionada = ''
   provinciaSelecionada = ''
@@ -49,17 +49,18 @@ export class FormComponent implements OnInit {
   setProvincia(valor: string) {
     this.provinciaSelecionada = valor
     alert(this.provinciaSelecionada)
-    
+
   }
 
   async ngOnInit() {
     this.obtenerElUsuario()
-     this.direccion = await this.direcionService.obtenerDirecion()
-     this.selecciones = await this.seleccionService.todasLasSelecciones()
-    } 
+    this.direccion = await this.direcionService.obtenerDirecion()
+    this.selecciones = await this.seleccionService.todasLasSelecciones()
+    console.log ("se completo el nOnInit")
+  }
   alerta() {
-     console.log(this.selecciones)
-     alert(`La provincia seleccionada es ${this.selecciones}`)
+    console.log(this.selecciones)
+    alert(`La provincia seleccionada es ${this.selecciones}`)
   }
   getLocalidades() {
     switch (this.provinciaSelecionada) {

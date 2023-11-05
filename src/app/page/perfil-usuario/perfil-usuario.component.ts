@@ -29,8 +29,11 @@ constructor(
     //this.obtenerJugadores(){}
     //this.jugadores = await this.jugadorService.todosLosJugadores()
     //console.log("pase por el componente perfil usuario")
-    await this.getTodosLosJugadores()
+    this.getTodosLosJugadores()
+    console.log("se completo noOninit de perfil usuario")
+    //await this.getTodosLosJugadores()
     console.log(this.jugadores)
+    
 
   }
 

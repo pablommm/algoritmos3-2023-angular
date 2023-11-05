@@ -11,8 +11,7 @@ import { UsuarioLogin } from '../dominio/usuarioLogin'
   providedIn: 'root'
 })
 export class FiguritaService {
-  constructor(private httpClient: HttpClient) {}
-
+  constructor(private httpClient: HttpClient) { }
   async todasLasFiguritas(filtro: FiltroFiguritas) {
     const figuritas$ = this.httpClient.get<FiguritaJSON[]>(
       `${REST_SERVER_URL}/FiguritasRepetidas/${UsuarioLogin.getInstance().id}`,
@@ -24,8 +23,7 @@ export class FiguritaService {
 
   async figuritasFaltantesUsuario() {
     const figuritas$ = this.httpClient.get<FiguritaJSON[]>(
-      `${REST_SERVER_URL}/PerfilUsuario/FiguritasFaltantes/${
-        UsuarioLogin.getInstance().id
+      `${REST_SERVER_URL}/PerfilUsuario/FiguritasFaltantes/${UsuarioLogin.getInstance().id
       }`
     )
 
@@ -34,8 +32,7 @@ export class FiguritaService {
 
   async figuritasRepetidasUsuario() {
     const figuritas$ = this.httpClient.get<FiguritaJSON[]>(
-      `${REST_SERVER_URL}/PerfilUsuario/FiguritasRepetidas/${
-        UsuarioLogin.getInstance().id
+      `${REST_SERVER_URL}/PerfilUsuario/FiguritasRepetidas/${UsuarioLogin.getInstance().id
       }`
     )
 
