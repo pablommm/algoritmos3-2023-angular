@@ -25,7 +25,7 @@ export class CardComponent {
   }
 
   rutaDelete() {
-    return this.currentUrl === '/BusquedaFiguritas'
+    return this.currentUrl === '/BusquedaFiguritas' || this.currentUrl === '/BusquedaFiguritasPerfil'
   }
   ruta() {
     return this.currentUrl === '/BusquedaFiguritas'
