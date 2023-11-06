@@ -55,7 +55,11 @@ export class FormComponent implements OnInit {
     this.obtenerElUsuario()
     this.direccion = await this.direcionService.obtenerDirecion()
     this.selecciones = await this.seleccionService.todasLasSelecciones()
+
     console.log('se completo el nOnInit')
+
+
+
   }
   alerta() {
     console.log(this.selecciones)

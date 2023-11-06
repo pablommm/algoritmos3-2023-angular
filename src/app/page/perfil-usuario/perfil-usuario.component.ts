@@ -12,12 +12,12 @@ import { mostrarError } from 'src/app/util/errorHandler'
 export class PerfilUsuarioComponent {
 
   jugadores: Array<JugadorDom> = []
-  jugador! : JugadorDom[]
+  jugadorFav! : JugadorDom[]
   cambioDeUsuario = new CambioUsername()
   datosDePerfil = new DatosDePerfil()
-  jugadorFav = ''
-/*   jugadores = ['Messi', 'Neymar', 'Cristiano']
- */  
+  //jugadorFav = ''
+  //jugadores = ['Messi', 'Neymar', 'Cristiano']
+   
 constructor(
     private router: Router,
     private route: ActivatedRoute,

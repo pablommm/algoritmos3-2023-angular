@@ -23,19 +23,19 @@ async obtenerJugadores() {
   return jugadorJSON.map((jugadorJSON: JugadorJSON) => Jugador.fromJson(jugadorJSON))
   //return Jugador.fromJson(jugadorJSON)*/
 
-  async todosLosJugadores(){
-    const jugadorDom$ = this.httpClient.get<JugadorJSON[]>(
-      `${REST_SERVER_URL}/jugadores`
+  async todosLosJugadores() {
+    const jugadorDom$= this.httpClient.get<JugadorJSON[]>(
+      `${REST_SERVER_URL}/jugadores/`
     )
     return await this.awaitReturnJugadores(jugadorDom$)
   }
-
-  async awaitReturnJugadores(jugador$:Observable<JugadorJSON[]>){
-    const jugadorJSON = await lastValueFrom(jugador$)
-    console.log(jugadorJSON)
+  
+  async awaitReturnJugadores(jugadorDom$: Observable<JugadorJSON[]>){
+    const jugadorJSON = await lastValueFrom(jugadorDom$)
     console.log("pase por jugador service")
-
-    return jugadorJSON.map((jugadorJSON:JugadorJSON)=> JugadorDom.fromJson(jugadorJSON))
+  
+    return jugadorJSON.map((jugadorJSON:JugadorJSON) => 
+      JugadorDom.fromJson(jugadorJSON))
   }
   
 }

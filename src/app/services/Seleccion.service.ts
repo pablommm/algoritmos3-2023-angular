@@ -37,8 +37,8 @@ export class SeleccionService {
     const seleccionJSON = await lastValueFrom(seleccion$)
     console.log("pase por el awaitReturnSeleciones")
    
-    return seleccionJSON.map((figuritaJSON: SeleccionJSON) =>
-      Seleccion.fromJson(figuritaJSON)
+    return seleccionJSON.map((seleccionJSON: SeleccionJSON) =>
+      Seleccion.fromJson(seleccionJSON)
     )
   }
 }
