@@ -73,7 +73,7 @@
         <label for="Seleccion"> Seleccion</label>
         <form action="Seleccion">
           <select class="select"  [(ngModel)]="seleccionesElegidas"  name="selecionSelecionada">
-            <option value="seleccione" *ngFor= "let seleccion of selecciones" >{{seleccion}}</option>
+            <option *ngFor= "let seleccion of selecciones" >{{seleccion.pais}}</option>
           </select>
         </form>
     </div>
