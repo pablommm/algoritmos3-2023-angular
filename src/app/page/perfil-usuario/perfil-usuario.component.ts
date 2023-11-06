@@ -12,7 +12,7 @@ import { mostrarError } from 'src/app/util/errorHandler'
 export class PerfilUsuarioComponent {
 
   jugadores: Array<JugadorDom> = []
-  jugadorFav! : JugadorDom[]
+  jugadorFavo! : JugadorDom[]
   cambioDeUsuario = new CambioUsername()
   datosDePerfil = new DatosDePerfil()
   //jugadorFav = ''

@@ -25,7 +25,7 @@ async obtenerJugadores() {
 
   async todosLosJugadores() {
     const jugadorDom$= this.httpClient.get<JugadorJSON[]>(
-      `${REST_SERVER_URL}/jugadores/`
+      `${REST_SERVER_URL}/jugadores`
     )
     console.log("pase por jugador service")
     return await this.awaitReturnJugadores(jugadorDom$)

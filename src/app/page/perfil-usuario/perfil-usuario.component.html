@@ -26,8 +26,8 @@
 			<div>
 			  <label class="jugador">Jugador Favorito</label>
 			  <form action="Jugador">
-				<select class="select" [(ngModel)]="jugadorFav" name="jugadorFav">
-				  <option *ngFor="let jugadorFav of jugadores" >{{jugadorFav}}</option>
+				<select class="select" [(ngModel)]="jugadorFavo" name="jugadorFav">
+				  <option *ngFor="let jugador of jugadores" >{{" ID: " +jugador.id + " - " + jugador.nombre + " " + jugador.apellido + " - " + jugador.nroDeCamiseta}}</option>
 				</select>
 			  </form>
 			</div>

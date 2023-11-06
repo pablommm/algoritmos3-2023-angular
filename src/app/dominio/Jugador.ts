@@ -1,7 +1,9 @@
 
 export type JugadorJSON = {
     nombre: string
+    apellido:string
     nroDeCamiseta: number
+    id:number
 
 }
   
@@ -9,7 +11,9 @@ export type JugadorJSON = {
     constructor(
       /* public id: number = 0, */
       public nombre: string = '',
+      public apellido: string = '',
       public nroDeCamiseta: number = 0,
+      public id:number = 0
 
     ) {}
   
