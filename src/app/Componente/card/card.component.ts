@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { FiguritaUsuario } from 'src/app/dominio/figurita'
 import { Router, ActivatedRoute } from '@angular/router'
 
@@ -17,17 +17,21 @@ export class CardComponent {
   imagenNoEncontrada = '../assets/noImage.jpg'
 
   @Input() figurita!: FiguritaUsuario
+  @Output() newItemEvent = new EventEmitter<number>()
 
   OnInit() {}
 
-  selecionarCard() {
-    this.router.navigateByUrl('/DetalleFigurita')
-  }
-
   rutaDelete() {
-    return this.currentUrl === '/BusquedaFiguritas' || this.currentUrl === '/BusquedaFiguritasPerfil'
+    return (
+      this.currentUrl === '/BusquedaFiguritas' ||
+      this.currentUrl === '/BusquedaFiguritasPerfil'
+    )
   }
   ruta() {
     return this.currentUrl === '/BusquedaFiguritas'
+  }
+
+  quitarFigurita() {
+    this.newItemEvent.emit(this.figurita.getId())
   }
 }

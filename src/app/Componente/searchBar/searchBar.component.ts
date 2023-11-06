@@ -13,7 +13,6 @@ export class SearchBarComponent {
   campoDeBusqueda = ''
 
   filtrar() {
-    /* alert('FILTRE! :)') */
     this.newItemEvent.emit(this.campoDeBusqueda)
   }
 }

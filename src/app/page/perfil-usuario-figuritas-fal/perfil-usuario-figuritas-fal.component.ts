@@ -31,4 +31,9 @@ export class PerfilUsuarioFiguritasFalComponent {
       mostrarError(this, error)
     }
   }
+
+  async quitarFigurita(id: number) {
+    this.figuritaService.quitarFiguritaFaltante(id)
+    this.router.navigate(['.'], { relativeTo: this.route })
+  }
 }

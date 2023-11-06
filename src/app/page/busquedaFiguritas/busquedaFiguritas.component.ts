@@ -52,18 +52,4 @@ export class BusquedaFiguritasComponent implements OnInit {
       figurita.idUsuario
     ])
   }
-
-  /* filtrarSearchBar(searchBar: SearchBar) {
-    alert('me lleg al componente padre ' + searchBar)
-    this.filtros.setSearchBar(searchBar)
-  }
-
-  filtrarFiltro(filtro: Filtro) {
-    this.filtros.setFiltro(filtro)
-  }
-
-  enviarAlBack(searchBar: SearchBar, filtro: Filtro) {
-    this.filtrarSearchBar(searchBar)
-    this.filtrarFiltro(filtro)
-  } */
 }

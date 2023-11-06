@@ -57,9 +57,6 @@ export class FormComponent implements OnInit {
     this.selecciones = await this.seleccionService.todasLasSelecciones()
 
     console.log('se completo el nOnInit')
-
-
-
   }
   alerta() {
     console.log(this.selecciones)
@@ -74,14 +71,13 @@ export class FormComponent implements OnInit {
       case 'Cordoba':
         return this.direccion.localidadesCordoba
       default:
-        return 'no encontre nada'
+        return this.direccion.localidadesBuenosAires
     }
   }
 
   async obtenerElUsuario() {
     try {
       this.usuario = await this.usuarioService.usuarioLogueado()
-      /* alert(this.usuario) */
     } catch (error) {
       mostrarError(this, error)
     }

@@ -2,7 +2,7 @@
 	<div class="main-container">
 		
 		<section class="sub-main-container">
-			<app-card *ngFor="let figurita of figuritas" [figurita]="figurita" class="card-item"></app-card>
+			<app-card *ngFor="let figurita of figuritas" [figurita]="figurita" class="card-item" (newItemEvent)="quitarFigurita($event)"></app-card>
 			<span class="material-symbols-outlined plus-icon" routerLink="/BusquedaFiguritasPerfil" (click)="esRutaRepetida()">add</span>
 		</section>
 	</div>

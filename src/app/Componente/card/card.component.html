@@ -3,7 +3,8 @@
         <!-- (click)="selecionarCard() -->
         <!-- <img src="{{figurita.imagen}}" alt="Imágen no encontrada" class="card-imagen"> -->
         <img [src]="figurita.getImagen()"  alt="Imágen no encontrada" class="card-imagen">
-        <span class="material-symbols-outlined trash-can" *ngIf="!rutaDelete()">delete_forever</span>
+        <!-- <span class="material-symbols-outlined trash-can" *ngIf="!rutaDelete()">delete_forever</span> -->
+        <a (click)="quitarFigurita()"><i class="fa-solid fa-trash trash-can" *ngIf="!rutaDelete()"></i></a>
         <div class="card-upper-container">
           <div class="card-upper-subcontainer">
             <span class="card-detalles-largeFont">{{figurita.figurita | nombreApellido}}</span>

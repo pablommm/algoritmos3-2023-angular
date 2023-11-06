@@ -10,47 +10,40 @@ import { mostrarError } from 'src/app/util/errorHandler'
   styleUrls: ['./perfil-usuario.component.scss']
 })
 export class PerfilUsuarioComponent {
-
   jugadores: Array<JugadorDom> = []
-  jugadorFavo! : JugadorDom[]
+  jugadorFavo!: JugadorDom[]
   cambioDeUsuario = new CambioUsername()
   datosDePerfil = new DatosDePerfil()
-  //jugadorFav = ''
-  //jugadores = ['Messi', 'Neymar', 'Cristiano']
-   
-constructor(
+
+  constructor(
     private router: Router,
     private route: ActivatedRoute,
-    public jugadorService : JugadorService
+    public jugadorService: JugadorService
   ) {}
- 
 
   ngOnInit() {
     //this.obtenerJugadores(){}
-    //this.jugadores = await this.jugadorService.todosLosJugadores()    
+    //this.jugadores = await this.jugadorService.todosLosJugadores()
     //this.getTodosLosJugadores()
 
     this.getTodosLosJugadores()
     console.log(this.jugadores)
-    console.log("pase por el componente perfil usuario")
-
+    console.log('pase por el componente perfil usuario')
   }
 
-  async getTodosLosJugadores(){
+  async getTodosLosJugadores() {
     try {
-      this.jugadores = await this.jugadorService.todosLosJugadores()   
+      this.jugadores = await this.jugadorService.todosLosJugadores()
     } catch (error) {
-      console.log("catch error no se trajo nada")
-      mostrarError(this, error)      
+      console.log('catch error no se trajo nada')
+      mostrarError(this, error)
     }
   }
 
-  pepito(){
-    console.log("hice click en el boton del lapiz")
+  pepito() {
+    console.log('hice click en el boton del lapiz')
     console.log(this.jugadores)
   }
-
-
 }
 
 export class DatosDePerfil {

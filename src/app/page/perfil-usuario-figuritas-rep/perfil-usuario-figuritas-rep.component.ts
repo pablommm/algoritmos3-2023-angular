@@ -27,7 +27,6 @@ export class PerfilUsuarioFiguritasRepComponent {
   esRutaRepetida() {
     if (this.currentUrl === '/Perfil/FiguritaRepetida') {
       this.esRepetida = true
-      alert(this.esRepetida)
       // agregar comportamiento para añadir la figurita a la lista de repetida y faltantes
     }
   }
@@ -38,5 +37,10 @@ export class PerfilUsuarioFiguritasRepComponent {
     } catch (error) {
       mostrarError(this, error)
     }
+  }
+
+  async quitarFigurita(id: number) {
+    this.figuritaService.quitarFiguritaRepetida(id)
+    window.location.reload()
   }
 }

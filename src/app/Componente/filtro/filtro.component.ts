@@ -8,8 +8,4 @@ import { FiltroFiguritas } from 'src/app/dominio/filtro'
 })
 export class FiltroComponent {
   @Input() filtro!: FiltroFiguritas
-
-  filtrar() {
-    /* alert('FILTRE! :)') */
-  }
 }

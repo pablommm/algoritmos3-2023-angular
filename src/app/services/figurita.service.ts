@@ -84,4 +84,24 @@ export class FiguritaService {
 
     const figuritaJSON = await lastValueFrom(figurita$)
   }
+
+  async quitarFiguritaRepetida(id: number) {
+    const figurita$ = this.httpClient.post(
+      `${REST_SERVER_URL}/PerfilUsuario/FiguritasRepetidas/QuitarFigurita/${
+        UsuarioLogin.getInstance().id
+      }`,
+      id
+    )
+    const figuritaJSON = await lastValueFrom(figurita$)
+  }
+
+  async quitarFiguritaFaltante(id: number) {
+    const figurita$ = this.httpClient.post(
+      `${REST_SERVER_URL}/PerfilUsuario/FiguritasFaltantes/QuitarFigurita/${
+        UsuarioLogin.getInstance().id
+      }`,
+      id
+    )
+    const figuritaJSON = await lastValueFrom(figurita$)
+  }
 }

@@ -99,11 +99,8 @@
 }
 
 .trash-can {
- 
-  color: white;
-  position: absolute;
-  top: 0.5em;
-  right: 0.2em;
+  color: var(--fire-color);
+  cursor: pointer;
 }
 
 @media (min-width: 401px) {
