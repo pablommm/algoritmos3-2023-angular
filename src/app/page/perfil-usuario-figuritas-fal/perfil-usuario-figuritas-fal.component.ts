@@ -33,7 +33,7 @@ export class PerfilUsuarioFiguritasFalComponent {
   }
 
   async quitarFigurita(id: number) {
-    this.figuritaService.quitarFiguritaFaltante(id)
-    this.router.navigate(['.'], { relativeTo: this.route })
+    await this.figuritaService.quitarFiguritaFaltante(id)
+    await this.figuritasFaltantesUsuario()
   }
 }

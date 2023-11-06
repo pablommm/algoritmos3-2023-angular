@@ -32,14 +32,8 @@ export class DetallesFiguritaComponent implements OnInit {
     this.router.navigate(['/BusquedaFiguritas'])
   }
 
-  solicitar() {
-    this.figuritaService.solicitarFigurita(this.figurita)
-    this.timer = setInterval(() => {
-      this.volver()
-    }, 200) // Update the counter every second
-  }
-
-  ngOnDestroy() {
-    clearInterval(this.timer) // Clear the timer when the component is destroyed
+  async solicitar() {
+    await this.figuritaService.solicitarFigurita(this.figurita)
+    this.volver()
   }
 }

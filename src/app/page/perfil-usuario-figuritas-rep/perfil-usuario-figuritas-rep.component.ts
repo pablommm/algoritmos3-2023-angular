@@ -40,7 +40,7 @@ export class PerfilUsuarioFiguritasRepComponent {
   }
 
   async quitarFigurita(id: number) {
-    this.figuritaService.quitarFiguritaRepetida(id)
-    window.location.reload()
+    await this.figuritaService.quitarFiguritaRepetida(id)
+    await this.figuritasRepetidasUsuario()
   }
 }
