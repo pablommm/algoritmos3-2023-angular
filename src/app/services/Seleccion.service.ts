@@ -29,13 +29,17 @@ export class SeleccionService {
     const seleccion$ = this.httpClient.get<SeleccionJSON[]>(
       `${REST_SERVER_URL}/Selecciones`
     )    
+    console.log("llego a service todasLasSelecciones")
+
     return await this.awaitReturnSeleciones(seleccion$)
-  
+      
   }
 
   private async awaitReturnSeleciones(seleccion$: Observable<SeleccionJSON[]>) {
+    console.log("entre a awaitReturnSeleciones ")
+    
     const seleccionJSON = await lastValueFrom(seleccion$)
-    console.log("pase por el awaitReturnSeleciones")
+    console.log("sali de por el awaitReturnSeleciones")
    
     return seleccionJSON.map((seleccionJSON: SeleccionJSON) =>
       Seleccion.fromJson(seleccionJSON)

@@ -27,12 +27,13 @@ async obtenerJugadores() {
     const jugadorDom$= this.httpClient.get<JugadorJSON[]>(
       `${REST_SERVER_URL}/jugadores/`
     )
+    console.log("pase por jugador service")
     return await this.awaitReturnJugadores(jugadorDom$)
   }
   
   async awaitReturnJugadores(jugadorDom$: Observable<JugadorJSON[]>){
     const jugadorJSON = await lastValueFrom(jugadorDom$)
-    console.log("pase por jugador service")
+    
   
     return jugadorJSON.map((jugadorJSON:JugadorJSON) => 
       JugadorDom.fromJson(jugadorJSON))

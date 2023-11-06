@@ -25,26 +25,23 @@ constructor(
   ) {}
  
 
-  async ngOnInit() {
+  ngOnInit() {
     //this.obtenerJugadores(){}
-    //this.jugadores = await this.jugadorService.todosLosJugadores()
-    //console.log("pase por el componente perfil usuario")
+    //this.jugadores = await this.jugadorService.todosLosJugadores()    
+    //this.getTodosLosJugadores()
+
     this.getTodosLosJugadores()
-    console.log("se completo noOninit de perfil usuario")
-    //await this.getTodosLosJugadores()
     console.log(this.jugadores)
-    
+    console.log("pase por el componente perfil usuario")
 
   }
 
   async getTodosLosJugadores(){
     try {
-      this.jugadores = await this.jugadorService.todosLosJugadores(
-        
-      )
-   
+      this.jugadores = await this.jugadorService.todosLosJugadores()   
     } catch (error) {
-      mostrarError(this, error)
+      console.log("catch error no se trajo nada")
+      mostrarError(this, error)      
     }
   }
 
