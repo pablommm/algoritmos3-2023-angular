@@ -44,4 +44,8 @@ export class PuntoDeVenta {
   geolocalizacion() {
     return `(${this.ubicacionGeograficaX}, ${this.ubicacionGeograficaY})`
   }
+
+  getImporteACobrar() {
+    return this.importeACobrar.toPrecision(6)
+  }
 }

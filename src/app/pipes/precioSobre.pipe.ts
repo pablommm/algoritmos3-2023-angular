@@ -9,6 +9,6 @@ export class PrecioSobrePipe implements PipeTransform {
     return 'Precio por sobre'
       .concat(' ')
       .concat('$')
-      .concat(puntoDeVenta.importeACobrar.toString())
+      .concat(puntoDeVenta.getImporteACobrar().toString())
   }
 }
