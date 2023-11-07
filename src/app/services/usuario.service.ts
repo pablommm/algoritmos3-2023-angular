@@ -33,4 +33,22 @@ export class UsuarioService {
 
     return Usuario.fromJson(usuarioJSON)
   }
+  // async usuarioLogueado() {
+  //   const usuarioJSON$ = this.httpClient.get<UsuarioJSON>(
+  //     `${REST_SERVER_URL}/Usuario/${UsuarioLogin.getInstance().id}`
+  //   )
+  //   const usuarioJSON = await lastValueFrom(usuarioJSON$)
+  //   return Usuario.fromJson(usuarioJSON)
+  // }
+
+  async actualizarUsuario(usuario: Usuario) {
+    const usuarioJSON$ = this.httpClient.put<UsuarioJSON>(
+      `${REST_SERVER_URL}/Usuario/${UsuarioLogin.getInstance().id}`,
+      usuario
+    )
+    const usuarioJSON = await lastValueFrom(usuarioJSON$)
+    return Usuario.fromJson(usuarioJSON)
+  }
+
+
 }
