@@ -5,7 +5,7 @@
 				<header class="card-header-container">
 					<div class="card-name-container">
 						<span class="card-nombre">{{figurita.figurita | nombreApellido}}</span>
-						<span>(de {{figurita.nombreUsuario}})</span>
+						<span data-testid="figuritaNombreUsuario">(de {{figurita.nombreUsuario}})</span>
 					</div>
 					<div class="card-logos-container">
 						<i *ngIf="figurita.getOnFire()" class="fa-solid fa-fire fire"></i>

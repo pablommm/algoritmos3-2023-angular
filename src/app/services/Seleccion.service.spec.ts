@@ -2,11 +2,13 @@
 
 import { TestBed, inject } from '@angular/core/testing'
 import { SeleccionService } from './Seleccion.service'
+import { HttpClientModule } from '@angular/common/http'
 
 describe('Service: Seleccion', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [SeleccionService]
+      providers: [SeleccionService],
+      imports: [HttpClientModule]
     })
   })
 

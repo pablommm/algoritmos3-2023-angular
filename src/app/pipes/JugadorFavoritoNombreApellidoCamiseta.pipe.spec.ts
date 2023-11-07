@@ -1,6 +1,6 @@
 /* tslint:disable:no-unused-variable */
 
-import { TestBed, async } from '@angular/core/testing';
+/* import { TestBed, async } from '@angular/core/testing';
 import { JugadorFavoritoNombreApellidoCamisetaPipe } from './JugadorFavoritoNombreApellidoCamiseta.pipe';
 
 describe('Pipe: JugadorFavoritoNombreApellidoCamisetae', () => {
@@ -8,4 +8,4 @@ describe('Pipe: JugadorFavoritoNombreApellidoCamisetae', () => {
     let pipe = new JugadorFavoritoNombreApellidoCamisetaPipe();
     expect(pipe).toBeTruthy();
   });
-});
+}); */

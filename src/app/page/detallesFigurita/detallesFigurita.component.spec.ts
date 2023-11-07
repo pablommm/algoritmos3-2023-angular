@@ -32,4 +32,14 @@ describe('DetallesFiguritaComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy()
   })
+
+  it('when clicking on a card, it shows its details', () => {
+    getByTestId('ampliarDetalles').click()
+    expect(getByTestId('figuritaNombreUsuario').textContent.toBe('frantano'))
+  })
+
+  function getByTestId(testId: string) {
+    const resultHtml = fixture.debugElement.nativeElement
+    return resultHtml.querySelector(`[data-testid="${testId}"]`)
+  }
 })
